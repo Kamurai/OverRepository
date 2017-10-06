@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+                Board Over!
+            </title>
+            <h2>
+                The User List!
+            </h2>
+            <p id="idCenterContent">
+                This is a list of the users on Board Over.<br/>
+                <table id="idTableManagementStats">
+                    <!--User Count Headers -->
+                    <tr>
+                        <td>Basic Users</td>
+                        <td>Managers</td>
+                        <td>Administrators</td>
+                        <td>Into Deck Building?</td>
+                        <td>Into Fixed Deck games?</td>
+                        <td>Into Constructed Deck?</td>
+                        <td>Into Strategy?</td>
+                        <td>Into War?</td>
+                        <td>Into Economy games?</td>
+                        <td>Into Tableau Building?</td>
+                        <td>Into Coop?</td>
+                        <td>Into Mystery?</td>
+                        <td>Into Semi Coop?</td>
+                        <td>Into RPGs?</td>
+                        <td>Into Bluffing?</td>
+                        <td>Into Puzzles?</td>
+                        <td>Into Dexterity games?</td>
+                        <td>Into Party games?</td>
+                        <td>Users Online</td>
+                    </tr>
+                    <!--User Counts -->
+                    <!--<c:set value="#{ManagementBean.setUserCounts()}" var="tickle"></c:set>-->
+                    <tr>
+                        <ui:repeat var="x" value="#{ManagementBean.uc}" size="#{ManagementBean.getUCSize()}" varStatus="myVarStatus">
+                            <td><h:outputText value="#{x[0]}" /></td>
+                        </ui:repeat>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <h:dataTable id="idTableManagementUsers" value="#{ManagementBean.dataModel}" var="user"
+                    styleClass="idTableManagementUsers"
+                    headerClass="classTableManagementHeader"
+                    rowClasses="classTableManagementRow"
+                    columnClasses="classTableManagementUsersColIndex,
+                    classTableManagementUsersColUsername,
+                    classTableManagementUsersColEmail,
+                    classTableManagementUsersColAdminLevel,
+                    classTableManagementUsersColDeckBuilding,
+                    classTableManagementUsersColFixedDeck,
+                    classTableManagementUsersColConstructedDeck,
+                    classTableManagementUsersColStrategy,
+                    classTableManagementUsersColWar,
+                    classTableManagementUsersColEconomy,
+                    classTableManagementUsersColTableauBuilding,
+                    classTableManagementUsersColCoop,
+                    classTableManagementUsersColMystery,
+                    classTableManagementUsersColSemiCoop,
+                    classTableManagementUsersColPPRPG,
+                    classTableManagementUsersColBluffing,
+                    classTableManagementUsersColPuzzle,
+                    classTableManagementUsersColDexterity,
+                    classTableManagementUsersColParty,
+                    classTableManagementUsersColOnline            
+                    ">
+                    <h:column> 
+                        <f:facet id="idTableManagementUsersColHeaderIndex" name="header">#</f:facet>
+                        #{ManagementBean.dataModel.rowIndex + 1}
+                    </h:column>
+                    <h:column>    				
+                        <f:facet id="idTableManagementUsersColHeaderUsername" name = "header">Username</f:facet>    				
+                        #{user.username}
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderEmail" name = "header">Email</f:facet>
+                        #{user.email}
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderAdminLevel" name = "header">Admin Level</f:facet>
+                        <h:selectOneMenu value="#{user.adminLevel}" onchange="submit()" valueChangeListener="#{ManagementBean.UpdateUser}" immediate="true" >
+                            <f:selectItem itemValue="2" itemLabel="Admin" />
+                            <f:selectItem itemValue="1" itemLabel="Manager"/>
+                            <f:selectItem itemValue="0" itemLabel="Basic"/>
+                        </h:selectOneMenu>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderWomen" name = "header">Into Deck Building</f:facet>
+                        <ui:fragment rendered="#{user.deckBuilding}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.deckBuilding}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderMen" name = "header">Into Fixed Deck</f:facet>
+                        <ui:fragment rendered="#{user.fixedDeck}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.fixedDeck}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderTransWomen" name = "header">Into Constructed Deck</f:facet>
+                        <ui:fragment rendered="#{user.constructedDeck}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.constructedDeck}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderTransMen" name = "header">Into Strategy</f:facet>
+                        <ui:fragment rendered="#{user.strategy}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.strategy}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderTransMen" name = "header">Into War</f:facet>
+                        <ui:fragment rendered="#{user.war}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.war}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderEconomy" name = "header">Into Economy games</f:facet>
+                        <ui:fragment rendered="#{user.economy}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.economy}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderTableauBuilding" name = "header">Into Tableau Building</f:facet>
+                        <ui:fragment rendered="#{user.tableauBuilding}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.tableauBuilding}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderCoop" name = "header">Into Coop</f:facet>
+                        <ui:fragment rendered="#{user.coop}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.coop}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderMystery" name = "header">Into Mystery</f:facet>
+                        <ui:fragment rendered="#{user.mystery}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.mystery}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderSemiCoop" name = "header">Into Semi Coop</f:facet>
+                        <ui:fragment rendered="#{user.semiCoop}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.semiCoop}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderPPRPG" name = "header">Into RPGs</f:facet>
+                        <ui:fragment rendered="#{user.PPRPG}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.PPRPG}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderBluffing" name = "header">Into Bluffing</f:facet>
+                        <ui:fragment rendered="#{user.bluffing}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.bluffing}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderPuzzle" name = "header">Into Puzzles</f:facet>
+                        <ui:fragment rendered="#{user.puzzle}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.puzzle}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderDexterity" name = "header">Into Dexterity games</f:facet>
+                        <ui:fragment rendered="#{user.dexterity}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.dexterity}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderParty" name = "header">Into Party games</f:facet>
+                        <ui:fragment rendered="#{user.party}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.party}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderOnline" name = "header">Online</f:facet>
+                        <ui:fragment rendered="#{user.loggedOn}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.loggedOn}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                </h:dataTable>
+            </p>
+        </c:when>
+    </c:choose>
+</html>
+

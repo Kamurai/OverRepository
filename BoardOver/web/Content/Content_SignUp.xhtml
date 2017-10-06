@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <title>
+       Board Over!
+    </title>
+    <p id="idContentSignUp">
+        Username:<h:inputText id="username" value="#{LoginBean.username}"/><br/>
+        <h:message for="username"/><br/>
+        Email:<h:inputText id="email" value="#{LoginBean.email}"/><br/>
+        <h:message for="email"/><br/>
+        Password:<h:inputSecret id="password" value="#{LoginBean.password}"/><br/>
+        <h:message for="password"/><br/>
+        Confirm Password:<h:inputSecret id="confirmPassword" value="#{LoginBean.confirmPassword}"/><br/>
+        <h:message for="confirmPassword"/><br/>
+
+        <table id="idTableSignUp">
+            <tr>
+                <td>Into Deck Building?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolDeckBuilding}"/></td>
+            </tr>
+            <tr>
+                <td>Into Fixed Deck games?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolFixedDeck}"/></td>
+            </tr>
+            <tr>
+                <td>Into Constructed Deck?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolConstructedDeck}"/></td>
+            </tr>
+            <tr>
+                <td>Into Strategy?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolStrategy}"/></td>
+            </tr>
+            <tr>
+                <td>Into War?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolWar}"/></td>
+            </tr>
+            <tr>
+                <td>Into Economy games?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolEconomy}"/></td>
+            </tr>
+            <tr>
+                <td>Into Tableau Building?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolTableauBuilding}"/></td>
+            </tr>
+            <tr>
+                <td>Into Coop?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolCoop}"/></td>
+            </tr>
+            <tr>
+                <td>Into Mystery?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolMystery}"/></td>
+            </tr>
+            <tr>
+                <td>Into Semi Coop?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolSemiCoop}"/></td>
+            </tr>
+            <tr>
+                <td>Into RPGs?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolPPRPG}"/></td>
+            </tr>
+            <tr>
+                <td>Into Bluffing?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolBluffing}"/></td>
+            </tr>
+            <tr>
+                <td>Into Puzzles?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolPuzzle}"/></td>
+            </tr>
+            <tr>
+                <td>Into Dexterity games?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolDexterity}"/></td>
+            </tr>
+            <tr>
+                <td>Into Party games?</td>
+                <td><h:selectBooleanCheckbox value="#{LoginBean.boolParty}"/></td>
+            </tr>
+        </table>
+        <br/>
+        <br/>
+        <h:outputText id="error" value="#{LoginBean.error}"/><br/>
+        <h:commandButton value ="Back to Login" action="Login.xhtml"/>
+        <h:commandButton value ="Sign Up" action="#{LoginBean.SignUp()}"/>
+    </p>
+</html>
+

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+                Show Over!
+            </title>
+            <h2>
+                The Show List!
+            </h2>
+            <p id="idCenterContent">
+                This is a list of the shows on Show Over.<br/>
+            </p>
+            <table id="idTableGlobalStats">
+                <!--Global Count Headers -->
+                <tr>
+                    <td>Shows</td>
+                    <td>Comedies</td>
+                    <td>Dramas</td>
+                    <td>Action Movies</td>
+                    <td>Horror Movies</td>
+                    <td>Thrillers</td>
+                    <td>Mysteries</td>
+                    <td>Documentaries</td>
+                    <td>Science Fiction Movies</td>
+                    <td>Fantasies</td>
+                    <td>Westerns</td>
+                    <td>Martial Arts Movies</td>
+                    <td>Modern</td>
+                    <td>Historic</td>
+                    <td>Prehistoric</td>
+                    <td>Comics</td>
+                    <td>Period</td>
+                </tr>
+                <!--Global Counts -->
+                <!--<c:set value="#{TargetBean.setGlobalCounts()}" var="tickle"></c:set>-->
+                <tr>
+                    <ui:repeat var="x" value="#{TargetBean.gc}" size="#{TargetBean.getGCSize()}" varStatus="myVarStatus">
+                        <td><h:outputText value="#{x[0]}" /></td>
+                    </ui:repeat>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+            <div id="idTableGlobalList">
+                <!--Celebrity Headers -->
+                <div class="classTableGlobalListHeaderRow">
+                    <span class="classTableGlobalListHeader">#</span>
+                    <span class="classTableGlobalListHeader">Name</span>
+                    <span class="classTableGlobalListHeader">Release</span>
+                    <span class="classTableGlobalListHeader">Picture</span>
+                    <span class="classTableGlobalListHeader">Genre</span>
+                    <span class="classTableGlobalListHeader">Setting</span>
+                    <span class="classTableGlobalListHeader">Ranking</span>
+                </div>
+                <!--Shows-->
+                <!--<c:set value="#{TargetBean.setGlobalList(LoginBean)}" var="tickle"></c:set>-->
+                <ui:repeat var="x" value="#{TargetBean.gl}" size="#{TargetBean.getGLSize()}" varStatus="myVarStatus">
+                    <div class="classTableGlobalListRow">
+                        <span class="classTableGlobalListRowSpanNumber"><h:outputText class="classTableGlobalListRowNumber" value="#{myVarStatus.index+1}" /></span>
+                        <span class="classTableGlobalListRowSpanName"><h:outputText class="classTableGlobalListRowName" value="#{x[0]}" /></span>
+                        <span class="classTableGlobalListRowSpanRelease"><h:outputText class="classTableGlobalListRowRelease" value="#{x[1]}" /></span>
+                        <span class="classTableGlobalListRowSpanPicture"><h:graphicImage class="classTableGlobalListRowPicture" value="#{TargetBean.path}#{TargetBean.folder}#{x[2]}" /></span>
+                        <span class="classTableGlobalListRowSpanGenre"><h:outputText class="classTableGlobalListRowGenre" value="#{x[3]}" /></span>
+                        <span class="classTableGlobalListRowSpanSetting"><h:outputText class="classTableGlobalListRowSetting" value="#{x[4]}" /></span>
+                        <span class="classTableGlobalListRowSpanRanking"><h:outputText class="classTableGlobalListRowRanking" value="#{x[5]}" /></span>
+                    </div>
+                </ui:repeat>
+            </div>
+        </c:when>
+    </c:choose>
+</html>
+

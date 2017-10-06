@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+               Watch Over!
+            </title>
+            <h2>
+                You got options!
+            </h2>
+            <p id="idCenterContent">
+                This is where you can set your options!
+                <br/>
+                Just click what you're into.
+                <table id="idTableOptions">
+                    <tr>
+                        <td>Into Comedy movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.comedyM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Drama movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.dramaM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Action movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.actionM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Horror movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.horrorM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Thriller movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.thrillerM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Mystery movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.mysteryM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Documentary movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.documentaryM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Science Fiction movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.scienceFictionM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Fantasy movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.fantasyM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Western movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.westernM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Marital Arts movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.martialArtsM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Modern movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.modernM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Historic movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.historicM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Prehistoric movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.prehistoricM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Comics movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.comicsM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Period movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.periodM}"/></td>
+                    </tr>
+                </table>
+            </p>
+            <h:commandButton  value ="Update" action='#{LoginBean.UpdateOptions()}'/>
+        </c:when>
+    </c:choose>
+</html>
+

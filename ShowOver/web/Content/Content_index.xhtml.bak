@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+                Show Over!
+            </title>
+<!--<c:set value="#{TargetBean.PullTargetPair(LoginBean.currentUser.userIndex)}" var="tickle"></c:set>-->
+            <div id="idTableCompare">
+                <div id="idTableCompareRowPictures">
+                    <div id="idTableCompareRowDataPicturesLeft">
+                        <h:commandLink action="#{TargetBean.SwapPositions(LoginBean.currentUser.userIndex,TargetBean.targetName1,TargetBean.targetName2)}"> 
+                            <h:graphicImage id="idTableCompareRowPicturesLeft" value="#{TargetBean.getpath()}#{TargetBean.getfolder()}#{TargetBean.targetURL1}" alt="#{TargetBean.targetName1}" />
+                        </h:commandLink>
+                    </div>
+                    <div id="idTableCompareRowDataPicturesRight">
+                        <h:commandLink action="#{TargetBean.SwapPositions(LoginBean.currentUser.userIndex,TargetBean.targetName2,TargetBean.targetName1)}"> 
+                            <h:graphicImage id="idTableCompareRowPicturesRight" value="#{TargetBean.getpath()}#{TargetBean.getfolder()}#{TargetBean.targetURL2}" alt="#{TargetBean.targetName2}" />
+                        </h:commandLink>
+                    </div>
+                </div>
+                <div id="idTableCompareRowNames">
+                    <div id="idTableCompareRowNamesLeft">
+                        <h:outputText value='#{TargetBean.targetName1}' />
+                    </div>
+                    <div id="idTableCompareRowNamesRight">
+                        <h:outputText value='#{TargetBean.targetName2}' />
+                    </div>
+                </div>
+                <div id="idTableCompareRowSecond">
+                    <div id="idTableCompareRowReleasesLeft">
+                        <h:outputText value='#{TargetBean.targetRelease2}' />
+                    </div>
+                    <div id="idTableCompareRowSettingsLeft">
+                        <h:outputText value='#{TargetBean.targetSetting1}' />
+                    </div>
+                    <div id="idTableCompareRowGenresLeft">
+                        <h:outputText value='#{TargetBean.targetGenre1}' />
+                    </div>
+                    <div id="idTableCompareRowReleasesRight">
+                        <h:outputText value='#{TargetBean.targetRelease1}' />
+                    </div>
+                    <div id="idTableCompareRowSettingsRight">
+                        <h:outputText value='#{TargetBean.targetSetting2}' />
+                    </div>
+                    <div id="idTableCompareRowGenresRight">
+                        <h:outputText value='#{TargetBean.targetGenre2}' />
+                    </div>
+                </div>
+                <p id="idCenterContent">
+                    Select which show you'd watch over the other.
+                </p>
+            </div>
+        </c:when>
+    </c:choose>
+</html>
+

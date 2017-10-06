@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+               Play Over!
+            </title>
+            <h2>
+                You got options!
+            </h2>
+            <p id="idCenterContent">
+                This is where you can set your options!
+                <br/>
+                Just click what you're into.
+                <table id="idTableOptions">
+                    <tr>
+                        <td>Into 2D Platformers?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.twoDP}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into 3D Platformers?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.threeDP}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into First Person Shooters?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.FPS}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into First Person Perspective?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.FPP}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Puzzles?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.VPuzzle}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Bulletstorms?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.bulletstorm}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Fighters?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.fighting}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Stealth?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.stealth}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Survival?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.survival}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Visual Novels?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.VN}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Interactive Movies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.IM}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into RPGs?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.RPG}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Tactical RPGs?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.TRPG}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Action RPGs?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.ARPG}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Sports?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.sports}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Racing?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.racing}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into RTSs?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.RTS}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Turn Based Strategies?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.TBS}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Virtual Environments?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.VE}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into MMOs?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.MMO}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Into Mobas?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.moba}"/></td>
+                    </tr>
+                </table>
+            </p>
+            <h:commandButton  value ="Update" action='#{LoginBean.UpdateOptions()}'/>
+        </c:when>
+    </c:choose>
+</html>
+

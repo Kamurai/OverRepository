@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+                Play Over!
+            </title>
+            <p id="idCenterContent">
+                This is a list of video games you've compared.
+            </p>
+            <!--<div id="idTableMyList" style="overflow-y: scroll">-->
+            <div id="idTableMyList">
+                <!--<c:set value="#{TargetBean.setPersonalList(LoginBean)}" var="tickle"></c:set>-->
+                <ui:repeat var="x" value="#{TargetBean.pl}" size="#{TargetBean.getPLSize()}" varStatus="myVarStatus" >
+                    <div class="classTableMyListRow">
+                        <span class="classTableMyListRowSpanNumber"><h:outputText class="classTableMyListRowNumber" value="#{myVarStatus.index+1}" /></span>
+                        <span class="classTableMyListRowSpanName"><h:outputText class="classTableMyListRowName" value="#{x[0]}" /></span>
+                        <span class="classTableMyListRowSpanRelease"><h:outputText class="classTableMyListRowRelease" value="#{x[1]}" /></span>
+                        <span class="classTableMyListRowSpanPlatform"><h:outputText class="classTableMyListRowPlatform" value="#{x[2]}" /></span>
+                        <span class="classTableMyListRowSpanPicture"><h:graphicImage class="classTableMyListRowPicture" value="#{TargetBean.path}#{TargetBean.folder}#{x[3]}" /></span>
+                    </div>
+                </ui:repeat>
+            </div>
+        </c:when>
+    </c:choose>
+</html>
+

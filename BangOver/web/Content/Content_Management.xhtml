@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+                Bang Over!
+            </title>
+            <h2>
+                The User List!
+            </h2>
+            <p id="idCenterContent">
+                This is a list of the users on Bang Over.<br/>
+                <table id="idTableManagementStats">
+                    <!--User Count Headers -->
+                    <tr>
+                        <td>Basic Users</td>
+                        <td>Managers</td>
+                        <td>Administrators</td>
+                        <td>Into Women</td>
+                        <td>Into Men</td>
+                        <td>Into Trans Women</td>
+                        <td>Into Trans Men</td>
+                        <td>Users Online</td>
+                    </tr>
+                    <!--User Counts -->
+                    <!--<c:set value="#{ManagementBean.setUserCounts()}" var="tickle"></c:set>-->
+                    <tr>
+                        <ui:repeat var="x" value="#{ManagementBean.uc}" size="#{ManagementBean.getUCSize()}" varStatus="myVarStatus">
+                            <td><h:outputText value="#{x[0]}" /></td>
+                        </ui:repeat>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <h:dataTable id="idTableManagementUsers" value="#{ManagementBean.dataModel}" var="user"
+                    styleClass="idTableManagementUsers"
+                    headerClass="classTableManagementHeader"
+                    rowClasses="classTableManagementRow"
+                    columnClasses="classTableManagementUsersColIndex,
+                    classTableManagementUsersColUsername,
+                    classTableManagementUsersColEmail,
+                    classTableManagementUsersColAdminLevel,
+                    classTableManagementUsersColWomen,
+                    classTableManagementUsersColMen,
+                    classTableManagementUsersColTransWomen,
+                    classTableManagementUsersColTransMen,
+                    classTableManagementUsersColOnline            
+                    ">
+                    <h:column> 
+                        <f:facet id="idTableManagementUsersColHeaderIndex" name="header">#</f:facet>
+                        #{ManagementBean.dataModel.rowIndex + 1}
+                    </h:column>
+                    <h:column>    				
+                        <f:facet id="idTableManagementUsersColHeaderUsername" name = "header">Username</f:facet>    				
+                        #{user.username}
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderEmail" name = "header">Email</f:facet>
+                        #{user.email}
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderAdminLevel" name = "header">Admin Level</f:facet>
+                        <h:selectOneMenu value="#{user.adminLevel}" onchange="submit()" valueChangeListener="#{ManagementBean.UpdateUser}" immediate="true" >
+                            <f:selectItem itemValue="2" itemLabel="Admin" />
+                            <f:selectItem itemValue="1" itemLabel="Manager"/>
+                            <f:selectItem itemValue="0" itemLabel="Basic"/>
+                        </h:selectOneMenu>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderWomen" name = "header">Into Women</f:facet>
+                        <ui:fragment rendered="#{user.women}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.women}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderMen" name = "header">Into Men</f:facet>
+                        <ui:fragment rendered="#{user.men}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.men}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderTransWomen" name = "header">Into Trans Women</f:facet>
+                        <ui:fragment rendered="#{user.transWomen}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.transWomen}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderTransMen" name = "header">Into Trans Men</f:facet>
+                        <ui:fragment rendered="#{user.transMen}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.transMen}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderLoggedOn" name = "header">Online</f:facet>
+                        <ui:fragment rendered="#{user.loggedOn}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.loggedOn}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                </h:dataTable>
+            </p>
+        </c:when>
+    </c:choose>
+</html>
+

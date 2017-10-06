@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <c:choose>
+        <c:when test="#{LoginBean.currentUser.loggedOn}">
+            <title>
+                Board Over!
+            </title>
+            <c:if test="#{LoginBean.currentUser.adminLevel > 0}">
+                <h2>
+                    Add it!
+                </h2>
+                <p id="idContentAdd">
+                    This is where you, manager, can add board games to the list!<br/>
+                    Board Game:<h:inputText id="idAddTarget2" value="#{TargetBean.strTargetToAdd}"/><br/>
+                    <h:message for="idAddTarget2"/><br/>
+                    Release year:<h:inputText id="idAddTargetRelease2" value="#{TargetBean.strReleaseToAdd}"/><br/>
+                    <h:message for="idAddTargetRelease2"/><br/>
+                    File:<h:inputFile id="idAddTargetUrl2" value="#{TargetBean.fileTargetToAdd}" /><br/>
+                    <h:message for="idAddTargetUrl2"/><br/>
+                    Genre:
+                    <h:selectOneRadio id="idRadioAddValue2" value="#{TargetBean.strValueToAdd}">
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "DeckBuilding" itemValue = "DeckBuilding" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Fixed Deck" itemValue = "FixedDeck" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Constructed Deck" itemValue = "ConstructedDeck" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Strategy" itemValue = "Strategy" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "War" itemValue = "War" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Economy" itemValue = "Economy" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Tableau Building" itemValue = "TableauBuilding" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Coop" itemValue = "Coop" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Mystery" itemValue = "Mystery" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "SemiCoop" itemValue = "SemiCoop" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "RPG" itemValue = "PPRPG" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Bluffing" itemValue = "Bluffing" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Puzzle" itemValue = "Puzzle" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Dexterity" itemValue = "Dexterity" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Party" itemValue = "Party" /> 
+                    </h:selectOneRadio>
+                    <h:message for="idRadioAddValue2"/><br/>
+                    <h:commandButton value ="Add" action="#{TargetBean.AddTarget()}"/><br/>
+                </p>
+            </c:if>
+            <h2>
+                Suggestion? Yes please!
+            </h2>
+            <p id="idContentAddSuggestion">
+                This is where you can suggest celebrities to add to the list!<br/>
+                Board game:<h:inputText id="idAddTarget1" value="#{TargetBean.strTargetToSuggest}"/><br/>
+                <h:message for="idAddTarget1"/><br/>
+                Release year:<h:inputText id="idAddTargetRelease1" value="#{TargetBean.strReleaseToSuggest}"/><br/>
+                <h:message for="idAddTargetRelease1"/><br/>
+                URL:<h:inputText id="idAddTargetUrl1" value="#{TargetBean.strURLToSuggest}"/><br/>
+                <h:message for="idAddTargetUrl1"/><br/>
+                Genre:
+                    <h:selectOneRadio id="idRadioAddValue1" value="#{TargetBean.strValueToSuggest}">
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Deck Building" itemValue = "DeckBuilding" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Fixed Deck" itemValue = "FixedDeck" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Constructed Deck" itemValue = "ConstructedDeck" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Strategy" itemValue = "Strategy" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "War" itemValue = "War" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Economy" itemValue = "Economy" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Tableau Building" itemValue = "TableauBuilding" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Coop" itemValue = "Coop" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Mystery" itemValue = "Mystery" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Semi Coop" itemValue = "SemiCoop" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "RPG" itemValue = "PPRPG" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Bluffing" itemValue = "Bluffing" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Puzzle" itemValue = "Puzzle" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Dexterity" itemValue = "Dexterity" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Party" itemValue = "Party" /> 
+                    </h:selectOneRadio>
+                <h:message for="idRadioAddValue1"/><br/>
+                <h:commandButton value ="Add" action="#{TargetBean.AddTargetSuggestion()}"/><br/>
+            </p>
+        </c:when>
+    </c:choose>
+</html>
+
