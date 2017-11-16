@@ -1,0 +1,29 @@
+Bang Over To Do List:
+
+    Add: Secure / Valid Uploads
+        no duplicates
+    
+    Secure input boxes
+        apostrophe problem
+        validate email
+        
+    Pictures:
+        Wide Logo (symbol in the middle?)
+        Create (better) tall adverts
+        
+    Error: Odd picture overlapping (Bailey Jay, Gauge)
+        Possibly because overflow is enacting instead of the widths remaining fixed.
+    
+	Error: Safari on Iphone (maybe Ipad)
+        In portrait, bad overlap with pictures
+    
+    ?My List total number
+    
+    ?Fix defaulting pages:
+        Particularly index.xhtml
+        
+    Management functions?
+        ?Add User
+    
+    
+    

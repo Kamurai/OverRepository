@@ -1,0 +1,16 @@
+Over todo list
+
+HTML: Play, Show and Watch Over
+    adjust ui for Settings and Platforms
+    change radio buttons to selection boxes where able
+
+add recording advert views and click throughs
+
+?add addfree layout option for non-compare pages
+
+
+
+Utilities:
+    The Back Up Over: writes databases to insert style .sql file
+    
+    The Over Loader: mass loader for files to Over database
