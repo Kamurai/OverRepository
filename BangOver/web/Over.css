@@ -13,7 +13,7 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 @media only screen and (max-device-width: 1024px)
- {
+{
     .parallax{
        background-image: url('../Image/main.jpg');
        min-height: 450px;
@@ -21,15 +21,10 @@
        background-position: center;
        background-repeat: no-repeat;
        background-size: cover;
-      
+    }
 }
 
-
-
-
-
-
-/* TESTING ERIC - 11/17/2017
+/* TESTING ERIC - 11/17/2017 */
 root 
 { 
     display: block;
@@ -70,7 +65,7 @@ body
     line-height: 25px;
 }
 
-/* Elements 
+/* Elements */
 a {
     font-family: Verdana, Geneva, sans-serif;
     color: #0000ff;
@@ -165,7 +160,7 @@ navlink a:hover
     color: #00aa00;
 }
 
-/* Classes 
+/* Classes */
 .navBar
 {
     width: auto;
@@ -1039,7 +1034,7 @@ navlink a:hover
 }
 
 
-/* IDs 
+/* IDs */
 #idForm
 {
     
@@ -1891,6 +1886,4 @@ navlink a:hover
     vertical-align: top;
     text-align: left;
     font-size: 7pt;
-}*/
-
-
+}
