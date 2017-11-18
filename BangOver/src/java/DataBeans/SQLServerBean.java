@@ -34,7 +34,7 @@ public class SQLServerBean
     {
         driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         //url = "jdbc:sqlserver://localhost:1433";
-        url = "jdbc:sqlserver://localhost\\SQLSERVER";
+        url = "jdbc:sqlserver://htkb.dyndns.org\\SQLSERVER";
         dbName = ";DatabaseName=TEST";
         dbUsername = "SA";
         dbPassword = "yellow23";
