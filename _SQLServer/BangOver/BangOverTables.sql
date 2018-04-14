@@ -112,7 +112,7 @@ insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Jenna Haz
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Madison Young',				'F', 'MadisonYoung.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Alexis Arquette',			'W', 'AlexisArquette.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Anna Sophia Robb',			'F', 'AnnaSophiaRobb.jpg',				0);
-insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Catlyn Jenner',				'W', 'CatlynJenner.jpg',				0);
+insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Caitlyn Jenner',				'W', 'CaitlynJenner.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Caity Lotz',					'F', 'CaityLotz.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Candice Patton',				'F', 'CandicePatton.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Candis Cayne',				'W', 'CandisCayne.jpg',					0);
