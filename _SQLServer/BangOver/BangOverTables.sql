@@ -145,7 +145,7 @@ insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Kitti Kai
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Laverne Cox',				'W', 'LaverneCox.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Leighton Meester',			'F', 'LeightonMeester.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Bianca Freire',				'W', 'BiancaFreire.jpg',				0);
-insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Lily Wachowski',				'W', 'LilyWachowski.jpg',				0);
+insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Lilly Wachowski',			'W', 'LillyWachowski.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Lizzy Caplan',				'F', 'LizzyCaplan.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Mandy Mitchell',				'W', 'MandyMitchell.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Mark Hamil',					'M', 'MarkHamil.jpg',					0);
