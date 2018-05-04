@@ -11,7 +11,7 @@
 * This is back up for the Over project test site.  The application can be used to compare targets: celebrities, movies, tv shows, video games, and board games.
 
 ## Application URL:
-Our Test Site can be found here: (http://htkb.dyndns.org)
+Our Site can be found here: (http://htkb.dyndns.org:8080/BangOver)
 
 ## Technologies Used:
 * Netbeans
