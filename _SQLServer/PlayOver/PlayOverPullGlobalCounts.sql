@@ -3,7 +3,7 @@
 create PROCEDURE PlayOverPullGlobalCounts
 AS
 BEGIN
-	select count(Indext) as retNum from VideoGames
+	select count(TargetIndex) as retNum from VideoGames
     UNION all
 	--Genres
     select count(Genre) from VideoGames where Genre = 'TwoDP'

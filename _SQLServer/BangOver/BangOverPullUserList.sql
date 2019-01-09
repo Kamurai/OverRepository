@@ -3,5 +3,5 @@
 create PROCEDURE BangOverPullUserList
 AS
 BEGIN
-	select * from Users, BangOverUsers where Users.Indext = BangOverUsers.UserIndex;
+	select * from Users JOIN BangOverUsers ON Users.UserIndex = BangOverUsers.MasterUserIndex;
 END

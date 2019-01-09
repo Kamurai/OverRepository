@@ -1,12 +1,12 @@
 drop table WatchOverAdverts, WatchOverLists, Movies, MovieRequests;
 
-create table WatchOverAdverts (Indext bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
+create table WatchOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 
-create table WatchOverLists (Indext bigint IDENTITY(0,1) PRIMARY KEY, UserIndex bigint not null, OrderRank bigint not null, MovieIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
+create table WatchOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, MasterUserIndex bigint not null, OrderRank bigint not null, MovieIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table Movies (Indext bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
+create table Movies (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
-create table MovieRequests (Indext bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
+create table MovieRequests (RequestIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
 insert into WatchOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
 insert into WatchOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');

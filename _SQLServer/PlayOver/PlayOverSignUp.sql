@@ -71,11 +71,11 @@ BEGIN
 		VALUES ( @strUsername, @strEmail, @strPasscode, 0 );
 	END
 
-	IF( (select count(*) from Users, PlayOverUsers where Username = @strUsername and Users.Indext = UserIndex) = 0)
+	IF( (select count(*) from Users JOIN PlayOverUsers ON Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
 	BEGIN
-		DECLARE @TargetUserIndex int = (select Indext from Users where Username = @strUsername);
+		DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);
 
-		INSERT INTO PlayOverUsers (UserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR)
+		INSERT INTO PlayOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR)
 		VALUES ( @TargetUserIndex, 0, 
 		--Genres
 		@bitTwoDP, 

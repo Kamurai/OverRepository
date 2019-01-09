@@ -21,11 +21,11 @@ BEGIN
 		VALUES ( @strUsername, @strEmail, @strPasscode, 0 );
 	END
 
-	if( (select count(*) from Users, BangOverUsers where Username = @strUsername and Users.Indext = UserIndex) = 0)
+	if( (select count(*) from Users JOIN BangOverUsers ON Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
 	BEGIN
-		DECLARE @TargetUserIndex int = (select Indext from Users where Username = @strUsername);
+		DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);
 
-	INSERT INTO BangOverUsers (UserIndex, LoggedOn, Women, Men, TransWomen, TransMen)
+	INSERT INTO BangOverUsers (MasterUserIndex, LoggedOn, Women, Men, TransWomen, TransMen)
 	VALUES ( @TargetUserIndex, 0, @bitWomen, @bitMen, @bitTransWomen, @bitTransMen );
 	END
 END

@@ -3,7 +3,7 @@
 create PROCEDURE ShowOverPullGlobalCounts
 AS
 BEGIN
-	select count(Indext) as retNum from Shows
+	select count(TargetIndex) as retNum from Shows
     UNION all
     select count(Genre) from Shows where Genre = 'Comedy'
     UNION all

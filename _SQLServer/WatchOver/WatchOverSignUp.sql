@@ -34,11 +34,11 @@ BEGIN
 		VALUES ( @strUsername, @strEmail, @strPasscode, 0 );
 	END
 
-	IF( (select count(*) from Users, WatchOverUsers where Username = @strUsername and Users.Indext = UserIndex) = 0)
+	IF( (select count(*) from Users JOIN WatchOverUsers ON Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
 	BEGIN
-		DECLARE @TargetUserIndex int = (select Indext from Users where Username = @strUsername);
+		DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);
 
-		INSERT INTO WatchOverUsers ( UserIndex, LoggedOn, 
+		INSERT INTO WatchOverUsers ( MasterUserIndex, LoggedOn, 
 		--Genres
 		ComedyM, 
 		DramaM, 

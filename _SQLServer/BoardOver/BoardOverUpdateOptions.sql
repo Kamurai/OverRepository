@@ -39,15 +39,15 @@ BEGIN
 	Puzzle = @bitPuzzle, 
 	Dexterity = @bitDexterity, 
 	Party = @bitParty 	
-	where BoardOverUsers.UserIndex = @intUserIndex;
+	where BoardOverUsers.MasterUserIndex = @intUserIndex;
 
-	--select * from Users where Indext = @intUserIndex;
+	--select * from Users where UserIndex = @intUserIndex;
 
 	
 	--//Adjust Personal list to match new preferences
-	delete from BoardOverLists where UserIndex = @intUserIndex and BoardGameIndex IN (
-	select BoardGames.Indext from BoardGames, BoardOverUsers where BoardOverUsers.UserIndex = @intUserIndex
-		and (
+	delete from BoardOverLists where MasterUserIndex = @intUserIndex and BoardGameIndex IN (
+	select BoardGames.TargetIndex from BoardGames JOIN BoardOverUsers 
+		ON (
 			( Genre = 'DeckBuilding'	and BoardOverUsers.DeckBuilding = 0 )		or 
 			( Genre = 'FixedDeck'		and BoardOverUsers.FixedDeck = 0 )			or 
 			( Genre = 'ConstructedDeck' and BoardOverUsers.ConstructedDeck = 0 )	or 
@@ -63,31 +63,32 @@ BEGIN
 			( Genre = 'Puzzle'			and BoardOverUsers.Puzzle = 0 )				or
 			( Genre = 'Dexterity'		and BoardOverUsers.Dexterity = 0 )			or
 			( Genre = 'Party'			and BoardOverUsers.Party = 0 ) 
-		)
+		) 
+		where BoardOverUsers.MasterUserIndex = @intUserIndex
 	);
 
-	--select * from Celebrities, BoardOverLists where Celebrities.Indext = BoardOverLists.CelebrityIndex and BoardOverLists.UserIndex = 0 order by OrderRank;
+	--select * from Celebrities, BoardOverLists where Celebrities.TargetIndex = BoardOverLists.CelebrityIndex and BoardOverLists.MasterUserIndex = 0 order by OrderRank;
 
 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumOne from BoardOverLists where UserIndex = 0; 
+	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumOne from BoardOverLists where MasterUserIndex = 0; 
 	--select * from #NumOne;
 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumTwo from BoardOverLists where UserIndex = 0; 
+	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumTwo from BoardOverLists where MasterUserIndex = 0; 
 	--select * from #NumTwo;
 
 	--//Unlock records adacent to removed records
 		--//Unlock DownLock for OrderRank+1 < 1
 		Update BoardOverLists set Downlock = 0 where 
-		Indext IN(
-			select #NumOne.Indext from #NumOne, #NumTwo where 
+		ListIndex IN(
+			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum + 1 = #NumTwo.RowNum and 
 			#NumTwo.OrderRank - #NumOne.OrderRank > 1
 		);
 		
 		--//Unlock UpLock for OrderRank-1 < 1
 		Update BoardOverLists set Uplock = 0 where 
-		Indext IN(
-			select #NumOne.Indext from #NumOne, #NumTwo where 
+		ListIndex IN(
+			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum - 1 = #NumTwo.RowNum and 
 			#NumOne.OrderRank - #NumTwo.OrderRank > 1
 		);
@@ -95,14 +96,14 @@ BEGIN
 	drop table #NumOne;
 	drop table #NumTwo;
 
-	--select * from Celebrities, BoardOverLists where Celebrities.Indext = BoardOverLists.CelebrityIndex and BoardOverLists.UserIndex = 0 order by OrderRank;
+	--select * from Celebrities, BoardOverLists where Celebrities.TargetIndex = BoardOverLists.CelebrityIndex and BoardOverLists.MasterUserIndex = 0 order by OrderRank;
 
 	--//Reorder rankings
 	With cte As
 	(
 		SELECT *,
 		ROW_NUMBER() OVER (ORDER BY OrderRank) AS RowNum
-		FROM BoardOverLists where UserIndex = @intUserIndex
+		FROM BoardOverLists where MasterUserIndex = @intUserIndex
 	)
 	UPDATE cte SET OrderRank=RowNum-1
 

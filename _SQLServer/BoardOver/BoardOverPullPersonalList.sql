@@ -6,8 +6,8 @@ create PROCEDURE BoardOverPullPersonalList
 )
 AS
 BEGIN
-	select * from BoardGames, BoardOverLists where 
-        BoardOverLists.UserIndex = @intUserIndex and BoardOverLists.BoardGameIndex = BoardGames.Indext 
+	select * from BoardGames JOIN BoardOverLists ON BoardOverLists.BoardGameIndex = BoardGames.TargetIndex 
+        WHERE BoardOverLists.MasterUserIndex = @intUserIndex
 		
     --sort by Order Ranking
     order by OrderRank        

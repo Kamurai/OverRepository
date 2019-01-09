@@ -6,8 +6,8 @@ create PROCEDURE ShowOverPullPersonalList
 )
 AS
 BEGIN
-	select * from Shows, ShowOverLists where 
-        ShowOverLists.UserIndex = @intUserIndex and ShowOverLists.ShowIndex = Shows.Indext 
+	select * from Shows JOIN ShowOverLists ON ShowOverLists.ShowIndex = Shows.TargetIndex 
+        WHERE ShowOverLists.MasterUserIndex = @intUserIndex
 		
     --sort by Order Ranking
     order by OrderRank        

@@ -33,11 +33,11 @@ BEGIN
 		VALUES ( @strUsername, @strEmail, @strPasscode, 0 );
 	END
 
-	IF( (select count(*) from Users, BoardOverUsers where Username = @strUsername and Users.Indext = UserIndex) = 0)
+	IF( (select count(*) from Users JOIN BoardOverUsers ON Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
 	BEGIN
-		DECLARE @TargetUserIndex int = (select Indext from Users where Username = @strUsername);
+		DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);
 
-		INSERT INTO BoardOverUsers (UserIndex, LoggedOn, DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
+		INSERT INTO BoardOverUsers (MasterUserIndex, LoggedOn, DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
 		VALUES ( @TargetUserIndex, 0, @bitDeckBuilding, @bitFixedDeck, @bitConstructedDeck, @bitStrategy, @bitWar, @bitEconomy, @bitTableauBuilding, @bitCoop, @bitMystery, @bitSemiCoop, @bitPPRPG, @bitBluffing, @bitPuzzle, @bitDexterity, @bitParty	 );
 	END
 END

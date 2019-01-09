@@ -3,7 +3,7 @@
 create PROCEDURE BangOverPullGlobalCounts
 AS
 BEGIN
-	select count(Indext) as retNum from celebrities
+	select count(TargetIndex) as retNum from Celebrities
     UNION all
     select count(Sex) from celebrities where Sex = 'F'
     UNION all

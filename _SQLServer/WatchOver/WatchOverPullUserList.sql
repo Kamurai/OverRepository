@@ -3,5 +3,5 @@
 create PROCEDURE WatchOverPullUserList
 AS
 BEGIN
-	select * from Users, WatchOverUsers where Users.Indext = WatchOverUsers.UserIndex;
+	select * from Users JOIN WatchOverUsers ON Users.UserIndex = WatchOverUsers.MasterUserIndex;
 END

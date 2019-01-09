@@ -13,7 +13,7 @@ BEGIN
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(UserIndex) from ShowOverLists where userindex = @intUserIndex);
+	SET @UserCount = (select count(MasterUserIndex) from ShowOverLists where userindex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
@@ -21,10 +21,10 @@ BEGIN
 		--//request count of random non-locked Shows from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(Indext) from ShowOverLists where UserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+		select count(ListIndex) from ShowOverLists where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
 		);
-		SET @GlobalExclusionCount = (select count(Shows.Indext) from Shows, ShowOverUsers
+		SET @GlobalExclusionCount = (select count(Shows.TargetIndex) from Shows, ShowOverUsers
 			where (
 				(
 					--Genres
@@ -50,10 +50,10 @@ BEGIN
 					(Setting = 'Period'			and PeriodS = 1)
 				)
 			) 
-			and ShowOverUsers.UserIndex = @intUserIndex
-			and Shows.Indext not in(
-			select Shows.Indext from Shows, ShowOverLists, ShowOverUsers
-			where ShowOverUsers.UserIndex = @intUserIndex and ShowOverLists.UserIndex = ShowOverUsers.UserIndex and ShowIndex = Shows.Indext
+			and ShowOverUsers.MasterUserIndex = @intUserIndex
+			and Shows.TargetIndex not in(
+			select Shows.TargetIndex from Shows, ShowOverLists, ShowOverUsers
+			where ShowOverUsers.MasterUserIndex = @intUserIndex and ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex and ShowIndex = Shows.TargetIndex
 			));
 	
 		--//if count is not 0 (there are some unlocked records)
@@ -63,14 +63,14 @@ BEGIN
 			IF( @GlobalExclusionCount > 0 )
 			BEGIN
 				--//request random non-locked Target from personal list
-				SET @TargetIndex = (select top 1 Indext from ShowOverLists where UserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				SET @TargetIndex = (select top 1 ListIndex from ShowOverLists where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
 			END
 			ELSE
 			BEGIN
 				--//request random non-locked Target from personal list
 					--//exclude the first and last Shows
-				SET @TargetIndex = (select top 1 Indext from ShowOverLists 
-				where UserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+				SET @TargetIndex = (select top 1 ListIndex from ShowOverLists 
+				where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 				and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
 			END
 
@@ -78,16 +78,16 @@ BEGIN
 			--//find a record to compare to the one we have
 				--//if order is 0 or equal to count
 					--//there are Shows left in the global list
-			if ( (select count(UserIndex) from ShowOverLists 
-			where (Indext = @TargetIndex and OrderRank = 0) or (Indext = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
+			if ( (select count(MasterUserIndex) from ShowOverLists 
+			where (ListIndex = @TargetIndex and OrderRank = 0) or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
 			and @GlobalExclusionCount > 0 )
 			BEGIN    
 				--//request @TargetIndex from personal list
-				select Shows.Indext, Name, Release, Picture, Genre, Setting from ShowOverLists, Shows where ShowOverLists.Indext = @TargetIndex and ShowIndex = Shows.Indext
+				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from ShowOverLists, Shows where ShowOverLists.ListIndex = @TargetIndex and ShowIndex = Shows.TargetIndex
 				UNION
 				--//request random from global list
 					--//exclude from personal list
-				select * from ( select Top 1 Shows.Indext, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers
+				select * from ( select Top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers
 				where (
 					(
 						--Genres
@@ -113,22 +113,22 @@ BEGIN
 						(Setting = 'Period'			and PeriodS = 1)
 					)
 				) 
-				and ShowOverUsers.UserIndex = @intUserIndex
-				and Shows.Indext not in(
-				select Shows.Indext from Shows, ShowOverLists, ShowOverUsers
-				where ShowOverUsers.UserIndex = @intUserIndex and ShowOverUsers.UserIndex = ShowOverUsers.UserIndex and ShowIndex = Shows.Indext
+				and ShowOverUsers.MasterUserIndex = @intUserIndex
+				and Shows.TargetIndex not in(
+				select Shows.TargetIndex from Shows, ShowOverLists, ShowOverUsers
+				where ShowOverUsers.MasterUserIndex = @intUserIndex and ShowOverUsers.MasterUserIndex = ShowOverUsers.MasterUserIndex and ShowIndex = Shows.TargetIndex
 				) order by newid() ) T1;
 			END
 			--//else we're looking for an adjacent Target from the personal list
 			ELSE
 			BEGIN
-				SET @SavedOrder = (select OrderRank from ShowOverLists where Indext = @TargetIndex);
+				SET @SavedOrder = (select OrderRank from ShowOverLists where ListIndex = @TargetIndex);
 				--//request @TargetIndex from personal list
-				select Shows.Indext, Name, Release, Picture, Genre, Setting from  Shows, ShowOverLists where ShowOverLists.Indext = @TargetIndex and ShowIndex = Shows.Indext
+				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from  Shows, ShowOverLists where ShowOverLists.ListIndex = @TargetIndex and ShowIndex = Shows.TargetIndex
 				UNION
 				--//request adjacent non-locked Target from personal list
 				select * from (
-					select top 1 Shows.Indext, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where UserIndex = @intUserIndex and Shows.Indext = ShowIndex and ( (OrderRank = @SavedOrder-1 and DownLock = 0) or (OrderRank = @SavedOrder+1 and UpLock = 0) ) order by newid()
+					select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where MasterUserIndex = @intUserIndex and Shows.TargetIndex = ShowIndex and ( (OrderRank = @SavedOrder-1 and DownLock = 0) or (OrderRank = @SavedOrder+1 and UpLock = 0) ) order by newid()
 				) T2;
 			END
 		END                    
@@ -140,12 +140,12 @@ BEGIN
 			BEGIN
 				--//request Order = 0 or Order = count from personal list
 				select * from (
-				select top 1 Shows.Indext, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where UserIndex = @intUserIndex and ShowIndex = Shows.Indext and ( OrderRank = 0 or OrderRank = @UserCount-1 )
+				select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where MasterUserIndex = @intUserIndex and ShowIndex = Shows.TargetIndex and ( OrderRank = 0 or OrderRank = @UserCount-1 )
 				order by newid() ) T3
 				UNION
 				--//request random from global list
 					--//exclude from personal list
-				select * from ( select Top 1 Shows.Indext, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers
+				select * from ( select Top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers
 				where (
 					(
 						--Genres
@@ -171,10 +171,10 @@ BEGIN
 						(Setting = 'Period'			and PeriodS = 1)
 					)
 				) 
-				and ShowOverUsers.UserIndex = @intUserIndex
-				and Shows.Indext not in(
-				select Shows.Indext from Shows, ShowOverLists, Users
-				where ShowOverUsers.UserIndex = @intUserIndex and ShowOverLists.UserIndex = ShowOverUsers.UserIndex and ShowIndex = Shows.Indext
+				and ShowOverUsers.MasterUserIndex = @intUserIndex
+				and Shows.TargetIndex not in(
+				select Shows.TargetIndex from Shows, ShowOverLists, Users
+				where ShowOverUsers.MasterUserIndex = @intUserIndex and ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex and ShowIndex = Shows.TargetIndex
 				) order by newid() ) T4;
 			END
 			ELSE
@@ -182,8 +182,8 @@ BEGIN
 				--//there are no unlocked records
 			BEGIN
 				--//return the top two records from personal list
-				select top 2 Shows.Indext, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where UserIndex = @intUserIndex
-				and ShowIndex = Shows.Indext
+				select top 2 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where MasterUserIndex = @intUserIndex
+				and ShowIndex = Shows.TargetIndex
 				and ( (OrderRank = 0) or (OrderRank = 1) );
 			END
 		END
@@ -192,7 +192,7 @@ BEGIN
 	ELSE
 	BEGIN
 		--//request 2 random Shows from global list
-		select top 2 Shows.Indext, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers where ShowOverUsers.UserIndex = @intUserIndex and 
+		select top 2 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers where ShowOverUsers.MasterUserIndex = @intUserIndex and 
 		(
 			(
 				--Genres

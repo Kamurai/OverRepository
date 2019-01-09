@@ -3,7 +3,7 @@
 create PROCEDURE BoardOverPullGlobalCounts
 AS
 BEGIN
-	select count(Indext) as retNum from BoardGames
+	select count(TargetIndex) as retNum from BoardGames
     UNION all
     select count(Genre) from BoardGames where Genre = 'DeckBuilding'
     UNION all

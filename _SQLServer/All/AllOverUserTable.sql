@@ -1,13 +1,13 @@
 --drop table Users, BangOverUsers, BoardOverUsers, PlayOverUsers, ShowOverUsers, WatchOverUsers;
 
-create table Users (Indext bigint IDENTITY(0,1) PRIMARY KEY, 
+create table Users (UserIndex bigint IDENTITY(0,1) PRIMARY KEY, 
 	Username varchar(max) not null, 
 	Passcode varchar(max) not null, 
 	Email varchar(max) not null, 
 	AdminLevel int not null);
 
-create table BangOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY, 
-	UserIndex bigint not null, 
+create table BangOverUsers (UserIndex bigint IDENTITY(0,1) PRIMARY KEY, 
+	MasterUserIndex bigint not null, 
 	LoggedOn bit not null, 
 	--Genders
 	Women bit not null, 
@@ -15,8 +15,8 @@ create table BangOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY,
 	TransWomen bit not null, 
 	TransMen bit not null);
 
-create table BoardOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY, 
-	UserIndex bigint not null, 
+create table BoardOverUsers (UserIndex bigint IDENTITY(0,1) PRIMARY KEY, 
+	MasterUserIndex bigint not null, 
 	LoggedOn bit not null, 
 	--Genres
 	DeckBuilding bit not null, 
@@ -35,8 +35,8 @@ create table BoardOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY,
 	Dexterity bit not null, 
 	Party bit not null);
 
-create table PlayOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY, 
-	UserIndex bigint not null, 
+create table PlayOverUsers (UserIndex bigint IDENTITY(0,1) PRIMARY KEY, 
+	MasterUserIndex bigint not null, 
 	LoggedOn bit not null, 
 	--Genres
 	TwoDP bit not null, 
@@ -95,8 +95,8 @@ create table PlayOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY,
 	PSVR bit not null
 	);
 
-create table ShowOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY, 
-	UserIndex bigint not null, 
+create table ShowOverUsers (UserIndex bigint IDENTITY(0,1) PRIMARY KEY, 
+	MasterUserIndex bigint not null, 
 	LoggedOn bit not null, 
 	--Genres
 	ComedyS bit not null, 
@@ -118,8 +118,8 @@ create table ShowOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY,
 	PeriodS bit not null, 
 	);
 
-create table WatchOverUsers (Indext bigint IDENTITY(0,1) PRIMARY KEY, 
-	UserIndex bigint not null, 
+create table WatchOverUsers (UserIndex bigint IDENTITY(0,1) PRIMARY KEY, 
+	MasterUserIndex bigint not null, 
 	LoggedOn bit not null, 
 	--Genres
 	ComedyM bit not null, 
@@ -149,11 +149,11 @@ INSERT INTO Users (Username, Passcode, Email, AdminLevel) VALUES ('JBaker', 'gre
 INSERT INTO Users (Username, Passcode, Email, AdminLevel) VALUES ('MBaker', 'green20', 'JonathanLBaker@hotmail.com', 0);
 
 --Kamurai
-INSERT INTO BangOverUsers (UserIndex, LoggedOn, Women, Men, TransWomen, TransMen)
+INSERT INTO BangOverUsers (MasterUserIndex, LoggedOn, Women, Men, TransWomen, TransMen)
 VALUES (0, 0, 
 --Genders
 1, 0, 1, 0);
-INSERT INTO BoardOverUsers (UserIndex, LoggedOn, DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
+INSERT INTO BoardOverUsers (MasterUserIndex, LoggedOn, DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
 VALUES (0, 0, 
 --Genres
 	1, 
@@ -172,7 +172,7 @@ VALUES (0, 0,
 	1, 
 	1
 	);
-INSERT INTO PlayOverUsers (UserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR)
+INSERT INTO PlayOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR)
 VALUES (0, 0,
 	--Genres
 	1, 
@@ -230,7 +230,7 @@ VALUES (0, 0,
 	1,
 	1
 );
-INSERT INTO ShowOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, /*Settings*/ ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
+INSERT INTO ShowOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, /*Settings*/ ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
 VALUES (0, 0, 
 	--Genres
 	1, 
@@ -251,7 +251,7 @@ VALUES (0, 0,
 	1, 
 	1
 );
-INSERT INTO WatchOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
+INSERT INTO WatchOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
 VALUES (0, 0, 
 	--Genres
 	1, 
@@ -275,50 +275,50 @@ VALUES (0, 0,
 
 
 --Aethenis
-INSERT INTO BangOverUsers (UserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
+INSERT INTO BangOverUsers (MasterUserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
 VALUES (1, 0, /*Genders*/ 1, 0, 1, 0);
-INSERT INTO BoardOverUsers (UserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
+INSERT INTO BoardOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
 VALUES (1, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO PlayOverUsers (UserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
+INSERT INTO PlayOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
 VALUES (1, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, /*Platforms*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 );
-INSERT INTO ShowOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
+INSERT INTO ShowOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
 VALUES (1, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO WatchOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
+INSERT INTO WatchOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
 VALUES (1, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 --Stevens
-INSERT INTO BangOverUsers (UserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
+INSERT INTO BangOverUsers (MasterUserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
 VALUES (2, 0, /*Genders*/ 1, 0, 0, 0);
-INSERT INTO BoardOverUsers (UserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
+INSERT INTO BoardOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
 VALUES (2, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO PlayOverUsers (UserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
+INSERT INTO PlayOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
 VALUES (2, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, /*Platforms*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 );
-INSERT INTO ShowOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
+INSERT INTO ShowOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
 VALUES (2, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO WatchOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
+INSERT INTO WatchOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
 VALUES (2, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 --JBaker
-INSERT INTO BangOverUsers (UserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
+INSERT INTO BangOverUsers (MasterUserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
 VALUES (3, 0, /*Genders*/ 1, 0, 0, 0);
-INSERT INTO BoardOverUsers (UserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
+INSERT INTO BoardOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
 VALUES (3, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO PlayOverUsers (UserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
+INSERT INTO PlayOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
 VALUES (3, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, /*Platforms*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 );
-INSERT INTO ShowOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
+INSERT INTO ShowOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
 VALUES (3, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO WatchOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
+INSERT INTO WatchOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
 VALUES (3, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 --MBaker
-INSERT INTO BangOverUsers (UserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
+INSERT INTO BangOverUsers (MasterUserIndex, LoggedOn, /*Genders*/ Women, Men, TransWomen, TransMen)
 VALUES (4, 0, /*Genders*/ 0, 1, 0, 0);
-INSERT INTO BoardOverUsers (UserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
+INSERT INTO BoardOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ DeckBuilding, FixedDeck, ConstructedDeck, Strategy, War, Economy, TableauBuilding, Coop, Mystery, SemiCoop, PPRPG, Bluffing, Puzzle, Dexterity, Party)
 VALUES (4, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO PlayOverUsers (UserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
+INSERT INTO PlayOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ TwoDP, ThreeDP, FPS, FPP, VPuzzle, Bulletstorm, Fighting, Stealth, Survival, VN, IM, RPG, TRPG, ARPG, Sports, Racing, RTS, TBS, VE, MMO, MOBA, /*Platforms*/ PC, Atari, Commodore64, FAMICOM, NES, SNES, N64, Gamecube, Wii, WiiU, NintendoSwitch, Gameboy, VirtualBoy, GBA, DS, ThreeDS, SegaGenesis, SegaCD, SegaDreamcast, PS1, PS2, PS3, PS4, PSP, PSVita, Xbox, Xbox360, XboxOne, Ouya, OculusRift, Vive, PSVR )
 VALUES (4, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, /*Platforms*/ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 );
-INSERT INTO ShowOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
+INSERT INTO ShowOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyS, DramaS, ActionS, HorrorS, ThrillerS, MysteryS, DocumentaryS,  /*Settings*/ ScienceFictionS, FantasyS, WesternS, MartialArtsS, ModernS, HistoricS, PrehistoricS, ComicsS, PeriodS)
 VALUES (4, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO WatchOverUsers (UserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
+INSERT INTO WatchOverUsers (MasterUserIndex, LoggedOn, /*Genres*/ ComedyM, DramaM, ActionM, HorrorM, ThrillerM, MysteryM, DocumentaryM, /*Settings*/ ScienceFictionM, FantasyM, WesternM, MartialArtsM, ModernM, HistoricM, PrehistoricM, ComicsM, PeriodM) 
 VALUES (4, 0, /*Genres*/ 1, 1, 1, 1, 1, 1, 1, /*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1);
 

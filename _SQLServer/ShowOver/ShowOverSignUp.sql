@@ -35,11 +35,11 @@ BEGIN
 		VALUES ( @strUsername, @strEmail, @strPasscode, 0 );
 	END
 
-	IF( (select count(*) from Users, ShowOverUsers where Username = @strUsername and Users.Indext = UserIndex) = 0)
+	IF( (select count(*) from Users JOIN ShowOverUsers ON Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
 	BEGIN
-		DECLARE @TargetUserIndex int = (select Indext from Users where Username = @strUsername);
+		DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);
 
-		INSERT INTO ShowOverUsers ( UserIndex, LoggedOn, 
+		INSERT INTO ShowOverUsers ( MasterUserIndex, LoggedOn, 
 		--Genres
 		ComedyS, 
 		DramaS, 

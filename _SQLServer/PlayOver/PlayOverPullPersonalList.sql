@@ -6,8 +6,8 @@ create PROCEDURE PlayOverPullPersonalList
 )
 AS
 BEGIN
-	select * from VideoGames, PlayOverLists where 
-        PlayOverLists.UserIndex = @intUserIndex and PlayOverLists.VideoGameIndex = VideoGames.Indext 
+	select * from VideoGames JOIN PlayOverLists ON PlayOverLists.VideoGameIndex = VideoGames.TargetIndex
+        WHERE PlayOverLists.MasterUserIndex = @intUserIndex
 		
     --sort by Order Ranking
     order by OrderRank        

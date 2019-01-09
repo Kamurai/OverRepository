@@ -3,5 +3,5 @@
 create PROCEDURE PlayOverPullUserList
 AS
 BEGIN
-	select * from Users, PlayOverUsers where Users.Indext = PlayOverUsers.UserIndex;
+	select * from Users JOIN PlayOverUsers ON Users.UserIndex = PlayOverUsers.MasterUserIndex;
 END

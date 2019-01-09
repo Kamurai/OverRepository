@@ -1,12 +1,12 @@
 drop table BoardOverAdverts, Users, BoardOverLists, BoardGames, BoardGameRequests;
 
-create table BoardOverAdverts (Indext bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
+create table BoardOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 
-create table BoardOverLists (Indext bigint IDENTITY(0,1) PRIMARY KEY, UserIndex bigint not null, OrderRank bigint not null, BoardGameIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
+create table BoardOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, MasterUserIndex bigint not null, OrderRank bigint not null, BoardGameIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table BoardGames (Indext bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
+create table BoardGames (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
-create table BoardGameRequests (Indext bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
+create table BoardGameRequests (RequestIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
 insert into BoardOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
 insert into BoardOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');

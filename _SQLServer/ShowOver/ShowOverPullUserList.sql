@@ -3,5 +3,5 @@
 create PROCEDURE ShowOverPullUserList
 AS
 BEGIN
-	select * from Users, ShowOverUsers where Users.Indext = ShowOverUsers.UserIndex;
+	select * from Users JOIN ShowOverUsers ON Users.UserIndex = ShowOverUsers.MasterUserIndex;
 END

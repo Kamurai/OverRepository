@@ -6,8 +6,8 @@ create PROCEDURE BangOverPullPersonalList
 )
 AS
 BEGIN
-	select * from Celebrities, BangOverLists where 
-        BangOverLists.UserIndex = @intUserIndex and BangOverLists.CelebrityIndex = Celebrities.Indext 
+	select * from Celebrities JOIN BangOverLists ON BangOverLists.CelebrityIndex = Celebrities.TargetIndex  
+        WHERE BangOverLists.MasterUserIndex = @intUserIndex
 		
     --sort by Order Ranking
     order by OrderRank        

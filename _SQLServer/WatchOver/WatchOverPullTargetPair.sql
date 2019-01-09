@@ -13,7 +13,7 @@ BEGIN
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(UserIndex) from WatchOverLists where userindex = @intUserIndex);
+	SET @UserCount = (select count(MasterUserIndex) from WatchOverLists where userindex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
@@ -21,10 +21,10 @@ BEGIN
 		--//request count of random non-locked Movies from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(Indext) from WatchOverLists where UserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+		select count(ListIndex) from WatchOverLists where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
 		);
-		SET @GlobalExclusionCount = (select count(Movies.Indext) from Movies, WatchOverUsers
+		SET @GlobalExclusionCount = (select count(Movies.TargetIndex) from Movies, WatchOverUsers
 			where (
 				(
 					--Genres
@@ -50,10 +50,10 @@ BEGIN
 					(Setting = 'Period'			and PeriodM = 1)
 				)
 			) 
-			and WatchOverUsers.UserIndex = @intUserIndex
-			and Movies.Indext not in(
-			select Movies.Indext from Movies, WatchOverLists, WatchOverUsers
-			where WatchOverUsers.UserIndex = @intUserIndex and WatchOverLists.UserIndex = WatchOverUsers.UserIndex and MovieIndex = Movies.Indext
+			and WatchOverUsers.MasterUserIndex = @intUserIndex
+			and Movies.TargetIndex not in(
+			select Movies.TargetIndex from Movies, WatchOverLists, WatchOverUsers
+			where WatchOverUsers.MasterUserIndex = @intUserIndex and WatchOverLists.MasterUserIndex = WatchOverUsers.MasterUserIndex and MovieIndex = Movies.TargetIndex
 			));
 	
 		--//if count is not 0 (there are some unlocked records)
@@ -63,14 +63,14 @@ BEGIN
 			IF( @GlobalExclusionCount > 0 )
 			BEGIN
 				--//request random non-locked Target from personal list
-				SET @TargetIndex = (select top 1 Indext from WatchOverLists where UserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				SET @TargetIndex = (select top 1 ListIndex from WatchOverLists where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
 			END
 			ELSE
 			BEGIN
 				--//request random non-locked Target from personal list
 					--//exclude the first and last Movies
-				SET @TargetIndex = (select top 1 Indext from WatchOverLists 
-				where UserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+				SET @TargetIndex = (select top 1 ListIndex from WatchOverLists 
+				where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 				and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
 			END
 
@@ -78,16 +78,16 @@ BEGIN
 			--//find a record to compare to the one we have
 				--//if order is 0 or equal to count
 					--//there are Movies left in the global list
-			if ( (select count(UserIndex) from WatchOverLists 
-			where (Indext = @TargetIndex and OrderRank = 0) or (Indext = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
+			if ( (select count(MasterUserIndex) from WatchOverLists 
+			where (ListIndex = @TargetIndex and OrderRank = 0) or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
 			and @GlobalExclusionCount > 0 )
 			BEGIN    
 				--//request @TargetIndex from personal list
-				select Movies.Indext, Name, Release, Picture, Genre, Setting from WatchOverLists, Movies where WatchOverLists.Indext = @TargetIndex and MovieIndex = Movies.Indext
+				select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from WatchOverLists, Movies where WatchOverLists.ListIndex = @TargetIndex and MovieIndex = Movies.TargetIndex
 				UNION
 				--//request random from global list
 					--//exclude from personal list
-				select * from ( select Top 1 Movies.Indext, Name, Release, Picture, Genre, Setting from Movies, WatchOverUsers
+				select * from ( select Top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies, WatchOverUsers
 				where (
 					(
 						--Genres
@@ -113,22 +113,22 @@ BEGIN
 						(Setting = 'Period'			and PeriodM = 1)
 					)
 				) 
-				and WatchOverUsers.UserIndex = @intUserIndex
-				and Movies.Indext not in(
-				select Movies.Indext from Movies, WatchOverLists, WatchOverUsers
-				where WatchOverUsers.UserIndex = @intUserIndex and WatchOverUsers.UserIndex = WatchOverUsers.UserIndex and MovieIndex = Movies.Indext
+				and WatchOverUsers.MasterUserIndex = @intUserIndex
+				and Movies.TargetIndex not in(
+				select Movies.TargetIndex from Movies, WatchOverLists, WatchOverUsers
+				where WatchOverUsers.MasterUserIndex = @intUserIndex and WatchOverUsers.MasterUserIndex = WatchOverUsers.MasterUserIndex and MovieIndex = Movies.TargetIndex
 				) order by newid() ) T1;
 			END
 			--//else we're looking for an adjacent Target from the personal list
 			ELSE
 			BEGIN
-				SET @SavedOrder = (select OrderRank from WatchOverLists where Indext = @TargetIndex);
+				SET @SavedOrder = (select OrderRank from WatchOverLists where ListIndex = @TargetIndex);
 				--//request @TargetIndex from personal list
-				select Movies.Indext, Name, Release, Picture, Genre, Setting from  Movies, WatchOverLists where WatchOverLists.Indext = @TargetIndex and MovieIndex = Movies.Indext
+				select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from  Movies, WatchOverLists where WatchOverLists.ListIndex = @TargetIndex and MovieIndex = Movies.TargetIndex
 				UNION
 				--//request adjacent non-locked Target from personal list
 				select * from (
-					select top 1 Movies.Indext, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where UserIndex = @intUserIndex and Movies.Indext = MovieIndex and ( (OrderRank = @SavedOrder-1 and DownLock = 0) or (OrderRank = @SavedOrder+1 and UpLock = 0) ) order by newid()
+					select top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where MasterUserIndex = @intUserIndex and Movies.TargetIndex = MovieIndex and ( (OrderRank = @SavedOrder-1 and DownLock = 0) or (OrderRank = @SavedOrder+1 and UpLock = 0) ) order by newid()
 				) T2;
 			END
 		END                    
@@ -140,12 +140,12 @@ BEGIN
 			BEGIN
 				--//request Order = 0 or Order = count from personal list
 				select * from (
-				select top 1 Movies.Indext, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where UserIndex = @intUserIndex and MovieIndex = Movies.Indext and ( OrderRank = 0 or OrderRank = @UserCount-1 )
+				select top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where MasterUserIndex = @intUserIndex and MovieIndex = Movies.TargetIndex and ( OrderRank = 0 or OrderRank = @UserCount-1 )
 				order by newid() ) T3
 				UNION
 				--//request random from global list
 					--//exclude from personal list
-				select * from ( select Top 1 Movies.Indext, Name, Release, Picture, Genre, Setting from Movies, WatchOverUsers
+				select * from ( select Top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies, WatchOverUsers
 				where (
 					(
 						--Genres
@@ -171,10 +171,10 @@ BEGIN
 						(Setting = 'Period'			and PeriodM = 1)
 					)
 				) 
-				and WatchOverUsers.UserIndex = @intUserIndex
-				and Movies.Indext not in(
-				select Movies.Indext from Movies, WatchOverLists, Users
-				where WatchOverUsers.UserIndex = @intUserIndex and WatchOverLists.UserIndex = WatchOverUsers.UserIndex and MovieIndex = Movies.Indext
+				and WatchOverUsers.MasterUserIndex = @intUserIndex
+				and Movies.TargetIndex not in(
+				select Movies.TargetIndex from Movies, WatchOverLists, Users
+				where WatchOverUsers.MasterUserIndex = @intUserIndex and WatchOverLists.MasterUserIndex = WatchOverUsers.MasterUserIndex and MovieIndex = Movies.TargetIndex
 				) order by newid() ) T4;
 			END
 			ELSE
@@ -182,8 +182,8 @@ BEGIN
 				--//there are no unlocked records
 			BEGIN
 				--//return the top two records from personal list
-				select top 2 Movies.Indext, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where UserIndex = @intUserIndex
-				and MovieIndex = Movies.Indext
+				select top 2 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where MasterUserIndex = @intUserIndex
+				and MovieIndex = Movies.TargetIndex
 				and ( (OrderRank = 0) or (OrderRank = 1) );
 			END
 		END
@@ -192,7 +192,7 @@ BEGIN
 	ELSE
 	BEGIN
 		--//request 2 random Movies from global list
-		select top 2 Movies.Indext, Name, Picture, Release, Genre, Setting from Movies, WatchOverUsers where WatchOverUsers.UserIndex = @intUserIndex and 
+		select top 2 Movies.TargetIndex, Name, Picture, Release, Genre, Setting from Movies, WatchOverUsers where WatchOverUsers.MasterUserIndex = @intUserIndex and 
 		(
 			(
 				--Genres

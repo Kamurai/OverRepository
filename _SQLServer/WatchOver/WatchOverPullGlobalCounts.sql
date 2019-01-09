@@ -3,7 +3,7 @@
 create PROCEDURE WatchOverPullGlobalCounts
 AS
 BEGIN
-	select count(Indext) as retNum from Movies
+	select count(TargetIndex) as retNum from Movies
     UNION all
     select count(Genre) from Movies where Genre = 'Comedy'
     UNION all
