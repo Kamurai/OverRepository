@@ -136,7 +136,8 @@ BEGIN
 					select top 1 BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames
 					JOIN BoardOverLists ON
 						BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
-					where MasterUserIndex = @intUserIndex and 
+					where MasterUserIndex = @intUserIndex 
+					and 
 					(
 						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
 						(OrderRank = @SavedOrder+1 and UpLock = 0) 
@@ -155,7 +156,8 @@ BEGIN
 					select top 1 BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames
 					JOIN BoardOverLists ON
 						BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
-					where MasterUserIndex = @intUserIndex and 
+					where MasterUserIndex = @intUserIndex 
+					and 
 						( OrderRank = 0 or OrderRank = @UserCount-1 )
 					order by newid() 
 				) T3

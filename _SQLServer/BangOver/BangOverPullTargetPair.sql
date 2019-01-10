@@ -114,7 +114,8 @@ BEGIN
 					select top 1 Celebrities.TargetIndex, Name, Sex, Picture from Celebrities
 					JOIN BangOverLists ON 
 						Celebrities.TargetIndex = BangOverLists.CelebrityIndex
-					where MasterUserIndex = @intUserIndex and 
+					where MasterUserIndex = @intUserIndex 
+					and 
 					(
 						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
 						(OrderRank = @SavedOrder+1 and UpLock = 0) 
@@ -133,7 +134,8 @@ BEGIN
 					select top 1 Celebrities.TargetIndex, Name, Sex, Picture from Celebrities 
 					JOIN BangOverLists ON 
 						Celebrities.TargetIndex = BangOverLists.CelebrityIndex
-					where MasterUserIndex = @intUserIndex and
+					where MasterUserIndex = @intUserIndex 
+					and
 						( OrderRank = 0 or OrderRank = @UserCount-1 )
 					order by newid() 
 				) T3

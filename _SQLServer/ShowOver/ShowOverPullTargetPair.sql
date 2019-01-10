@@ -24,8 +24,9 @@ BEGIN
 		select count(ListIndex) from ShowOverLists where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
 		);
-		SET @GlobalExclusionCount = (select count(Shows.TargetIndex) from Shows, ShowOverUsers
-			where (
+		SET @GlobalExclusionCount = (select count(Shows.TargetIndex) from Shows
+			JOIN ShowOverUsers ON
+			(
 				(
 					--Genres
 					(Genre = 'Comedy'			and ComedyS = 1)			or 
@@ -50,11 +51,16 @@ BEGIN
 					(Setting = 'Period'			and PeriodS = 1)
 				)
 			) 
-			and ShowOverUsers.MasterUserIndex = @intUserIndex
+			WHERE ShowOverUsers.MasterUserIndex = @intUserIndex
 			and Shows.TargetIndex not in(
-			select Shows.TargetIndex from Shows, ShowOverLists, ShowOverUsers
-			where ShowOverUsers.MasterUserIndex = @intUserIndex and ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex and ShowIndex = Shows.TargetIndex
-			));
+				select Shows.TargetIndex from Shows
+				JOIN ShowOverLists ON
+					Shows.TargetIndex = ShowOverLists.ShowIndex
+				JOIN ShowOverUsers ON
+					ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex
+				where ShowOverUsers.MasterUserIndex = @intUserIndex
+			)
+		);
 	
 		--//if count is not 0 (there are some unlocked records)
 		if( @OrderCount != 0 )
@@ -83,52 +89,73 @@ BEGIN
 			and @GlobalExclusionCount > 0 )
 			BEGIN    
 				--//request @TargetIndex from personal list
-				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from ShowOverLists, Shows where ShowOverLists.ListIndex = @TargetIndex and ShowIndex = Shows.TargetIndex
+				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from ShowOverLists
+				JOIN Shows ON
+					ShowOverLists.ShowIndex = Shows.TargetIndex
+				where ShowOverLists.ListIndex = @TargetIndex 
 				UNION
 				--//request random from global list
 					--//exclude from personal list
-				select * from ( select Top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers
-				where (
-					(
-						--Genres
-						(Genre = 'Comedy'			and ComedyS = 1)			or 
-						(Genre = 'Drama'			and DramaS = 1)				or 
-						(Genre = 'Action'			and ActionS = 1)			or 
-						(Genre = 'Horror'			and HorrorS = 1)			or 
-						(Genre = 'Thriller'			and ThrillerS = 1)			or 
-						(Genre = 'Mystery'			and MysteryS = 1)			or 
-						(Genre = 'Documentary'		and DocumentaryS = 1) 
-					)
-					and
-					(
-						--Settings
-						(Setting = 'ScienceFiction'	and ScienceFictionS = 1)	or 
-						(Setting = 'Fantasy'		and FantasyS = 1)			or 
-						(Setting = 'Western'		and WesternS = 1)			or 
-						(Setting = 'MartialArts'	and MartialArtsS = 1)		or 
-						(Setting = 'Modern'			and ModernS = 1)			or 
-						(Setting = 'Historic'		and HistoricS = 1)			or 
-						(Setting = 'PreHistoric'	and PreHistoricS = 1)		or 
-						(Setting = 'Comics'			and ComicsS = 1)			or 
-						(Setting = 'Period'			and PeriodS = 1)
-					)
-				) 
-				and ShowOverUsers.MasterUserIndex = @intUserIndex
-				and Shows.TargetIndex not in(
-				select Shows.TargetIndex from Shows, ShowOverLists, ShowOverUsers
-				where ShowOverUsers.MasterUserIndex = @intUserIndex and ShowOverUsers.MasterUserIndex = ShowOverUsers.MasterUserIndex and ShowIndex = Shows.TargetIndex
-				) order by newid() ) T1;
+				select * from ( 
+					select Top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
+					JOIN ShowOverUsers ON
+						(
+							(
+								--Genres
+								(Genre = 'Comedy'			and ComedyS = 1)			or 
+								(Genre = 'Drama'			and DramaS = 1)				or 
+								(Genre = 'Action'			and ActionS = 1)			or 
+								(Genre = 'Horror'			and HorrorS = 1)			or 
+								(Genre = 'Thriller'			and ThrillerS = 1)			or 
+								(Genre = 'Mystery'			and MysteryS = 1)			or 
+								(Genre = 'Documentary'		and DocumentaryS = 1) 
+							)
+							and
+							(
+								--Settings
+								(Setting = 'ScienceFiction'	and ScienceFictionS = 1)	or 
+								(Setting = 'Fantasy'		and FantasyS = 1)			or 
+								(Setting = 'Western'		and WesternS = 1)			or 
+								(Setting = 'MartialArts'	and MartialArtsS = 1)		or 
+								(Setting = 'Modern'			and ModernS = 1)			or 
+								(Setting = 'Historic'		and HistoricS = 1)			or 
+								(Setting = 'PreHistoric'	and PreHistoricS = 1)		or 
+								(Setting = 'Comics'			and ComicsS = 1)			or 
+								(Setting = 'Period'			and PeriodS = 1)
+							)
+						) 
+					WHERE ShowOverUsers.MasterUserIndex = @intUserIndex
+					and Shows.TargetIndex not in(
+						select Shows.TargetIndex from Shows
+						JOIN ShowOverLists ON
+							Shows.TargetIndex = ShowOverLists.ShowIndex
+						JOIN ShowOverUsers ON
+							ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex
+						where ShowOverUsers.MasterUserIndex = @intUserIndex
+					) order by newid() 
+				) T1;
 			END
 			--//else we're looking for an adjacent Target from the personal list
 			ELSE
 			BEGIN
 				SET @SavedOrder = (select OrderRank from ShowOverLists where ListIndex = @TargetIndex);
 				--//request @TargetIndex from personal list
-				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from  Shows, ShowOverLists where ShowOverLists.ListIndex = @TargetIndex and ShowIndex = Shows.TargetIndex
+				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from  Shows
+				JOIN ShowOverLists ON
+					Shows.TargetIndex = ShowOverLists.ShowIndex
+				where ShowOverLists.ListIndex = @TargetIndex
 				UNION
 				--//request adjacent non-locked Target from personal list
 				select * from (
-					select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where MasterUserIndex = @intUserIndex and Shows.TargetIndex = ShowIndex and ( (OrderRank = @SavedOrder-1 and DownLock = 0) or (OrderRank = @SavedOrder+1 and UpLock = 0) ) order by newid()
+					select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
+					JOIN ShowOverLists ON
+						Shows.TargetIndex = ShowOverLists.ShowIndex
+					where MasterUserIndex = @intUserIndex 
+					and
+					( 
+						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
+						(OrderRank = @SavedOrder+1 and UpLock = 0) 
+					) order by newid()
 				) T2;
 			END
 		END                    
@@ -140,50 +167,65 @@ BEGIN
 			BEGIN
 				--//request Order = 0 or Order = count from personal list
 				select * from (
-				select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where MasterUserIndex = @intUserIndex and ShowIndex = Shows.TargetIndex and ( OrderRank = 0 or OrderRank = @UserCount-1 )
-				order by newid() ) T3
+					select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
+					JOIN ShowOverLists ON
+						Shows.TargetIndex = ShowOverLists.ShowIndex
+					where MasterUserIndex = @intUserIndex 
+					and 
+						( OrderRank = 0 or OrderRank = @UserCount-1 )
+					order by newid() 
+				) T3
 				UNION
 				--//request random from global list
 					--//exclude from personal list
-				select * from ( select Top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers
-				where (
+				select * from ( 
+					select Top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
+					JOIN ShowOverUsers ON
 					(
-						--Genres
-						(Genre = 'Comedy'			and ComedyS = 1)			or 
-						(Genre = 'Drama'			and DramaS = 1)				or 
-						(Genre = 'Action'			and ActionS = 1)			or 
-						(Genre = 'Horror'			and HorrorS = 1)			or 
-						(Genre = 'Thriller'			and ThrillerS = 1)			or 
-						(Genre = 'Mystery'			and MysteryS = 1)			or 
-						(Genre = 'Documentary'		and DocumentaryS = 1) 
-					)
-					and
-					(
-						--Settings
-						(Setting = 'ScienceFiction'	and ScienceFictionS = 1)	or 
-						(Setting = 'Fantasy'		and FantasyS = 1)			or 
-						(Setting = 'Western'		and WesternS = 1)			or 
-						(Setting = 'MartialArts'	and MartialArtsS = 1)		or 
-						(Setting = 'Modern'			and ModernS = 1)			or 
-						(Setting = 'Historic'		and HistoricS = 1)			or 
-						(Setting = 'PreHistoric'	and PreHistoricS = 1)		or 
-						(Setting = 'Comics'			and ComicsS = 1)			or 
-						(Setting = 'Period'			and PeriodS = 1)
-					)
-				) 
-				and ShowOverUsers.MasterUserIndex = @intUserIndex
-				and Shows.TargetIndex not in(
-				select Shows.TargetIndex from Shows, ShowOverLists, Users
-				where ShowOverUsers.MasterUserIndex = @intUserIndex and ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex and ShowIndex = Shows.TargetIndex
-				) order by newid() ) T4;
+						(
+							--Genres
+							(Genre = 'Comedy'			and ComedyS = 1)			or 
+							(Genre = 'Drama'			and DramaS = 1)				or 
+							(Genre = 'Action'			and ActionS = 1)			or 
+							(Genre = 'Horror'			and HorrorS = 1)			or 
+							(Genre = 'Thriller'			and ThrillerS = 1)			or 
+							(Genre = 'Mystery'			and MysteryS = 1)			or 
+							(Genre = 'Documentary'		and DocumentaryS = 1) 
+						)
+						and
+						(
+							--Settings
+							(Setting = 'ScienceFiction'	and ScienceFictionS = 1)	or 
+							(Setting = 'Fantasy'		and FantasyS = 1)			or 
+							(Setting = 'Western'		and WesternS = 1)			or 
+							(Setting = 'MartialArts'	and MartialArtsS = 1)		or 
+							(Setting = 'Modern'			and ModernS = 1)			or 
+							(Setting = 'Historic'		and HistoricS = 1)			or 
+							(Setting = 'PreHistoric'	and PreHistoricS = 1)		or 
+							(Setting = 'Comics'			and ComicsS = 1)			or 
+							(Setting = 'Period'			and PeriodS = 1)
+						)
+					) 
+					WHERE ShowOverUsers.MasterUserIndex = @intUserIndex
+					and Shows.TargetIndex not in(
+						select Shows.TargetIndex from Shows
+						JOIN ShowOverLists ON
+							Shows.TargetIndex = ShowOverLists.ShowIndex
+						JOIN ShowOverUsers ON
+							ShowOverLists.MasterUserIndex = ShowOverUsers.MasterUserIndex
+						where ShowOverUsers.MasterUserIndex = @intUserIndex
+					) order by newid() 
+				) T4;
 			END
 			ELSE
 			--//there are no selections left in the global list
 				--//there are no unlocked records
 			BEGIN
 				--//return the top two records from personal list
-				select top 2 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverLists where MasterUserIndex = @intUserIndex
-				and ShowIndex = Shows.TargetIndex
+				select top 2 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
+				JOIN ShowOverLists ON
+					Shows.TargetIndex = ShowOverLists.ShowIndex
+				where MasterUserIndex = @intUserIndex
 				and ( (OrderRank = 0) or (OrderRank = 1) );
 			END
 		END
@@ -192,7 +234,8 @@ BEGIN
 	ELSE
 	BEGIN
 		--//request 2 random Shows from global list
-		select top 2 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows, ShowOverUsers where ShowOverUsers.MasterUserIndex = @intUserIndex and 
+		select top 2 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
+		JOIN ShowOverUsers ON		
 		(
 			(
 				--Genres
@@ -217,7 +260,8 @@ BEGIN
 				(Setting = 'Comics'			and ComicsS = 1)			or 
 				(Setting = 'Period'			and PeriodS = 1)
 			)
-		) order by newid();
+		) 
+		where ShowOverUsers.MasterUserIndex = @intUserIndex order by newid();
 	END
 
 END

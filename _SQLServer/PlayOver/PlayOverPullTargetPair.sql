@@ -124,7 +124,10 @@ BEGIN
 			and @GlobalExclusionCount > 0 )
 			BEGIN    
 				--//request @TargetIndex from personal list
-				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from PlayOverLists, VideoGames where PlayOverLists.ListIndex = @TargetIndex and VideoGameIndex = VideoGames.TargetIndex
+				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from PlayOverLists
+				JOIN VideoGames ON
+					PlayOverLists.VideoGameIndex = VideoGames.TargetIndex
+				where PlayOverLists.ListIndex = @TargetIndex
 				UNION
 				--//request random from global list
 					--//exclude from personal list
@@ -216,8 +219,9 @@ BEGIN
 				select * from (
 					select top 1 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
 					JOIN PlayOverLists ON
-						VideoGames.TargetIndex = VideoGameIndex
-					where MasterUserIndex = @intUserIndex and 
+						VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
+					where MasterUserIndex = @intUserIndex 
+					and 
 					(
 						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
 						(OrderRank = @SavedOrder+1 and UpLock = 0) 
@@ -236,7 +240,8 @@ BEGIN
 					select top 1 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
 					JOIN PlayOverLists ON
 						VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-					where MasterUserIndex = @intUserIndex and 
+					where MasterUserIndex = @intUserIndex 
+					and 
 						( OrderRank = 0 or OrderRank = @UserCount-1 )
 					order by newid() 
 				) T3
