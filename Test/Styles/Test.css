@@ -1,0 +1,863 @@
+/*Testing for 1600 x 900 pixel screens*/
+
+/** Elements **/
+root { 
+    display: block;
+}
+
+body{
+    border: 0px solid #FE0101;
+        
+    text-align: center;
+    vertical-align: top;
+    color: #ffffff;
+    background-color: #aaaaaa;
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 100%;
+    line-height: 25px;
+}
+
+a {
+	color: #0000ff;
+	text-decoration: underline;
+}
+
+a:hover {
+    color: #00aa00;
+}
+
+h1 {
+    font-size: 175%;
+    color: #0000ff;
+}
+
+h2 {
+    font-size: 150%;
+    color: #0000ff;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 130%;
+    color: #0000ff;
+    text-align: center;
+}
+
+h4 {
+    font-size: 120%;
+    text-align: center;
+    color: #bbbbbb;
+    background-color: #0000ff;
+}
+
+h5{
+    font-size: 80%;
+    color: #0000ff;
+    text-align: left;
+    padding-left: 15px;
+}
+
+h6{
+    font-size: 70%;
+    color: #0000ff;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/** Classes **/
+.navBar{
+    width: auto;
+    
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+.navBar a{
+    display: block;
+    color: #0000ff;
+}
+
+/** IDs **/
+#idGeneralLayout{
+    background-color: #000000;
+    border-collapse: collapse;
+}
+
+#idHeaderRow{
+    border: 0px solid #e9f413;
+}
+
+#idLogo{
+    border: 0px solid #FE0101;
+    
+    margin: auto;
+    display: block;
+}
+
+#idNavigationRow{
+    border: 0px solid #e9f413;
+	
+	text-align: left;
+}
+
+#idNavForm{
+    border: 0px solid #FE0101;	
+}
+
+#idCenterRow{
+    border: 0px solid #e9f413;
+    
+    margin: 0px;
+    padding: 0px;
+	display: table-row;
+}
+
+#idCenterRowLeft{
+    border: 0px solid #13ecf4;
+    
+    margin: 0px;
+    padding: 0px;
+	display: table-cell;
+}
+
+#idAdvertLeft{
+    object-fit: fill;
+    -o-object-fit: fill;
+    -moz-object-fit: fill;
+    
+    margin: auto;
+    display: block;
+}
+
+#idCenterRowMain{
+    border: 0px solid #13ecf4;
+    
+	margin: 0px;
+    padding: 0px;
+	vertical-align: top;
+	display: table-cell;
+}
+
+#idCenterContent{
+    border: 0px solid #FE0101;
+    
+    color: #ffffff;
+}
+
+#idCenterRowRight{
+    border: 0px solid #13ecf4;
+    
+	margin: 0px;
+    padding: 0px;
+	display: table-cell;
+}
+
+#idAdvertRight{
+    object-fit: fill;
+    -o-object-fit: fill;
+    -moz-object-fit: fill;
+    
+    margin: auto;
+    display: block;
+}
+
+#idFooterRow{
+    border: 0px solid #e9f413;
+    
+	color: #ffffff;
+}
+
+#idFooterContent{
+	border: 0px solid #FE0101;
+    
+	font-size: 10pt;
+}
+
+#idFooterManagement{
+    border: 0px solid #FE0101;
+    
+	text-align: left;
+    font-size: 7pt;
+}
+
+/** Media Queries **/
+
+/* 352 x 240 */
+@media screen and (min-width: 352px) , screen and (min-height: 240px){
+	/** Elements **/
+	body{ width: 352px; height: 240px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 352px; 	height: 240px;	}
+	#idHeaderRow		{ width: 352px; 	height: 36px;	}
+	#idLogo				{ width: 352px; 	height: 36px;	}
+	#idNavigationRow	{ width: 352px; 	height: 7.2px;	}
+	#idNavForm			{ width: 352px; 	height: 7.2px;	}
+	#idCenterRow		{ width: 352px; 	height: 180px;	}
+	#idCenterRowLeft	{ width: 52.8px;  	height: 180px;	}
+	#idAdvertLeft		{ width: 52.8px; 	height: 180px;	}
+	#idCenterRowMain	{ width: 246.4px;	height: 180px;	}
+	#idCenterContent	{ width: 246.4px;	height: 180px;	}
+	#idForm				{ width: 246.4px;	height: 180px;	}
+	#idCenterRowRight	{ width: 52.8px;	height: 180px;	}
+	#idAdvertRight		{ width: 52.8px;	height: 180px;	}
+	#idFooterRow		{ width: 352px;		height: 16.8px;	}
+	#idFooterContent	{ width: 352px;		height: 9.6px;	}
+	#idFooterManagement	{ width: 352px;		height: 7.2px;	}
+}
+
+/* 480 x 360 */
+@media screen and (min-width: 480px) , screen and (min-height: 360px){
+	/** Elements **/
+	body{ width: 480px; height: 360px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 480px; 	height: 360px;	}
+	#idHeaderRow		{ width: 480px; 	height: 54px;	}
+	#idLogo				{ width: 480px; 	height: 54px;	}
+	#idNavigationRow	{ width: 480px; 	height: 10.8px;	}
+	#idNavForm			{ width: 480px; 	height: 10.8px;	}
+	#idCenterRow		{ width: 480px; 	height: 270px;	}
+	#idCenterRowLeft	{ width: 72px;  	height: 270px;	}
+	#idAdvertLeft		{ width: 72px; 		height: 270px;	}
+	#idCenterRowMain	{ width: 336px;		height: 270px;	}
+	#idCenterContent	{ width: 336px;		height: 270px;	}
+	#idForm				{ width: 336px;		height: 270px;	}
+	#idCenterRowRight	{ width: 72px;		height: 270px;	}
+	#idAdvertRight		{ width: 72px;		height: 270px;	}
+	#idFooterRow		{ width: 480px;		height: 25.2px;	}
+	#idFooterContent	{ width: 480px;		height: 14.4px;	}
+	#idFooterManagement	{ width: 480px;		height: 10.8px;	}
+}
+
+/* 720 x 480 */
+@media screen and (min-width: 720px) , screen and (min-height: 480px){
+	/** Elements **/
+	body{ width: 720px; height: 480px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 720px; 	height: 480px;	}
+	#idHeaderRow		{ width: 720px; 	height: 72px;	}
+	#idLogo				{ width: 720px; 	height: 72px;	}
+	#idNavigationRow	{ width: 720px; 	height: 14.4px;	}
+	#idNavForm			{ width: 720px; 	height: 14.4px;	}
+	#idCenterRow		{ width: 720px; 	height: 360px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 360px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 360px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 360px;	}
+	#idCenterContent	{ width: 1120px;	height: 360px;	}
+	#idForm				{ width: 1120px;	height: 360px;	}
+	#idCenterRowRight	{ width: 240px;		height: 360px;	}
+	#idAdvertRight		{ width: 240px;		height: 360px;	}
+	#idFooterRow		{ width: 720px;		height: 33.6px;	}
+	#idFooterContent	{ width: 720px;		height: 19.2px;	}
+	#idFooterManagement	{ width: 720px;		height: 14.4px;	}
+}
+
+/* 720 x 576 */
+@media screen and (min-width: 720px) , screen and (min-height: 576px){
+	/** Elements **/
+	body{ width: 720px; height: 576px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 720px; 	height: 576px;	}
+	#idHeaderRow		{ width: 720px; 	height: 86.4px;	}
+	#idLogo				{ width: 720px; 	height: 86.4px;	}
+	#idNavigationRow	{ width: 720px; 	height: 17.28px;}
+	#idNavForm			{ width: 720px; 	height: 17.28px;}
+	#idCenterRow		{ width: 720px; 	height: 432px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 432px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 432px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 432px;	}
+	#idCenterContent	{ width: 1120px;	height: 432px;	}
+	#idForm				{ width: 1120px;	height: 432px;	}
+	#idCenterRowRight	{ width: 240px;		height: 432px;	}
+	#idAdvertRight		{ width: 240px;		height: 432px;	}
+	#idFooterRow		{ width: 720px;		height: 40.32px;}
+	#idFooterContent	{ width: 720px;		height: 23.04px;}
+	#idFooterManagement	{ width: 720px;		height: 17.28px;}
+}
+
+/* 800 x 600 */
+@media screen and (min-width: 800px) , screen and (min-height: 600px){
+	/** Elements **/
+	body{ width: 800px; height: 600px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 800px; 	height: 600px;	}
+	#idHeaderRow		{ width: 800px; 	height: 90px;	}
+	#idLogo				{ width: 800px; 	height: 90px;	}
+	#idNavigationRow	{ width: 800px; 	height: 18px;	}
+	#idNavForm			{ width: 800px; 	height: 18px;	}
+	#idCenterRow		{ width: 800px; 	height: 450px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 450px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 450px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 450px;	}
+	#idCenterContent	{ width: 1120px;	height: 450px;	}
+	#idForm				{ width: 1120px;	height: 450px;	}
+	#idCenterRowRight	{ width: 240px;		height: 450px;	}
+	#idAdvertRight		{ width: 240px;		height: 450px;	}
+	#idFooterRow		{ width: 800px;		height: 42px;	}
+	#idFooterContent	{ width: 800px;		height: 24px;	}
+	#idFooterManagement	{ width: 800px;		height: 18px;	}
+}
+
+/* 858 x 480 */
+@media screen and (min-width: 858px) , screen and (min-height: 480px){
+	/** Elements **/
+	body{ width: 858px; height: 480px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 858px; 	height: 480px;	}
+	#idHeaderRow		{ width: 858px; 	height: 72px;	}
+	#idLogo				{ width: 858px; 	height: 72px;	}
+	#idNavigationRow	{ width: 858px; 	height: 14.4px;	}
+	#idNavForm			{ width: 858px; 	height: 14.4px;	}
+	#idCenterRow		{ width: 858px; 	height: 360px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 360px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 360px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 360px;	}
+	#idCenterContent	{ width: 1120px;	height: 360px;	}
+	#idForm				{ width: 1120px;	height: 360px;	}
+	#idCenterRowRight	{ width: 240px;		height: 360px;	}
+	#idAdvertRight		{ width: 240px;		height: 360px;	}
+	#idFooterRow		{ width: 858px;		height: 33.6px;	}
+	#idFooterContent	{ width: 858px;		height: 19.2px;	}
+	#idFooterManagement	{ width: 858px;		height: 14.4px;	}
+}
+
+/* 1024 x 768 */
+@media screen and (min-width: 1024px) , screen and (min-height: 768px){
+	/** Elements **/
+	body{ width: 1024px; height: 768px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1024px; 	height: 768px;	}
+	#idHeaderRow		{ width: 1024px; 	height: 115.2px;}
+	#idLogo				{ width: 1024px; 	height: 115.2px;}
+	#idNavigationRow	{ width: 1024px; 	height: 23.04px;}
+	#idNavForm			{ width: 1024px; 	height: 23.04px;}
+	#idCenterRow		{ width: 1024px; 	height: 576px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 576px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 576px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 576px;	}
+	#idCenterContent	{ width: 1120px;	height: 576px;	}
+	#idForm				{ width: 1120px;	height: 576px;	}
+	#idCenterRowRight	{ width: 240px;		height: 576px;	}
+	#idAdvertRight		{ width: 240px;		height: 576px;	}
+	#idFooterRow		{ width: 1024px;	height: 53.76px;}
+	#idFooterContent	{ width: 1024px;	height: 30.72px;}
+	#idFooterManagement	{ width: 1024px;	height: 23.04px;}
+}
+
+/* 1152 x 864 */
+@media screen and (min-width: 1152px) , screen and (min-height: 864px){
+	/** Elements **/
+	body{ width: 1152px; height: 864px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1152px; 	height: 864px;	}
+	#idHeaderRow		{ width: 1152px; 	height: 129.6px;}
+	#idLogo				{ width: 1152px; 	height: 129.6px;}
+	#idNavigationRow	{ width: 1152px; 	height: 25.92px;}
+	#idNavForm			{ width: 1152px; 	height: 25.92px;}
+	#idCenterRow		{ width: 1152px; 	height: 648px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 648px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 648px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 648px;	}
+	#idCenterContent	{ width: 1120px;	height: 648px;	}
+	#idForm				{ width: 1120px;	height: 648px;	}
+	#idCenterRowRight	{ width: 240px;		height: 648px;	}
+	#idAdvertRight		{ width: 240px;		height: 648px;	}
+	#idFooterRow		{ width: 1152px;	height: 60.48px;}
+	#idFooterContent	{ width: 1152px;	height: 34.56px;}
+	#idFooterManagement	{ width: 1152px;	height: 25.92px;}
+}
+
+/* 1280 x 720 */
+@media screen and (min-width: 1280px) , screen and (min-height: 720px){
+	/** Elements **/
+	body{ width: 1280px; height: 720px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1280px; 	height: 720px;	}
+	#idHeaderRow		{ width: 1280px; 	height: 108px;	}
+	#idLogo				{ width: 1280px; 	height: 108px;	}
+	#idNavigationRow	{ width: 1280px; 	height: 21.6px;	}
+	#idNavForm			{ width: 1280px; 	height: 21.6px;	}
+	#idCenterRow		{ width: 1280px; 	height: 540px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 540px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 540px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 540px;	}
+	#idCenterContent	{ width: 1120px;	height: 540px;	}
+	#idForm				{ width: 1120px;	height: 540px;	}
+	#idCenterRowRight	{ width: 240px;		height: 540px;	}
+	#idAdvertRight		{ width: 240px;		height: 540px;	}
+	#idFooterRow		{ width: 1280px;	height: 50.4px;	}
+	#idFooterContent	{ width: 1280px;	height: 28.8px;	}
+	#idFooterManagement	{ width: 1280px;	height: 21.6px;	}
+}
+
+/* 1280 x 768 */
+@media screen and (min-width: 1280px) , screen and (min-height: 768px){
+	/** Elements **/
+	body{ width: 1280px; height: 768px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1280px; 	height: 768px;	}
+	#idHeaderRow		{ width: 1280px; 	height: 115.2px;}
+	#idLogo				{ width: 1280px; 	height: 115.2px;}
+	#idNavigationRow	{ width: 1280px; 	height: 23.04px;}
+	#idNavForm			{ width: 1280px; 	height: 23.04px;}
+	#idCenterRow		{ width: 1280px; 	height: 576px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 576px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 576px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 576px;	}
+	#idCenterContent	{ width: 1120px;	height: 576px;	}
+	#idForm				{ width: 1120px;	height: 576px;	}
+	#idCenterRowRight	{ width: 240px;		height: 576px;	}
+	#idAdvertRight		{ width: 240px;		height: 576px;	}
+	#idFooterRow		{ width: 1280px;	height: 53.76px;}
+	#idFooterContent	{ width: 1280px;	height: 30.72px;}
+	#idFooterManagement	{ width: 1280px;	height: 23.04px;}
+}
+
+/* 1280 x 800 */
+@media screen and (min-width: 1280px) , screen and (min-height: 800px){
+	/** Elements **/
+	body{ width: 1280px; height: 800px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1280px; 	height: 800px;	}
+	#idHeaderRow		{ width: 1280px; 	height: 120px;	}
+	#idLogo				{ width: 1280px; 	height: 120px;	}
+	#idNavigationRow	{ width: 1280px; 	height: 24px;	}
+	#idNavForm			{ width: 1280px; 	height: 24px;	}
+	#idCenterRow		{ width: 1280px; 	height: 600px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 600px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 600px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 600px;	}
+	#idCenterContent	{ width: 1120px;	height: 600px;	}
+	#idForm				{ width: 1120px;	height: 600px;	}
+	#idCenterRowRight	{ width: 240px;		height: 600px;	}
+	#idAdvertRight		{ width: 240px;		height: 600px;	}
+	#idFooterRow		{ width: 1280px;	height: 56px;	}
+	#idFooterContent	{ width: 1280px;	height: 32px;	}
+	#idFooterManagement	{ width: 1280px;	height: 24px;	}
+}
+
+/* 1280 x 1024 */
+@media screen and (min-width: 1280px) , screen and (min-height: 1024px){
+	/** Elements **/
+	body{ width: 1280px; height: 1024px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1280px; 	height: 1024px;	}
+	#idHeaderRow		{ width: 1280px; 	height: 153.6px;}
+	#idLogo				{ width: 1280px; 	height: 153.6px;}
+	#idNavigationRow	{ width: 1280px; 	height: 30.72px;}
+	#idNavForm			{ width: 1280px; 	height: 30.72px;}
+	#idCenterRow		{ width: 1280px; 	height: 768px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 768px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 768px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 768px;	}
+	#idCenterContent	{ width: 1120px;	height: 768px;	}
+	#idForm				{ width: 1120px;	height: 768px;	}
+	#idCenterRowRight	{ width: 240px;		height: 768px;	}
+	#idAdvertRight		{ width: 240px;		height: 768px;	}
+	#idFooterRow		{ width: 1280px;	height: 71.68px;}
+	#idFooterContent	{ width: 1280px;	height: 40.96px;}
+	#idFooterManagement	{ width: 1280px;	height: 30.72px;}
+}
+
+/* 1360 x 768 */
+@media screen and (min-width: 1360px) , screen and (min-height: 768px){
+	/** Elements **/
+	body{ width: 1360px; height: 768px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1360px; 	height: 768px;	}
+	#idHeaderRow		{ width: 1360px; 	height: 115.2px;}
+	#idLogo				{ width: 1360px; 	height: 115.2px;}
+	#idNavigationRow	{ width: 1360px; 	height: 23.04px;}
+	#idNavForm			{ width: 1360px; 	height: 23.04px;}
+	#idCenterRow		{ width: 1360px; 	height: 576px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 576px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 576px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 576px;	}
+	#idCenterContent	{ width: 1120px;	height: 576px;	}
+	#idForm				{ width: 1120px;	height: 576px;	}
+	#idCenterRowRight	{ width: 240px;		height: 576px;	}
+	#idAdvertRight		{ width: 240px;		height: 576px;	}
+	#idFooterRow		{ width: 1360px;	height: 53.76px;}
+	#idFooterContent	{ width: 1360px;	height: 30.72px;}
+	#idFooterManagement	{ width: 1360px;	height: 23.04px;}
+}
+
+/* 1366 x 768 */
+@media screen and (min-width: 1366px) , screen and (min-height: 768px){
+	/** Elements **/
+	body{ width: 1366px; height: 768px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1366px; 	height: 768px;	}
+	#idHeaderRow		{ width: 1366px; 	height: 115.2px;}
+	#idLogo				{ width: 1366px; 	height: 115.2px;}
+	#idNavigationRow	{ width: 1366px; 	height: 23.04px;}
+	#idNavForm			{ width: 1366px; 	height: 23.04px;}
+	#idCenterRow		{ width: 1366px; 	height: 576px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 576px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 576px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 576px;	}
+	#idCenterContent	{ width: 1120px;	height: 576px;	}
+	#idForm				{ width: 1120px;	height: 576px;	}
+	#idCenterRowRight	{ width: 240px;		height: 576px;	}
+	#idAdvertRight		{ width: 240px;		height: 576px;	}
+	#idFooterRow		{ width: 1366px;	height: 53.76px;}
+	#idFooterContent	{ width: 1366px;	height: 30.72px;}
+	#idFooterManagement	{ width: 1366px;	height: 23.04px;}
+}
+
+/* 1440 x 900 */
+@media screen and (min-width: 1440px) , screen and (min-height: 900px){
+	/** Elements **/
+	body{ width: 1440px; height: 900px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1440px; 	height: 900px;	}
+	#idHeaderRow		{ width: 1440px; 	height: 135px;	}
+	#idLogo				{ width: 1440px; 	height: 135px;	}
+	#idNavigationRow	{ width: 1440px; 	height: 27px;	}
+	#idNavForm			{ width: 1440px; 	height: 27px;	}
+	#idCenterRow		{ width: 1440px; 	height: 675px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 675px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 675px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 675px;	}
+	#idCenterContent	{ width: 1120px;	height: 675px;	}
+	#idForm				{ width: 1120px;	height: 675px;	}
+	#idCenterRowRight	{ width: 240px;		height: 675px;	}
+	#idAdvertRight		{ width: 240px;		height: 675px;	}
+	#idFooterRow		{ width: 1440px;	height: 63px;	}
+	#idFooterContent	{ width: 1440px;	height: 36px;	}
+	#idFooterManagement	{ width: 1440px;	height: 27px;	}
+}
+
+/* 1536 x 864 */
+@media screen and (min-width: 1536px) , screen and (min-height: 864px){
+	/** Elements **/
+	body{ width: 1536px; height: 864px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1536px; 	height: 864px;	}
+	#idHeaderRow		{ width: 1536px; 	height: 129.6px;	}
+	#idLogo				{ width: 1536px; 	height: 129.6px;	}
+	#idNavigationRow	{ width: 1536px; 	height: 25.92px;	}
+	#idNavForm			{ width: 1536px; 	height: 25.92px;	}
+	#idCenterRow		{ width: 1536px; 	height: 648px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 648px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 648px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 648px;	}
+	#idCenterContent	{ width: 1120px;	height: 648px;	}
+	#idForm				{ width: 1120px;	height: 648px;	}
+	#idCenterRowRight	{ width: 240px;		height: 648px;	}
+	#idAdvertRight		{ width: 240px;		height: 648px;	}
+	#idFooterRow		{ width: 1536px;	height: 60.48px;	}
+	#idFooterContent	{ width: 1536px;	height: 34.56px;	}
+	#idFooterManagement	{ width: 1536px;	height: 25.92px;	}
+}
+
+/* 1600 x 900 */
+@media screen and (min-width: 1600px) , screen and (min-height: 900px){
+	/** Elements **/
+	body{ width: 1600px; height: 900px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1600px; 	height: 900px;	}
+	#idHeaderRow		{ width: 1600px; 	height: 135px;	}
+	#idLogo				{ width: 1600px; 	height: 135px;	}
+	#idNavigationRow	{ width: 1600px; 	height: 27px;	}
+	#idNavForm			{ width: 1600px; 	height: 27px;	}
+	#idCenterRow		{ width: 1600px; 	height: 675px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 675px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 675px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 675px;	}
+	#idCenterContent	{ width: 1120px;	height: 675px;	}
+	#idForm				{ width: 1120px;	height: 675px;	}
+	#idCenterRowRight	{ width: 240px;		height: 675px;	}
+	#idAdvertRight		{ width: 240px;		height: 675px;	}
+	#idFooterRow		{ width: 1600px;	height: 63px;	}
+	#idFooterContent	{ width: 1600px;	height: 36px;	}
+	#idFooterManagement	{ width: 1600px;	height: 27px;	}
+}
+
+/* 1680 x 1050 */
+@media screen and (min-width: 1680px) , screen and (min-height: 1050px){
+	/** Elements **/
+	body{ width: 1680px; height: 1050px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1680px; 	height: 1050px;	}
+	#idHeaderRow		{ width: 1680px; 	height: 157.5px;}
+	#idLogo				{ width: 1680px; 	height: 157.5px;}
+	#idNavigationRow	{ width: 1680px; 	height: 31.5px;	}
+	#idNavForm			{ width: 1680px; 	height: 31.5px;	}
+	#idCenterRow		{ width: 1680px; 	height: 787.5px;}
+	#idCenterRowLeft	{ width: 240px;  	height: 787.5px;}
+	#idAdvertLeft		{ width: 240px; 	height: 787.5px;}
+	#idCenterRowMain	{ width: 1120px;	height: 787.5px;}
+	#idCenterContent	{ width: 1120px;	height: 787.5px;}
+	#idForm				{ width: 1120px;	height: 787.5px;}
+	#idCenterRowRight	{ width: 240px;		height: 787.5px;}
+	#idAdvertRight		{ width: 240px;		height: 787.5px;}
+	#idFooterRow		{ width: 1680px;	height: 73.5px;	}
+	#idFooterContent	{ width: 1680px;	height: 42px;	}
+	#idFooterManagement	{ width: 1680px;	height: 31.5px;	}
+}
+
+/* 1920 x 1080 */
+@media screen and (min-width: 1920px) , screen and (min-height: 1080px){
+	/** Elements **/
+	body{ width: 1920px; height: 1080px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1920px; 	height: 1080px;	}
+	#idHeaderRow		{ width: 1920px; 	height: 162px;	}
+	#idLogo				{ width: 1920px; 	height: 162px;	}
+	#idNavigationRow	{ width: 1920px; 	height: 32.4px;	}
+	#idNavForm			{ width: 1920px; 	height: 32.4px;	}
+	#idCenterRow		{ width: 1920px; 	height: 810px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 810px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 810px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 810px;	}
+	#idCenterContent	{ width: 1120px;	height: 810px;	}
+	#idForm				{ width: 1120px;	height: 810px;	}
+	#idCenterRowRight	{ width: 240px;		height: 810px;	}
+	#idAdvertRight		{ width: 240px;		height: 810px;	}
+	#idFooterRow		{ width: 1920px;	height: 75.6px;	}
+	#idFooterContent	{ width: 1920px;	height: 43.2px;	}
+	#idFooterManagement	{ width: 1920px;	height: 32.4px;	}
+}
+
+/* 1920 x 1200 */
+@media screen and (min-width: 1920px) , screen and (min-height: 1200px){
+	/** Elements **/
+	body{ width: 1920px; height: 1200px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 1920px; 	height: 1200px;	}
+	#idHeaderRow		{ width: 1920px; 	height: 180px;	}
+	#idLogo				{ width: 1920px; 	height: 180px;	}
+	#idNavigationRow	{ width: 1920px; 	height: 36px;	}
+	#idNavForm			{ width: 1920px; 	height: 36px;	}
+	#idCenterRow		{ width: 1920px; 	height: 900px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 900px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 900px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 900px;	}
+	#idCenterContent	{ width: 1120px;	height: 900px;	}
+	#idForm				{ width: 1120px;	height: 900px;	}
+	#idCenterRowRight	{ width: 240px;		height: 900px;	}
+	#idAdvertRight		{ width: 240px;		height: 900px;	}
+	#idFooterRow		{ width: 1920px;	height: 84px;	}
+	#idFooterContent	{ width: 1920px;	height: 48px;	}
+	#idFooterManagement	{ width: 1920px;	height: 36px;	}
+}
+
+/* 2560 x 1080 */
+@media screen and (min-width: 2560px) , screen and (min-height: 1080px){
+	/** Elements **/
+	body{ width: 2560px; height: 1080px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 2560px; 	height: 1080px;	}
+	#idHeaderRow		{ width: 2560px; 	height: 162px;	}
+	#idLogo				{ width: 2560px; 	height: 162px;	}
+	#idNavigationRow	{ width: 2560px; 	height: 32.4px;	}
+	#idNavForm			{ width: 2560px; 	height: 32.4px;	}
+	#idCenterRow		{ width: 2560px; 	height: 810px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 810px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 810px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 810px;	}
+	#idCenterContent	{ width: 1120px;	height: 810px;	}
+	#idForm				{ width: 1120px;	height: 810px;	}
+	#idCenterRowRight	{ width: 240px;		height: 810px;	}
+	#idAdvertRight		{ width: 240px;		height: 810px;	}
+	#idFooterRow		{ width: 2560px;	height: 75.6px;	}
+	#idFooterContent	{ width: 2560px;	height: 43.2px;	}
+	#idFooterManagement	{ width: 2560px;	height: 32.4px;	}
+}
+
+/* 2560 x 1440 */
+@media screen and (min-width: 2560px) , screen and (min-height: 1440px){
+	/** Elements **/
+	body{ width: 2560px; height: 1440px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 2560px; 	height: 1440px;	}
+	#idHeaderRow		{ width: 2560px; 	height: 216px;	}
+	#idLogo				{ width: 2560px; 	height: 216px;	}
+	#idNavigationRow	{ width: 2560px; 	height: 43.2px;	}
+	#idNavForm			{ width: 2560px; 	height: 43.2px;	}
+	#idCenterRow		{ width: 2560px; 	height: 1080px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 1080px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 1080px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 1080px;	}
+	#idCenterContent	{ width: 1120px;	height: 1080px;	}
+	#idForm				{ width: 1120px;	height: 1080px;	}
+	#idCenterRowRight	{ width: 240px;		height: 1080px;	}
+	#idAdvertRight		{ width: 240px;		height: 1080px;	}
+	#idFooterRow		{ width: 2560px;	height: 100.8px;	}
+	#idFooterContent	{ width: 2560px;	height: 57.6px;	}
+	#idFooterManagement	{ width: 2560px;	height: 43.2px;	}
+}
+
+/* 3440 x 1440 */
+@media screen and (min-width: 3440px) , screen and (min-height: 1440px){
+	/** Elements **/
+	body{ width: 3440px; height: 1440px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 3440px; 	height: 1440px;	}
+	#idHeaderRow		{ width: 3440px; 	height: 216px;	}
+	#idLogo				{ width: 3440px; 	height: 216px;	}
+	#idNavigationRow	{ width: 3440px; 	height: 43.2px;	}
+	#idNavForm			{ width: 3440px; 	height: 43.2px;	}
+	#idCenterRow		{ width: 3440px; 	height: 1080px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 1080px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 1080px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 1080px;	}
+	#idCenterContent	{ width: 1120px;	height: 1080px;	}
+	#idForm				{ width: 1120px;	height: 1080px;	}
+	#idCenterRowRight	{ width: 240px;		height: 1080px;	}
+	#idAdvertRight		{ width: 240px;		height: 1080px;	}
+	#idFooterRow		{ width: 3440px;	height: 100.8px;}
+	#idFooterContent	{ width: 3440px;	height: 57.6px;	}
+	#idFooterManagement	{ width: 3440px;	height: 43.2px;	}
+}
+
+/* 3840 x 2160 */
+@media screen and (min-width: 3840px) , screen and (min-height: 2160px){
+	/** Elements **/
+	body{ width: 3840px; height: 2160px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 3840px; 	height: 2160px;	}
+	#idHeaderRow		{ width: 3840px; 	height: 324px;	}
+	#idLogo				{ width: 3840px; 	height: 324px;	}
+	#idNavigationRow	{ width: 3840px; 	height: 64.8px;	}
+	#idNavForm			{ width: 3840px; 	height: 64.8px;	}
+	#idCenterRow		{ width: 3840px; 	height: 1620px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 1620px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 1620px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 1620px;	}
+	#idCenterContent	{ width: 1120px;	height: 1620px;	}
+	#idForm				{ width: 1120px;	height: 1620px;	}
+	#idCenterRowRight	{ width: 240px;		height: 1620px;	}
+	#idAdvertRight		{ width: 240px;		height: 1620px;	}
+	#idFooterRow		{ width: 3840px;	height: 151.2px;}
+	#idFooterContent	{ width: 3840px;	height: 86.4px;	}
+	#idFooterManagement	{ width: 3840px;	height: 64.8px;	}
+}
+
+/* 4096 x 2160 */
+@media screen and (min-width: 4096px) , screen and (min-height: 2160px){
+	/** Elements **/
+	body{ width: 4096px; height: 2160px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 4096px; 	height: 2160px;	}
+	#idHeaderRow		{ width: 4096px; 	height: 324px;	}
+	#idLogo				{ width: 4096px; 	height: 324px;	}
+	#idNavigationRow	{ width: 4096px; 	height: 64.8px;	}
+	#idNavForm			{ width: 4096px; 	height: 64.8px;	}
+	#idCenterRow		{ width: 4096px; 	height: 1620px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 1620px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 1620px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 1620px;	}
+	#idCenterContent	{ width: 1120px;	height: 1620px;	}
+	#idForm				{ width: 1120px;	height: 1620px;	}
+	#idCenterRowRight	{ width: 240px;		height: 1620px;	}
+	#idAdvertRight		{ width: 240px;		height: 1620px;	}
+	#idFooterRow		{ width: 4096px;	height: 151.2px;}
+	#idFooterContent	{ width: 4096px;	height: 86.4px;	}
+	#idFooterManagement	{ width: 4096px;	height: 64.8px;	}
+}
+
+/* 7680 x 4320 */
+@media screen and (min-width: 7680px) , screen and (min-height: 4320px){
+	/** Elements **/
+	body{ width: 7680px; height: 4320px; }
+	
+	/** Classes **/
+	
+	/** IDs **/
+	#idGeneralLayout	{ width: 7680px; 	height: 4320px;	}
+	#idHeaderRow		{ width: 7680px; 	height: 648px;	}
+	#idLogo				{ width: 7680px; 	height: 648px;	}
+	#idNavigationRow	{ width: 7680px; 	height: 129.6px;}
+	#idNavForm			{ width: 7680px; 	height: 129.6px;}
+	#idCenterRow		{ width: 7680px; 	height: 3240px;	}
+	#idCenterRowLeft	{ width: 240px;  	height: 3240px;	}
+	#idAdvertLeft		{ width: 240px; 	height: 3240px;	}
+	#idCenterRowMain	{ width: 1120px;	height: 3240px;	}
+	#idCenterContent	{ width: 1120px;	height: 3240px;	}
+	#idForm				{ width: 1120px;	height: 3240px;	}
+	#idCenterRowRight	{ width: 240px;		height: 3240px;	}
+	#idAdvertRight		{ width: 240px;		height: 3240px;	}
+	#idFooterRow		{ width: 7680px;	height: 302.4px;}
+	#idFooterContent	{ width: 7680px;	height: 172.8px;}
+	#idFooterManagement	{ width: 7680px;	height: 129.6px;}
+}
