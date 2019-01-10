@@ -221,8 +221,10 @@ BEGIN
 				--//there are no unlocked records
 			BEGIN
 				--//return the top two records from personal list
-				select top 2 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies, WatchOverLists where MasterUserIndex = @intUserIndex
-				and MovieIndex = Movies.TargetIndex
+				select top 2 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
+				JOIN WatchOverLists ON
+					Movies.TargetIndex = WatchOverLists.MovieIndex
+				where MasterUserIndex = @intUserIndex
 				and ( (OrderRank = 0) or (OrderRank = 1) );
 			END
 		END
