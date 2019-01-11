@@ -13,7 +13,7 @@ BEGIN
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(MasterUserIndex) from BoardOverLists where userindex = @intUserIndex);
+	SET @UserCount = (select count(MasterUserIndex) from BoardOverLists where MasterUserIndex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
@@ -85,7 +85,7 @@ BEGIN
 				select BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardOverLists
 				JOIN BoardGames ON
 					BoardOverLists.BoardGameIndex = BoardGames.TargetIndex
-				where BoardOverLists.ListIndex = @TargetIndex and 
+				where BoardOverLists.ListIndex = @TargetIndex 
 				UNION
 				--//request random from global list
 					--//exclude from personal list
@@ -115,7 +115,7 @@ BEGIN
 						JOIN BoardOverLists ON
 							BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
 						JOIN BoardOverUsers ON
-							BangOverLists.MasterUserIndex = BoardOverUsers.MasterUserIndex
+							BoardOverLists.MasterUserIndex = BoardOverUsers.MasterUserIndex
 						where BoardOverUsers.MasterUserIndex = @intUserIndex
 					)
 					order by newid() 

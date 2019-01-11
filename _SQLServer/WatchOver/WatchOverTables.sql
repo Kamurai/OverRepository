@@ -1,4 +1,4 @@
-drop table WatchOverAdverts, WatchOverLists, Movies, MovieRequests;
+--drop table WatchOverAdverts, WatchOverLists, Movies, MovieRequests;
 
 create table WatchOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 

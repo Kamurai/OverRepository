@@ -6,8 +6,10 @@ create PROCEDURE WatchOverPullPersonalList
 )
 AS
 BEGIN
-	select * from Movies JOIN WatchOverLists ON WatchOverLists.MovieIndex = Movies.TargetIndex 
-        WHERE WatchOverLists.MasterUserIndex = @intUserIndex
+	select * from Movies 
+	JOIN WatchOverLists ON 
+		WatchOverLists.MovieIndex = Movies.TargetIndex 
+    WHERE WatchOverLists.MasterUserIndex = @intUserIndex
 		
     --sort by Order Ranking
     order by OrderRank        

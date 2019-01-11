@@ -24,21 +24,21 @@ AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update BoardOverUsers set 
-	DeckBuilding = @bitDeckBuilding, 
-	FixedDeck = @bitFixedDeck, 
-	ConstructedDeck = @bitConstructedDeck, 
-	Strategy = @bitStrategy, 
-	War = @bitWar, 
-	Economy = @bitEconomy, 
-	TableauBuilding = @bitTableauBuilding, 
-	Coop = @bitCoop, 
-	Mystery = @bitMystery, 
-	SemiCoop = @bitSemiCoop, 
-	PPRPG = @bitPPRPG, 
-	Bluffing = @bitBluffing, 
-	Puzzle = @bitPuzzle, 
-	Dexterity = @bitDexterity, 
-	Party = @bitParty 	
+		DeckBuilding		= @bitDeckBuilding, 
+		FixedDeck			= @bitFixedDeck, 
+		ConstructedDeck		= @bitConstructedDeck, 
+		Strategy			= @bitStrategy, 
+		War					= @bitWar, 
+		Economy				= @bitEconomy, 
+		TableauBuilding		= @bitTableauBuilding, 
+		Coop				= @bitCoop, 
+		Mystery				= @bitMystery, 
+		SemiCoop			= @bitSemiCoop, 
+		PPRPG				= @bitPPRPG, 
+		Bluffing			= @bitBluffing, 
+		Puzzle				= @bitPuzzle, 
+		Dexterity			= @bitDexterity, 
+		Party				= @bitParty 	
 	where BoardOverUsers.MasterUserIndex = @intUserIndex;
 
 	--select * from Users where UserIndex = @intUserIndex;
@@ -48,21 +48,21 @@ BEGIN
 	delete from BoardOverLists where MasterUserIndex = @intUserIndex and BoardGameIndex IN (
 	select BoardGames.TargetIndex from BoardGames JOIN BoardOverUsers 
 		ON (
-			( Genre = 'DeckBuilding'	and BoardOverUsers.DeckBuilding = 0 )		or 
-			( Genre = 'FixedDeck'		and BoardOverUsers.FixedDeck = 0 )			or 
-			( Genre = 'ConstructedDeck' and BoardOverUsers.ConstructedDeck = 0 )	or 
-			( Genre = 'Strategy'		and BoardOverUsers.Strategy = 0 )			or
-			( Genre = 'War'				and BoardOverUsers.War = 0 )				or
-			( Genre = 'Economy'			and BoardOverUsers.Economy = 0 )			or
-			( Genre = 'TableauBuilding' and BoardOverUsers.TableauBuilding = 0 )	or
-			( Genre = 'Coop'			and BoardOverUsers.Coop = 0 )				or
-			( Genre = 'Mystery'			and BoardOverUsers.Mystery = 0 )			or
-			( Genre = 'SemiCoop'		and BoardOverUsers.SemiCoop = 0 )			or
-			( Genre = 'PPRPG'			and BoardOverUsers.PPRPG = 0 )				or
-			( Genre = 'Bluffing'		and BoardOverUsers.Bluffing = 0 )			or
-			( Genre = 'Puzzle'			and BoardOverUsers.Puzzle = 0 )				or
-			( Genre = 'Dexterity'		and BoardOverUsers.Dexterity = 0 )			or
-			( Genre = 'Party'			and BoardOverUsers.Party = 0 ) 
+			( Genre = 'DeckBuilding'	and BoardOverUsers.DeckBuilding		= 0 )	or 
+			( Genre = 'FixedDeck'		and BoardOverUsers.FixedDeck		= 0 )	or 
+			( Genre = 'ConstructedDeck' and BoardOverUsers.ConstructedDeck	= 0 )	or 
+			( Genre = 'Strategy'		and BoardOverUsers.Strategy			= 0 )	or
+			( Genre = 'War'				and BoardOverUsers.War				= 0 )	or
+			( Genre = 'Economy'			and BoardOverUsers.Economy			= 0 )	or
+			( Genre = 'TableauBuilding' and BoardOverUsers.TableauBuilding	= 0 )	or
+			( Genre = 'Coop'			and BoardOverUsers.Coop				= 0 )	or
+			( Genre = 'Mystery'			and BoardOverUsers.Mystery			= 0 )	or
+			( Genre = 'SemiCoop'		and BoardOverUsers.SemiCoop			= 0 )	or
+			( Genre = 'PPRPG'			and BoardOverUsers.PPRPG			= 0 )	or
+			( Genre = 'Bluffing'		and BoardOverUsers.Bluffing			= 0 )	or
+			( Genre = 'Puzzle'			and BoardOverUsers.Puzzle			= 0 )	or
+			( Genre = 'Dexterity'		and BoardOverUsers.Dexterity		= 0 )	or
+			( Genre = 'Party'			and BoardOverUsers.Party			= 0 ) 
 		) 
 		where BoardOverUsers.MasterUserIndex = @intUserIndex
 	);

@@ -5,8 +5,7 @@ create PROCEDURE WatchOverAddTarget
     @strMovieName varChar(50),
 	@strMovieRelease varChar(50),
 	@strMovieGenre varChar(50),
-	@strMoviePicture varChar(50)
-    
+	@strMoviePicture varChar(50)    
 )
 AS
 BEGIN

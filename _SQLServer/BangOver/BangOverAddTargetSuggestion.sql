@@ -4,8 +4,7 @@ create PROCEDURE BangOverAddTargetSuggestion
 (
     @strCelebrityName varChar(max),
 	@strCelebritySex varChar(1),
-	@strCelebrityPicture varChar(max)
-    
+	@strCelebrityPicture varChar(max)    
 )
 AS
 BEGIN

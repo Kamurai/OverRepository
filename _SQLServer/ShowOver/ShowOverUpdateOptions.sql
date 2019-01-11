@@ -25,6 +25,8 @@ create PROCEDURE ShowOverUpdateOptions
 AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
+	update ShowOverUsers set
+	
 	--Genres
     ComedyS				= @bitComedyS, 
 	DramaS				= @bitDramaS, 
@@ -53,25 +55,25 @@ BEGIN
 	select Shows.TargetIndex from Shows JOIN ShowOverUsers 
 		ON (
 			(
-				( Genre = 'ComedyS'				and WatchOverUsers.ComedyS			= 0 )	or 
-				( Genre = 'DramaS'				and WatchOverUsers.DramaS			= 0 )	or 
-				( Genre = 'ActionS'				and WatchOverUsers.ActionS			= 0 )	or 
-				( Genre = 'HorrorS'				and WatchOverUsers.HorrorS			= 0 )	or
-				( Genre = 'ThrillerS'			and WatchOverUsers.ThrillerS		= 0 )	or
-				( Genre = 'MysteryS'			and WatchOverUsers.MysteryS			= 0 )	or
-				( Genre = 'DocumentaryS'		and WatchOverUsers.DocumentaryS		= 0 )
+				( Genre = 'ComedyS'				and ShowOverUsers.ComedyS			= 0 )	or 
+				( Genre = 'DramaS'				and ShowOverUsers.DramaS			= 0 )	or 
+				( Genre = 'ActionS'				and ShowOverUsers.ActionS			= 0 )	or 
+				( Genre = 'HorrorS'				and ShowOverUsers.HorrorS			= 0 )	or
+				( Genre = 'ThrillerS'			and ShowOverUsers.ThrillerS			= 0 )	or
+				( Genre = 'MysteryS'			and ShowOverUsers.MysteryS			= 0 )	or
+				( Genre = 'DocumentaryS'		and ShowOverUsers.DocumentaryS		= 0 )
 			) 
 			and
 			(
-				( Setting = 'ScienceFictionS'	and WatchOverUsers.ScienceFictionS	= 0 )	or
-				( Setting = 'FantasyS'			and WatchOverUsers.FantasyS			= 0 )	or
-				( Setting = 'WesternS'			and WatchOverUsers.WesternS			= 0 )	or
-				( Setting = 'MartialArtsS'		and WatchOverUsers.MartialArtsS		= 0 )	or
-				( Setting = 'ModernS'			and WatchOverUsers.ModernS			= 0 )	or
-				( Setting = 'HistoricS'			and WatchOverUsers.HistoricS		= 0 )	or
-				( Setting = 'PrehistoricS'		and WatchOverUsers.PrehistoricS		= 0 )	or
-				( Setting = 'ComicsS'			and WatchOverUsers.ComicsS			= 0 )	or
-				( Setting = 'PeriodS'			and WatchOverUsers.PeriodS			= 0 )
+				( Setting = 'ScienceFictionS'	and ShowOverUsers.ScienceFictionS	= 0 )	or
+				( Setting = 'FantasyS'			and ShowOverUsers.FantasyS			= 0 )	or
+				( Setting = 'WesternS'			and ShowOverUsers.WesternS			= 0 )	or
+				( Setting = 'MartialArtsS'		and ShowOverUsers.MartialArtsS		= 0 )	or
+				( Setting = 'ModernS'			and ShowOverUsers.ModernS			= 0 )	or
+				( Setting = 'HistoricS'			and ShowOverUsers.HistoricS			= 0 )	or
+				( Setting = 'PrehistoricS'		and ShowOverUsers.PrehistoricS		= 0 )	or
+				( Setting = 'ComicsS'			and ShowOverUsers.ComicsS			= 0 )	or
+				( Setting = 'PeriodS'			and ShowOverUsers.PeriodS			= 0 )
 			)
 		)
 		where ShowOverUsers.MasterUserIndex = @intUserIndex

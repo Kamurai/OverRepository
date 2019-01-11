@@ -1,4 +1,4 @@
-drop table ShowOverAdverts, ShowOverLists, Shows, ShowRequests;
+--drop table ShowOverAdverts, ShowOverLists, Shows, ShowRequests;
 
 create table ShowOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(max) not null, Picture varchar(max) not null, Link varchar(max) not null );
 

@@ -12,7 +12,12 @@ BEGIN
 	BEGIN
 		
 		--if user does not exist in Bang Over table
-		if( (select count(*) from Users JOIN BangOverUsers Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
+		if( 
+			(select count(*) from Users
+			JOIN BangOverUsers ON
+				Users.UserIndex = MasterUserIndex 
+			where Username = @strUsername) = 0
+		)
 		BEGIN
 			--get MasterUserIndex
 			DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);

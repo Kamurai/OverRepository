@@ -13,7 +13,7 @@ BEGIN
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(MasterUserIndex) from WatchOverLists where userindex = @intUserIndex);
+	SET @UserCount = (select count(MasterUserIndex) from WatchOverLists where MasterUserIndex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
@@ -169,7 +169,7 @@ BEGIN
 					select top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
 					JOIN WatchOverLists ON
 						Movies.TargetIndex = WatchOverLists.MovieIndex
-					where MasterUserIndex = @intUserIndex and 
+					where MasterUserIndex = @intUserIndex 
 					and 
 						( OrderRank = 0 or OrderRank = @UserCount-1 )
 					order by newid() 

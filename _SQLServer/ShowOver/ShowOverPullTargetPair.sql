@@ -13,7 +13,7 @@ BEGIN
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(MasterUserIndex) from ShowOverLists where userindex = @intUserIndex);
+	SET @UserCount = (select count(MasterUserIndex) from ShowOverLists where MasterUserIndex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )

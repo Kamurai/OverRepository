@@ -12,7 +12,14 @@ BEGIN
 	BEGIN
 		
 		--if user does not exist in Video Over table
-		IF( (select count(*) from Users JOIN WatchOverUsers ON Users.UserIndex = MasterUserIndex where Username = @strUsername) = 0)
+		IF( 
+			(
+				select count(*) from Users 
+				JOIN WatchOverUsers ON 
+					Users.UserIndex = MasterUserIndex 
+				where Username = @strUsername
+			) = 0
+		)
 		BEGIN
 			--get MasterUserIndex
 			DECLARE @TargetUserIndex int = (select UserIndex from Users where Username = @strUsername);

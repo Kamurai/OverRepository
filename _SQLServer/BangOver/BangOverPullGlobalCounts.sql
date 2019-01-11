@@ -1,4 +1,4 @@
---drop PROCEDURE PullGlobalCounts;
+--drop PROCEDURE BangOverPullGlobalCounts;
 
 create PROCEDURE BangOverPullGlobalCounts
 AS

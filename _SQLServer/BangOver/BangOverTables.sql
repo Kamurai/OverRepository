@@ -1,4 +1,4 @@
-drop table BangOverAdverts, BangOverLists, Celebrities, CelebrityRequests;
+--drop table BangOverAdverts, BangOverLists, Celebrities, CelebrityRequests;
 
 create table BangOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 

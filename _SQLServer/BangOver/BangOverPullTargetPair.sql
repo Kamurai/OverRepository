@@ -13,7 +13,7 @@ BEGIN
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(MasterUserIndex) from BangOverLists where userindex = @intUserIndex);
+	SET @UserCount = (select count(MasterUserIndex) from BangOverLists where MasterUserIndex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )

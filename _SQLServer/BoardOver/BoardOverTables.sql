@@ -1,4 +1,4 @@
-drop table BoardOverAdverts, Users, BoardOverLists, BoardGames, BoardGameRequests;
+--drop table BoardOverAdverts, Users, BoardOverLists, BoardGames, BoardGameRequests;
 
 create table BoardOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 

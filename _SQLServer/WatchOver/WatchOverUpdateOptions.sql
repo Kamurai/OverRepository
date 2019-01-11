@@ -50,43 +50,41 @@ BEGIN
 	--select * from Users where UserIndex = @intUserIndex;
 		
 	--//Adjust Personal list to match new preferences
-	delete from WatchOverLists where MasterUserIndex = @intUserIndex and MovieIndex IN (
-	select Movies.TargetIndex from Movies JOIN WatchOverUsers 
-		ON (
+	delete from WatchOverLists 
+	where MasterUserIndex = @intUserIndex and MovieIndex 
+	IN (
+		select Movies.TargetIndex from Movies 
+		JOIN WatchOverUsers ON 
 			(
-				( Genre = 'ComedyM'				and WatchOverUsers.ComedyM = 0 )			or 
-				( Genre = 'DramaM'				and WatchOverUsers.DramaM = 0 )				or 
-				( Genre = 'ActionM'				and WatchOverUsers.ActionM = 0 )			or 
-				( Genre = 'HorrorM'				and WatchOverUsers.HorrorM = 0 )			or
-				( Genre = 'ThrillerM'			and WatchOverUsers.ThrillerM = 0 )			or
-				( Genre = 'MysteryM'			and WatchOverUsers.MysteryM = 0 )			or
-				( Genre = 'DocumentaryM'		and WatchOverUsers.DocumentaryM = 0 )
-			) 
-			and
-			(
-				( Setting = 'ScienceFictionM'	and WatchOverUsers.ScienceFictionM = 0 )	or
-				( Setting = 'FantasyM'			and WatchOverUsers.FantasyM = 0 )			or
-				( Setting = 'WesternM'			and WatchOverUsers.WesternM = 0 )			or
-				( Setting = 'MartialArtsM'		and WatchOverUsers.MartialArtsM = 0 )		or
-				( Setting = 'ModernM'			and WatchOverUsers.ModernM = 0 )			or
-				( Setting = 'HistoricM'			and WatchOverUsers.HistoricM = 0 )			or
-				( Setting = 'PrehistoricM'		and WatchOverUsers.PrehistoricM = 0 )		or
-				( Setting = 'ComicsM'			and WatchOverUsers.ComicsM = 0 )			or
-				( Setting = 'PeriodM'			and WatchOverUsers.PeriodM = 0 )
+				(
+					( Genre = 'ComedyM'				and WatchOverUsers.ComedyM = 0 )			or 
+					( Genre = 'DramaM'				and WatchOverUsers.DramaM = 0 )				or 
+					( Genre = 'ActionM'				and WatchOverUsers.ActionM = 0 )			or 
+					( Genre = 'HorrorM'				and WatchOverUsers.HorrorM = 0 )			or
+					( Genre = 'ThrillerM'			and WatchOverUsers.ThrillerM = 0 )			or
+					( Genre = 'MysteryM'			and WatchOverUsers.MysteryM = 0 )			or
+					( Genre = 'DocumentaryM'		and WatchOverUsers.DocumentaryM = 0 )
+				) 
+				and
+				(
+					( Setting = 'ScienceFictionM'	and WatchOverUsers.ScienceFictionM = 0 )	or
+					( Setting = 'FantasyM'			and WatchOverUsers.FantasyM = 0 )			or
+					( Setting = 'WesternM'			and WatchOverUsers.WesternM = 0 )			or
+					( Setting = 'MartialArtsM'		and WatchOverUsers.MartialArtsM = 0 )		or
+					( Setting = 'ModernM'			and WatchOverUsers.ModernM = 0 )			or
+					( Setting = 'HistoricM'			and WatchOverUsers.HistoricM = 0 )			or
+					( Setting = 'PrehistoricM'		and WatchOverUsers.PrehistoricM = 0 )		or
+					( Setting = 'ComicsM'			and WatchOverUsers.ComicsM = 0 )			or
+					( Setting = 'PeriodM'			and WatchOverUsers.PeriodM = 0 )
+				)
 			)
-		)
 		where WatchOverUsers.MasterUserIndex = @intUserIndex
 	);
 
-	--select * from Movies, WatchOverLists where Movies.TargetIndex = WatchOverLists.MovieIndex and WatchOverLists.MasterUserIndex = 0 order by OrderRank;
-
-
 	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumOne from WatchOverLists where MasterUserIndex = 0; 
-	--select * from #NumOne;
-
+	
 	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumTwo from WatchOverLists where MasterUserIndex = 0; 
-	--select * from #NumTwo;
-
+	
 	--//Unlock records adacent to removed records
 		--//Unlock DownLock for OrderRank+1 < 1
 		Update WatchOverLists set Downlock = 0 where 
@@ -116,7 +114,7 @@ BEGIN
 		ROW_NUMBER() OVER (ORDER BY OrderRank) AS RowNum
 		FROM WatchOverLists where MasterUserIndex = @intUserIndex
 	)
-	UPDATE cte SET OrderRank=RowNum-1
+	UPDATE cte SET OrderRank = RowNum-1
 
 
 END
