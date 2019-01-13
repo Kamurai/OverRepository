@@ -166,7 +166,7 @@ public class ManagementBean implements Serializable
             while(rs.next())
             {
                 tempUser = new User(
-                        rs.getInt("Indext"), 
+                        rs.getInt("UserIndex"), 
                         rs.getString("Username"), 
                         rs.getString("Email"), 
                         rs.getInt("AdminLevel"),

@@ -735,7 +735,7 @@ public class LoginBean implements Serializable
             rows = rs.getRow();
             
             CurrentUser = new User(
-                rs.getInt("Indext"), 
+                rs.getInt("UserIndex"), 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
                 rs.getInt("AdminLevel"),
