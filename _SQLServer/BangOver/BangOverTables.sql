@@ -165,7 +165,7 @@ insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Zoe Liste
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Amanda Seyfried',			'F', 'AmandaSeyfried.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Arthur Darvil',				'M', 'ArthurDarvil.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Brandon Routh',				'M', 'BrandonRouth.jpg',				0);
-insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Calista Rockhart',			'F', 'CalistaRockhart.jpg',				0);
+insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Calista Flockhart',			'F', 'CalistaFlockhart.jpg',			0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Chris Wood',					'M', 'ChrisWood.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Chyler Leigh',				'F', 'ChylerLeigh.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Colton Haynes',				'M', 'ColtonHaynes.jpg',				0);

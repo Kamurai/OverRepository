@@ -24,66 +24,67 @@ BEGIN
 		select count(ListIndex) from PlayOverLists where MasterUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
 		);
+							   
 		SET @GlobalExclusionCount = (select count(VideoGames.TargetIndex) from VideoGames
 			JOIN PlayOverUsers ON
 			(
 				(
-					(Genre = 'TwoDP'			and TwoDP = 1)			or 
-					(Genre = 'ThreeDP'			and ThreeDP = 1)		or 
-					(Genre = 'FPS'				and FPS = 1)			or 
-					(Genre = 'FPP'				and FPP = 1)			or 
-					(Genre = 'VPuzzle'			and VPuzzle = 1)		or 
-					(Genre = 'Bulletstorm'		and Bulletstorm = 1)	or 
-					(Genre = 'Fighting'			and Fighting = 1)		or 
-					(Genre = 'Stealth'			and Stealth = 1)		or 
-					(Genre = 'Survival'			and Survival = 1)		or 
-					(Genre = 'VN'				and VN = 1)				or 
-					(Genre = 'IM'				and IM = 1)				or 
-					(Genre = 'RPG'				and RPG = 1)			or 
-					(Genre = 'TRPG'				and TRPG = 1)			or 
-					(Genre = 'ARPG'				and ARPG = 1)			or 
-					(Genre = 'Sports'			and Sports = 1)			or 
-					(Genre = 'Racing'			and Racing = 1)			or 
-					(Genre = 'RTS'				and RTS = 1)			or 
-					(Genre = 'TBS'				and TBS = 1)			or 
-					(Genre = 'VE'				and VE = 1)				or 
-					(Genre = 'MMO'				and MMO = 1)			or
-					(Genre = 'MOBA'				and MOBA = 1)
+					(VideoGames.Genre = 'TwoDP'				and PlayOverUsers.TwoDP = 1)		or 
+					(VideoGames.Genre = 'ThreeDP'			and PlayOverUsers.ThreeDP = 1)		or 
+					(VideoGames.Genre = 'FPS'				and PlayOverUsers.FPS = 1)			or 
+					(VideoGames.Genre = 'FPP'				and PlayOverUsers.FPP = 1)			or 
+					(VideoGames.Genre = 'VPuzzle'			and PlayOverUsers.VPuzzle = 1)		or 
+					(VideoGames.Genre = 'Bulletstorm'		and PlayOverUsers.Bulletstorm = 1)	or 
+					(VideoGames.Genre = 'Fighting'			and PlayOverUsers.Fighting = 1)		or 
+					(VideoGames.Genre = 'Stealth'			and PlayOverUsers.Stealth = 1)		or 
+					(VideoGames.Genre = 'Survival'			and PlayOverUsers.Survival = 1)		or 
+					(VideoGames.Genre = 'VN'				and PlayOverUsers.VN = 1)			or 
+					(VideoGames.Genre = 'IM'				and PlayOverUsers.IM = 1)			or 
+					(VideoGames.Genre = 'RPG'				and PlayOverUsers.RPG = 1)			or 
+					(VideoGames.Genre = 'TRPG'				and PlayOverUsers.TRPG = 1)			or 
+					(VideoGames.Genre = 'ARPG'				and PlayOverUsers.ARPG = 1)			or 
+					(VideoGames.Genre = 'Sports'			and PlayOverUsers.Sports = 1)		or 
+					(VideoGames.Genre = 'Racing'			and PlayOverUsers.Racing = 1)		or 
+					(VideoGames.Genre = 'RTS'				and PlayOverUsers.RTS = 1)			or 
+					(VideoGames.Genre = 'TBS'				and PlayOverUsers.TBS = 1)			or 
+					(VideoGames.Genre = 'VE'				and PlayOverUsers.VE = 1)			or 
+					(VideoGames.Genre = 'MMO'				and PlayOverUsers.MMO = 1)			or
+					(VideoGames.Genre = 'MOBA'				and PlayOverUsers.MOBA = 1)
 				)
 				and
 				(
-					(Genre = 'PC'				and PC = 1)				or 
-					(Genre = 'Atari'			and Atari = 1)			or 
-					(Genre = 'Commodore64'		and Commodore64 = 1)	or 
-					(Genre = 'FAMICOM'			and FAMICOM = 1)		or 
-					(Genre = 'NES'				and NES = 1)			or 
-					(Genre = 'SNES'				and SNES = 1)			or 
-					(Genre = 'N64'				and N64 = 1)			or 
-					(Genre = 'Gamecube'			and Gamecube = 1)		or 
-					(Genre = 'Wii'				and Wii = 1)			or 
-					(Genre = 'WiiU'				and WiiU = 1)			or 
-					(Genre = 'NintendoSwitch'	and NintendoSwitch = 1)	or 
-					(Genre = 'Gameboy'			and Gameboy = 1)		or 
-					(Genre = 'VirtualBoy'		and VirtualBoy = 1)		or 
-					(Genre = 'GBA'				and GBA = 1)			or 
-					(Genre = 'DS'				and DS = 1)				or 
-					(Genre = 'ThreeDS'			and ThreeDS = 1)		or 
-					(Genre = 'SegaGenesis'		and SegaGenesis = 1)	or 
-					(Genre = 'SegaCD'			and SegaCD = 1)			or 
-					(Genre = 'SegaDreamcast'	and SegaDreamcast = 1)	or 
-					(Genre = 'PS1'				and PS1 = 1)			or
-					(Genre = 'PS2'				and PS2 = 1)			or
-					(Genre = 'PS3'				and PS3 = 1)			or
-					(Genre = 'PS4'				and PS4 = 1)			or
-					(Genre = 'PSP'				and PSP = 1)			or
-					(Genre = 'PSVita'			and PSVita = 1)			or
-					(Genre = 'Xbox'				and Xbox = 1)			or
-					(Genre = 'Xbox360'			and Xbox360 = 1)		or
-					(Genre = 'XboxOne'			and XboxOne = 1)		or
-					(Genre = 'Ouya'				and Ouya = 1)			or
-					(Genre = 'OculusRift'		and OculusRift = 1)		or
-					(Genre = 'Vive'				and Vive = 1)			or
-					(Genre = 'PSVR'				and PSVR = 1)
+					(VideoGames.GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
+					(VideoGames.GamePlatform = 'Atari'			and PlayOverUsers.Atari = 1)			or 
+					(VideoGames.GamePlatform = 'Commodore64'	and PlayOverUsers.Commodore64 = 1)		or 
+					(VideoGames.GamePlatform = 'FAMICOM'		and PlayOverUsers.FAMICOM = 1)			or 
+					(VideoGames.GamePlatform = 'NES'			and PlayOverUsers.NES = 1)				or 
+					(VideoGames.GamePlatform = 'SNES'			and PlayOverUsers.SNES = 1)				or 
+					(VideoGames.GamePlatform = 'N64'			and PlayOverUsers.N64 = 1)				or 
+					(VideoGames.GamePlatform = 'Gamecube'		and PlayOverUsers.Gamecube = 1)			or 
+					(VideoGames.GamePlatform = 'Wii'			and PlayOverUsers.Wii = 1)				or 
+					(VideoGames.GamePlatform = 'WiiU'			and PlayOverUsers.WiiU = 1)				or 
+					(VideoGames.GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
+					(VideoGames.GamePlatform = 'Gameboy'		and PlayOverUsers.Gameboy = 1)			or 
+					(VideoGames.GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
+					(VideoGames.GamePlatform = 'GBA'			and PlayOverUsers.GBA = 1)				or 
+					(VideoGames.GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
+					(VideoGames.GamePlatform = 'ThreeDS'		and PlayOverUsers.ThreeDS = 1)			or 
+					(VideoGames.GamePlatform = 'SegaGenesis'	and PlayOverUsers.SegaGenesis = 1)		or 
+					(VideoGames.GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
+					(VideoGames.GamePlatform = 'SegaDreamcast'	and PlayOverUsers.SegaDreamcast = 1)	or 
+					(VideoGames.GamePlatform = 'PS1'			and PlayOverUsers.PS1 = 1)				or
+					(VideoGames.GamePlatform = 'PS2'			and PlayOverUsers.PS2 = 1)				or
+					(VideoGames.GamePlatform = 'PS3'			and PlayOverUsers.PS3 = 1)				or
+					(VideoGames.GamePlatform = 'PS4'			and PlayOverUsers.PS4 = 1)				or
+					(VideoGames.GamePlatform = 'PSP'			and PlayOverUsers.PSP = 1)				or
+					(VideoGames.GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
+					(VideoGames.GamePlatform = 'Xbox'			and PlayOverUsers.Xbox = 1)				or
+					(VideoGames.GamePlatform = 'Xbox360'		and PlayOverUsers.Xbox360 = 1)			or
+					(VideoGames.GamePlatform = 'XboxOne'		and PlayOverUsers.XboxOne = 1)			or
+					(VideoGames.GamePlatform = 'Ouya'			and PlayOverUsers.Ouya = 1)				or
+					(VideoGames.GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
+					(VideoGames.GamePlatform = 'Vive'			and PlayOverUsers.Vive = 1)				or
+					(VideoGames.GamePlatform = 'PSVR'			and PlayOverUsers.PSVR = 1)
 				)
 			) 
 			WHERE PlayOverUsers.MasterUserIndex = @intUserIndex
@@ -136,62 +137,62 @@ BEGIN
 					JOIN PlayOverUsers ON
 						(
 							(
-								(Genre = 'TwoDP'					and TwoDP = 1)				or 
-								(Genre = 'ThreeDP'					and ThreeDP = 1)			or 
-								(Genre = 'FPS'						and FPS = 1)				or 
-								(Genre = 'FPP'						and FPP = 1)				or 
-								(Genre = 'VPuzzle'					and VPuzzle = 1)			or 
-								(Genre = 'Bulletstorm'				and Bulletstorm = 1)		or 
-								(Genre = 'Fighting'					and Fighting = 1)			or 
-								(Genre = 'Stealth'					and Stealth = 1)			or 
-								(Genre = 'Survival'					and Survival = 1)			or 
-								(Genre = 'VN'						and VN = 1)					or 
-								(Genre = 'IM'						and IM = 1)					or 
-								(Genre = 'RPG'						and RPG = 1)				or 
-								(Genre = 'TRPG'						and TRPG = 1)				or 
-								(Genre = 'ARPG'						and ARPG = 1)				or 
-								(Genre = 'Sports'					and Sports = 1)				or 
-								(Genre = 'Racing'					and Racing = 1)				or 
-								(Genre = 'RTS'						and RTS = 1)				or 
-								(Genre = 'TBS'						and TBS = 1)				or 
-								(Genre = 'VE'						and VE = 1)					or 
-								(Genre = 'MMO'						and MMO = 1)				or
-								(Genre = 'MOBA'						and MOBA = 1)
+								(VideoGames.Genre = 'TwoDP'						and PlayOverUsers.TwoDP = 1)			or 
+								(VideoGames.Genre = 'ThreeDP'					and PlayOverUsers.ThreeDP = 1)			or 
+								(VideoGames.Genre = 'FPS'						and PlayOverUsers.FPS = 1)				or 
+								(VideoGames.Genre = 'FPP'						and PlayOverUsers.FPP = 1)				or 
+								(VideoGames.Genre = 'VPuzzle'					and PlayOverUsers.VPuzzle = 1)			or 
+								(VideoGames.Genre = 'Bulletstorm'				and PlayOverUsers.Bulletstorm = 1)		or 
+								(VideoGames.Genre = 'Fighting'					and PlayOverUsers.Fighting = 1)			or 
+								(VideoGames.Genre = 'Stealth'					and PlayOverUsers.Stealth = 1)			or 
+								(VideoGames.Genre = 'Survival'					and PlayOverUsers.Survival = 1)			or 
+								(VideoGames.Genre = 'VN'						and PlayOverUsers.VN = 1)				or 
+								(VideoGames.Genre = 'IM'						and PlayOverUsers.IM = 1)				or 
+								(VideoGames.Genre = 'RPG'						and PlayOverUsers.RPG = 1)				or 
+								(VideoGames.Genre = 'TRPG'						and PlayOverUsers.TRPG = 1)				or 
+								(VideoGames.Genre = 'ARPG'						and PlayOverUsers.ARPG = 1)				or 
+								(VideoGames.Genre = 'Sports'					and PlayOverUsers.Sports = 1)			or 
+								(VideoGames.Genre = 'Racing'					and PlayOverUsers.Racing = 1)			or 
+								(VideoGames.Genre = 'RTS'						and PlayOverUsers.RTS = 1)				or 
+								(VideoGames.Genre = 'TBS'						and PlayOverUsers.TBS = 1)				or 
+								(VideoGames.Genre = 'VE'						and PlayOverUsers.VE = 1)				or 
+								(VideoGames.Genre = 'MMO'						and PlayOverUsers.MMO = 1)				or
+								(VideoGames.Genre = 'MOBA'						and PlayOverUsers.MOBA = 1)
 							)
 							and
 							(
-								(GamePlatform = 'PC'				and PC = 1)					or 
-								(GamePlatform = 'Atari'				and Atari = 1)				or 
-								(GamePlatform = 'Commodore64'		and Commodore64 = 1)		or 
-								(GamePlatform = 'FAMICOM'			and FAMICOM = 1)			or 
-								(GamePlatform = 'NES'				and NES = 1)				or 
-								(GamePlatform = 'SNES'				and SNES = 1)				or 
-								(GamePlatform = 'N64'				and N64 = 1)				or 
-								(GamePlatform = 'Gamecube'			and Gamecube = 1)			or 
-								(GamePlatform = 'Wii'				and Wii = 1)				or 
-								(GamePlatform = 'WiiU'				and WiiU = 1)				or 
-								(GamePlatform = 'NintendoSwitch'	and NintendoSwitch = 1)		or 
-								(GamePlatform = 'Gameboy'			and Gameboy = 1)			or 
-								(GamePlatform = 'VirtualBoy'		and VirtualBoy = 1)			or 
-								(GamePlatform = 'GBA'				and GBA = 1)				or 
-								(GamePlatform = 'DS'				and DS = 1)					or 
-								(GamePlatform = 'ThreeDS'			and ThreeDS = 1)			or 
-								(GamePlatform = 'SegaGenesis'		and SegaGenesis = 1)		or 
-								(GamePlatform = 'SegaCD'			and SegaCD = 1)				or 
-								(GamePlatform = 'SegaDreamcast'		and SegaDreamcast = 1)		or 
-								(GamePlatform = 'PS1'				and PS1 = 1)				or
-								(GamePlatform = 'PS2'				and PS2 = 1)				or
-								(GamePlatform = 'PS3'				and PS3 = 1)				or
-								(GamePlatform = 'PS4'				and PS4 = 1)				or
-								(GamePlatform = 'PSP'				and PSP = 1)				or
-								(GamePlatform = 'PSVita'			and PSVita = 1)				or
-								(GamePlatform = 'Xbox'				and Xbox = 1)				or
-								(GamePlatform = 'Xbox360'			and Xbox360 = 1)			or
-								(GamePlatform = 'XboxOne'			and XboxOne = 1)			or
-								(GamePlatform = 'Ouya'				and Ouya = 1)				or
-								(GamePlatform = 'OculusRift'		and OculusRift = 1)			or
-								(GamePlatform = 'Vive'				and Vive = 1)				or
-								(GamePlatform = 'PSVR'				and PSVR = 1)
+								(GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
+								(GamePlatform = 'Atari'				and PlayOverUsers.Atari = 1)			or 
+								(GamePlatform = 'Commodore64'		and PlayOverUsers.Commodore64 = 1)		or 
+								(GamePlatform = 'FAMICOM'			and PlayOverUsers.FAMICOM = 1)			or 
+								(GamePlatform = 'NES'				and PlayOverUsers.NES = 1)				or 
+								(GamePlatform = 'SNES'				and PlayOverUsers.SNES = 1)				or 
+								(GamePlatform = 'N64'				and PlayOverUsers.N64 = 1)				or 
+								(GamePlatform = 'Gamecube'			and PlayOverUsers.Gamecube = 1)			or 
+								(GamePlatform = 'Wii'				and PlayOverUsers.Wii = 1)				or 
+								(GamePlatform = 'WiiU'				and PlayOverUsers.WiiU = 1)				or 
+								(GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
+								(GamePlatform = 'Gameboy'			and PlayOverUsers.Gameboy = 1)			or 
+								(GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
+								(GamePlatform = 'GBA'				and PlayOverUsers.GBA = 1)				or 
+								(GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
+								(GamePlatform = 'ThreeDS'			and PlayOverUsers.ThreeDS = 1)			or 
+								(GamePlatform = 'SegaGenesis'		and PlayOverUsers.SegaGenesis = 1)		or 
+								(GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
+								(GamePlatform = 'SegaDreamcast'		and PlayOverUsers.SegaDreamcast = 1)	or 
+								(GamePlatform = 'PS1'				and PlayOverUsers.PS1 = 1)				or
+								(GamePlatform = 'PS2'				and PlayOverUsers.PS2 = 1)				or
+								(GamePlatform = 'PS3'				and PlayOverUsers.PS3 = 1)				or
+								(GamePlatform = 'PS4'				and PlayOverUsers.PS4 = 1)				or
+								(GamePlatform = 'PSP'				and PlayOverUsers.PSP = 1)				or
+								(GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
+								(GamePlatform = 'Xbox'				and PlayOverUsers.Xbox = 1)				or
+								(GamePlatform = 'Xbox360'			and PlayOverUsers.Xbox360 = 1)			or
+								(GamePlatform = 'XboxOne'			and PlayOverUsers.XboxOne = 1)			or
+								(GamePlatform = 'Ouya'				and PlayOverUsers.Ouya = 1)				or
+								(GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
+								(GamePlatform = 'Vive'				and PlayOverUsers.Vive = 1)				or
+								(GamePlatform = 'PSVR'				and PlayOverUsers.PSVR = 1)
 							)
 						) 
 					WHERE PlayOverUsers.MasterUserIndex = @intUserIndex
@@ -202,6 +203,7 @@ BEGIN
 						JOIN PlayOverUsers ON
 							PlayOverLists.MasterUserIndex = PlayOverUsers.MasterUserIndex
 						where PlayOverUsers.MasterUserIndex = @intUserIndex
+	   
 					) order by newid() 
 				) T1;
 			END
@@ -253,62 +255,62 @@ BEGIN
 					JOIN PlayOverUsers ON
 					(
 						(
-							(Genre = 'TwoDP'			and TwoDP = 1)			or 
-							(Genre = 'ThreeDP'			and ThreeDP = 1)		or 
-							(Genre = 'FPS'				and FPS = 1)			or 
-							(Genre = 'FPP'				and FPP = 1)			or 
-							(Genre = 'VPuzzle'			and VPuzzle = 1)		or 
-							(Genre = 'Bulletstorm'		and Bulletstorm = 1)	or 
-							(Genre = 'Fighting'			and Fighting = 1)		or 
-							(Genre = 'Stealth'			and Stealth = 1)		or 
-							(Genre = 'Survival'			and Survival = 1)		or 
-							(Genre = 'VN'				and VN = 1)				or 
-							(Genre = 'IM'				and IM = 1)				or 
-							(Genre = 'RPG'				and RPG = 1)			or 
-							(Genre = 'TRPG'				and TRPG = 1)			or 
-							(Genre = 'ARPG'				and ARPG = 1)			or 
-							(Genre = 'Sports'			and Sports = 1)			or 
-							(Genre = 'Racing'			and Racing = 1)			or 
-							(Genre = 'RTS'				and RTS = 1)			or 
-							(Genre = 'TBS'				and TBS = 1)			or 
-							(Genre = 'VE'				and VE = 1)				or 
-							(Genre = 'MMO'				and MMO = 1)			or
-							(Genre = 'MOBA'				and MOBA = 1)
+							(VideoGames.Genre = 'TwoDP'				and PlayOverUsers.TwoDP = 1)		or 
+							(VideoGames.Genre = 'ThreeDP'			and PlayOverUsers.ThreeDP = 1)		or 
+							(VideoGames.Genre = 'FPS'				and PlayOverUsers.FPS = 1)			or 
+							(VideoGames.Genre = 'FPP'				and PlayOverUsers.FPP = 1)			or 
+							(VideoGames.Genre = 'VPuzzle'			and PlayOverUsers.VPuzzle = 1)		or 
+							(VideoGames.Genre = 'Bulletstorm'		and PlayOverUsers.Bulletstorm = 1)	or 
+							(VideoGames.Genre = 'Fighting'			and PlayOverUsers.Fighting = 1)		or 
+							(VideoGames.Genre = 'Stealth'			and PlayOverUsers.Stealth = 1)		or 
+							(VideoGames.Genre = 'Survival'			and PlayOverUsers.Survival = 1)		or 
+							(VideoGames.Genre = 'VN'				and PlayOverUsers.VN = 1)			or 
+							(VideoGames.Genre = 'IM'				and PlayOverUsers.IM = 1)			or 
+							(VideoGames.Genre = 'RPG'				and PlayOverUsers.RPG = 1)			or 
+							(VideoGames.Genre = 'TRPG'				and PlayOverUsers.TRPG = 1)			or 
+							(VideoGames.Genre = 'ARPG'				and PlayOverUsers.ARPG = 1)			or 
+							(VideoGames.Genre = 'Sports'			and PlayOverUsers.Sports = 1)		or 
+							(VideoGames.Genre = 'Racing'			and PlayOverUsers.Racing = 1)		or 
+							(VideoGames.Genre = 'RTS'				and PlayOverUsers.RTS = 1)			or 
+							(VideoGames.Genre = 'TBS'				and PlayOverUsers.TBS = 1)			or 
+							(VideoGames.Genre = 'VE'				and PlayOverUsers.VE = 1)			or 
+							(VideoGames.Genre = 'MMO'				and PlayOverUsers.MMO = 1)			or
+							(VideoGames.Genre = 'MOBA'				and PlayOverUsers.MOBA = 1)
 						)
 						and
 						(
-							(Genre = 'PC'				and PC = 1)				or 
-							(Genre = 'Atari'			and Atari = 1)			or 
-							(Genre = 'Commodore64'		and Commodore64 = 1)	or 
-							(Genre = 'FAMICOM'			and FAMICOM = 1)		or 
-							(Genre = 'NES'				and NES = 1)			or 
-							(Genre = 'SNES'				and SNES = 1)			or 
-							(Genre = 'N64'				and N64 = 1)			or 
-							(Genre = 'Gamecube'			and Gamecube = 1)		or 
-							(Genre = 'Wii'				and Wii = 1)			or 
-							(Genre = 'WiiU'				and WiiU = 1)			or 
-							(Genre = 'NintendoSwitch'	and NintendoSwitch = 1)	or 
-							(Genre = 'Gameboy'			and Gameboy = 1)		or 
-							(Genre = 'VirtualBoy'		and VirtualBoy = 1)		or 
-							(Genre = 'GBA'				and GBA = 1)			or 
-							(Genre = 'DS'				and DS = 1)				or 
-							(Genre = 'ThreeDS'			and ThreeDS = 1)		or 
-							(Genre = 'SegaGenesis'		and SegaGenesis = 1)	or 
-							(Genre = 'SegaCD'			and SegaCD = 1)			or 
-							(Genre = 'SegaDreamcast'	and SegaDreamcast = 1)	or 
-							(Genre = 'PS1'				and PS1 = 1)			or
-							(Genre = 'PS2'				and PS2 = 1)			or
-							(Genre = 'PS3'				and PS3 = 1)			or
-							(Genre = 'PS4'				and PS4 = 1)			or
-							(Genre = 'PSP'				and PSP = 1)			or
-							(Genre = 'PSVita'			and PSVita = 1)			or
-							(Genre = 'Xbox'				and Xbox = 1)			or
-							(Genre = 'Xbox360'			and Xbox360 = 1)		or
-							(Genre = 'XboxOne'			and XboxOne = 1)		or
-							(Genre = 'Ouya'				and Ouya = 1)			or
-							(Genre = 'OculusRift'		and OculusRift = 1)		or
-							(Genre = 'Vive'				and Vive = 1)			or
-							(Genre = 'PSVR'				and PSVR = 1)
+							(VideoGames.GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
+							(VideoGames.GamePlatform = 'Atari'			and PlayOverUsers.Atari = 1)			or 
+							(VideoGames.GamePlatform = 'Commodore64'	and PlayOverUsers.Commodore64 = 1)		or 
+							(VideoGames.GamePlatform = 'FAMICOM'		and PlayOverUsers.FAMICOM = 1)			or 
+							(VideoGames.GamePlatform = 'NES'			and PlayOverUsers.NES = 1)				or 
+							(VideoGames.GamePlatform = 'SNES'			and PlayOverUsers.SNES = 1)				or 
+							(VideoGames.GamePlatform = 'N64'			and PlayOverUsers.N64 = 1)				or 
+							(VideoGames.GamePlatform = 'Gamecube'		and PlayOverUsers.Gamecube = 1)			or 
+							(VideoGames.GamePlatform = 'Wii'			and PlayOverUsers.Wii = 1)				or 
+							(VideoGames.GamePlatform = 'WiiU'			and PlayOverUsers.WiiU = 1)				or 
+							(VideoGames.GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
+							(VideoGames.GamePlatform = 'Gameboy'		and PlayOverUsers.Gameboy = 1)			or 
+							(VideoGames.GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
+							(VideoGames.GamePlatform = 'GBA'			and PlayOverUsers.GBA = 1)				or 
+							(VideoGames.GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
+							(VideoGames.GamePlatform = 'ThreeDS'		and PlayOverUsers.ThreeDS = 1)			or 
+							(VideoGames.GamePlatform = 'SegaGenesis'	and PlayOverUsers.SegaGenesis = 1)		or 
+							(VideoGames.GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
+							(VideoGames.GamePlatform = 'SegaDreamcast'	and PlayOverUsers.SegaDreamcast = 1)	or 
+							(VideoGames.GamePlatform = 'PS1'			and PlayOverUsers.PS1 = 1)				or
+							(VideoGames.GamePlatform = 'PS2'			and PlayOverUsers.PS2 = 1)				or
+							(VideoGames.GamePlatform = 'PS3'			and PlayOverUsers.PS3 = 1)				or
+							(VideoGames.GamePlatform = 'PS4'			and PlayOverUsers.PS4 = 1)				or
+							(VideoGames.GamePlatform = 'PSP'			and PlayOverUsers.PSP = 1)				or
+							(VideoGames.GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
+							(VideoGames.GamePlatform = 'Xbox'			and PlayOverUsers.Xbox = 1)				or
+							(VideoGames.GamePlatform = 'Xbox360'		and PlayOverUsers.Xbox360 = 1)			or
+							(VideoGames.GamePlatform = 'XboxOne'		and PlayOverUsers.XboxOne = 1)			or
+							(VideoGames.GamePlatform = 'Ouya'			and PlayOverUsers.Ouya = 1)				or
+							(VideoGames.GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
+							(VideoGames.GamePlatform = 'Vive'			and PlayOverUsers.Vive = 1)				or
+							(VideoGames.GamePlatform = 'PSVR'			and PlayOverUsers.PSVR = 1)
 						)
 					)
 					WHERE PlayOverUsers.MasterUserIndex = @intUserIndex
@@ -343,62 +345,62 @@ BEGIN
 		JOIN PlayOverUsers ON
 		(
 			(
-				(Genre = 'TwoDP'			and TwoDP = 1)			or 
-				(Genre = 'ThreeDP'			and ThreeDP = 1)		or 
-				(Genre = 'FPS'				and FPS = 1)			or 
-				(Genre = 'FPP'				and FPP = 1)			or 
-				(Genre = 'VPuzzle'			and VPuzzle = 1)		or 
-				(Genre = 'Bulletstorm'		and	Bulletstorm = 1)	or 
-				(Genre = 'Fighting'			and Fighting = 1)		or 
-				(Genre = 'Stealth'			and Stealth = 1)		or 
-				(Genre = 'Survival'			and Survival = 1)		or 
-				(Genre = 'VN'				and VN = 1)				or 
-				(Genre = 'IM'				and IM = 1)				or 
-				(Genre = 'RPG'				and RPG = 1)			or 
-				(Genre = 'TRPG'				and TRPG = 1)			or 
-				(Genre = 'ARPG'				and ARPG = 1)			or 
-				(Genre = 'Sports'			and Sports = 1)			or 
-				(Genre = 'Racing'			and Racing = 1)			or 
-				(Genre = 'RTS'				and RTS = 1)			or 
-				(Genre = 'TBS'				and TBS = 1)			or 
-				(Genre = 'VE'				and VE = 1)				or 
-				(Genre = 'MMO'				and MMO = 1)			or
-				(Genre = 'MOBA'				and MOBA = 1)
+				(VideoGames.Genre = 'TwoDP'				and PlayOverUsers.TwoDP = 1)		or 
+				(VideoGames.Genre = 'ThreeDP'			and PlayOverUsers.ThreeDP = 1)		or 
+				(VideoGames.Genre = 'FPS'				and PlayOverUsers.FPS = 1)			or 
+				(VideoGames.Genre = 'FPP'				and PlayOverUsers.FPP = 1)			or 
+				(VideoGames.Genre = 'VPuzzle'			and PlayOverUsers.VPuzzle = 1)		or 
+				(VideoGames.Genre = 'Bulletstorm'		and	PlayOverUsers.Bulletstorm = 1)	or 
+				(VideoGames.Genre = 'Fighting'			and PlayOverUsers.Fighting = 1)		or 
+				(VideoGames.Genre = 'Stealth'			and PlayOverUsers.Stealth = 1)		or 
+				(VideoGames.Genre = 'Survival'			and PlayOverUsers.Survival = 1)		or 
+				(VideoGames.Genre = 'VN'				and PlayOverUsers.VN = 1)			or 
+				(VideoGames.Genre = 'IM'				and PlayOverUsers.IM = 1)			or 
+				(VideoGames.Genre = 'RPG'				and PlayOverUsers.RPG = 1)			or 
+				(VideoGames.Genre = 'TRPG'				and PlayOverUsers.TRPG = 1)			or 
+				(VideoGames.Genre = 'ARPG'				and PlayOverUsers.ARPG = 1)			or 
+				(VideoGames.Genre = 'Sports'			and PlayOverUsers.Sports = 1)		or 
+				(VideoGames.Genre = 'Racing'			and PlayOverUsers.Racing = 1)		or 
+				(VideoGames.Genre = 'RTS'				and PlayOverUsers.RTS = 1)			or 
+				(VideoGames.Genre = 'TBS'				and PlayOverUsers.TBS = 1)			or 
+				(VideoGames.Genre = 'VE'				and PlayOverUsers.VE = 1)			or 
+				(VideoGames.Genre = 'MMO'				and PlayOverUsers.MMO = 1)			or
+				(VideoGames.Genre = 'MOBA'				and PlayOverUsers.MOBA = 1)
 			)
 			and
 			(
-				(Genre = 'PC'				and PC = 1)				or 
-				(Genre = 'Atari'			and Atari = 1)			or 
-				(Genre = 'Commodore64'		and Commodore64 = 1)	or 
-				(Genre = 'FAMICOM'			and FAMICOM = 1)		or 
-				(Genre = 'NES'				and NES = 1)			or 
-				(Genre = 'SNES'				and SNES = 1)			or 
-				(Genre = 'N64'				and N64 = 1)			or 
-				(Genre = 'Gamecube'			and Gamecube = 1)		or 
-				(Genre = 'Wii'				and Wii = 1)			or 
-				(Genre = 'WiiU'				and WiiU = 1)			or 
-				(Genre = 'NintendoSwitch'	and NintendoSwitch = 1)	or 
-				(Genre = 'Gameboy'			and Gameboy = 1)		or 
-				(Genre = 'VirtualBoy'		and VirtualBoy = 1)		or 
-				(Genre = 'GBA'				and GBA = 1)			or 
-				(Genre = 'DS'				and DS = 1)				or 
-				(Genre = 'ThreeDS'			and ThreeDS = 1)		or 
-				(Genre = 'SegaGenesis'		and SegaGenesis = 1)	or 
-				(Genre = 'SegaCD'			and SegaCD = 1)			or 
-				(Genre = 'SegaDreamcast'	and SegaDreamcast = 1)	or 
-				(Genre = 'PS1'				and PS1 = 1)			or
-				(Genre = 'PS2'				and PS2 = 1)			or
-				(Genre = 'PS3'				and PS3 = 1)			or
-				(Genre = 'PS4'				and PS4 = 1)			or
-				(Genre = 'PSP'				and PSP = 1)			or
-				(Genre = 'PSVita'			and PSVita = 1)			or
-				(Genre = 'Xbox'				and Xbox = 1)			or
-				(Genre = 'Xbox360'			and Xbox360 = 1)		or
-				(Genre = 'XboxOne'			and XboxOne = 1)		or
-				(Genre = 'Ouya'				and Ouya = 1)			or
-				(Genre = 'OculusRift'		and OculusRift = 1)		or
-				(Genre = 'Vive'				and Vive = 1)			or
-				(Genre = 'PSVR'				and PSVR = 1)
+				(VideoGames.GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
+				(VideoGames.GamePlatform = 'Atari'			and PlayOverUsers.Atari = 1)			or 
+				(VideoGames.GamePlatform = 'Commodore64'	and PlayOverUsers.Commodore64 = 1)		or 
+				(VideoGames.GamePlatform = 'FAMICOM'		and PlayOverUsers.FAMICOM = 1)			or 
+				(VideoGames.GamePlatform = 'NES'			and PlayOverUsers.NES = 1)				or 
+				(VideoGames.GamePlatform = 'SNES'			and PlayOverUsers.SNES = 1)				or 
+				(VideoGames.GamePlatform = 'N64'			and PlayOverUsers.N64 = 1)				or 
+				(VideoGames.GamePlatform = 'Gamecube'		and PlayOverUsers.Gamecube = 1)			or 
+				(VideoGames.GamePlatform = 'Wii'			and PlayOverUsers.Wii = 1)				or 
+				(VideoGames.GamePlatform = 'WiiU'			and PlayOverUsers.WiiU = 1)				or 
+				(VideoGames.GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
+				(VideoGames.GamePlatform = 'Gameboy'		and PlayOverUsers.Gameboy = 1)			or 
+				(VideoGames.GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
+				(VideoGames.GamePlatform = 'GBA'			and PlayOverUsers.GBA = 1)				or 
+				(VideoGames.GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
+				(VideoGames.GamePlatform = 'ThreeDS'		and PlayOverUsers.ThreeDS = 1)			or 
+				(VideoGames.GamePlatform = 'SegaGenesis'	and PlayOverUsers.SegaGenesis = 1)		or 
+				(VideoGames.GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
+				(VideoGames.GamePlatform = 'SegaDreamcast'	and PlayOverUsers.SegaDreamcast = 1)	or 
+				(VideoGames.GamePlatform = 'PS1'			and PlayOverUsers.PS1 = 1)				or
+				(VideoGames.GamePlatform = 'PS2'			and PlayOverUsers.PS2 = 1)				or
+				(VideoGames.GamePlatform = 'PS3'			and PlayOverUsers.PS3 = 1)				or
+				(VideoGames.GamePlatform = 'PS4'			and PlayOverUsers.PS4 = 1)				or
+				(VideoGames.GamePlatform = 'PSP'			and PlayOverUsers.PSP = 1)				or
+				(VideoGames.GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
+				(VideoGames.GamePlatform = 'Xbox'			and PlayOverUsers.Xbox = 1)				or
+				(VideoGames.GamePlatform = 'Xbox360'		and PlayOverUsers.Xbox360 = 1)			or
+				(VideoGames.GamePlatform = 'XboxOne'		and PlayOverUsers.XboxOne = 1)			or
+				(VideoGames.GamePlatform = 'Ouya'			and PlayOverUsers.Ouya = 1)				or
+				(VideoGames.GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
+				(VideoGames.GamePlatform = 'Vive'			and PlayOverUsers.Vive = 1)				or
+				(VideoGames.GamePlatform = 'PSVR'			and PlayOverUsers.PSVR = 1)
 			)
 		)
 		where PlayOverUsers.MasterUserIndex = @intUserIndex order by newid();
