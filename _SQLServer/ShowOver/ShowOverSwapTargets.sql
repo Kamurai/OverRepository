@@ -14,8 +14,9 @@ BEGIN
 	DECLARE @intShowIndex2 int = -2;
 
 	set @intShowCount = (
-		select count(*) from Shows JOIN ShowOverLists ON
-		Shows.TargetIndex = ShowOverLists.ShowIndex
+		select count(*) from Shows 
+		JOIN ShowOverLists ON
+			Shows.TargetIndex = ShowOverLists.ShowIndex
 		where ShowOverLists.MasterUserIndex = @intUserIndex and (Name = @strShow1 or Name = @strShow2)
 	);
 	set @intShowIndex1 = (select top 1 TargetIndex from Shows where Name = @strShow1);

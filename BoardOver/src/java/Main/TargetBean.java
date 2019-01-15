@@ -349,12 +349,15 @@ public class TargetBean implements Serializable
     }
     
     //Swap Positions
-    public String SwapPositions(int intUserIndex, String strCelebrity1, String strCelebrity2)
+    public String SwapPositions(int intUserIndex, String strTarget1, String strTarget2)
     {
         String Result = "index";
         String sqlQuery = "";
         
-        sqlQuery += "BoardOverSwapCelebrities " + intUserIndex + ", '" + strCelebrity1 + "', '" + strCelebrity2 + "';\n";
+        sqlQuery += "BoardOverSwapTargets " + 
+                intUserIndex + ", '" + 
+                strTarget1 + "', '" + 
+                strTarget2 + "';\n";
         
         try
         {
@@ -426,7 +429,7 @@ public class TargetBean implements Serializable
         ArrayList<ArrayList<String>> ResultList = new ArrayList<ArrayList<String>>();
         ArrayList<String> Sub = new ArrayList<String>();
         
-        //join BangOverList, and Celebrities based on current user
+        //join BoardOverList, and Targets based on current user
         String sqlQuery = "BoardOverPullPersonalList " + intUserIndex;
         
         try

@@ -6,111 +6,111 @@ BEGIN
 	select count(TargetIndex) as retNum from VideoGames
     UNION all
 	--Genres
-    select count(Genre) from VideoGames where Genre = 'TwoDP'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'TwoDP'
     UNION all
-    select count(Genre) from VideoGames where Genre = 'ThreeDP'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'ThreeDP'
     UNION all
-    select count(Genre) from VideoGames where Genre = 'FPS'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'FPS'
     UNION all
-    select count(Genre) from VideoGames where Genre = 'FPP'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'FPP'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'VPuzzle'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'VPuzzle'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'Bulletstorm'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'Bulletstorm'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'Fighting'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'Fighting'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'Stealth'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'Stealth'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'Survival'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'Survival'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'VN'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'VN'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'IM'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'IM'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'RPG'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'RPG'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'TRPG'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'TRPG'
 	UNION all
-    select count(Genre) from VideoGames where Genre = 'ARPG'
+    select count(Genre) from VideoGames where VideoGames.Genre = 'ARPG'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Sports'
+	select count(Genre) from VideoGames where VideoGames.Genre = 'Sports'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Racing'
+	select count(Genre) from VideoGames where VideoGames.Genre = 'Racing'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'RTS'
+	select count(Genre) from VideoGames where VideoGames.Genre = 'RTS'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'TBS'
+	select count(Genre) from VideoGames where VideoGames.Genre = 'TBS'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'VE'
+	select count(Genre) from VideoGames where VideoGames.Genre = 'VE'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'MMO'
+	select count(Genre) from VideoGames where VideoGames.Genre = 'MMO'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'MOBA'
-	--Settings
+	select count(Genre) from VideoGames where VideoGames.Genre = 'MOBA'
+	--Platforms
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PC'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PC'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Atari'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Atari'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Commodore64'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Commodore64'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'FAMICOM'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'FAMICOM'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'NES'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'NES'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'SNES'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'SNES'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'N64'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'N64'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Gamecube'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Gamecube'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Wii'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Wii'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'WiiU'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'WiiU'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'NintendoSwitch'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'NintendoSwitch'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Gameboy'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Gameboy'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'VirtualBoy'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'VirtualBoy'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'GBA'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'GBA'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'DS'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'DS'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'ThreeDS'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'ThreeDS'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'SegaGenesis'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'SegaGenesis'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'SegaCD'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'SegaCD'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'SegaDreamcast'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'SegaDreamcast'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PS1'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PS1'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PS2'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PS2'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PS3'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PS3'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PS4'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PS4'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PSP'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PSP'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PSVita'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PSVita'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Xbox'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Xbox'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Xbox360'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Xbox360'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'XboxOne'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'XboxOne'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Ouya'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Ouya'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'OculusRift'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'OculusRift'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'Vive'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'Vive'
 	UNION all
-	select count(Genre) from VideoGames where Genre = 'PSVR'
+	select count(Genre) from VideoGames where VideoGames.GamePlatform = 'PSVR'
 ;
 END

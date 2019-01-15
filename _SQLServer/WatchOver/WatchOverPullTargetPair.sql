@@ -29,26 +29,26 @@ BEGIN
 			(
 				(
 					--Genres
-					(Genre = 'Comedy'			and ComedyM = 1)			or 
-					(Genre = 'Drama'			and DramaM = 1)				or 
-					(Genre = 'Action'			and ActionM = 1)			or 
-					(Genre = 'Horror'			and HorrorM = 1)			or 
-					(Genre = 'Thriller'			and ThrillerM = 1)			or 
-					(Genre = 'Mystery'			and MysteryM = 1)			or 
-					(Genre = 'Documentary'		and DocumentaryM = 1) 
+					(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
+					(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
+					(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
+					(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
+					(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
+					(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
+					(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
 				)
 				and
 				(
 					--Settings
-					(Setting = 'ScienceFiction'	and ScienceFictionM = 1)	or 
-					(Setting = 'Fantasy'		and FantasyM = 1)			or 
-					(Setting = 'Western'		and WesternM = 1)			or 
-					(Setting = 'MartialArts'	and MartialArtsM = 1)		or 
-					(Setting = 'Modern'			and ModernM = 1)			or 
-					(Setting = 'Historic'		and HistoricM = 1)			or 
-					(Setting = 'PreHistoric'	and PreHistoricM = 1)		or 
-					(Setting = 'Comics'			and ComicsM = 1)			or 
-					(Setting = 'Period'			and PeriodM = 1)
+					(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
+					(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
+					(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
+					(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
+					(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
+					(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
+					(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
+					(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
+					(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
 				)
 			) 
 			WHERE WatchOverUsers.MasterUserIndex = @intUserIndex
@@ -57,7 +57,7 @@ BEGIN
 				JOIN WatchOverLists ON
 					Movies.TargetIndex = WatchOverLists.MovieIndex
 				JOIN WatchOverUsers ON
-					WatchOverLists.MasterUserIndex = WatchOverUsers.MasterUserIndex
+					WatchOverUsers.MasterUserIndex = WatchOverLists.MasterUserIndex
 				where WatchOverUsers.MasterUserIndex = @intUserIndex
 			)
 		);
@@ -84,7 +84,8 @@ BEGIN
 			--//find a record to compare to the one we have
 				--//if order is 0 or equal to count
 					--//there are Movies left in the global list
-			if ( (select count(MasterUserIndex) from WatchOverLists 
+			if ( 
+				(select count(MasterUserIndex) from WatchOverLists 
 			where (ListIndex = @TargetIndex and OrderRank = 0) or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
 			and @GlobalExclusionCount > 0 )
 			BEGIN    
@@ -99,38 +100,38 @@ BEGIN
 				select * from (
 					select Top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
 					JOIN WatchOverUsers ON
+					(
 						(
-							(
-								--Genres
-								(Genre = 'Comedy'			and ComedyM = 1)			or 
-								(Genre = 'Drama'			and DramaM = 1)				or 
-								(Genre = 'Action'			and ActionM = 1)			or 
-								(Genre = 'Horror'			and HorrorM = 1)			or 
-								(Genre = 'Thriller'			and ThrillerM = 1)			or 
-								(Genre = 'Mystery'			and MysteryM = 1)			or 
-								(Genre = 'Documentary'		and DocumentaryM = 1) 
-							)
-							and
-							(
-								--Settings
-								(Setting = 'ScienceFiction'	and ScienceFictionM = 1)	or 
-								(Setting = 'Fantasy'		and FantasyM = 1)			or 
-								(Setting = 'Western'		and WesternM = 1)			or 
-								(Setting = 'MartialArts'	and MartialArtsM = 1)		or 
-								(Setting = 'Modern'			and ModernM = 1)			or 
-								(Setting = 'Historic'		and HistoricM = 1)			or 
-								(Setting = 'PreHistoric'	and PreHistoricM = 1)		or 
-								(Setting = 'Comics'			and ComicsM = 1)			or 
-								(Setting = 'Period'			and PeriodM = 1)
-							)
-						) 
+							--Genres
+							(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
+							(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
+							(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
+							(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
+							(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
+							(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
+							(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
+						)
+						and
+						(
+							--Settings
+							(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
+							(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
+							(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
+							(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
+							(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
+							(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
+							(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
+							(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
+							(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
+						)
+					) 
 					WHERE WatchOverUsers.MasterUserIndex = @intUserIndex
 					and Movies.TargetIndex not in(
 						select Movies.TargetIndex from Movies
 						JOIN WatchOverLists ON
 							Movies.TargetIndex = WatchOverLists.MovieIndex
 						JOIN WatchOverUsers ON
-							WatchOverLists.MasterUserIndex = WatchOverUsers.MasterUserIndex
+							WatchOverUsers.MasterUserIndex = WatchOverLists.MasterUserIndex
 						where WatchOverUsers.MasterUserIndex = @intUserIndex
 					) order by newid() 
 				) T1;
@@ -149,8 +150,9 @@ BEGIN
 				select * from (
 					select top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
 					JOIN WatchOverLists ON
-						Movies.TargetIndex = MovieIndex
-					where MasterUserIndex = @intUserIndex and 
+						Movies.TargetIndex = WatchOverLists.MovieIndex
+					where MasterUserIndex = @intUserIndex 
+					and 
 					( 
 						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
 						(OrderRank = @SavedOrder+1 and UpLock = 0) 
@@ -183,26 +185,26 @@ BEGIN
 					(
 						(
 							--Genres
-							(Genre = 'Comedy'			and ComedyM = 1)			or 
-							(Genre = 'Drama'			and DramaM = 1)				or 
-							(Genre = 'Action'			and ActionM = 1)			or 
-							(Genre = 'Horror'			and HorrorM = 1)			or 
-							(Genre = 'Thriller'			and ThrillerM = 1)			or 
-							(Genre = 'Mystery'			and MysteryM = 1)			or 
-							(Genre = 'Documentary'		and DocumentaryM = 1) 
+							(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
+							(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
+							(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
+							(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
+							(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
+							(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
+							(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
 						)
 						and
 						(
 							--Settings
-							(Setting = 'ScienceFiction'	and ScienceFictionM = 1)	or 
-							(Setting = 'Fantasy'		and FantasyM = 1)			or 
-							(Setting = 'Western'		and WesternM = 1)			or 
-							(Setting = 'MartialArts'	and MartialArtsM = 1)		or 
-							(Setting = 'Modern'			and ModernM = 1)			or 
-							(Setting = 'Historic'		and HistoricM = 1)			or 
-							(Setting = 'PreHistoric'	and PreHistoricM = 1)		or 
-							(Setting = 'Comics'			and ComicsM = 1)			or 
-							(Setting = 'Period'			and PeriodM = 1)
+							(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
+							(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
+							(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
+							(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
+							(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
+							(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
+							(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
+							(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
+							(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
 						)
 					) 
 					WHERE WatchOverUsers.MasterUserIndex = @intUserIndex
@@ -236,30 +238,31 @@ BEGIN
 		select top 2 Movies.TargetIndex, Name, Picture, Release, Genre, Setting from Movies
 		JOIN WatchOverUsers  ON 
 		(
-			(
-				--Genres
-				(Genre = 'Comedy'			and ComedyM = 1)			or 
-				(Genre = 'Drama'			and DramaM = 1)				or 
-				(Genre = 'Action'			and ActionM = 1)			or 
-				(Genre = 'Horror'			and HorrorM = 1)			or 
-				(Genre = 'Thriller'			and ThrillerM = 1)			or 
-				(Genre = 'Mystery'			and MysteryM = 1)			or 
-				(Genre = 'Documentary'		and DocumentaryM = 1) 
-			)
-			and
-			(
-				--Settings
-				(Setting = 'ScienceFiction'	and ScienceFictionM = 1)	or 
-				(Setting = 'Fantasy'		and FantasyM = 1)			or 
-				(Setting = 'Western'		and WesternM = 1)			or 
-				(Setting = 'MartialArts'	and MartialArtsM = 1)		or 
-				(Setting = 'Modern'			and ModernM = 1)			or 
-				(Setting = 'Historic'		and HistoricM = 1)			or 
-				(Setting = 'PreHistoric'	and PreHistoricM = 1)		or 
-				(Setting = 'Comics'			and ComicsM = 1)			or 
-				(Setting = 'Period'			and PeriodM = 1)
-			)
-		) where WatchOverUsers.MasterUserIndex = @intUserIndex order by newid();
+				(
+					--Genres
+					(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
+					(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
+					(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
+					(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
+					(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
+					(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
+					(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
+				)
+				and
+				(
+					--Settings
+					(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
+					(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
+					(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
+					(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
+					(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
+					(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
+					(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
+					(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
+					(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
+				)
+			)  
+			where WatchOverUsers.MasterUserIndex = @intUserIndex order by newid();
 	END
 
 END

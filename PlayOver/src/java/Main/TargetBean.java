@@ -394,15 +394,15 @@ public class TargetBean implements Serializable
     }
     
     //Swap Positions
-    public String SwapPositions(int intUserIndex, String strCelebrity1, String strCelebrity2)
+    public String SwapPositions(int intUserIndex, String strTarget1, String strTarget2)
     {
         String Result = "index";
         String sqlQuery = "";
         
-        sqlQuery += "PlayOverSwapCelebrities " + 
+        sqlQuery += "PlayOverSwapTargets " + 
                 intUserIndex + ", '" + 
-                strCelebrity1 + "', '" + 
-                strCelebrity2 + "';\n";
+                strTarget1 + "', '" + 
+                strTarget2 + "';\n";
         
         try
         {
@@ -476,7 +476,7 @@ public class TargetBean implements Serializable
         ArrayList<ArrayList<String>> ResultList = new ArrayList<ArrayList<String>>();
         ArrayList<String> Sub = new ArrayList<String>();
         
-        //join BangOverList, and Celebrities based on current user
+        //join PlayOverList, and Targets based on current user
         String sqlQuery = "PlayOverPullPersonalList " + intUserIndex;
         
         try
@@ -720,7 +720,7 @@ public class TargetBean implements Serializable
         
         try
         {
-            //take celebrity to add and connect to main site
+            //take target to add and connect to main site
             FileConnection.UploadToServer(fileTargetToAdd);
         }
         catch(Exception ex)

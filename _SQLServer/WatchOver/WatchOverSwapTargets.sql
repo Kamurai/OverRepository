@@ -14,8 +14,9 @@ BEGIN
 	DECLARE @intMovieIndex2 int = -2;
 
 	set @intMovieCount = (
-		select count(*) from Movies JOIN WatchOverLists ON
-		Movies.TargetIndex = WatchOverLists.MovieIndex
+		select count(*) from Movies 
+		JOIN WatchOverLists ON
+			Movies.TargetIndex = WatchOverLists.MovieIndex
 		where WatchOverLists.MasterUserIndex = @intUserIndex and (Name = @strMovie1 or Name = @strMovie2)
 	);
 	set @intMovieIndex1 = (select top 1 TargetIndex from Movies where Name = @strMovie1);

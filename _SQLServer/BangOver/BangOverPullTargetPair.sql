@@ -93,7 +93,7 @@ BEGIN
 						JOIN BangOverLists ON
 							Celebrities.TargetIndex = BangOverLists.CelebrityIndex
 						JOIN BangOverUsers ON
-							BangOverLists.MasterUserIndex = BangOverUsers.MasterUserIndex
+							BangOverUsers.MasterUserIndex = BangOverLists.MasterUserIndex
 						where BangOverUsers.MasterUserIndex = @intUserIndex 
 					) 
 					order by newid() 

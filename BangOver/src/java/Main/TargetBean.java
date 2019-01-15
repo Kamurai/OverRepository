@@ -407,7 +407,7 @@ public class TargetBean implements Serializable
         ArrayList<String> Sub = new ArrayList<String>();
         String tempValue = "";
         
-        //join BangOverList, and Celebrities based on current user
+        //join BangOverList, and Targets based on current user
         String sqlQuery = "BangOverPullPersonalList " + intUserIndex;
         
         try

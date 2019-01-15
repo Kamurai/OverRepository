@@ -14,8 +14,9 @@ BEGIN
 	DECLARE @intCelebrityIndex2 int = -2;
 
 	set @intCelebrityCount = (
-		select count(*) from Celebrities JOIN BangOverLists ON
-		Celebrities.TargetIndex = BangOverLists.CelebrityIndex
+		select count(*) from Celebrities 
+		JOIN BangOverLists ON
+			Celebrities.TargetIndex = BangOverLists.CelebrityIndex
 		where BangOverLists.MasterUserIndex = @intUserIndex and (Name = @strCelebrity1 or Name = @strCelebrity2)
 	);	
 	set @intCelebrityIndex1 = (select top 1 TargetIndex from Celebrities where Name = @strCelebrity1);

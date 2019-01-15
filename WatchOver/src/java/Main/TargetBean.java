@@ -420,7 +420,7 @@ public class TargetBean implements Serializable
         String Result = "index";
         String sqlQuery = "";
         
-        sqlQuery += "SwapCelebrities " + 
+        sqlQuery += "WatchOverSwapTargets " + 
                 intUserIndex + ", '" + 
                 strTarget1 + "', '" + 
                 strTarget2 + "';\n";
@@ -497,8 +497,8 @@ public class TargetBean implements Serializable
         ArrayList<ArrayList<String>> ResultList = new ArrayList<ArrayList<String>>();
         ArrayList<String> Sub = new ArrayList<String>();
         
-        //join BangOverList, and Celebrities based on current user
-        String sqlQuery = "PullPersonalList " + intUserIndex;
+        //join WatchOverList, and Targets based on current user
+        String sqlQuery = "WatchOverPullPersonalList " + intUserIndex;
         
         try
         {
