@@ -90,6 +90,7 @@
                     <span class="classTableGlobalListHeader">#</span>
                     <span class="classTableGlobalListHeader">Name</span>
                     <span class="classTableGlobalListHeader">Release</span>
+                    <span class="classTableGlobalListHeader">Platform</span>
                     <span class="classTableGlobalListHeader">Picture</span>
                     <span class="classTableGlobalListHeader">Genre</span>
                     <span class="classTableGlobalListHeader">Ranking</span>
@@ -103,7 +104,7 @@
                         <span class="classTableGlobalListRowSpanRelease"><h:outputText class="classTableGlobalListRowRelease" value="#{x[1]}" /></span>
                         <span class="classTableGlobalListRowSpanPlatform"><h:outputText class="classTableGlobalListRowPlatform" value="#{x[2]}" /></span>
                         <span class="classTableGlobalListRowSpanPicture"><h:graphicImage class="classTableGlobalListRowPicture" value="#{TargetBean.path}#{TargetBean.folder}#{x[3]}" /></span>
-                        <span class="classTableGlobalListRowSpanValue"><h:outputText class="classTableGlobalListRowValue" value="#{x[4]}" /></span>
+                        <span class="classTableGlobalListRowSpanGenre"><h:outputText class="classTableGlobalListRowGenre" value="#{x[4]}" /></span>
                         <span class="classTableGlobalListRowSpanRanking"><h:outputText class="classTableGlobalListRowRanking" value="#{x[5]}" /></span>
                     </div>
                 </ui:repeat>
