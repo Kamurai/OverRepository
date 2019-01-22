@@ -151,13 +151,13 @@ insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Mandy Mit
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Mark Hamil',					'M', 'MarkHamil.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Matt Letscher',				'M', 'MattLetscher.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Melissa Benoist',			'F', 'MelissaBenoist.jpg',				0);
-insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Shantel Van Santen',			'F', 'ShantelVanSanten.jpg',			0);
+insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Shantel Van Santen',			'F', 'ShantelVanSanten.png',			0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Stephen Amell',				'M', 'StephenAmell.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Susan Coffey',				'F', 'SusanCoffey.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Teddy Sears',				'M', 'TeddySears.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Tom Cavanagh',				'M', 'TomCavanagh.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Tom Felton',					'M', 'TomFelton.jpg',					0);
-insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Trace Lisette',				'W', 'TraceLisette.jpg',				0);
+insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Trace Lysette',				'W', 'TraceLysette.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Violet Beane',				'F', 'VioletBeane.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Whitney Cummings',			'F', 'WhitneyCummings.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Willa Holland',				'F', 'WillaHolland.jpg',				0);
