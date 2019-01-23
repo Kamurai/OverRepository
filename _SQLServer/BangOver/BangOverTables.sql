@@ -186,7 +186,7 @@ insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Joe Dinic
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('John Barrowman',				'M', 'JohnBarrowman.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Katie McGrath',				'F', 'KatieMcGrath.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Madison McLaughlin',			'F', 'MadisonMcLaughlin.jpg',			0);
-insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Maisie Richardson Sellers',	'F', 'MaisieRichardson Sellers.jpg',	0);
+insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Maisie Richardson Sellers',	'F', 'MaisieRichardsonSellers.jpg',		0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Manu Bennett',				'M', 'ManuBennett.jpg',					0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Mehcad Brooks',				'M', 'MehcadBrooks.jpg',				0);
 insert into Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ('Michael Rowe',				'M', 'MichaelRowe.jpg',					0);
