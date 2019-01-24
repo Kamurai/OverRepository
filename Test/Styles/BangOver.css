@@ -282,7 +282,7 @@
 	/* 240 x 352 */
 	@media screen and (min-height: 352px){
 		/** Elements **/
-		body										{ width: 240px; height: 352px; 	}
+		body										{width: 240px; height: 352px; 	}
 		
 		/** Classes **/
 		/* My List */
@@ -349,7 +349,7 @@
 	/* 352 x 240 */
 	@media screen and (min-height: 240px){
 		/** Elements **/
-		body										{ width: 352px; height: 240px; }
+		body										{width: 352px; height: 240px; }
 		
 		/** Classes **/
 		/* My List */
@@ -448,7 +448,7 @@
 	/* 360 x 480 */
 	@media screen and (min-height: 480px){
 		/** Elements **/
-		body										{ width: 360px; height: 480px; }
+		body										{width: 360px; height: 480px; }
 		
 		/** Classes **/
 		/* My List */
@@ -548,7 +548,7 @@
 	/* 480 x 360 */
 	@media screen and (min-height: 360px){
 		/** Elements **/
-		body										{ width: 480px; height: 360px; }
+		body										{width: 480px; height: 360px; }
 		
 		/** Classes **/
 		/* My List */
@@ -645,7 +645,7 @@
 	/* 480 x 720 */
 	@media screen and (min-height: 720px){
 		/** Elements **/
-		body										{ width: 480px; height: 720px; }
+		body										{width: 480px; height: 720px; }
 		
 		/** Classes **/
 		/* My List */
@@ -742,7 +742,7 @@
 	/* 480 x 858 */
 	@media screen and (min-height: 858px){
 		/** Elements **/
-		body										{ width: 480px; height: 858px; }
+		body										{width: 480px; height: 858px; }
 		
 		/** Classes **/
 		/* My List */
@@ -842,7 +842,7 @@
 	/* 576 x 720 */
 	@media screen and (min-height: 720px){
 		/** Elements **/
-		body										{ width: 576px; height: 720px; }
+		body										{width: 576px; height: 720px; }
 		
 		/** Classes **/
 		/* My List */
@@ -942,7 +942,7 @@
 	/* 600 x 800 */
 	@media screen and (min-height: 800px){
 		/** Elements **/
-		body										{ width: 600px; height: 800px; }
+		body										{width: 600px; height: 800px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1042,7 +1042,7 @@
 	/* 720 x 480 */
 	@media screen and (min-height: 480px){
 		/** Elements **/
-		body										{ width: 720px; height: 480px; }
+		body										{width: 720px; height: 480px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1139,7 +1139,7 @@
 	/* 720 x 576 */
 	@media screen and (min-height: 576px){
 		/** Elements **/
-		body										{ width: 720px; height: 576px; }
+		body										{width: 720px; height: 576px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1236,7 +1236,7 @@
 	/* 720 x 1200 */
 	@media screen and (min-height: 1280px){
 		/** Elements **/
-		body										{ width: 720px; height: 1280px; }
+		body										{width: 720px; height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1336,7 +1336,7 @@
 	/* 768 x 1024 */
 	@media screen and (min-height: 1024px){
 		/** Elements **/
-		body										{ width: 768px; height: 1024px; }
+		body										{width: 768px; height: 1024px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1433,7 +1433,7 @@
 	/* 768 x 1280 */
 	@media screen and (min-height: 1280px){
 		/** Elements **/
-		body										{ width: 768px; height: 1280px; }
+		body										{width: 768px; height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1530,7 +1530,7 @@
 	/* 768 x 1360 */
 	@media screen and (min-height: 1360px){
 		/** Elements **/
-		body										{ width: 768px; height: 1360px; }
+		body										{width: 768px; height: 1360px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1627,7 +1627,7 @@
 	/* 768 x 1366 */
 	@media screen and (min-height: 1366px){
 		/** Elements **/
-		body										{ width: 768px; height: 1366px; }
+		body										{width: 768px; height: 1366px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1727,7 +1727,7 @@
 	/* 800 x 600 */
 	@media screen and (min-height: 600px){
 		/** Elements **/
-		body										{ width: 800px; height: 600px; }
+		body										{width: 800px; height: 600px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1824,7 +1824,7 @@
 	/* 800 x 1280 */
 	@media screen and (min-height: 1280px){
 		/** Elements **/
-		body										{ width: 800px; height: 1280px; }
+		body										{width: 800px; height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1924,7 +1924,7 @@
 	/* 864 x 1152 */
 	@media screen and (min-height: 1152px){
 		/** Elements **/
-		body										{ width: 864px; height: 1152px; }
+		body										{width: 864px; height: 1152px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2021,7 +2021,7 @@
 	/* 864 x 1536 */
 	@media screen and (min-height: 1536px){
 		/** Elements **/
-		body										{ width: 864px; height: 1536px; }
+		body										{width: 864px; height: 1536px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2121,7 +2121,7 @@
 	/* 858 x 480 */
 	@media screen and (min-height: 480px){
 		/** Elements **/
-		body										{ width: 858px; height: 480px; }
+		body										{width: 858px; height: 480px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2221,7 +2221,7 @@
 	/* 900 x 1440 */
 	@media screen and (min-height: 1440px){
 		/** Elements **/
-		body										{ width: 900px; height: 1440px; }
+		body										{width: 900px; height: 1440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2318,7 +2318,7 @@
 	/* 900 x 1600 */
 	@media screen and (min-height: 1600px){
 		/** Elements **/
-		body										{ width: 900px; height: 1600px; }
+		body										{width: 900px; height: 1600px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2418,7 +2418,7 @@
 	/* 1024 x 768 */
 	@media screen and (min-height: 768px){
 		/** Elements **/
-		body										{ width: 1024px; height: 768px; }
+		body										{width: 1024px; height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2515,7 +2515,7 @@
 		/* 1024 x 1280 */
 	@media screen and (min-height: 1280px){
 		/** Elements **/
-		body										{ width: 1024px; height: 1280px; }
+		body										{width: 1024px; height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2615,7 +2615,7 @@
 	/* 1050 x 1920 */
 	@media screen and (min-height: 1680px){
 		/** Elements **/
-		body										{ width: 1050px; height: 1680px; }
+		body										{width: 1050px; height: 1680px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2715,7 +2715,7 @@
 	/* 1080 x 1920 */
 	@media screen and (min-height: 1920px){
 		/** Elements **/
-		body										{ width: 1080px; height: 1920px; }
+		body										{width: 1080px; height: 1920px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2812,7 +2812,7 @@
 	/* 1080 x 2560 */
 	@media screen and (min-height: 2560px){
 		/** Elements **/
-		body										{ width: 1080px; height: 2560px; }
+		body										{width: 1080px; height: 2560px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2912,7 +2912,7 @@
 	/* 1152 x 864 */
 	@media screen and (min-height: 864px){
 		/** Elements **/
-		body										{ width: 1152px; height: 864px; }
+		body										{width: 1152px; height: 864px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3012,7 +3012,7 @@
 	/* 1200 x 1920 */
 	@media screen and (min-height: 1920px){
 		/** Elements **/
-		body										{ width: 1200px; height: 1920px; }
+		body										{width: 1200px; height: 1920px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3112,7 +3112,7 @@
 	/* 1280 x 720 */
 	@media screen and (min-height: 720px){
 		/** Elements **/
-		body										{ width: 1280px; height: 720px; }
+		body										{width: 1280px; height: 720px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3209,7 +3209,7 @@
 	/* 1280 x 768 */
 	@media screen and (min-height: 768px){
 		/** Elements **/
-		body										{ width: 1280px; height: 768px; }
+		body										{width: 1280px; height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3306,7 +3306,7 @@
 	/* 1280 x 800 */
 	@media screen and (min-height: 800px){
 		/** Elements **/
-		body										{ width: 1280px; height: 800px; }
+		body										{width: 1280px; height: 800px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3403,7 +3403,7 @@
 	/* 1280 x 1024 */
 	@media screen and (min-height: 1024px){
 		/** Elements **/
-		body										{ width: 1280px; height: 1024px; }
+		body										{width: 1280px; height: 1024px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3503,7 +3503,7 @@
 	/* 1360 x 768 */
 	@media screen and (min-height: 768px){
 		/** Elements **/
-		body										{ width: 1360px; height: 768px; }
+		body										{width: 1360px; height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3603,7 +3603,7 @@
 	/* 1366 x 768 */
 	@media screen and (min-height: 768px){
 		/** Elements **/
-		body										{ width: 1366px; height: 768px; }
+		body										{width: 1366px; height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3703,7 +3703,7 @@
 	/* 1440 x 900 */
 	@media screen and (min-height: 900px){
 		/** Elements **/
-		body										{ width: 1440px; height: 900px; }
+		body										{width: 1440px; height: 900px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3800,7 +3800,7 @@
 	/* 1440 x 2560 */
 	@media screen and (min-height: 2560px){
 		/** Elements **/
-		body										{ width: 1440px; height: 2560px; }
+		body										{width: 1440px; height: 2560px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3897,7 +3897,7 @@
 	/* 1440 x 3440 */
 	@media screen and (min-height: 3440px){
 		/** Elements **/
-		body										{ width: 1440px; height: 3440px; }
+		body										{width: 1440px; height: 3440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3997,7 +3997,7 @@
 	/* 1536 x 864 */
 	@media screen and (min-height: 864px){
 		/** Elements **/
-		body										{ width: 1536px; height: 864px; }
+		body										{width: 1536px; height: 864px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4097,7 +4097,7 @@
 	/* 1600 x 900 */
 	@media screen and (min-height: 900px){
 		/** Elements **/
-		body										{ width: 1600px; height: 900px; }
+		body										{width: 1600px; height: 900px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4197,7 +4197,7 @@
 	/* 1680 x 1050 */
 	@media screen and (min-height: 1050px){
 		/** Elements **/
-		body										{ width: 1680px; height: 1050px; }
+		body										{width: 1680px; height: 1050px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4297,7 +4297,7 @@
 	/* 1920 x 1080 */
 	@media screen and (min-height: 1080px) {
 		/** Elements **/
-		body										{ width: 1920px; height: 1080px; }
+		body										{width: 1920px; height: 1080px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4394,7 +4394,7 @@
 	/* 1920 x 1200 */
 	@media screen and (min-height: 1200px){
 		/** Elements **/
-		body										{ width: 1920px; height: 1200px; }
+		body										{width: 1920px; height: 1200px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4496,7 +4496,7 @@
 	/* 2160 x 3840 */
 	@media screen and (min-height: 3840px) {
 		/** Elements **/
-		body										{ width: 2160px; height: 3840px; }
+		body										{width: 2160px; height: 3840px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4593,7 +4593,7 @@
 	/* 2160 x 4096 */
 	@media screen and (min-height: 4096px) {
 		/** Elements **/
-		body										{ width: 2160px; height: 4096px; }
+		body										{width: 2160px; height: 4096px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4693,7 +4693,7 @@
 	/* 2560 x 1080 */
 	@media screen and (min-height: 1080px){
 		/** Elements **/
-		body										{ width: 2560px; height: 1080px; }
+		body										{width: 2560px; height: 1080px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4790,7 +4790,7 @@
 	/* 2560 x 1440 */
 	@media screen and (min-height: 1440px){
 		/** Elements **/
-		body										{ width: 2560px; height: 1440px; }
+		body										{width: 2560px; height: 1440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4890,7 +4890,7 @@
 	/* 3440 x 1440 */
 	@media screen and (min-height: 1440px){
 		/** Elements **/
-		body										{ width: 3440px; height: 1440px; }
+		body										{width: 3440px; height: 1440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4990,7 +4990,7 @@
 	/* 3840 x 2160 */
 	@media screen and (min-height: 2160px){
 		/** Elements **/
-		body										{ width: 3840px; height: 2160px; }
+		body										{width: 3840px; height: 2160px; }
 		
 		/** Classes **/
 		/* My List */
@@ -5090,7 +5090,7 @@
 	/* 4096 x 2160 */
 	@media screen and (min-height: 2160px){
 		/** Elements **/
-		body										{ width: 4096px; height: 2160px; }
+		body										{width: 4096px; height: 2160px; }
 		
 		/** Classes **/
 		/* My List */
@@ -5190,7 +5190,7 @@
 	/* 4320 x 7680 */
 	@media screen and (min-height: 7680px){
 		/** Elements **/
-		body										{ width: 4320px; height: 7680px; }
+		body										{width: 4320px; height: 7680px; }
 		
 		/** Classes **/
 		/* My List */
@@ -5290,7 +5290,7 @@
 	/* 7680 x 4320 */
 	@media screen and (min-height: 4320px){
 		/** Elements **/
-		body										{ width: 7680px; height: 4320px; }
+		body										{width: 7680px; height: 4320px; }
 		
 		/** Classes **/
 		/* My List */
