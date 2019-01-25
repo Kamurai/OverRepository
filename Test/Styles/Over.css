@@ -577,25 +577,25 @@ h6{
 	@media screen and (min-height: 352px){
 		/** Elements **/
 		/* Common */
-		body										{width: 240px; 		height: 352px; 		}
+		body											{width: 240px; 		height: 352px; 		}
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 		height: 176px;		}
+		.classTableMyListRow						{width: 168px; 		height: 66px;		}
 		
 		/* Global List */
-		.classTableGlobalListHeaderRow				{width: 240px; 		height: 17.6px;		}
-		.classTableGlobalListRow					{width: 240px; 		height: 88px;		}
+		.classTableGlobalListHeaderRow				{width: 168px; 		height: 26.4px;		}
+		.classTableGlobalListRow					{width: 168px; 		height: 66px;		}
 		
 		/* Management */
-		.classTableManagementHeaderRow				{width: 240px; 		height: 35.2px;		}
-		.classTableManagementRow					{width: 240px; 		height: 35.2px;		}
+		.classTableManagementHeaderRow				{width: 168px; 		height: 26.4px;		}
+		.classTableManagementRow					{width: 168px; 		height: 26.4px;		}
 		
 		/** IDs **/
 		/* Common */
 		#idGeneralLayout							{width: 240px;		height: 352px; 		}
-		#idHeaderRow								{width: 240px;		height: 63.536px; 	}
-		#idLogo										{width: 240px;		height: 63.536px; 	}
+		#idHeaderRow								{width: 240px;		height: 52.8px; 	}
+		#idLogo										{width: 240px;		height: 52.8px; 	}
 		#idNavigationRow							{width: 240px;		height: 10.56px; 	}
 		#idNavForm									{width: 240px;		height: 10.56px; 	}
 		#idCenterRow								{width: 240px;		height: 264px; 		}
@@ -606,38 +606,38 @@ h6{
 		#idForm										{width: 168px;		height: 264px;		}
 		#idCenterRowRight							{width: 36px;		height: 264px;		}
 		#idAdvertRight								{width: 36px;		height: 264px;		}
-		#idFooterRow								{width: 240px;		height: 13.904px;	}
-		#idFooterContent							{width: 240px; 		height: 7.92px;		}
-		#idFooterManagement							{width: 240px; 		height: 5.984px;	}
+		#idFooterRow								{width: 240px;		height: 24.64px;	}
+		#idFooterContent							{width: 240px; 		height: 14.08px;	}
+		#idFooterManagement							{width: 240px; 		height: 10.56px;	}
 		
 		/* Compare */
-		#idTableCompare								{width: 240px; 		height: 352px;		}
-		#idTableCompareRowPictures					{width: 240px; 		height: 316.8px;	}
-		#idTableCompareRowDataPicturesLeft			{width: 50%; 		height: 316.8px;	}
-		#idTableCompareRowDataPicturesRight			{width: 50%; 		height: 316.8px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 316.8px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 316.8px;	}
-		#idTableCompareRowNames						{width: 240px; 		height: 35.2px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;		height: 35.2px;		}
-		#idTableCompareRowNamesRight				{width: 50%;		height: 35.2px;		}
+		#idTableCompare								{width: 168px; 		height: 264px;		}
+		#idTableCompareRowPictures					{width: 168px; 		height: 237.6px;	}
+		#idTableCompareRowDataPicturesLeft			{width: 84px; 		height: 237.6px;	}
+		#idTableCompareRowDataPicturesRight			{width: 84px; 		height: 237.6px;	}
+		#idTableCompareRowPicturesLeft				{width: 84px;		height: 237.6px;	}
+		#idTableCompareRowPicturesRight				{width: 84px; 		height: 237.6px;	}
+		#idTableCompareRowNames						{width: 168px; 		height: 26.4px;		}
+		#idTableCompareRowNamesLeft					{width: 84px;		height: 26.4px;		}
+		#idTableCompareRowNamesRight				{width: 84px;		height: 26.4px;		}
 	
 		/* My List */
-		#idTableMyList								{width: 240px; 		height: 316.8px;	}
+		#idTableMyList								{width: 168px; 		height: 237.6px;	}
 		
 		/* Global List */
-		#idTableGlobalStats							{width: 1600px; 	height: 35.2px;		}
-		#idTableGlobalList							{width: 70%; 		height: 316.8px;	}
+		#idTableGlobalStats							{width: 168px; 		height: 52.8px;		}
+		#idTableGlobalList							{width: 168px; 		height: 158.4px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;		height: 281.6px;	}
+		#idTableOptions								{width: 168px;		height: 211.2px;	}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;		height: 70.4px;		}
-		#idTableManagementUsers						{width: 240px;		height: 281.6px;	}
+		#idTableManagementStats						{width: 168px;		height: 52.8px;		}
+		#idTableManagementUsers						{width: 168px;		height: 211.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;		height: 176px		}
-		#idTableSignUp								{width: 240px;		height: 176px		}
+		#idContentSignUp							{width: 168px;		height: 132px		}
+		#idTableSignUp								{width: 168px;		height: 132px		}
 	}
 }
 
@@ -647,7 +647,7 @@ h6{
 	@media screen and (min-height: 240px){
 		/** Elements **/
 		/* Common */
-		body										{width: 352px; 	height: 240px; }
+		body											{width: 352px; 	height: 240px; }
 		
 		/** Classes **/
 		/* My List */
@@ -717,7 +717,7 @@ h6{
 	@media screen and (min-height: 480px){
 		/** Elements **/
 		/* Common */
-		body										{width: 360px; 	height: 480px; }
+		body											{width: 360px; 	height: 480px; }
 		
 		/** Classes **/
 		/* My List */
@@ -787,7 +787,7 @@ h6{
 	@media screen and (min-height: 360px){
 		/** Elements **/
 		/* Common */
-		body										{width: 480px; 	height: 360px; }
+		body											{width: 480px; 	height: 360px; }
 		
 		/** Classes **/
 		/* My List */
@@ -854,7 +854,7 @@ h6{
 	@media screen and (min-height: 720px){
 		/** Elements **/
 		/* Common */
-		body										{width: 480px; 	height: 720px; }
+		body											{width: 480px; 	height: 720px; }
 		
 		/** Classes **/
 		/* My List */
@@ -921,7 +921,7 @@ h6{
 	@media screen and (min-height: 858px){
 		/** Elements **/
 		/* Common */
-		body										{width: 480px; 	height: 858px; }
+		body											{width: 480px; 	height: 858px; }
 		
 		/** Classes **/
 		/* My List */
@@ -991,7 +991,7 @@ h6{
 	@media screen and (min-height: 720px){
 		/** Elements **/
 		/* Common */
-		body										{width: 576px; 	height: 720px; }
+		body											{width: 576px; 	height: 720px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1061,7 +1061,7 @@ h6{
 	@media screen and (min-height: 800px){
 		/** Elements **/
 		/* Common */
-		body										{width: 600px; 	height: 800px; }
+		body											{width: 600px; 	height: 800px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1131,7 +1131,7 @@ h6{
 	@media screen and (min-height: 480px){
 		/** Elements **/
 		/* Common */
-		body										{width: 720px; 	height: 480px; }
+		body											{width: 720px; 	height: 480px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1198,7 +1198,7 @@ h6{
 	@media screen and (min-height: 576px){
 		/** Elements **/
 		/* Common */
-		body										{width: 720px; 	height: 576px; }
+		body											{width: 720px; 	height: 576px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1265,7 +1265,7 @@ h6{
 	@media screen and (min-height: 1280px){
 		/** Elements **/
 		/* Common */
-		body										{width: 720px; 	height: 1280px; }
+		body											{width: 720px; 	height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1335,7 +1335,7 @@ h6{
 	@media screen and (min-height: 1024px){
 		/** Elements **/
 		/* Common */
-		body										{width: 768px; 	height: 1024px; }
+		body											{width: 768px; 	height: 1024px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1402,7 +1402,7 @@ h6{
 	@media screen and (min-height: 1280px){
 		/** Elements **/
 		/* Common */
-		body										{width: 768px; 	height: 1280px; }
+		body											{width: 768px; 	height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1469,7 +1469,7 @@ h6{
 	@media screen and (min-height: 1360px){
 		/** Elements **/
 		/* Common */
-		body										{width: 768px; 	height: 1360px; }
+		body											{width: 768px; 	height: 1360px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1536,7 +1536,7 @@ h6{
 	@media screen and (min-height: 1366px){
 		/** Elements **/
 		/* Common */
-		body										{width: 768px; 	height: 1366px; }
+		body											{width: 768px; 	height: 1366px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1606,7 +1606,7 @@ h6{
 	@media screen and (min-height: 600px){
 		/** Elements **/
 		/* Common */
-		body										{width: 800px; 	height: 600px; }
+		body											{width: 800px; 	height: 600px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1673,7 +1673,7 @@ h6{
 	@media screen and (min-height: 1280px){
 		/** Elements **/
 		/* Common */
-		body										{width: 800px; 	height: 1280px; }
+		body											{width: 800px; 	height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1743,7 +1743,7 @@ h6{
 	@media screen and (min-height: 1152px){
 		/** Elements **/
 		/* Common */
-		body										{width: 864px; 	height: 1152px; }
+		body											{width: 864px; 	height: 1152px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1810,7 +1810,7 @@ h6{
 	@media screen and (min-height: 1536px){
 		/** Elements **/
 		/* Common */
-		body										{width: 864px; 	height: 1536px; }
+		body											{width: 864px; 	height: 1536px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1880,7 +1880,7 @@ h6{
 	@media screen and (min-height: 480px){
 		/** Elements **/
 		/* Common */
-		body										{width: 858px; 	height: 480px; }
+		body											{width: 858px; 	height: 480px; }
 		
 		/** Classes **/
 		/* My List */
@@ -1950,7 +1950,7 @@ h6{
 	@media screen and (min-height: 1440px){
 		/** Elements **/
 		/* Common */
-		body										{width: 900px; 	height: 1440px; }
+		body											{width: 900px; 	height: 1440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2017,7 +2017,7 @@ h6{
 	@media screen and (min-height: 1600px){
 		/** Elements **/
 		/* Common */
-		body										{width: 900px; 	height: 1600px; }
+		body											{width: 900px; 	height: 1600px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2087,7 +2087,7 @@ h6{
 	@media screen and (min-height: 768px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1024px; 	height: 768px; }
+		body											{width: 1024px; 	height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2154,7 +2154,7 @@ h6{
 	@media screen and (min-height: 1280px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1024px; 	height: 1280px; }
+		body											{width: 1024px; 	height: 1280px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2224,7 +2224,7 @@ h6{
 	@media screen and (min-height: 1680px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1050px; 	height: 1680px; }
+		body											{width: 1050px; 	height: 1680px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2294,7 +2294,7 @@ h6{
 	@media screen and (min-height: 1920px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1080px; 	height: 1920px; }
+		body											{width: 1080px; 	height: 1920px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2361,7 +2361,7 @@ h6{
 	@media screen and (min-height: 2560px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1080px; 	height: 2560px; }
+		body											{width: 1080px; 	height: 2560px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2431,7 +2431,7 @@ h6{
 	@media screen and (min-height: 864px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1152px; 	height: 864px; }
+		body											{width: 1152px; 	height: 864px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2501,7 +2501,7 @@ h6{
 	@media screen and (min-height: 1920px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1200px; 	height: 1920px; }
+		body											{width: 1200px; 	height: 1920px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2571,7 +2571,7 @@ h6{
 	@media screen and (min-height: 720px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1280px; 	height: 720px; }
+		body											{width: 1280px; 	height: 720px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2638,7 +2638,7 @@ h6{
 	@media screen and (min-height: 768px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1280px; 	height: 768px; }
+		body											{width: 1280px; 	height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2705,7 +2705,7 @@ h6{
 	@media screen and (min-height: 800px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1280px; 	height: 800px; }
+		body											{width: 1280px; 	height: 800px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2772,7 +2772,7 @@ h6{
 	@media screen and (min-height: 1024px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1280px; 	height: 1024px; }
+		body											{width: 1280px; 	height: 1024px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2842,7 +2842,7 @@ h6{
 	@media screen and (min-height: 768px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1360px; 	height: 768px; }
+		body											{width: 1360px; 	height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2912,7 +2912,7 @@ h6{
 	@media screen and (min-height: 768px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1366px; 	height: 768px; }
+		body											{width: 1366px; 	height: 768px; }
 		
 		/** Classes **/
 		/* My List */
@@ -2982,7 +2982,7 @@ h6{
 	@media screen and (min-height: 900px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1440px; 	height: 900px; }
+		body											{width: 1440px; 	height: 900px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3049,7 +3049,7 @@ h6{
 	@media screen and (min-height: 2560px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1440px; 	height: 2560px; }
+		body											{width: 1440px; 	height: 2560px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3117,7 +3117,7 @@ h6{
 	@media screen and (min-height: 3440px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1440px; 	height: 3440px; }
+		body											{width: 1440px; 	height: 3440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3187,7 +3187,7 @@ h6{
 	@media screen and (min-height: 864px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1536px; 	height: 864px; }
+		body											{width: 1536px; 	height: 864px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3257,7 +3257,7 @@ h6{
 	@media screen and (min-height: 900px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1600px; 	height: 900px; }
+		body											{width: 1600px; 	height: 900px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3327,7 +3327,7 @@ h6{
 	@media screen and (min-height: 1050px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1680px; 	height: 1050px; }
+		body											{width: 1680px; 	height: 1050px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3397,74 +3397,74 @@ h6{
 	@media screen and (min-height: 1080px) {
 		/** Elements **/
 		/* Common */
-		body										{width: 1920px; 	height: 1080px; }
+		body											{width: 1920px; 	height: 1080px; 	}
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 		height: 176px;		}
+		.classTableMyListRow						{width: 1344px; 	height: 202.5px;	}
 		
 		/* Global List */
-		.classTableGlobalListHeaderRow				{width: 240px; 		height: 17.6px;		}
-		.classTableGlobalListRow					{width: 240px; 		height: 88px;		}
+		.classTableGlobalListHeaderRow				{width: 1344px; 	height: 81px;		}
+		.classTableGlobalListRow					{width: 1344px; 	height: 202.5px;	}
 		
 		/* Management */
-		.classTableManagementHeaderRow				{width: 240px; 		height: 35.2px;		}
-		.classTableManagementRow					{width: 240px; 		height: 35.2px;		}
+		.classTableManagementHeaderRow				{width: 1344px; 	height: 81px;		}
+		.classTableManagementRow					{width: 1344px; 	height: 81px;		}
 		
 		/** IDs **/
 		/* Common */
-		#idGeneralLayout							{width: 1920px; 	height: 1080px;	}
-		#idHeaderRow								{width: 1920px; 	height: 162px;	}
-		#idLogo										{width: 1920px; 	height: 162px;	}
-		#idNavigationRow							{width: 1920px; 	height: 32.4px;	}
-		#idNavForm									{width: 1920px; 	height: 32.4px;	}
-		#idCenterRow								{width: 1920px; 	height: 810px;	}
-		#idCenterRowLeft							{width: 288px;  	height: 810px;	}
-		#idAdvertLeft								{width: 288px; 	height: 810px;	}
-		#idCenterRowMain							{width: 1344px;	height: 810px;	}
-		#idCenterContent							{width: 1344px;	height: 810px;	}
-		#idForm										{width: 1344px;	height: 810px;	}
-		#idCenterRowRight							{width: 288px;		height: 810px;	}
-		#idAdvertRight								{width: 288px;		height: 810px;	}
-		#idFooterRow								{width: 1920px;	height: 75.6px;	}
-		#idFooterContent							{width: 1920px;	height: 43.2px;	}
-		#idFooterManagement							{width: 1920px;	height: 32.4px;	}
+		#idGeneralLayout							{width: 1920px; 	height: 1080px;		}
+		#idHeaderRow								{width: 1920px; 	height: 162px;		}
+		#idLogo										{width: 1920px; 	height: 162px;		}
+		#idNavigationRow							{width: 1920px; 	height: 32.4px;		}
+		#idNavForm									{width: 1920px; 	height: 32.4px;		}
+		#idCenterRow								{width: 1920px; 	height: 810px;		}
+		#idCenterRowLeft							{width: 288px;  	height: 810px;		}
+		#idAdvertLeft								{width: 288px; 		height: 810px;		}
+		#idCenterRowMain							{width: 1344px;		height: 810px;		}
+		#idCenterContent							{width: 1344px;		height: 810px;		}
+		#idForm										{width: 1344px;		height: 810px;		}
+		#idCenterRowRight							{width: 288px;		height: 810px;		}
+		#idAdvertRight								{width: 288px;		height: 810px;		}
+		#idFooterRow								{width: 1920px;		height: 75.6px;		}
+		#idFooterContent							{width: 1920px;		height: 43.2px;		}
+		#idFooterManagement							{width: 1920px;		height: 32.4px;		}
 		
 		/* Compare */
-		#idTableCompare								{width: 240px; 		height: 352px;		}
-		#idTableCompareRowPictures					{width: 240px; 		height: 316.8px;	}
-		#idTableCompareRowDataPicturesLeft			{width: 50%; 		height: 316.8px;	}
-		#idTableCompareRowDataPicturesRight			{width: 50%; 		height: 316.8px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 316.8px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 316.8px;	}
-		#idTableCompareRowNames						{width: 240px; 		height: 35.2px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;		height: 35.2px;		}
-		#idTableCompareRowNamesRight				{width: 50%;		height: 35.2px;		}
+		#idTableCompare								{width: 1344px; 	height: 810px;		}
+		#idTableCompareRowPictures					{width: 1344px; 	height: 729px;		}
+		#idTableCompareRowDataPicturesLeft			{width: 672px; 		height: 729px;		}
+		#idTableCompareRowDataPicturesRight			{width: 672px; 		height: 729px;		}
+		#idTableCompareRowPicturesLeft				{width: 672px;		height: 729px;		}
+		#idTableCompareRowPicturesRight				{width: 672px; 		height: 729px;		}
+		#idTableCompareRowNames						{width: 1344px; 	height: 81px;		}
+		#idTableCompareRowNamesLeft					{width: 672px;		height: 81px;		}
+		#idTableCompareRowNamesRight				{width: 672px;		height: 81px;		}
 	
 		/* My List */
-		#idTableMyList								{width: 240px; 		height: 316.8px;	}
+		#idTableMyList								{width: 240px; 		height: 729px;		}
 		
 		/* Global List */
-		#idTableGlobalStats							{width: 1600px; 	height: 35.2px;		}
-		#idTableGlobalList							{width: 70%; 		height: 316.8px;	}
+		#idTableGlobalStats							{width: 1600px; 	height: 162px;		}
+		#idTableGlobalList							{width: 70%; 		height: 486px;		}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;		height: 281.6px;	}
+		#idTableOptions								{width: 240px;		height: 648px;		}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;		height: 70.4px;		}
-		#idTableManagementUsers						{width: 240px;		height: 281.6px;	}
+		#idTableManagementStats						{width: 240px;		height: 162px;		}
+		#idTableManagementUsers						{width: 240px;		height: 648px;		}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;		height: 176px		}
-		#idTableSignUp								{width: 240px;		height: 176px		}
+		#idContentSignUp							{width: 240px;		height: 405px		}
+		#idTableSignUp								{width: 240px;		height: 405px		}
 	}
 	
 	/* 1920 x 1200 */
 	@media screen and (min-height: 1200px){
 		/** Elements **/
 		/* Common */
-		body										{width: 1920px; 	height: 1200px; }
+		body											{width: 1920px; 	height: 1200px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3536,7 +3536,7 @@ h6{
 	@media screen and (min-height: 3840px) {
 		/** Elements **/
 		/* Common */
-		body										{width: 2160px; 	height: 3840px; }
+		body											{width: 2160px; 	height: 3840px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3603,7 +3603,7 @@ h6{
 	@media screen and (min-height: 4096px) {
 		/** Elements **/
 		/* Common */
-		body										{width: 2160px; 	height: 4096px; }
+		body											{width: 2160px; 	height: 4096px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3673,7 +3673,7 @@ h6{
 	@media screen and (min-height: 1080px){
 		/** Elements **/
 		/* Common */
-		body										{width: 2560px; 	height: 1080px; }
+		body											{width: 2560px; 	height: 1080px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3740,7 +3740,7 @@ h6{
 	@media screen and (min-height: 1440px){
 		/** Elements **/
 		/* Common */
-		body										{width: 2560px; 	height: 1440px; }
+		body											{width: 2560px; 	height: 1440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3810,7 +3810,7 @@ h6{
 	@media screen and (min-height: 1440px){
 		/** Elements **/
 		/* Common */
-		body										{width: 3440px; 	height: 1440px; }
+		body											{width: 3440px; 	height: 1440px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3880,7 +3880,7 @@ h6{
 	@media screen and (min-height: 2160px){
 		/** Elements **/
 		/* Common */
-		body										{width: 3840px; 	height: 2160px; }
+		body											{width: 3840px; 	height: 2160px; }
 		
 		/** Classes **/
 		/* My List */
@@ -3950,7 +3950,7 @@ h6{
 	@media screen and (min-height: 2160px){
 		/** Elements **/
 		/* Common */
-		body										{width: 4096px; 	height: 2160px; }
+		body											{width: 4096px; 	height: 2160px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4020,7 +4020,7 @@ h6{
 	@media screen and (min-height: 7680px){
 		/** Elements **/
 		/* Common */
-		body										{width: 4320px; 	height: 7680px; }
+		body											{width: 4320px; 	height: 7680px; }
 		
 		/** Classes **/
 		/* My List */
@@ -4090,7 +4090,7 @@ h6{
 	@media screen and (min-height: 4320px){
 		/** Elements **/
 		/* Common */
-		body										{width: 7680px; 	height: 4320px; }
+		body											{width: 7680px; 	height: 4320px; }
 		
 		/** Classes **/
 		/* My List */
