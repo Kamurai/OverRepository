@@ -325,7 +325,9 @@ h6{
 	margin: 0px;
     padding: 0px;
 	vertical-align: top;
-	display: table-cell;
+	overflow-x: auto;
+    overflow-y: auto;
+    display: table-cell;
 }
 
 #idCenterContent{
