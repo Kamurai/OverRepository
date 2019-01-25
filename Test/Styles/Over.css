@@ -11,7 +11,7 @@ body{
     text-align: center;
     vertical-align: top;
     color: #ffffff;
-    background-color: #aaaaaa;
+    background-color: #000000;
     padding: 0px;
     margin: 0px;
     font-family: Verdana, Geneva, sans-serif;
@@ -3440,24 +3440,24 @@ h6{
 		#idTableCompareRowNames						{width: 1344px; 	height: 81px;		}
 		#idTableCompareRowNamesLeft					{width: 672px;		height: 81px;		}
 		#idTableCompareRowNamesRight				{width: 672px;		height: 81px;		}
-	
+		
 		/* My List */
-		#idTableMyList								{width: 240px; 		height: 729px;		}
+		#idTableMyList								{width: 1344px; 	height: 729px;		}
 		
 		/* Global List */
-		#idTableGlobalStats							{width: 1600px; 	height: 162px;		}
-		#idTableGlobalList							{width: 70%; 		height: 486px;		}
+		#idTableGlobalStats							{width: 1344px; 	height: 162px;		}
+		#idTableGlobalList							{width: 1344px; 	height: 486px;		}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;		height: 648px;		}
+		#idTableOptions								{width: 1344px;		height: 648px;		}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;		height: 162px;		}
-		#idTableManagementUsers						{width: 240px;		height: 648px;		}
+		#idTableManagementStats						{width: 1344px;		height: 162px;		}
+		#idTableManagementUsers						{width: 1344px;		height: 648px;		}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;		height: 405px		}
-		#idTableSignUp								{width: 240px;		height: 405px		}
+		#idContentSignUp							{width: 1344px;		height: 405px		}
+		#idTableSignUp								{width: 1344px;		height: 405px		}
 	}
 	
 	/* 1920 x 1200 */
