@@ -83,21 +83,21 @@ h6{
 
 /* My List */
 .classTableMyListRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableMyListRowSpanNumber{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
 
 .classTableMyListRowNumber{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     text-align: right;
@@ -128,28 +128,28 @@ h6{
 
 /* Global List */
 .classTableGlobalListHeaderRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableGlobalListHeader{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
 
 .classTableGlobalListRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableGlobalListRowSpanNumber{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -160,7 +160,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanName{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -171,7 +171,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanPicture{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: block;
@@ -187,7 +187,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanValue{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -198,7 +198,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanRanking{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -210,14 +210,14 @@ h6{
 
 /* Management */
 .classTableManagementHeaderRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableManagementHeader{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     color: #ffffff;
     margin: auto;
@@ -225,28 +225,28 @@ h6{
 }
 
 .classTableManagementRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableManagementUsersColIndex{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     overflow-x: auto;
     margin: auto;
 }
 
 .classTableManagementUsersColUsername{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     overflow-x: auto;
 }
 
 .classTableManagementUsersColEmail{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     overflow-x: auto;
     margin: auto;
@@ -254,14 +254,14 @@ h6{
 }
 
 .classTableManagementUsersColAdminLevel{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
 
 .classTableManagementUsersColLoggedOn{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -374,71 +374,67 @@ h6{
 
 /* Compare */
 #idTableCompare{
-    border: 1px solid #00fffa;
+    border: 0px solid #00fffa;
     
 	border-spacing: 0px;
     border-collapse: collapse;
 }
 
 #idTableCompareRowPictures{
-    border: 1px solid #e9f413;
+    border: 0px solid #e9f413;
     
     margin: auto;
     display: table-row;
  }
 
 #idTableCompareRowDataPicturesLeft{
-    border: 1px solid #13ecf4;
+    border: 0px solid #13ecf4;
     
     margin: auto;
     display: table-cell;
  }
 
 #idTableCompareRowDataPicturesRight{
-    border: 1px solid #13ecf4;
+    border: 0px solid #13ecf4;
     
     margin: auto;
     display: table-cell;
  }
 
 #idTableCompareRowPicturesLeft{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
-    object-fit: fill;
-    -o-object-fit: fill;
-    -moz-object-fit: fill;
-        
-    margin: auto;
+	text-align: center;
+    overflow: hidden;
+	margin: auto;
     display: block;
  }
 
 #idTableCompareRowPicturesRight{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
-    object-fit: fill;
-    -o-object-fit: fill;
-    -moz-object-fit: fill;
-        
-    margin: auto;
+    text-align: center;
+    overflow: hidden;
+	margin: auto;
     display: block;
  }
 
 #idTableCompareRowNames{
-    border: 1px solid #e9f413;
+    border: 0px solid #e9f413;
     
 	margin: auto;
     display: table-row;
 }
 
 #idTableCompareRowNamesLeft{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
 	margin: auto;
     display: table-cell;
 }
 
 #idTableCompareRowNamesRight{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
 	margin: auto;
     display: table-cell;
@@ -446,7 +442,7 @@ h6{
 
 /* My List */
 #idTableMyList{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     padding: 0px;
     border-spacing: 0px;
@@ -458,7 +454,7 @@ h6{
 
 /* Global List */
 #idTableGlobalStats{
-    border: 1px solid #00fffa;
+    border: 0px solid #00fffa;
     
     padding: 0px;
     border-spacing: 0px;
@@ -468,7 +464,7 @@ h6{
 }
 
 #idTableGlobalList{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     border-spacing: 0px;
     //border-collapse: collapse;
@@ -492,7 +488,7 @@ h6{
 }
 
 #idTableManagementUsers{
-    border: 1px solid #00fffa;
+    border: 0px solid #00fffa;
     
     padding: 0px;
     border-spacing: 0px;
@@ -502,33 +498,33 @@ h6{
 }
 
 #idTableManagementUsersColHeaderIndex{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
 }
     
 #idTableManagementUsersColHeaderUsername{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;    
 }
     
 #idTableManagementUsersColHeaderEmail{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
     
 #idTableManagementUsersColHeaderAdminLevel{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
 	display: table-cell;
 }
 
 #idTableManagementUsersColHeaderLoggedOn{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -536,7 +532,7 @@ h6{
  
 /* Add Target */ 
 #idContentAdd{
-    border: 1px solid #FE0101;
+    border: 0px solid #FE0101;
     
     text-align: left;
     vertical-align: top;    
@@ -549,7 +545,7 @@ h6{
 #idRadioAddValue2{}
 
 #idContentAddSuggestion{
-    border: 1px solid #FE0101;
+    border: 0px solid #FE0101;
     
     text-align: left;
 }
@@ -562,7 +558,7 @@ h6{
 
 /* Sign Up */
 #idContentSignUp{
-    border: 1px solid #FE0101;
+    border: 0px solid #FE0101;
 	
     text-align: left;
 }
@@ -3456,7 +3452,7 @@ h6{
 		/* Common */
 		#idGeneralLayout							{width: 1920px; 	height: 1080px;		}
 		#idHeaderRow								{width: 1920px; 	height: 162px;		}
-		#idLogo										{width: 1920px; 	height: 162px;		}
+		#idLogo										{width: auto; 		height: 162px;		}
 		#idNavigationRow							{width: 1920px; 	height: 32.4px;		}
 		#idNavForm									{width: 1920px; 	height: 32.4px;		}
 		#idCenterRow								{width: 1920px; 	height: 885.6px;	}
@@ -3510,64 +3506,64 @@ h6{
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 1344px; 	height: 225px;		}
+		.classTableMyListRow						{width: 1344px; 	height: 246px;		}
 		
 		/* Global List */
-		.classTableGlobalListHeaderRow				{width: 1344px; 	height: 90px;		}
-		.classTableGlobalListRow					{width: 1344px; 	height: 225px;		}
+		.classTableGlobalListHeaderRow				{width: 1344px; 	height: 98.4px;		}
+		.classTableGlobalListRow					{width: 1344px; 	height: 246px;		}
 		
 		/* Management */
-		.classTableManagementHeaderRow				{width: 1344px; 	height: 90px;		}
-		.classTableManagementRow					{width: 1344px; 	height: 90px;		}
+		.classTableManagementHeaderRow				{width: 1344px; 	height: 98.4px;		}
+		.classTableManagementRow					{width: 1344px; 	height: 98.4px;		}
 		
 		/** IDs **/
 		/* Common */
 		#idGeneralLayout							{width: 1920px; 	height: 1200px;		}
 		#idHeaderRow								{width: 1920px; 	height: 180px;		}
-		#idLogo										{width: 1920px; 	height: 180px;		}
+		#idLogo										{width: auto; 		height: 180px;		}
 		#idNavigationRow							{width: 1920px; 	height: 36px;		}
 		#idNavForm									{width: 1920px; 	height: 36px;		}
-		#idCenterRow								{width: 1920px; 	height: 900px;		}
-		#idCenterRowLeft							{width: 288px;  	height: 900px;		}
-		#idAdvertLeft								{width: 288px; 		height: 900px;		}
-		#idCenterRowMain							{width: 1344px;		height: 900px;		}
+		#idCenterRow								{width: 1920px; 	height: 984px;		}
+		#idCenterRowLeft							{width: 288px;  	height: 984px;		}
+		#idAdvertLeft								{width: 288px; 		height: 984px;		}
+		#idCenterRowMain							{width: 1344px;		height: 984px;		}
 		#idCenterContent							{width: 1344px;		height: 60px;		}
-		#idForm										{width: 1344px;		height: 900px;		}
-		#idCenterRowRight							{width: 288px;		height: 900px;		}
-		#idAdvertRight								{width: 288px;		height: 900px;		}
+		#idForm										{width: 1344px;		height: 984px;		}
+		#idCenterRowRight							{width: 288px;		height: 984px;		}
+		#idAdvertRight								{width: 288px;		height: 984px;		}
 		#idFooterRow								{width: 1920px;		height: 84px;		}
 		#idFooterContent							{width: 1920px;		height: 48px;		}
 		#idFooterManagement							{width: 1920px;		height: 36px;		}
 		
 		/* Compare */
 		#idTableCompare								{width: 1344px; 	height: auto;		}
-		#idTableCompareRowPictures					{width: 1344px; 	height: 855px;		}
-		#idTableCompareRowDataPicturesLeft			{width: 672px; 		height: 855px;		}
-		#idTableCompareRowDataPicturesRight			{width: 672px; 		height: 855px;		}
-		#idTableCompareRowPicturesLeft				{width: 672px;		height: 855px;		}
-		#idTableCompareRowPicturesRight				{width: 672px; 		height: 855px;		}
-		#idTableCompareRowNames						{width: 1344px; 	height: 45px;		}
-		#idTableCompareRowNamesLeft					{width: 672px;		height: 45px;		}
-		#idTableCompareRowNamesRight				{width: 672px;		height: 45px;		}
-		#idTableCompareRowSecond					{width: 1344px; 	height: 45px;		}
+		#idTableCompareRowPictures					{width: 1344px; 	height: 984px;		}
+		#idTableCompareRowDataPicturesLeft			{width: 672px; 		height: 984px;		}
+		#idTableCompareRowDataPicturesRight			{width: 672px; 		height: 984px;		}
+		#idTableCompareRowPicturesLeft				{width: 672px;		height: 984px;		}
+		#idTableCompareRowPicturesRight				{width: 672px; 		height: 984px;		}
+		#idTableCompareRowNames						{width: 1344px; 	height: 49.2px;		}
+		#idTableCompareRowNamesLeft					{width: 672px;		height: 49.2px;		}
+		#idTableCompareRowNamesRight				{width: 672px;		height: 49.2px;		}
+		#idTableCompareRowSecond					{width: 1344px; 	height: 49.2px;		}
 		
 		/* My List */
 		#idTableMyList								{width: 1344px; 	height: auto;		}
 		
 		/* Global List */
-		#idTableGlobalStats							{width: 1344px; 	height: 180px;		}
+		#idTableGlobalStats							{width: 1344px; 	height: 196.8px;	}
 		#idTableGlobalList							{width: 1344px; 	height: auto;		}
 		
 		/* Options */
-		#idTableOptions								{width: 1344px;		height: 720px;		}
+		#idTableOptions								{width: 1344px;		height: 787.2px;	}
 		
 		/* Management */
-		#idTableManagementStats						{width: 1344px;		height: 180px;		}
+		#idTableManagementStats						{width: 1344px;		height: 196.8px;	}
 		#idTableManagementUsers						{width: 1344px;		height: auto;		}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 1344px;		height: 450px		}
-		#idTableSignUp								{width: 1344px;		height: 450px		}
+		#idContentSignUp							{width: 1344px;		height: 492px		}
+		#idTableSignUp								{width: 1344px;		height: 492px		}
 	}	
 }
 
@@ -3581,64 +3577,64 @@ h6{
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 1512px; 	height: 720px;		}
+		.classTableMyListRow						{width: 1512px; 	height: 787.2px;	}
 		
 		/* Global List */
-		.classTableGlobalListHeaderRow				{width: 1512px; 	height: 288px;		}
-		.classTableGlobalListRow					{width: 1512px; 	height: 720px;		}
+		.classTableGlobalListHeaderRow				{width: 1512px; 	height: 314.88px;	}
+		.classTableGlobalListRow					{width: 1512px; 	height: 787.2px;	}
 		
 		/* Management */
-		.classTableManagementHeaderRow				{width: 1512px; 	height: 288px;		}
-		.classTableManagementRow					{width: 1512px; 	height: 288px;		}
+		.classTableManagementHeaderRow				{width: 1512px; 	height: 314.88px;	}
+		.classTableManagementRow					{width: 1512px; 	height: 314.88px;	}
 		
 		/** IDs **/
 		/* Common */
 		#idGeneralLayout							{width: 2160px; 	height: 3840px;		}
 		#idHeaderRow								{width: 2160px; 	height: 576px;		}
-		#idLogo										{width: 2160px; 	height: 576px;		}
+		#idLogo										{width: auto; 		height: 576px;		}
 		#idNavigationRow							{width: 2160px; 	height: 115.2px;	}
 		#idNavForm									{width: 2160px; 	height: 115.2px;	}
-		#idCenterRow								{width: 2160px; 	height: 2880px;		}
-		#idCenterRowLeft							{width: 324px;  	height: 2880px;		}
-		#idAdvertLeft								{width: 324px; 		height: 2880px;		}
-		#idCenterRowMain							{width: 1512px;		height: 2880px;		}
+		#idCenterRow								{width: 2160px; 	height: 3148.8px;	}
+		#idCenterRowLeft							{width: 324px;  	height: 3148.8px;	}
+		#idAdvertLeft								{width: 324px; 		height: 3148.8px;	}
+		#idCenterRowMain							{width: 1512px;		height: 3148.8px;	}
 		#idCenterContent							{width: 1512px;		height: 192px;		}
-		#idForm										{width: 1344px;		height: 2880px;		}
-		#idCenterRowRight							{width: 324px;		height: 2880px;		}
-		#idAdvertRight								{width: 324px;		height: 2880px;		}
+		#idForm										{width: 1512px;		height: 3148.8px;	}
+		#idCenterRowRight							{width: 324px;		height: 3148.8px;	}
+		#idAdvertRight								{width: 324px;		height: 3148.8px;	}
 		#idFooterRow								{width: 2160px;		height: 268.8px;	}
 		#idFooterContent							{width: 2160px;		height: 153.6px;	}
 		#idFooterManagement							{width: 2160px;		height: 115.2px;	}
 		
 		/* Compare */
 		#idTableCompare								{width: 1512px; 	height: auto;		}
-		#idTableCompareRowPictures					{width: 1512px; 	height: 2736px;		}
-		#idTableCompareRowDataPicturesLeft			{width: 756px; 		height: 2736px;		}
-		#idTableCompareRowDataPicturesRight			{width: 756px; 		height: 2736px;		}
-		#idTableCompareRowPicturesLeft				{width: 756px;		height: 2736px;		}
-		#idTableCompareRowPicturesRight				{width: 756px; 		height: 2736px;		}
-		#idTableCompareRowNames						{width: 1512px; 	height: 144px;		}
-		#idTableCompareRowNamesLeft					{width: 756px;		height: 144px;		}
-		#idTableCompareRowNamesRight				{width: 756px;		height: 144px;		}
-		#idTableCompareRowSecond					{width: 1512px; 	height: 144px;		}
+		#idTableCompareRowPictures					{width: 1512px; 	height: 3148.8px;	}
+		#idTableCompareRowDataPicturesLeft			{width: 756px; 		height: 3148.8px;	}
+		#idTableCompareRowDataPicturesRight			{width: 756px; 		height: 3148.8px;	}
+		#idTableCompareRowPicturesLeft				{width: 756px;		height: 3148.8px;	}
+		#idTableCompareRowPicturesRight				{width: 756px; 		height: 3148.8px;	}
+		#idTableCompareRowNames						{width: 1512px; 	height: 157.44px;	}
+		#idTableCompareRowNamesLeft					{width: 756px;		height: 157.44px;	}
+		#idTableCompareRowNamesRight				{width: 756px;		height: 157.44px;	}
+		#idTableCompareRowSecond					{width: 1512px; 	height: 157.44px;	}
 		
 		/* My List */
 		#idTableMyList								{width: 1512px; 	height: auto;		}
 		
 		/* Global List */
-		#idTableGlobalStats							{width: 1512px; 	height: 576px;		}
+		#idTableGlobalStats							{width: 1512px; 	height: 629.76px;	}
 		#idTableGlobalList							{width: 1512px; 	height: auto;		}
 		
 		/* Options */
-		#idTableOptions								{width: 1512px;		height: 2304px;		}
+		#idTableOptions								{width: 1512px;		height: 2519px;		}
 		
 		/* Management */
-		#idTableManagementStats						{width: 1512px;		height: 576px;		}
+		#idTableManagementStats						{width: 1512px;		height: 629.76px;	}
 		#idTableManagementUsers						{width: 1512px;		height: auto;		}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 1512px;		height: 1440px		}
-		#idTableSignUp								{width: 1512px;		height: 1440px		}
+		#idContentSignUp							{width: 1512px;		height: 1574.4px	}
+		#idTableSignUp								{width: 1512px;		height: 1574.4px	}
 	}
 	
 	/* 2160 x 4096 */
@@ -3649,46 +3645,46 @@ h6{
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 1512px; 	height: 768px;		}
+		.classTableMyListRow						{width: 1512px; 	height: 839.68px;	}
 		
 		/* Global List */
-		.classTableGlobalListHeaderRow				{width: 1512px; 	height: 307.2px;	}
-		.classTableGlobalListRow					{width: 1512px; 	height: 768px;		}
+		.classTableGlobalListHeaderRow				{width: 1512px; 	height: 335.87px;	}
+		.classTableGlobalListRow					{width: 1512px; 	height: 839.68px;	}
 		
 		/* Management */
-		.classTableManagementHeaderRow				{width: 1512px; 	height: 307.2px;	}
-		.classTableManagementRow					{width: 1512px; 	height: 307.2px;	}
+		.classTableManagementHeaderRow				{width: 1512px; 	height: 335.87px;	}
+		.classTableManagementRow					{width: 1512px; 	height: 335.87px;	}
 		
 		/** IDs **/
 		/* Common */
 		#idGeneralLayout							{width: 2160px; 	height: 4096px;		}
 		#idHeaderRow								{width: 2160px; 	height: 614.4px;	}
-		#idLogo										{width: 2160px; 	height: 614.4px;	}
+		#idLogo										{width: auto; 		height: 614.4px;	}
 		#idNavigationRow							{width: 2160px; 	height: 122.88px;	}
 		#idNavForm									{width: 2160px; 	height: 122.88px;	}
-		#idCenterRow								{width: 2160px; 	height: 3072px;		}
-		#idCenterRowLeft							{width: 324px;  	height: 3072px;		}
-		#idAdvertLeft								{width: 324px; 		height: 3072px;		}
-		#idCenterRowMain							{width: 1512px;		height: 3072px;		}
+		#idCenterRow								{width: 2160px; 	height: 3358.7px;	}
+		#idCenterRowLeft							{width: 324px;  	height: 3358.7px;	}
+		#idAdvertLeft								{width: 324px; 		height: 3358.7px;	}
+		#idCenterRowMain							{width: 1512px;		height: 3358.7px;	}
 		#idCenterContent							{width: 1512px;		height: 204.8px;	}
-		#idForm										{width: 1344px;		height: 3072px;		}
-		#idCenterRowRight							{width: 324px;		height: 3072px;		}
-		#idAdvertRight								{width: 324px;		height: 3072px;		}
+		#idForm										{width: 1344px;		height: 3358.7px;	}
+		#idCenterRowRight							{width: 324px;		height: 3358.7px;	}
+		#idAdvertRight								{width: 324px;		height: 3358.7px;	}
 		#idFooterRow								{width: 2160px;		height: 286.72px;	}
 		#idFooterContent							{width: 2160px;		height: 163.84px;	}
 		#idFooterManagement							{width: 2160px;		height: 122.88px;	}
 		
 		/* Compare */
 		#idTableCompare								{width: 1512px; 	height: auto;		}
-		#idTableCompareRowPictures					{width: 1512px; 	height: 2918.4px;	}
-		#idTableCompareRowDataPicturesLeft			{width: 756px; 		height: 2918.4px;	}
-		#idTableCompareRowDataPicturesRight			{width: 756px; 		height: 2918.4px;	}
-		#idTableCompareRowPicturesLeft				{width: 756px;		height: 2918.4px;	}
-		#idTableCompareRowPicturesRight				{width: 756px; 		height: 2918.4px;	}
-		#idTableCompareRowNames						{width: 1512px; 	height: 153.6px;	}
-		#idTableCompareRowNamesLeft					{width: 756px;		height: 153.6px;	}
-		#idTableCompareRowNamesRight				{width: 756px;		height: 153.6px;	}
-		#idTableCompareRowSecond					{width: 1512px; 	height: 153.6px;	}
+		#idTableCompareRowPictures					{width: 1512px; 	height: 3358.7px;	}
+		#idTableCompareRowDataPicturesLeft			{width: 756px; 		height: 3358.7px;	}
+		#idTableCompareRowDataPicturesRight			{width: 756px; 		height: 3358.7px;	}
+		#idTableCompareRowPicturesLeft				{width: 756px;		height: 3358.7px;	}
+		#idTableCompareRowPicturesRight				{width: 756px; 		height: 3358.7px;	}
+		#idTableCompareRowNames						{width: 1512px; 	height: 167.94px;	}
+		#idTableCompareRowNamesLeft					{width: 756px;		height: 167.94px;	}
+		#idTableCompareRowNamesRight				{width: 756px;		height: 167.94px;	}
+		#idTableCompareRowSecond					{width: 1512px; 	height: 167.94px;	}
 		
 		/* My List */
 		#idTableMyList								{width: 1512px; 	height: auto;		}
@@ -3698,15 +3694,15 @@ h6{
 		#idTableGlobalList							{width: 1512px; 	height: auto;		}
 		
 		/* Options */
-		#idTableOptions								{width: 1512px;		height: 2457.6px;	}
+		#idTableOptions								{width: 1512px;		height: 2687px;		}
 		
 		/* Management */
-		#idTableManagementStats						{width: 1512px;		height: 614.4px;	}
+		#idTableManagementStats						{width: 1512px;		height: 674.74px;	}
 		#idTableManagementUsers						{width: 1512px;		height: auto;		}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 1512px;		height: 1536px		}
-		#idTableSignUp								{width: 1512px;		height: 1536px		}
+		#idContentSignUp							{width: 1512px;		height: 1679.4px	}
+		#idTableSignUp								{width: 1512px;		height: 1679.4px	}
 	}
 }
 
