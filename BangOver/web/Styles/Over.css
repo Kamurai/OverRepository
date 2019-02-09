@@ -83,21 +83,21 @@ h6{
 
 /* My List */
 .classTableMyListRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableMyListRowSpanNumber{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
 
 .classTableMyListRowNumber{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     text-align: right;
@@ -128,28 +128,28 @@ h6{
 
 /* Global List */
 .classTableGlobalListHeaderRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableGlobalListHeader{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
 
 .classTableGlobalListRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableGlobalListRowSpanNumber{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -160,7 +160,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanName{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -171,7 +171,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanPicture{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: block;
@@ -187,7 +187,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanValue{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -198,7 +198,7 @@ h6{
 }
 
 .classTableGlobalListRowSpanRanking{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -210,14 +210,14 @@ h6{
 
 /* Management */
 .classTableManagementHeaderRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableManagementHeader{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     color: #ffffff;
     margin: auto;
@@ -225,28 +225,28 @@ h6{
 }
 
 .classTableManagementRow{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-row;
 }
 
 .classTableManagementUsersColIndex{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     overflow-x: auto;
     margin: auto;
 }
 
 .classTableManagementUsersColUsername{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     overflow-x: auto;
 }
 
 .classTableManagementUsersColEmail{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     overflow-x: auto;
     margin: auto;
@@ -254,14 +254,14 @@ h6{
 }
 
 .classTableManagementUsersColAdminLevel{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
 
 .classTableManagementUsersColLoggedOn{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -374,71 +374,65 @@ h6{
 
 /* Compare */
 #idTableCompare{
-    border: 1px solid #00fffa;
+    border: 0px solid #00fffa;
     
 	border-spacing: 0px;
     border-collapse: collapse;
 }
 
 #idTableCompareRowPictures{
-    border: 1px solid #e9f413;
+    border: 0px solid #e9f413;
     
     margin: auto;
     display: table-row;
  }
 
 #idTableCompareRowDataPicturesLeft{
-    border: 1px solid #13ecf4;
+    border: 0px solid #13ecf4;
     
     margin: auto;
     display: table-cell;
  }
 
 #idTableCompareRowDataPicturesRight{
-    border: 1px solid #13ecf4;
+    border: 0px solid #13ecf4;
     
     margin: auto;
     display: table-cell;
  }
 
 #idTableCompareRowPicturesLeft{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
-    object-fit: fill;
-    -o-object-fit: fill;
-    -moz-object-fit: fill;
-        
+    overflow: hidden;    
     margin: auto;
     display: block;
  }
 
 #idTableCompareRowPicturesRight{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
-    object-fit: fill;
-    -o-object-fit: fill;
-    -moz-object-fit: fill;
-        
+    overflow: hidden;    
     margin: auto;
     display: block;
  }
 
 #idTableCompareRowNames{
-    border: 1px solid #e9f413;
+    border: 0px solid #e9f413;
     
 	margin: auto;
     display: table-row;
 }
 
 #idTableCompareRowNamesLeft{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
 	margin: auto;
     display: table-cell;
 }
 
 #idTableCompareRowNamesRight{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
 	margin: auto;
     display: table-cell;
@@ -446,7 +440,7 @@ h6{
 
 /* My List */
 #idTableMyList{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     padding: 0px;
     border-spacing: 0px;
@@ -458,7 +452,7 @@ h6{
 
 /* Global List */
 #idTableGlobalStats{
-    border: 1px solid #00fffa;
+    border: 0px solid #00fffa;
     
     padding: 0px;
     border-spacing: 0px;
@@ -468,7 +462,7 @@ h6{
 }
 
 #idTableGlobalList{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     border-spacing: 0px;
     //border-collapse: collapse;
@@ -492,7 +486,7 @@ h6{
 }
 
 #idTableManagementUsers{
-    border: 1px solid #00fffa;
+    border: 0px solid #00fffa;
     
     padding: 0px;
     border-spacing: 0px;
@@ -502,33 +496,33 @@ h6{
 }
 
 #idTableManagementUsersColHeaderIndex{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
 }
     
 #idTableManagementUsersColHeaderUsername{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;    
 }
     
 #idTableManagementUsersColHeaderEmail{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
 }
     
 #idTableManagementUsersColHeaderAdminLevel{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
 	display: table-cell;
 }
 
 #idTableManagementUsersColHeaderLoggedOn{
-    border: 1px solid #f702f7;
+    border: 0px solid #f702f7;
     
     margin: auto;
     display: table-cell;
@@ -536,7 +530,7 @@ h6{
  
 /* Add Target */ 
 #idContentAdd{
-    border: 1px solid #FE0101;
+    border: 0px solid #FE0101;
     
     text-align: left;
     vertical-align: top;    
@@ -549,7 +543,7 @@ h6{
 #idRadioAddValue2{}
 
 #idContentAddSuggestion{
-    border: 1px solid #FE0101;
+    border: 0px solid #FE0101;
     
     text-align: left;
 }
@@ -562,7 +556,7 @@ h6{
 
 /* Sign Up */
 #idContentSignUp{
-    border: 1px solid #FE0101;
+    border: 0px solid #FE0101;
 	
     text-align: left;
 }
@@ -3476,8 +3470,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1344px; 	height: 885.6px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 672px; 		height: 885.6px;	}
 		#idTableCompareRowDataPicturesRight			{width: 672px; 		height: 885.6px;	}
-		#idTableCompareRowPicturesLeft				{width: 672px;		height: 885.6px;	}
-		#idTableCompareRowPicturesRight				{width: 672px; 		height: 885.6px;	}
+		#idTableCompareRowPicturesLeft				{width: auto;		height: 885.6px;	}
+		#idTableCompareRowPicturesRight				{width: auto; 		height: 885.6px;	}
 		#idTableCompareRowNames						{width: 1344px; 	height: 44.28px;	}
 		#idTableCompareRowNamesLeft					{width: 672px;		height: 44.28px;	}
 		#idTableCompareRowNamesRight				{width: 672px;		height: 44.28px;	}
