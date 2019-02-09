@@ -617,8 +617,8 @@ h6{
 		#idTableCompareRowPictures					{width: 168px; 		height: 250.8px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 84px; 		height: 250.8px;	}
 		#idTableCompareRowDataPicturesRight			{width: 84px; 		height: 250.8px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 250.8px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 250.8px;	}
+		#idTableCompareRowPicturesLeft				{width: 84px;		height: 250.8px;	}
+		#idTableCompareRowPicturesRight				{width: 84px; 		height: 250.8px;	}
 		#idTableCompareRowNames						{width: 168px; 		height: 13.2px;		}
 		#idTableCompareRowNamesLeft					{width: 84px;		height: 13.2px;		}
 		#idTableCompareRowNamesRight				{width: 84px;		height: 13.2px;		}
@@ -688,8 +688,8 @@ h6{
 		#idTableCompareRowPictures					{width: 246.4px; 	height: 171px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 123.2px;	height: 171px;		}
 		#idTableCompareRowDataPicturesRight			{width: 123.2px;	height: 171px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 171px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 171px;		}
+		#idTableCompareRowPicturesLeft				{width: 123.2px;	height: 171px;		}
+		#idTableCompareRowPicturesRight				{width: 123.2px; 	height: 171px;		}
 		#idTableCompareRowNames						{width: 246.4px; 	height: 9px;		}
 		#idTableCompareRowNamesLeft					{width: 123.2px;	height: 9px;		}
 		#idTableCompareRowNamesRight				{width: 123.2px;	height: 9px;		}
@@ -759,8 +759,8 @@ h6{
 		#idTableCompareRowPictures					{width: 252px; 		height: 342px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 126px; 		height: 342px;		}
 		#idTableCompareRowDataPicturesRight			{width: 126px; 		height: 342px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 342px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 342px;		}
+		#idTableCompareRowPicturesLeft				{width: 126px;		height: 342px;		}
+		#idTableCompareRowPicturesRight				{width: 126px; 		height: 342px;		}
 		#idTableCompareRowNames						{width: 252px; 		height: 18px;		}
 		#idTableCompareRowNamesLeft					{width: 126px;		height: 18px;		}
 		#idTableCompareRowNamesRight				{width: 126px;		height: 18px;		}
@@ -830,8 +830,8 @@ h6{
 		#idTableCompareRowPictures					{width: 336px; 		height: 256.5px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 168px; 		height: 256.5px;	}
 		#idTableCompareRowDataPicturesRight			{width: 168px; 		height: 256.5px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 256.5px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 256.5px;	}
+		#idTableCompareRowPicturesLeft				{width: 168px;		height: 256.5px;	}
+		#idTableCompareRowPicturesRight				{width: 168px; 		height: 256.5px;	}
 		#idTableCompareRowNames						{width: 336px; 		height: 13.5px;		}
 		#idTableCompareRowNamesLeft					{width: 168px;		height: 13.5px;		}
 		#idTableCompareRowNamesRight				{width: 168px;		height: 13.5px;		}
@@ -898,8 +898,8 @@ h6{
 		#idTableCompareRowPictures					{width: 336px; 		height: 513px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 168px; 		height: 513px;		}
 		#idTableCompareRowDataPicturesRight			{width: 168px; 		height: 513px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 513px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 513px;		}
+		#idTableCompareRowPicturesLeft				{width: 168px;		height: 513px;		}
+		#idTableCompareRowPicturesRight				{width: 168px; 		height: 513px;		}
 		#idTableCompareRowNames						{width: 336px; 		height: 27px;		}
 		#idTableCompareRowNamesLeft					{width: 168px;		height: 27px		}
 		#idTableCompareRowNamesRight				{width: 168px;		height: 27px		}
@@ -966,8 +966,8 @@ h6{
 		#idTableCompareRowPictures					{width: 336px; 		height: 611.325px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 168px; 		height: 611.325px;	}
 		#idTableCompareRowDataPicturesRight			{width: 168px; 		height: 611.325px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 611.325px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 611.325px;	}
+		#idTableCompareRowPicturesLeft				{width: 168px;		height: 611.325px;	}
+		#idTableCompareRowPicturesRight				{width: 168px; 		height: 611.325px;	}
 		#idTableCompareRowNames						{width: 240px; 		height: 32.175px;	}
 		#idTableCompareRowNamesLeft					{width: 168px;		height: 32.175px;	}
 		#idTableCompareRowNamesRight				{width: 168px;		height: 32.175px;	}
@@ -1037,8 +1037,8 @@ h6{
 		#idTableCompareRowPictures					{width: 403.2px; 	height: 513px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 201.6px;	height: 513px;		}
 		#idTableCompareRowDataPicturesRight			{width: 201.6px;	height: 513px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 513px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 513px;		}
+		#idTableCompareRowPicturesLeft				{width: 201.6px;	height: 513px;		}
+		#idTableCompareRowPicturesRight				{width: 201.6px; 	height: 513px;		}
 		#idTableCompareRowNames						{width: 240px; 		height: 27px;		}
 		#idTableCompareRowNamesLeft					{width: 201.6px;	height: 27px;		}
 		#idTableCompareRowNamesRight				{width: 201.6px;	height: 27px;		}
@@ -1108,8 +1108,8 @@ h6{
 		#idTableCompareRowPictures					{width: 420px; 		height: 570px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 210px; 		height: 570px;		}
 		#idTableCompareRowDataPicturesRight			{width: 210px; 		height: 570px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 570px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 570px;		}
+		#idTableCompareRowPicturesLeft				{width: 210px;		height: 570px;		}
+		#idTableCompareRowPicturesRight				{width: 210px; 		height: 570px;		}
 		#idTableCompareRowNames						{width: 420px; 		height: 30px;		}
 		#idTableCompareRowNamesLeft					{width: 210px;		height: 30px;		}
 		#idTableCompareRowNamesRight				{width: 210px;		height: 30px;		}
@@ -1179,8 +1179,8 @@ h6{
 		#idTableCompareRowPictures					{width: 504px; 		height: 342px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 252px; 		height: 342px;		}
 		#idTableCompareRowDataPicturesRight			{width: 252px; 		height: 342px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 342px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 342px;		}
+		#idTableCompareRowPicturesLeft				{width: 252px;		height: 342px;		}
+		#idTableCompareRowPicturesRight				{width: 252px; 		height: 342px;		}
 		#idTableCompareRowNames						{width: 504px; 		height: 18px;		}
 		#idTableCompareRowNamesLeft					{width: 252px;		height: 18px;		}
 		#idTableCompareRowNamesRight				{width: 252px;		height: 18px;		}
@@ -1247,8 +1247,8 @@ h6{
 		#idTableCompareRowPictures					{width: 504px; 		height: 410.4px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 252px; 		height: 410.4px;	}
 		#idTableCompareRowDataPicturesRight			{width: 252px; 		height: 410.4px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 410.4px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 410.4px;	}
+		#idTableCompareRowPicturesLeft				{width: 252px;		height: 410.4px;	}
+		#idTableCompareRowPicturesRight				{width: 252px; 		height: 410.4px;	}
 		#idTableCompareRowNames						{width: 504px; 		height: 21.6px;		}
 		#idTableCompareRowNamesLeft					{width: 252px;		height: 21.6px;		}
 		#idTableCompareRowNamesRight				{width: 252px;		height: 21.6px;		}
@@ -1315,8 +1315,8 @@ h6{
 		#idTableCompareRowPictures					{width: 504px; 		height: 912px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 252px; 		height: 912px;		}
 		#idTableCompareRowDataPicturesRight			{width: 252px; 		height: 912px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 912px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 912px;		}
+		#idTableCompareRowPicturesLeft				{width: 252px;		height: 912px;		}
+		#idTableCompareRowPicturesRight				{width: 252px; 		height: 912px;		}
 		#idTableCompareRowNames						{width: 504px; 		height: 48px;		}
 		#idTableCompareRowNamesLeft					{width: 252px;		height: 48px;		}
 		#idTableCompareRowNamesRight				{width: 252px;		height: 48px;		}
@@ -1386,8 +1386,8 @@ h6{
 		#idTableCompareRowPictures					{width: 537.6px; 	height: 729.6px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 268.8px; 	height: 729.6px;	}
 		#idTableCompareRowDataPicturesRight			{width: 268.8px; 	height: 729.6px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 729.6px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 729.6px;	}
+		#idTableCompareRowPicturesLeft				{width: 268.8px;	height: 729.6px;	}
+		#idTableCompareRowPicturesRight				{width: 268.8px; 	height: 729.6px;	}
 		#idTableCompareRowNames						{width: 537.6px; 	height: 38.4px;		}
 		#idTableCompareRowNamesLeft					{width: 268.8px;	height: 38.4px;		}
 		#idTableCompareRowNamesRight				{width: 268.8px;	height: 38.4px;		}
@@ -1454,8 +1454,8 @@ h6{
 		#idTableCompareRowPictures					{width: 537.6px; 	height: 912px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 268.8px; 	height: 912px;		}
 		#idTableCompareRowDataPicturesRight			{width: 268.8px; 	height: 912px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 912px		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 912px;		}
+		#idTableCompareRowPicturesLeft				{width: 268.8px;	height: 912px		}
+		#idTableCompareRowPicturesRight				{width: 268.8px; 	height: 912px;		}
 		#idTableCompareRowNames						{width: 537.6px; 	height: 48px;		}
 		#idTableCompareRowNamesLeft					{width: 268.8px;	height: 48px;		}
 		#idTableCompareRowNamesRight				{width: 268.8px;	height: 48px;		}
@@ -1522,8 +1522,8 @@ h6{
 		#idTableCompareRowPictures					{width: 537.6px; 	height: 969px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 268.8px; 	height: 969px;		}
 		#idTableCompareRowDataPicturesRight			{width: 268.8px; 	height: 969px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 969px		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 969px;		}
+		#idTableCompareRowPicturesLeft				{width: 268.8px;	height: 969px		}
+		#idTableCompareRowPicturesRight				{width: 268.8px; 	height: 969px;		}
 		#idTableCompareRowNames						{width: 537.6px; 	height: 51px;		}
 		#idTableCompareRowNamesLeft					{width: 268.8px;	height: 51px;		}
 		#idTableCompareRowNamesRight				{width: 268.8px;	height: 51px;		}
@@ -1590,8 +1590,8 @@ h6{
 		#idTableCompareRowPictures					{width: 537.6px; 	height: 973.275px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 268.8px; 	height: 973.275px;	}
 		#idTableCompareRowDataPicturesRight			{width: 268.8px; 	height: 973.275px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 973.275px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 973.275px;	}
+		#idTableCompareRowPicturesLeft				{width: 268.8px;	height: 973.275px;	}
+		#idTableCompareRowPicturesRight				{width: 268.8px; 	height: 973.275px;	}
 		#idTableCompareRowNames						{width: 537.6px; 	height: 51.225px;	}
 		#idTableCompareRowNamesLeft					{width: 268.8px;	height: 51.225px;	}
 		#idTableCompareRowNamesRight				{width: 268.8px;	height: 51.225px;	}
@@ -1661,8 +1661,8 @@ h6{
 		#idTableCompareRowPictures					{width: 560px; 		height: 427.5px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 280px; 		height: 427.5px;	}
 		#idTableCompareRowDataPicturesRight			{width: 280px; 		height: 427.5px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 427.5px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 427.5px;	}
+		#idTableCompareRowPicturesLeft				{width: 280px;		height: 427.5px;	}
+		#idTableCompareRowPicturesRight				{width: 280px; 		height: 427.5px;	}
 		#idTableCompareRowNames						{width: 560px; 		height: 22.5px;		}
 		#idTableCompareRowNamesLeft					{width: 280px;		height: 22.5px;		}
 		#idTableCompareRowNamesRight				{width: 280px;		height: 22.5px;		}
@@ -1729,8 +1729,8 @@ h6{
 		#idTableCompareRowPictures					{width: 560px; 		height: 912px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 280px; 		height: 912px;		}
 		#idTableCompareRowDataPicturesRight			{width: 280px; 		height: 912px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 912px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 912px;		}
+		#idTableCompareRowPicturesLeft				{width: 280px;		height: 912px;		}
+		#idTableCompareRowPicturesRight				{width: 280px; 		height: 912px;		}
 		#idTableCompareRowNames						{width: 560px; 		height: 48px;		}
 		#idTableCompareRowNamesLeft					{width: 280px;		height: 48px;		}
 		#idTableCompareRowNamesRight				{width: 280px;		height: 48px;		}
@@ -1800,8 +1800,8 @@ h6{
 		#idTableCompareRowPictures					{width: 600.6px; 	height: 342px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 300.3px; 	height: 342px;		}
 		#idTableCompareRowDataPicturesRight			{width: 300.3px; 	height: 342px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 342px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 342px;		}
+		#idTableCompareRowPicturesLeft				{width: 300.3px;	height: 342px;		}
+		#idTableCompareRowPicturesRight				{width: 300.3px; 	height: 342px;		}
 		#idTableCompareRowNames						{width: 600.6px; 	height: 18px;		}
 		#idTableCompareRowNamesLeft					{width: 300.3px;	height: 18px;		}
 		#idTableCompareRowNamesRight				{width: 300.3px;	height: 18px;		}
@@ -1871,11 +1871,11 @@ h6{
 		#idTableCompareRowPictures					{width: 604.8px; 	height: 820.8px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 302.4px; 	height: 820.8px;	}
 		#idTableCompareRowDataPicturesRight			{width: 302.4px; 	height: 820.8px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 820.8px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 820.8px;	}
+		#idTableCompareRowPicturesLeft				{width: 302.4px;	height: 820.8px;	}
+		#idTableCompareRowPicturesRight				{width: 302.4px; 	height: 820.8px;	}
 		#idTableCompareRowNames						{width: 604.8px; 	height: 43.2px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;		height: 43.2px;		}
-		#idTableCompareRowNamesRight				{width: 50%;		height: 43.2px;		}
+		#idTableCompareRowNamesLeft					{width: 302.4px;	height: 43.2px;		}
+		#idTableCompareRowNamesRight				{width: 302.4px;	height: 43.2px;		}
 		#idTableCompareRowSecond					{width: 604.8px; 	height: 43.2px;		}
 		
 		/* My List */
@@ -1939,11 +1939,11 @@ h6{
 		#idTableCompareRowPictures					{width: 604.8px; 	height: 1094.4px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 302.4px; 	height: 1094.4px;	}
 		#idTableCompareRowDataPicturesRight			{width: 302.4px; 	height: 1094.4px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1094.4px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1094.4px;	}
+		#idTableCompareRowPicturesLeft				{width: 302.4px;	height: 1094.4px;	}
+		#idTableCompareRowPicturesRight				{width: 302.4px; 	height: 1094.4px;	}
 		#idTableCompareRowNames						{width: 604.8px; 	height: 57.6px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;		height: 57.6px;		}
-		#idTableCompareRowNamesRight				{width: 50%;		height: 57.6px;		}
+		#idTableCompareRowNamesLeft					{width: 302.4px;	height: 57.6px;		}
+		#idTableCompareRowNamesRight				{width: 302.4px;	height: 57.6px;		}
 		#idTableCompareRowSecond					{width: 604.8px; 	height: 57.6px;		}
 		
 		/* My List */
@@ -2008,13 +2008,13 @@ h6{
 		/* Compare */
 		#idTableCompare								{width: 630px; 		height: auto;		}
 		#idTableCompareRowPictures					{width: 630px; 		height: 1026px;		}
-		#idTableCompareRowDataPicturesLeft			{width: 50%; 		height: 1026px;		}
-		#idTableCompareRowDataPicturesRight			{width: 50%; 		height: 1026px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1026px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1026px;		}
+		#idTableCompareRowDataPicturesLeft			{width: 315px; 		height: 1026px;		}
+		#idTableCompareRowDataPicturesRight			{width: 315px; 		height: 1026px;		}
+		#idTableCompareRowPicturesLeft				{width: 315px;		height: 1026px;		}
+		#idTableCompareRowPicturesRight				{width: 315px; 		height: 1026px;		}
 		#idTableCompareRowNames						{width: 630px; 		height: 54px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;		height: 54px;		}
-		#idTableCompareRowNamesRight				{width: 50%;		height: 54px;		}
+		#idTableCompareRowNamesLeft					{width: 315px;		height: 54px;		}
+		#idTableCompareRowNamesRight				{width: 315px;		height: 54px;		}
 		#idTableCompareRowSecond					{width: 630px; 		height: 54px;		}
 		
 		/* My List */
@@ -2076,13 +2076,13 @@ h6{
 		/* Compare */
 		#idTableCompare								{width: 630px; 		height: auto;		}
 		#idTableCompareRowPictures					{width: 630px; 		height: 1140px;		}
-		#idTableCompareRowDataPicturesLeft			{width: 50%; 		height: 1140px;		}
-		#idTableCompareRowDataPicturesRight			{width: 50%; 		height: 1140px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1140px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1140px;		}
+		#idTableCompareRowDataPicturesLeft			{width: 315px; 		height: 1140px;		}
+		#idTableCompareRowDataPicturesRight			{width: 315px; 		height: 1140px;		}
+		#idTableCompareRowPicturesLeft				{width: 315px;		height: 1140px;		}
+		#idTableCompareRowPicturesRight				{width: 315px; 		height: 1140px;		}
 		#idTableCompareRowNames						{width: 630px; 		height: 60px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;		height: 60px;		}
-		#idTableCompareRowNamesRight				{width: 50%;		height: 60px;		}
+		#idTableCompareRowNamesLeft					{width: 315px;		height: 60px;		}
+		#idTableCompareRowNamesRight				{width: 315px;		height: 60px;		}
 		#idTableCompareRowSecond					{width: 630px; 		height: 60px;		}
 		
 		/* My List */
@@ -2149,8 +2149,8 @@ h6{
 		#idTableCompareRowPictures					{width: 716.8px; 	height: 547.2px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 358.4px; 	height: 547.2px;	}
 		#idTableCompareRowDataPicturesRight			{width: 358.4px; 	height: 547.2px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 547.2px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 547.2px;	}
+		#idTableCompareRowPicturesLeft				{width: 358.4px;	height: 547.2px;	}
+		#idTableCompareRowPicturesRight				{width: 358.4px; 	height: 547.2px;	}
 		#idTableCompareRowNames						{width: 716.8px; 	height: 53.76px;	}
 		#idTableCompareRowNamesLeft					{width: 358.4px;	height: 30.72px;	}
 		#idTableCompareRowNamesRight				{width: 358.4px;	height: 23.04px;	}
@@ -2216,8 +2216,8 @@ h6{
 		#idTableCompareRowPictures					{width: 716.8px; 	height: 912px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 358.4px; 	height: 912px;		}
 		#idTableCompareRowDataPicturesRight			{width: 358.4px; 	height: 912px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 912px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 912px;		}
+		#idTableCompareRowPicturesLeft				{width: 358.4px;	height: 912px;		}
+		#idTableCompareRowPicturesRight				{width: 358.4px; 	height: 912px;		}
 		#idTableCompareRowNames						{width: 716.8px; 	height: 48px;		}
 		#idTableCompareRowNamesLeft					{width: 358.4px;	height: 48px;		}
 		#idTableCompareRowNamesRight				{width: 358.4px;	height: 48px;		}
@@ -2287,8 +2287,8 @@ h6{
 		#idTableCompareRowPictures					{width: 735px; 		height: 1197px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 367.5px; 	height: 1197px;		}
 		#idTableCompareRowDataPicturesRight			{width: 367.5px; 	height: 1197px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1197px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1197px;		}
+		#idTableCompareRowPicturesLeft				{width: 367.5px;	height: 1197px;		}
+		#idTableCompareRowPicturesRight				{width: 367.5px; 	height: 1197px;		}
 		#idTableCompareRowNames						{width: 735px; 		height: 63px;		}
 		#idTableCompareRowNamesLeft					{width: 367.5px;	height: 63px;		}
 		#idTableCompareRowNamesRight				{width: 367.5px;	height: 63px;		}
@@ -2358,8 +2358,8 @@ h6{
 		#idTableCompareRowPictures					{width: 756px; 		height: 1368px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 378px; 		height: 1368px;		}
 		#idTableCompareRowDataPicturesRight			{width: 378px; 		height: 1368px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1368px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1368px;		}
+		#idTableCompareRowPicturesLeft				{width: 378px;		height: 1368px;		}
+		#idTableCompareRowPicturesRight				{width: 378px; 		height: 1368px;		}
 		#idTableCompareRowNames						{width: 756px; 		height: 72px;		}
 		#idTableCompareRowNamesLeft					{width: 378px;		height: 72px;		}
 		#idTableCompareRowNamesRight				{width: 378px;		height: 72px;		}
@@ -2426,8 +2426,8 @@ h6{
 		#idTableCompareRowPictures					{width: 756px; 		height: 1824px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 378px; 		height: 1824px;		}
 		#idTableCompareRowDataPicturesRight			{width: 378px; 		height: 1824px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1824px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1824px;		}
+		#idTableCompareRowPicturesLeft				{width: 378px;		height: 1824px;		}
+		#idTableCompareRowPicturesRight				{width: 378px; 		height: 1824px;		}
 		#idTableCompareRowNames						{width: 756px; 		height: 96px;		}
 		#idTableCompareRowNamesLeft					{width: 378px;		height: 96px;		}
 		#idTableCompareRowNamesRight				{width: 378px;		height: 96px;		}
@@ -2495,13 +2495,13 @@ h6{
 		/* Compare */
 		#idTableCompare								{width: 806.4px; 		height: auto;		}
 		#idTableCompareRowPictures					{width: 806.4px; 		height: 615.6px;	}
-		#idTableCompareRowDataPicturesLeft			{width: 50%; 			height: 615.6px;	}
-		#idTableCompareRowDataPicturesRight			{width: 50%; 			height: 615.6px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;			height: 615.6px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 			height: 615.6px;	}
+		#idTableCompareRowDataPicturesLeft			{width: 403.2px;		height: 615.6px;	}
+		#idTableCompareRowDataPicturesRight			{width: 403.2px; 		height: 615.6px;	}
+		#idTableCompareRowPicturesLeft				{width: 403.2px;		height: 615.6px;	}
+		#idTableCompareRowPicturesRight				{width: 403.2px; 		height: 615.6px;	}
 		#idTableCompareRowNames						{width: 806.4px; 		height: 32.4px;		}
-		#idTableCompareRowNamesLeft					{width: 50%;			height: 32.4px;		}
-		#idTableCompareRowNamesRight				{width: 50%;			height: 32.4px;		}
+		#idTableCompareRowNamesLeft					{width: 403.2px;		height: 32.4px;		}
+		#idTableCompareRowNamesRight				{width: 403.2px;		height: 32.4px;		}
 		#idTableCompareRowSecond					{width: 806.4px; 		height: 32.4px;		}
 		
 		/* My List */
@@ -2568,8 +2568,8 @@ h6{
 		#idTableCompareRowPictures					{width: 840px; 		height: 1368px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 420px; 		height: 1368px;		}
 		#idTableCompareRowDataPicturesRight			{width: 420px; 		height: 1368px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1368px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1368px;		}
+		#idTableCompareRowPicturesLeft				{width: 420px;		height: 1368px;		}
+		#idTableCompareRowPicturesRight				{width: 420px; 		height: 1368px;		}
 		#idTableCompareRowNames						{width: 840px; 		height: 72px;		}
 		#idTableCompareRowNamesLeft					{width: 420px;		height: 72px;		}
 		#idTableCompareRowNamesRight				{width: 420px;		height: 72px;		}
@@ -2639,8 +2639,8 @@ h6{
 		#idTableCompareRowPictures					{width: 896px; 		height: 513px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 448px; 		height: 513px;		}
 		#idTableCompareRowDataPicturesRight			{width: 448px; 		height: 513px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 513px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 513px;		}
+		#idTableCompareRowPicturesLeft				{width: 448px;		height: 513px;		}
+		#idTableCompareRowPicturesRight				{width: 448px; 		height: 513px;		}
 		#idTableCompareRowNames						{width: 896px; 		height: 27px;		}
 		#idTableCompareRowNamesLeft					{width: 448px;		height: 27px;		}
 		#idTableCompareRowNamesRight				{width: 448px;		height: 27px;		}
@@ -2707,8 +2707,8 @@ h6{
 		#idTableCompareRowPictures					{width: 896px; 		height: 547.2px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 448px; 		height: 547.2px;	}
 		#idTableCompareRowDataPicturesRight			{width: 448px; 		height: 547.2px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 547.2px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 547.2px;	}
+		#idTableCompareRowPicturesLeft				{width: 448px;		height: 547.2px;	}
+		#idTableCompareRowPicturesRight				{width: 448px; 		height: 547.2px;	}
 		#idTableCompareRowNames						{width: 896px; 		height: 28.8px;		}
 		#idTableCompareRowNamesLeft					{width: 448px;		height: 28.8px;		}
 		#idTableCompareRowNamesRight				{width: 448px;		height: 28.8px;		}
@@ -2775,8 +2775,8 @@ h6{
 		#idTableCompareRowPictures					{width: 896px; 		height: 570px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 448px; 		height: 570px;		}
 		#idTableCompareRowDataPicturesRight			{width: 448px; 		height: 570px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 570px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 570px;		}
+		#idTableCompareRowPicturesLeft				{width: 448px;		height: 570px;		}
+		#idTableCompareRowPicturesRight				{width: 448px; 		height: 570px;		}
 		#idTableCompareRowNames						{width: 896px; 		height: 30px;		}
 		#idTableCompareRowNamesLeft					{width: 448px;		height: 30px;		}
 		#idTableCompareRowNamesRight				{width: 448px;		height: 30px;		}
@@ -2843,8 +2843,8 @@ h6{
 		#idTableCompareRowPictures					{width: 896px; 		height: 729.6px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 448px; 		height: 729.6px;	}
 		#idTableCompareRowDataPicturesRight			{width: 448px; 		height: 729.6px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 729.6px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 729.6px;	}
+		#idTableCompareRowPicturesLeft				{width: 448px;		height: 729.6px;	}
+		#idTableCompareRowPicturesRight				{width: 448px; 		height: 729.6px;	}
 		#idTableCompareRowNames						{width: 896px; 		height: 38.4px;		}
 		#idTableCompareRowNamesLeft					{width: 448px;		height: 38.4px;		}
 		#idTableCompareRowNamesRight				{width: 448px;		height: 38.4px;		}
@@ -2914,8 +2914,8 @@ h6{
 		#idTableCompareRowPictures					{width: 952px; 		height: 547.2px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 476px; 		height: 547.2px;	}
 		#idTableCompareRowDataPicturesRight			{width: 476px; 		height: 547.2px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 547.2px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 547.2px;	}
+		#idTableCompareRowPicturesLeft				{width: 476px;		height: 547.2px;	}
+		#idTableCompareRowPicturesRight				{width: 476px; 		height: 547.2px;	}
 		#idTableCompareRowNames						{width: 952px; 		height: 28.8px;		}
 		#idTableCompareRowNamesLeft					{width: 476px;		height: 28.8px;		}
 		#idTableCompareRowNamesRight				{width: 476px;		height: 28.8px;		}
@@ -2985,8 +2985,8 @@ h6{
 		#idTableCompareRowPictures					{width: 956.2px; 	height: 547.2px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 478.1px; 	height: 547.2px;	}
 		#idTableCompareRowDataPicturesRight			{width: 478.1px; 	height: 547.2px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 547.2px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 547.2px;	}
+		#idTableCompareRowPicturesLeft				{width: 478.1px;	height: 547.2px;	}
+		#idTableCompareRowPicturesRight				{width: 478.1px; 	height: 547.2px;	}
 		#idTableCompareRowNames						{width: 956.2px; 	height: 28.8px;		}
 		#idTableCompareRowNamesLeft					{width: 478.1px;	height: 28.8px;		}
 		#idTableCompareRowNamesRight				{width: 478.1px;	height: 28.8px;		}
@@ -3056,8 +3056,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1008px; 	height: 641.25px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 504px; 		height: 641.25px;	}
 		#idTableCompareRowDataPicturesRight			{width: 504px; 		height: 641.25px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 641.25px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 641.25px;	}
+		#idTableCompareRowPicturesLeft				{width: 504px;		height: 641.25px;	}
+		#idTableCompareRowPicturesRight				{width: 504px; 		height: 641.25px;	}
 		#idTableCompareRowNames						{width: 1008px; 	height: 33.75px;	}
 		#idTableCompareRowNamesLeft					{width: 504px;		height: 33.75px;	}
 		#idTableCompareRowNamesRight				{width: 504px;		height: 33.75px;	}
@@ -3124,8 +3124,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1008px; 	height: 1824px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 504px; 		height: 1824px;		}
 		#idTableCompareRowDataPicturesRight			{width: 504px; 		height: 1824px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1824px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1824px;		}
+		#idTableCompareRowPicturesLeft				{width: 504px;		height: 1824px;		}
+		#idTableCompareRowPicturesRight				{width: 504px; 		height: 1824px;		}
 		#idTableCompareRowNames						{width: 1008px; 	height: 96px;		}
 		#idTableCompareRowNamesLeft					{width: 504px;		height: 96px;		}
 		#idTableCompareRowNamesRight				{width: 504px;		height: 96px;		}
@@ -3192,8 +3192,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1008px; 	height: 2451px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 504px; 		height: 2451px;		}
 		#idTableCompareRowDataPicturesRight			{width: 504px; 		height: 2451px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 2451px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 2451px;		}
+		#idTableCompareRowPicturesLeft				{width: 504px;		height: 2451px;		}
+		#idTableCompareRowPicturesRight				{width: 504px; 		height: 2451px;		}
 		#idTableCompareRowNames						{width: 1008px; 	height: 129px;		}
 		#idTableCompareRowNamesLeft					{width: 504px;		height: 129px;		}
 		#idTableCompareRowNamesRight				{width: 504px;		height: 129px;		}
@@ -3263,8 +3263,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1075.2px; 	height: 615.6px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 537.6px; 	height: 615.6px;	}
 		#idTableCompareRowDataPicturesRight			{width: 537.6px; 	height: 615.6px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 615.6px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 615.6px;	}
+		#idTableCompareRowPicturesLeft				{width: 537.6px;	height: 615.6px;	}
+		#idTableCompareRowPicturesRight				{width: 537.6px; 	height: 615.6px;	}
 		#idTableCompareRowNames						{width: 1075.2; 	height: 32.4px;		}
 		#idTableCompareRowNamesLeft					{width: 537.6px;	height: 32.4px;		}
 		#idTableCompareRowNamesRight				{width: 537.6px;	height: 32.4px;		}
@@ -3334,8 +3334,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1120px; 	height: 641.25px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 560px; 		height: 641.25px;	}
 		#idTableCompareRowDataPicturesRight			{width: 560px; 		height: 641.25px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 641.25px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 641.25px;	}
+		#idTableCompareRowPicturesLeft				{width: 560px;		height: 641.25px;	}
+		#idTableCompareRowPicturesRight				{width: 560px; 		height: 641.25px;	}
 		#idTableCompareRowNames						{width: 1120px; 	height: 33.75px;	}
 		#idTableCompareRowNamesLeft					{width: 560px;		height: 33.75px;	}
 		#idTableCompareRowNamesRight				{width: 560px;		height: 33.75px;	}
@@ -3405,8 +3405,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1176px; 	height: 748.13px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 588px; 		height: 748.13px;	}
 		#idTableCompareRowDataPicturesRight			{width: 588px; 		height: 748.13px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 748.13px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 748.13px;	}
+		#idTableCompareRowPicturesLeft				{width: 588px;		height: 748.13px;	}
+		#idTableCompareRowPicturesRight				{width: 588px; 		height: 748.13px;	}
 		#idTableCompareRowNames						{width: 1176px; 	height: 39.375px;	}
 		#idTableCompareRowNamesLeft					{width: 588px;		height: 39.375px;	}
 		#idTableCompareRowNamesRight				{width: 588px;		height: 39.375px;	}
@@ -3615,8 +3615,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1512px; 	height: 2736px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 756px; 		height: 2736px;		}
 		#idTableCompareRowDataPicturesRight			{width: 756px; 		height: 2736px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 2736px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 2736px;		}
+		#idTableCompareRowPicturesLeft				{width: 756px;		height: 2736px;		}
+		#idTableCompareRowPicturesRight				{width: 756px; 		height: 2736px;		}
 		#idTableCompareRowNames						{width: 1512px; 	height: 144px;		}
 		#idTableCompareRowNamesLeft					{width: 756px;		height: 144px;		}
 		#idTableCompareRowNamesRight				{width: 756px;		height: 144px;		}
@@ -3683,8 +3683,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1512px; 	height: 2918.4px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 756px; 		height: 2918.4px;	}
 		#idTableCompareRowDataPicturesRight			{width: 756px; 		height: 2918.4px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 2918.4px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 2918.4px;	}
+		#idTableCompareRowPicturesLeft				{width: 756px;		height: 2918.4px;	}
+		#idTableCompareRowPicturesRight				{width: 756px; 		height: 2918.4px;	}
 		#idTableCompareRowNames						{width: 1512px; 	height: 153.6px;	}
 		#idTableCompareRowNamesLeft					{width: 756px;		height: 153.6px;	}
 		#idTableCompareRowNamesRight				{width: 756px;		height: 153.6px;	}
@@ -3754,8 +3754,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1792px; 	height: 769.5px;	}
 		#idTableCompareRowDataPicturesLeft			{width: 896px; 		height: 769.5px;	}
 		#idTableCompareRowDataPicturesRight			{width: 896px; 		height: 769.5px;	}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 769.5px;	}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 769.5px;	}
+		#idTableCompareRowPicturesLeft				{width: 896px;		height: 769.5px;	}
+		#idTableCompareRowPicturesRight				{width: 896px; 		height: 769.5px;	}
 		#idTableCompareRowNames						{width: 1792px; 	height: 40.5px;		}
 		#idTableCompareRowNamesLeft					{width: 896px;		height: 40.5px;		}
 		#idTableCompareRowNamesRight				{width: 896px;		height: 40.5px;		}
@@ -3822,8 +3822,8 @@ h6{
 		#idTableCompareRowPictures					{width: 1792px; 	height: 1026px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 896px; 		height: 1026px;		}
 		#idTableCompareRowDataPicturesRight			{width: 896px; 		height: 1026px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1026px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1026px;		}
+		#idTableCompareRowPicturesLeft				{width: 896px;		height: 1026px;		}
+		#idTableCompareRowPicturesRight				{width: 896px; 		height: 1026px;		}
 		#idTableCompareRowNames						{width: 1792px; 	height: 54px;		}
 		#idTableCompareRowNamesLeft					{width: 896px;		height: 54px;		}
 		#idTableCompareRowNamesRight				{width: 896px;		height: 54px;		}
@@ -3893,8 +3893,8 @@ h6{
 		#idTableCompareRowPictures					{width: 2408px; 	height: 1026px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 1204px; 	height: 1026px;		}
 		#idTableCompareRowDataPicturesRight			{width: 1204px; 	height: 1026px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1026px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1026px;		}
+		#idTableCompareRowPicturesLeft				{width: 1204px;		height: 1026px;		}
+		#idTableCompareRowPicturesRight				{width: 1204px; 	height: 1026px;		}
 		#idTableCompareRowNames						{width: 2408px; 	height: 54px;		}
 		#idTableCompareRowNamesLeft					{width: 1204px;		height: 54px;		}
 		#idTableCompareRowNamesRight				{width: 1204px;		height: 54px;		}
@@ -3964,8 +3964,8 @@ h6{
 		#idTableCompareRowPictures					{width: 2688px; 	height: 1539px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 2688px; 	height: 1539px;		}
 		#idTableCompareRowDataPicturesRight			{width: 2688px; 	height: 1539px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1539px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1539px;		}
+		#idTableCompareRowPicturesLeft				{width: 2688px;		height: 1539px;		}
+		#idTableCompareRowPicturesRight				{width: 2688px; 	height: 1539px;		}
 		#idTableCompareRowNames						{width: 2688px; 	height: 81px;		}
 		#idTableCompareRowNamesLeft					{width: 2688px;		height: 81px;		}
 		#idTableCompareRowNamesRight				{width: 2688px;		height: 81px;		}
@@ -4035,8 +4035,8 @@ h6{
 		#idTableCompareRowPictures					{width: 2867.2px; 	height: 1539px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 1433.6px; 	height: 1539px;		}
 		#idTableCompareRowDataPicturesRight			{width: 1433.6px; 	height: 1539px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 1539px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 1539px;		}
+		#idTableCompareRowPicturesLeft				{width: 1433.6px;	height: 1539px;		}
+		#idTableCompareRowPicturesRight				{width: 1433.6px; 	height: 1539px;		}
 		#idTableCompareRowNames						{width: 2867.2px; 	height: 81px;		}
 		#idTableCompareRowNamesLeft					{width: 1433.6px;	height: 81px;		}
 		#idTableCompareRowNamesRight				{width: 1433.6px;	height: 81px;		}
@@ -4106,8 +4106,8 @@ h6{
 		#idTableCompareRowPictures					{width: 3024px; 	height: 5472px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 1512px; 	height: 5472px;		}
 		#idTableCompareRowDataPicturesRight			{width: 1512px; 	height: 5472px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 5472px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 5472px;		}
+		#idTableCompareRowPicturesLeft				{width: 1512px;		height: 5472px;		}
+		#idTableCompareRowPicturesRight				{width: 1512px; 	height: 5472px;		}
 		#idTableCompareRowNames						{width: 3024px; 	height: 288px;		}
 		#idTableCompareRowNamesLeft					{width: 1512px;		height: 288px;		}
 		#idTableCompareRowNamesRight				{width: 1512px;		height: 288px;		}
@@ -4177,8 +4177,8 @@ h6{
 		#idTableCompareRowPictures					{width: 5376px; 	height: 3078px;		}
 		#idTableCompareRowDataPicturesLeft			{width: 2688px; 	height: 3078px;		}
 		#idTableCompareRowDataPicturesRight			{width: 2688px; 	height: 3078px;		}
-		#idTableCompareRowPicturesLeft				{width: auto;		height: 3078px;		}
-		#idTableCompareRowPicturesRight				{width: auto; 		height: 3078px;		}
+		#idTableCompareRowPicturesLeft				{width: 2688px;		height: 3078px;		}
+		#idTableCompareRowPicturesRight				{width: 2688px; 	height: 3078px;		}
 		#idTableCompareRowNames						{width: 5376px; 	height: 162px;		}
 		#idTableCompareRowNamesLeft					{width: 2688px;		height: 162px;		}
 		#idTableCompareRowNamesRight				{width: 2688px;		height: 162px;		}
