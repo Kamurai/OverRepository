@@ -18,13 +18,13 @@
 
 .classTableMyListRowSpanPicture{}
 
-.classTableMyListRowSpanSex{
+.classTableMyListRowSpanGender{
     color: #ffffff;
     margin: auto;
     display: table-cell;
 }
 
-.classTableMyListRowSex{
+.classTableMyListRowGender{
     color: #ffffff;
     margin: auto;
 }
@@ -58,11 +58,11 @@
 
 .classTableGlobalListRowPicture{}
 
-.classTableGlobalListRowSpanSex{
+.classTableGlobalListRowSpanGender{
     color: #ffffff;
 }
 
-.classTableGlobalListRowSex{
+.classTableGlobalListRowGender{
     color: #ffffff;
 }
 
@@ -250,7 +250,7 @@
 
 #idAddTargetUrl2{}
 
-#idRadioAddSex2{
+#idRadioAddGender2{
     color: #ffffff;
 }
 
@@ -262,7 +262,7 @@
 
 #idAddTargetUrl1{}
 
-#idRadioAddSex1{
+#idRadioAddGender1{
     color: #ffffff;
 }
 
@@ -282,65 +282,65 @@
 	/* 240 x 352 */
 	@media screen and (min-height: 352px){
 		/** Elements **/
-		body										{width: 240px; height: 352px; 	}
+		body											{width: 240px; height: 352px; 	}
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanNumber				{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 67.2px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 67.2px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 33.6px; 	height: 176px;	}
 		
 		/* Global List */
-		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
-		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListHeader					{width: 33.6px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 33.6px; 	height: 88px;	}
 		
 		/* Management */
-		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
-		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 33.6px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 16.8px; 	height: 35.2px;	}
 		
 		/** IDs **/
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idContentAdd								{width: 168px; 		height: 140.8px;}
+		#idAddTarget2								{width: auto; 		height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 		height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 		height: 35.2px;	}
+		#idContentAddSuggestion						{width: 168px; 		height: auto;	}
+		#idAddTarget1								{width: auto; 		height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 		height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 		height: 35.2px;	}
 		
 		/* Management */
-		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderIndex		{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 33.6px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 16.8px; 	height: 35.2px;	}
 	}
 }
 
@@ -353,14 +353,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -373,8 +372,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -396,7 +395,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -406,11 +404,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -443,14 +441,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -463,8 +460,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -487,7 +484,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -497,11 +493,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -534,14 +530,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -554,8 +549,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -578,7 +573,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -588,11 +582,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -622,14 +616,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -642,8 +635,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -666,7 +659,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -676,11 +668,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -710,14 +702,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -730,8 +721,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -754,7 +745,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -764,11 +754,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -801,14 +791,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -821,8 +810,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -845,7 +834,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -855,11 +843,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -892,14 +880,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -912,8 +899,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -936,7 +923,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -946,11 +932,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -983,14 +969,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1003,8 +988,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1027,7 +1012,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1037,11 +1021,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1071,14 +1055,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1091,8 +1074,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1115,7 +1098,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1125,11 +1107,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1159,14 +1141,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1179,8 +1160,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1203,7 +1184,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1213,11 +1193,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1250,14 +1230,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1270,8 +1249,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1294,7 +1273,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1304,11 +1282,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1338,14 +1316,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1358,8 +1335,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1382,7 +1359,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1392,11 +1368,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1426,14 +1402,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1446,8 +1421,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1470,7 +1445,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1480,11 +1454,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1514,14 +1488,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1534,8 +1507,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1558,7 +1531,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1568,11 +1540,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1605,14 +1577,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1625,8 +1596,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1649,7 +1620,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1659,11 +1629,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1693,14 +1663,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1713,8 +1682,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1737,7 +1706,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1747,11 +1715,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1784,14 +1752,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1804,8 +1771,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1828,7 +1795,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1838,11 +1804,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1872,14 +1838,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1892,8 +1857,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -1916,7 +1881,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -1926,11 +1890,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -1963,14 +1927,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -1983,8 +1946,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2007,7 +1970,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2017,11 +1979,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2054,14 +2016,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2074,8 +2035,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2098,7 +2059,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2108,11 +2068,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2142,14 +2102,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2162,8 +2121,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2186,7 +2145,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2196,11 +2154,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2233,14 +2191,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2253,8 +2210,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2277,7 +2234,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2287,11 +2243,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2321,14 +2277,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2341,8 +2296,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2365,7 +2320,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2375,11 +2329,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2412,14 +2366,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2432,8 +2385,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2456,7 +2409,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2466,11 +2418,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2503,14 +2455,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2523,8 +2474,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2547,7 +2498,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2557,11 +2507,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2591,14 +2541,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2611,8 +2560,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2635,7 +2584,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2645,11 +2593,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2682,14 +2630,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2702,8 +2649,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2726,7 +2673,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2736,11 +2682,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2773,14 +2719,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2793,8 +2738,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2817,7 +2762,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2827,11 +2771,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2864,14 +2808,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2884,8 +2827,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2908,7 +2851,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -2918,11 +2860,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -2952,14 +2894,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -2972,8 +2913,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -2996,7 +2937,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3006,11 +2946,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3040,14 +2980,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3060,8 +2999,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3084,7 +3023,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3094,11 +3032,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3128,14 +3066,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3148,8 +3085,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3172,7 +3109,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3182,11 +3118,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3219,14 +3155,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3239,8 +3174,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3263,7 +3198,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3273,11 +3207,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3310,14 +3244,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3330,8 +3263,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3354,7 +3287,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3364,11 +3296,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3401,14 +3333,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3421,8 +3352,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3445,7 +3376,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3455,11 +3385,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3489,14 +3419,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3509,8 +3438,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3533,7 +3462,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3543,11 +3471,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3577,14 +3505,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3597,8 +3524,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3621,7 +3548,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3631,11 +3557,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3668,14 +3594,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3688,8 +3613,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3712,7 +3637,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3722,11 +3646,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3759,14 +3683,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3779,8 +3702,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3803,7 +3726,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3813,11 +3735,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3850,14 +3772,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -3870,8 +3791,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3894,7 +3815,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3904,11 +3824,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -3937,19 +3857,18 @@
 	/* 1920 x 1080 */
 	@media screen and (min-height: 1080px) {
 		/** Elements **/
-		body										{width: 1920px; height: 1080px; }
+		body											{width: 1920px; 	height: 1080px; 	}
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
-		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
-		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanNumber				{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowNumber					{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowSpanName				{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowName					{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowSpanPicture				{width: 537.6px; 	height: 177.12px;	}
+		.classTableMyListRowPicture					{width: auto; 		height: 177.12px;	}
+		.classTableMyListRowSpanGender				{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowGender					{width: 268.8px; 	height: 44.28px;	}
 		
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 240px; 	height: 17.6px;	}
@@ -3961,8 +3880,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -3985,7 +3904,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -3995,11 +3913,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4029,14 +3947,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4049,8 +3966,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4073,7 +3990,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4083,11 +3999,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4122,14 +4038,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4142,8 +4057,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4166,7 +4081,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4176,11 +4090,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4210,14 +4124,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4230,8 +4143,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4254,7 +4167,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4264,11 +4176,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4301,14 +4213,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4321,8 +4232,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4345,7 +4256,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4355,11 +4265,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4389,14 +4299,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4409,8 +4318,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4433,7 +4342,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4443,11 +4351,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4480,14 +4388,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4500,8 +4407,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4524,7 +4431,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4534,11 +4440,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4571,14 +4477,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4591,8 +4496,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4615,7 +4520,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4625,11 +4529,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4662,14 +4566,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4682,8 +4585,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4706,7 +4609,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4716,11 +4618,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4753,14 +4655,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4773,8 +4674,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4797,7 +4698,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4807,11 +4707,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
@@ -4844,14 +4744,13 @@
 		
 		/** Classes **/
 		/* My List */
-		.classTableMyListRow						{width: 240px; 	height: 176px;	}
 		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
 		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
 		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanSex					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSex						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
 		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
 		
 		/* Global List */
@@ -4864,8 +4763,8 @@
 		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanSex				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSex					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
 		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
 		
@@ -4888,7 +4787,6 @@
 		/* Compare */
 		
 		/* My List */
-		#idTableMyList								{width: 240px; 	height: 316.8px;}
 		
 		/* Global List */
 		#idTableGlobalStats							{width: 1600px; height: 35.2px;	}
@@ -4898,11 +4796,11 @@
 		#idContentAdd								{width: 240px; 	height: 140.8px;}
 		#idAddTarget2								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex2								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
 		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		#idAddTarget1								{width: auto; 	height: 35.2px;	}
 		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddSex1								{width: auto; 	height: 35.2px;	}
+		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 240px;	height: 281.6px;}
