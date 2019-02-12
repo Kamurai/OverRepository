@@ -87,12 +87,14 @@ h6{
     
     margin: auto;
     display: table-row;
+	vertical-align: top;
 }
 
 .classTableMyListRowSpanNumber{
     border: 0px solid #f702f7;
     
     margin: auto;
+    vertical-align: top;
     display: table-cell;
 }
 
@@ -101,15 +103,18 @@ h6{
     
     margin: auto;
     text-align: right;
+	vertical-align: top;
 }
 
 .classTableMyListRowSpanName{
     margin: auto;
+    vertical-align: top;
     display: table-cell;
 }
 
 .classTableMyListRowName{
     margin: auto;
+	vertical-align: top;
 }
 
 .classTableMyListRowSpanPicture{
@@ -118,10 +123,6 @@ h6{
 }
 
 .classTableMyListRowPicture{
-    object-fit: fill;
-    -o-object-fit: fill;
-    -moz-object-fit: fill;
-        
     margin: auto;
     display: block;
 }
@@ -152,6 +153,7 @@ h6{
     border: 0px solid #f702f7;
     
     margin: auto;
+    vertical-align: top;
     display: table-cell;
 }
 
@@ -163,6 +165,7 @@ h6{
     border: 0px solid #f702f7;
     
     margin: auto;
+    vertical-align: top;
     display: table-cell;
 }
 
@@ -174,14 +177,11 @@ h6{
     border: 0px solid #f702f7;
     
     margin: auto;
+    vertical-align: top;
     display: block;
 }
 
 .classTableGlobalListRowPicture{
-    object-fit: fill;
-    -o-object-fit: fill;
-    -moz-object-fit: fill;
-        
     margin: auto;
     display: block;
 }
@@ -190,6 +190,7 @@ h6{
     border: 0px solid #f702f7;
     
     margin: auto;
+    vertical-align: top;
     display: table-cell;
 }
 
@@ -201,6 +202,7 @@ h6{
     border: 0px solid #f702f7;
     
     margin: auto;
+    vertical-align: top;
     display: table-cell;
 }
 
@@ -446,9 +448,7 @@ h6{
     
     padding: 0px;
     border-spacing: 0px;
-    //border-collapse: collapse;
-    //overflow: auto;
-    //overflow-y: scroll;
+    overflow: auto;
     margin: auto;
 }
 
