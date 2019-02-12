@@ -630,6 +630,14 @@ h6{
 		/* Options */
 		#idTableOptions								{width: 168px;		height: 230.91px;	}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 168px; 		height: 115.46px;	}
+		#idAddTarget2								{width: auto; 		height: 28.864px;	}
+		#idAddTargetUrl2							{width: auto; 		height: 28.864px;	}
+		#idContentAddSuggestion						{width: 168px; 		height: 115.46px;	}
+		#idAddTarget1								{width: auto; 		height: 28.864px;	}
+		#idAddTargetUrl1							{width: auto; 		height: 28.864px;	}
+		
 		/* Management */
 		#idTableManagementStats						{width: 168px;		height: 57.728px;	}
 		#idTableManagementUsers						{width: 168px;		height: auto;		}
@@ -697,6 +705,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 246.4px; 	height: 39.36px;	}
 		#idTableGlobalList							{width: 246.4px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 246.4px;	height: 157.44px;	}
@@ -769,6 +785,14 @@ h6{
 		#idTableGlobalStats							{width: 252px; 		height: 78.72px;	}
 		#idTableGlobalList							{width: 252px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 252px;		height: 314.88px;	}
 		
@@ -840,6 +864,14 @@ h6{
 		#idTableGlobalStats							{width: 336px; 		height: 59.04px;	}
 		#idTableGlobalList							{width: 336px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 336px;		height: 236.16px;	}
 		
@@ -908,6 +940,14 @@ h6{
 		#idTableGlobalStats							{width: 336px; 		height: 118.08px;	}
 		#idTableGlobalList							{width: 336px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 336px;		height: 472.32px;	}
 		
@@ -975,6 +1015,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 336px; 		height: 140.71px;	}
 		#idTableGlobalList							{width: 336px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 336px;		height: 562.85px;	}
@@ -1047,6 +1095,14 @@ h6{
 		#idTableGlobalStats							{width: 403.2px; 	height: 118.08px;	}
 		#idTableGlobalList							{width: 403.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 403.2px;	height: 472.32px;	}
 		
@@ -1117,6 +1173,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 420px; 		height: 131.2px;	}
 		#idTableGlobalList							{width: 420px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 420px;		height: 524.8px;	}
@@ -1189,6 +1253,14 @@ h6{
 		#idTableGlobalStats							{width: 504px; 		height: 78.72px;	}
 		#idTableGlobalList							{width: 504px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 504px;		height: 314.88px;	}
 		
@@ -1257,6 +1329,14 @@ h6{
 		#idTableGlobalStats							{width: 504px; 		height: 94.464px;	}
 		#idTableGlobalList							{width: 504px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 504px;		height: 377.86px;	}
 		
@@ -1324,6 +1404,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 504px; 		height: 209.92px;	}
 		#idTableGlobalList							{width: 504px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 504px;		height: 839.68px;	}
@@ -1396,6 +1484,14 @@ h6{
 		#idTableGlobalStats							{width: 537.6px; 	height: 167.94px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 671.74px;	}
 		
@@ -1463,6 +1559,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 537.6px; 	height: 209.92px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 839.68px;	}
@@ -1532,6 +1636,14 @@ h6{
 		#idTableGlobalStats							{width: 537.6px; 	height: 223.04px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 892.16px;	}
 		
@@ -1599,6 +1711,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 537.6px; 	height: 224.02px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 896.1px;	}
@@ -1671,6 +1791,14 @@ h6{
 		#idTableGlobalStats							{width: 560px; 		height: 98.4px;		}
 		#idTableGlobalList							{width: 560px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 560px;		height: 393.6px;	}
 		
@@ -1738,6 +1866,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 560px; 		height: 209.92px;	}
 		#idTableGlobalList							{width: 560px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 560px;		height: 839.68px;	}
@@ -1810,6 +1946,14 @@ h6{
 		#idTableGlobalStats							{width: 600.6px; 	height: 72px;		}
 		#idTableGlobalList							{width: 600.6px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 600.6px;	height: 314.88px;	}
 		
@@ -1881,6 +2025,14 @@ h6{
 		#idTableGlobalStats							{width: 604.8px; 	height: 188.93px;	}
 		#idTableGlobalList							{width: 604.8px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 604.8px;	height: 755.71px;	}
 		
@@ -1948,6 +2100,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 604.8px; 	height: 251.9px;	}
 		#idTableGlobalList							{width: 604.8px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 604.8px;	height: 1007.6px;	}
@@ -2020,6 +2180,14 @@ h6{
 		#idTableGlobalStats							{width: 630px; 		height: 236.16px;	}
 		#idTableGlobalList							{width: 630px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 630px;		height: 944.64px;	}
 		
@@ -2087,6 +2255,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 630px; 		height: 262.4px;	}
 		#idTableGlobalList							{width: 630px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 630px;		height: 1049.6px;	}
@@ -2158,6 +2334,14 @@ h6{
 		#idTableGlobalStats							{width: 716.8px; 	height: 125.95px;	}
 		#idTableGlobalList							{width: 716.8px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 716.8px;	height: 503.81px;	}
 		
@@ -2225,6 +2409,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 716.8px; 	height: 209.92px;	}
 		#idTableGlobalList							{width: 716.8px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 716.8px;	height: 839.68px;	}
@@ -2297,6 +2489,14 @@ h6{
 		#idTableGlobalStats							{width: 735px; 		height: 275.52px;	}
 		#idTableGlobalList							{width: 735px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 735px;		height: 1102.1px;	}
 		
@@ -2368,6 +2568,14 @@ h6{
 		#idTableGlobalStats							{width: 756px; 		height: 314.88px;	}
 		#idTableGlobalList							{width: 756px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 756px;		height: 1259.5px;	}
 		
@@ -2435,6 +2643,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 756px; 		height: 419.84px;	}
 		#idTableGlobalList							{width: 756px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 756px;		height: 1679.4px;	}
@@ -2507,6 +2723,14 @@ h6{
 		#idTableGlobalStats							{width: 806.4px; 		height: 141.7px;	}
 		#idTableGlobalList							{width: 806.4px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 806.4px;		height: 566.78px;	}
 		
@@ -2577,6 +2801,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 840px; 		height: 314.88px;	}
 		#idTableGlobalList							{width: 840px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 840px;		height: 1259.5px;	}
@@ -2649,6 +2881,14 @@ h6{
 		#idTableGlobalStats							{width: 896px; 		height: 118.08px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 472.32px;	}
 		
@@ -2716,6 +2956,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 896px; 		height: 125.95px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 503.81px;	}
@@ -2785,6 +3033,14 @@ h6{
 		#idTableGlobalStats							{width: 896px; 		height: 131.2px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 524.8px;	}
 		
@@ -2852,6 +3108,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 896px; 		height: 167.94px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 671.74px;	}
@@ -2924,6 +3188,14 @@ h6{
 		#idTableGlobalStats							{width: 952px; 		height: 125.95px;	}
 		#idTableGlobalList							{width: 952px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 952px;		height: 503.81px;	}
 		
@@ -2994,6 +3266,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 956.2px; 	height: 125.95px;	}
 		#idTableGlobalList							{width: 956.2px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 956.2px;	height: 503.81px;	}
@@ -3066,6 +3346,14 @@ h6{
 		#idTableGlobalStats							{width: 1008px; 	height: 147.6px;	}
 		#idTableGlobalList							{width: 1008px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1008px;		height: 590.4px;	}
 		
@@ -3134,6 +3422,14 @@ h6{
 		#idTableGlobalStats							{width: 1008px; 	height: 419.84px;	}
 		#idTableGlobalList							{width: 1008px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1008px;		height: 1679.4px;	}
 		
@@ -3201,6 +3497,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 1008px; 	height: 564.16px;	}
 		#idTableGlobalList							{width: 1008px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 1008px;		height: 2256.6px;	}
@@ -3273,6 +3577,14 @@ h6{
 		#idTableGlobalStats							{width: 1075.2px; 	height: 141.7px;	}
 		#idTableGlobalList							{width: 1075.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1075.2px;	height: 566.78px;	}
 		
@@ -3343,6 +3655,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 1120px; 	height: 147.6px;	}
 		#idTableGlobalList							{width: 1120px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 1120px;		height: 590.4px;	}
@@ -3415,6 +3735,14 @@ h6{
 		#idTableGlobalStats							{width: 1176px; 	height: 172.2px;	}
 		#idTableGlobalList							{width: 1176px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1176px;		height: 688.8px;	}
 		
@@ -3486,6 +3814,14 @@ h6{
 		#idTableGlobalStats							{width: 1344px; 	height: 177.12px;	}
 		#idTableGlobalList							{width: 1344px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 1344px; 	height: 354.24px;	}
+		#idAddTarget2								{width: auto; 		height: 88.56px;	}
+		#idAddTargetUrl2							{width: auto; 		height: 88.56px;	}
+		#idContentAddSuggestion						{width: 1344px; 	height: 354.24px;	}
+		#idAddTarget1								{width: auto; 		height: 88.56px;	}
+		#idAddTargetUrl1							{width: auto; 		height: 88.56px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1344px;		height: 708.48px;	}
 		
@@ -3553,6 +3889,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 1344px; 	height: 196.8px;	}
 		#idTableGlobalList							{width: 1344px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 1344px;		height: 787.2px;	}
@@ -3625,6 +3969,14 @@ h6{
 		#idTableGlobalStats							{width: 1512px; 	height: 629.76px;	}
 		#idTableGlobalList							{width: 1512px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1512px;		height: 2519px;		}
 		
@@ -3692,6 +4044,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 1512px; 	height: 671.74px;	}
 		#idTableGlobalList							{width: 1512px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 1512px;		height: 2687px;		}
@@ -3764,6 +4124,14 @@ h6{
 		#idTableGlobalStats							{width: 1792px; 	height: 177.12px;	}
 		#idTableGlobalList							{width: 1792px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1792px;		height: 708.48px;	}
 		
@@ -3831,6 +4199,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 1792px; 	height: 236.16px;	}
 		#idTableGlobalList							{width: 1792px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 1792px;		height: 944.64px;	}
@@ -3903,6 +4279,14 @@ h6{
 		#idTableGlobalStats							{width: 2408px; 	height: 236.16px;	}
 		#idTableGlobalList							{width: 2408px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 2408px;		height: 944.64px;	}
 		
@@ -3973,6 +4357,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 2688px; 	height: 354.24px;	}
 		#idTableGlobalList							{width: 2688px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 2688px;		height: 1417px;		}
@@ -4045,6 +4437,14 @@ h6{
 		#idTableGlobalStats							{width: 2867.2px; 	height: 354.24px;	}
 		#idTableGlobalList							{width: 2867.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 2867.2px;	height: 1417px;		}
 		
@@ -4116,6 +4516,14 @@ h6{
 		#idTableGlobalStats							{width: 3024px; 	height: 1259.5px;	}
 		#idTableGlobalList							{width: 3024px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 3024px;		height: 5038.1px;	}
 		
@@ -4186,6 +4594,14 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 5376px; 	height: 708.48px;	}
 		#idTableGlobalList							{width: 5376px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idAddTarget2								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		#idAddTarget1								{width: auto; 	height: 35.2px;	}
+		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		#idTableOptions								{width: 5376px;		height: 2833.9px;	}

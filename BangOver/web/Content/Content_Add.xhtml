@@ -27,6 +27,12 @@
                         <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Trans Woman" itemValue = "W" /> 
                         <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Trans Man" itemValue = "T" /> 
                     </h:selectOneRadio>
+                    <h:selectOneMenu id="idRadioAddValue2" value="#{TargetBean.strValueToAdd}">
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Woman" itemValue = "F" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Man" itemValue = "M" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Trans Woman" itemValue = "W" /> 
+                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Trans Man" itemValue = "T" /> 
+                    </h:selectOneMenu>
                     <h:message for="idRadioAddValue2"/><br/>
                     <h:commandButton value ="Add" action="#{TargetBean.AddTarget()}"/><br/>
                 </p>
@@ -47,6 +53,12 @@
                         <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Trans Woman" itemValue = "W" /> 
                         <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Trans Man" itemValue = "T" /> 
                     </h:selectOneRadio>
+                    <h:selectOneMenu id="idRadioAddValue1" value="#{TargetBean.strValueToSuggest}">
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Woman" itemValue = "F" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Man" itemValue = "M" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Trans Woman" itemValue = "W" /> 
+                        <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Trans Man" itemValue = "T" /> 
+                    </h:selectOneMenu>
                 <h:message for="idRadioAddValue1"/><br/>
                 <h:commandButton value ="Add" action="#{TargetBean.AddTargetSuggestion()}"/><br/>
             </p>
