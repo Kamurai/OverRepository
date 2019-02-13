@@ -256,23 +256,7 @@
     color: #ffffff;
 }
 
-#idAddTarget2{}
-
-#idAddTargetUrl2{}
-
-#idRadioAddGender2{
-    color: #ffffff;
-}
-
 #idContentAddSuggestion{
-    color: #ffffff;
-}
-
-#idAddTarget1{}
-
-#idAddTargetUrl1{}
-
-#idRadioAddGender1{
     color: #ffffff;
 }
 
@@ -332,14 +316,8 @@
 		
 		/** IDs **/
 		/* Add Target */ 
-		#idContentAdd								{width: 168px; 		height: 140.8px;}
-		#idAddTarget2								{width: auto; 		height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 		height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 		height: 35.2px;	}
-		#idContentAddSuggestion						{width: 168px; 		height: auto;	}
-		#idAddTarget1								{width: auto; 		height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 		height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 		height: 35.2px;	}
+		
+		/* Options */
 		
 		/* Management */
 		#idTableManagementUsersColHeaderIndex		{width: 16.8px; 	height: 35.2px;	}
@@ -407,21 +385,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -433,8 +400,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -492,21 +457,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -518,8 +472,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -577,21 +529,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -603,8 +544,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 480 x 720 */
@@ -659,21 +598,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -685,8 +613,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 480 x 858 */
@@ -741,21 +667,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -767,8 +682,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -826,21 +739,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -852,8 +754,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -911,21 +811,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -937,8 +826,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -996,21 +883,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1022,8 +898,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 
 	/* 720 x 576 */
@@ -1078,21 +952,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1104,11 +967,9 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
-	/* 720 x 1200 */
+	/* 720 x 1280 */
 	@media screen and (min-height: 1280px){
 		/** Elements **/
 		body										{width: 720px; height: 1280px; }
@@ -1160,21 +1021,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1186,8 +1036,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -1245,21 +1093,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1271,8 +1108,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 768 x 1280 */
@@ -1327,21 +1162,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1353,8 +1177,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 768 x 1360 */
@@ -1409,21 +1231,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1435,8 +1246,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 768 x 1366 */
@@ -1491,21 +1300,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1517,8 +1315,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -1576,21 +1372,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1602,8 +1387,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 800 x 1280 */
@@ -1658,21 +1441,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1684,175 +1456,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
-	}
-}
-
-/* 864 */
-@media screen and (min-width: 864px) {
-	/* 864 x 1152 */
-	@media screen and (min-height: 1152px){
-		/** Elements **/
-		body										{width: 864px; height: 1152px; }
-		
-		/** Classes **/
-		/* My List */
-		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
-		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
-		
-		/* Global List */
-		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
-		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
-		
-		/* Management */
-		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
-		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
-		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
-		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
-		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
-		
-		/** IDs **/
-		
-		/* Compare */
-		
-		/* My List */
-		
-		/* Global List */
-		
-		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
-		
-		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
-		
-		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
-		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
-		
-		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
-	}
-	
-	/* 864 x 1536 */
-	@media screen and (min-height: 1536px){
-		/** Elements **/
-		body										{width: 864px; height: 1536px; }
-		
-		/** Classes **/
-		/* My List */
-		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
-		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
-		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
-		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
-		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
-		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
-		
-		/* Global List */
-		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
-		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
-		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
-		
-		/* Management */
-		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
-		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
-		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
-		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
-		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
-		
-		/** IDs **/
-		
-		/* Compare */
-		
-		/* My List */
-		
-		/* Global List */
-		
-		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
-		
-		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
-		
-		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
-		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
-		
-		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -1910,21 +1513,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -1936,8 +1528,147 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
+	}
+}
+
+/* 864 */
+@media screen and (min-width: 864px) {
+	/* 864 x 1152 */
+	@media screen and (min-height: 1152px){
+		/** Elements **/
+		body										{width: 864px; height: 1152px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 864 x 1536 */
+	@media screen and (min-height: 1536px){
+		/** Elements **/
+		body										{width: 864px; height: 1536px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
 	}
 }
 
@@ -1995,21 +1726,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2021,8 +1741,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 900 x 1600 */
@@ -2077,21 +1795,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2103,8 +1810,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -2162,21 +1867,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2188,8 +1882,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 		/* 1024 x 1280 */
@@ -2244,21 +1936,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2270,8 +1951,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -2329,21 +2008,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2355,8 +2023,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -2414,21 +2080,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2440,8 +2095,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 1080 x 2560 */
@@ -2496,21 +2149,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2522,8 +2164,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -2581,21 +2221,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2607,8 +2236,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -2666,21 +2293,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2692,8 +2308,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -2751,21 +2365,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2777,8 +2380,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 
 	/* 1280 x 768 */
@@ -2833,21 +2434,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2859,8 +2449,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 
 	/* 1280 x 800 */
@@ -2915,21 +2503,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -2941,8 +2518,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 
 	/* 1280 x 1024 */
@@ -2997,21 +2572,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3023,8 +2587,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3082,21 +2644,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3108,8 +2659,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3167,21 +2716,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3193,8 +2731,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3252,21 +2788,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3278,8 +2803,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 1440 x 2560 */
@@ -3334,21 +2857,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3360,8 +2872,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 1440 x 3440 */
@@ -3416,21 +2926,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3442,8 +2941,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3501,21 +2998,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3527,8 +3013,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3586,21 +3070,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3612,8 +3085,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3671,21 +3142,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3697,8 +3157,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -3707,7 +3165,7 @@
 	/* 1920 x 1080 */
 	@media screen and (min-height: 1080px) {
 		/** Elements **/
-		body										{width: 1920px; 	height: 1080px; 	}
+		body											{width: 1920px; 	height: 1080px; 	}
 		
 		/** Classes **/
 		/* My List */
@@ -3734,18 +3192,18 @@
 		.classTableGlobalListRowRanking				{width: 268.8px; 	height: 221.4px;	}
 		
 		/* Management */
-		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
-		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
-		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
-		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
-		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
-		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementHeaderRow				{width: 240px; 		height: 88.56px;	}
+		.classTableManagementHeader					{width: 24px; 		height: 88.56px;	}
+		.classTableManagementRow					{width: 240px; 		height: 88.56px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 		height: 88.56px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColMen			{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 		height: 88.56px;	}
 		
 		/** IDs **/
 		
@@ -3756,34 +3214,21 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2							{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
-		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
-		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 		height: 88.56px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 1920 x 1200 */
@@ -3838,21 +3283,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3864,8 +3298,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	
@@ -3925,21 +3357,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -3951,8 +3372,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 2160 x 4096 */
@@ -4007,21 +3426,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4033,8 +3441,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -4092,21 +3498,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4118,8 +3513,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 	
 	/* 2560 x 1440 */
@@ -4174,21 +3567,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4200,8 +3582,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -4259,21 +3639,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4285,8 +3654,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -4344,21 +3711,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4370,8 +3726,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -4429,21 +3783,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4455,8 +3798,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -4514,21 +3855,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4540,8 +3870,6 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }
 
@@ -4599,21 +3927,10 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
-		#idTableOptions								{width: 240px;	height: 281.6px;}
 		
 		/* Management */
-		#idTableManagementStats						{width: 240px;	height: 70.4px;	}
-		#idTableManagementUsers						{width: 240px;	height: 281.6px;}
 		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
 		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
@@ -4625,7 +3942,5 @@
 		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
 		
 		/* Sign Up */
-		#idContentSignUp							{width: 240px;	height: 176px	}
-		#idTableSignUp								{width: 240px;	height: 176px	}
 	}
 }

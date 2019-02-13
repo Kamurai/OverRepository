@@ -256,23 +256,7 @@
     color: #ffffff;
 }
 
-#idAddTarget2{}
-
-#idAddTargetUrl2{}
-
-#idRadioAddGender2{
-    color: #ffffff;
-}
-
 #idContentAddSuggestion{
-    color: #ffffff;
-}
-
-#idAddTarget1{}
-
-#idAddTargetUrl1{}
-
-#idRadioAddGender1{
     color: #ffffff;
 }
 
@@ -332,8 +316,6 @@
 		
 		/** IDs **/
 		/* Add Target */ 
-		#idRadioAddGender2							{width: auto; 		height: 35.2px;	}
-		#idRadioAddGender1							{width: auto; 		height: 35.2px;	}
 		
 		/* Options */
 		
@@ -403,8 +385,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -477,8 +457,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -551,8 +529,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -622,8 +598,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -693,8 +667,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -767,8 +739,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -841,8 +811,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -915,8 +883,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -986,8 +952,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1057,8 +1021,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1131,8 +1093,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1202,8 +1162,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1273,8 +1231,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1344,8 +1300,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1418,8 +1372,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1489,8 +1441,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1563,8 +1513,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2							{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1637,8 +1585,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1708,8 +1654,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1782,8 +1726,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1853,8 +1795,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1927,8 +1867,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -1998,8 +1936,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2072,8 +2008,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2146,8 +2080,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2217,8 +2149,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2291,8 +2221,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2365,8 +2293,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2439,8 +2365,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2510,8 +2434,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2581,8 +2503,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2652,8 +2572,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2726,8 +2644,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2800,8 +2716,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2874,8 +2788,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -2945,8 +2857,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3016,8 +2926,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3090,12 +2998,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idContentAdd								{width: 240px; 	height: 140.8px;}
-		#idAddTarget2								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl2							{width: auto; 	height: 35.2px;	}
-		#idContentAddSuggestion						{width: 1600px; height: auto;	}
-		#idAddTarget1								{width: auto; 	height: 35.2px;	}
-		#idAddTargetUrl1							{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3168,8 +3070,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3242,8 +3142,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3316,8 +3214,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2							{width: auto; 		height: 88.56px;	}
-		#idRadioAddGender1							{width: auto; 		height: 88.56px;	}
 		
 		/* Options */
 		
@@ -3387,8 +3283,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3463,8 +3357,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3534,8 +3426,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3608,8 +3498,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3679,8 +3567,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3753,8 +3639,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3827,8 +3711,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3901,8 +3783,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -3975,8 +3855,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		
@@ -4049,8 +3927,6 @@
 		/* Global List */
 		
 		/* Add Target */ 
-		#idRadioAddGender2								{width: auto; 	height: 35.2px;	}
-		#idRadioAddGender1								{width: auto; 	height: 35.2px;	}
 		
 		/* Options */
 		

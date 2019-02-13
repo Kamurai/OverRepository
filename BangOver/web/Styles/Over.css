@@ -210,6 +210,11 @@ h6{
     margin: auto;
 }
 
+/* Add Target */
+.classAddLabel{
+    display: block;
+}
+
 /* Management */
 .classTableManagementHeaderRow{
     border: 0px solid #f702f7;
@@ -538,23 +543,11 @@ h6{
     vertical-align: top;    
 }
 
-#idAddTarget2{}
-
-#idAddTargetUrl2{}
-
-#idRadioAddValue2{}
-
 #idContentAddSuggestion{
     border: 0px solid #FE0101;
     
     text-align: left;
 }
-
-#idAddTarget1{}
-
-#idAddTargetUrl1{}
-
-#idRadioAddValue1{}
 
 /* Sign Up */
 #idContentSignUp{
@@ -584,6 +577,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 168px; 		height: 28.864px;	}
 		.classTableGlobalListRow					{width: 168px; 		height: 72.16px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 168px; 		height: 28.864px;	}
@@ -630,6 +626,10 @@ h6{
 		/* Options */
 		#idTableOptions								{width: 168px;		height: 230.91px;	}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 168px; 		height: 115.46px;	}
+		#idContentAddSuggestion						{width: 168px; 		height: 115.46px;	}
+		
 		/* Management */
 		#idTableManagementStats						{width: 168px;		height: 57.728px;	}
 		#idTableManagementUsers						{width: 168px;		height: auto;		}
@@ -655,6 +655,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 246.4px; 	height: 19.68px;	}
 		.classTableGlobalListRow					{width: 246.4px; 	height: 49.2px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 246.4px; 	height: 19.68px;	}
@@ -698,6 +701,10 @@ h6{
 		#idTableGlobalStats							{width: 246.4px; 	height: 39.36px;	}
 		#idTableGlobalList							{width: 246.4px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 246.4px;	height: 157.44px;	}
 		
@@ -726,6 +733,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 252px; 		height: 39.36px;	}
 		.classTableGlobalListRow					{width: 252px; 		height: 98.4px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 252px; 		height: 39.36px;	}
@@ -769,6 +779,10 @@ h6{
 		#idTableGlobalStats							{width: 252px; 		height: 78.72px;	}
 		#idTableGlobalList							{width: 252px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 252px;		height: 314.88px;	}
 		
@@ -797,6 +811,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 336px; 		height: 29.52px;	}
 		.classTableGlobalListRow					{width: 336px; 		height: 73.8px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 336px; 		height: 29.52px;	}
@@ -840,6 +857,10 @@ h6{
 		#idTableGlobalStats							{width: 336px; 		height: 59.04px;	}
 		#idTableGlobalList							{width: 336px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 336px;		height: 236.16px;	}
 		
@@ -865,6 +886,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 336px; 		height: 59.04px;	}
 		.classTableGlobalListRow					{width: 336px; 		height: 147.6px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 336px; 		height: 59.04px;	}
@@ -908,6 +932,10 @@ h6{
 		#idTableGlobalStats							{width: 336px; 		height: 118.08px;	}
 		#idTableGlobalList							{width: 336px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 336px;		height: 472.32px;	}
 		
@@ -933,6 +961,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 336px; 		height: 70.356px;	}
 		.classTableGlobalListRow					{width: 336px; 		height: 175.89px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 336px; 		height: 70.356px;	}
@@ -976,6 +1007,10 @@ h6{
 		#idTableGlobalStats							{width: 336px; 		height: 140.71px;	}
 		#idTableGlobalList							{width: 336px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 336px;		height: 562.85px;	}
 		
@@ -1004,6 +1039,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 403.2px; 	height: 59.04px;	}
 		.classTableGlobalListRow					{width: 403.2px; 	height: 147.6px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 403.2px; 	height: 59.04px;	}
@@ -1047,6 +1085,10 @@ h6{
 		#idTableGlobalStats							{width: 403.2px; 	height: 118.08px;	}
 		#idTableGlobalList							{width: 403.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 403.2px;	height: 472.32px;	}
 		
@@ -1075,6 +1117,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 420px; 		height: 65.6px;		}
 		.classTableGlobalListRow					{width: 420px; 		height: 164px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 420px; 		height: 65.6px;		}
@@ -1118,6 +1163,10 @@ h6{
 		#idTableGlobalStats							{width: 420px; 		height: 131.2px;	}
 		#idTableGlobalList							{width: 420px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 420px;		height: 524.8px;	}
 		
@@ -1146,6 +1195,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 504px; 		height: 39.36px;	}
 		.classTableGlobalListRow					{width: 504px; 		height: 98.4px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 504px; 		height: 39.36px;	}
@@ -1189,6 +1241,10 @@ h6{
 		#idTableGlobalStats							{width: 504px; 		height: 78.72px;	}
 		#idTableGlobalList							{width: 504px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 504px;		height: 314.88px;	}
 		
@@ -1214,6 +1270,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 504px; 		height: 47.232px;	}
 		.classTableGlobalListRow					{width: 504px; 		height: 118.08px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 504px; 		height: 47.232px;	}
@@ -1257,6 +1316,10 @@ h6{
 		#idTableGlobalStats							{width: 504px; 		height: 94.464px;	}
 		#idTableGlobalList							{width: 504px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 504px;		height: 377.86px;	}
 		
@@ -1282,6 +1345,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 504px; 		height: 104.96px;	}
 		.classTableGlobalListRow					{width: 504px; 		height: 262.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 504px; 		height: 104.96px;	}
@@ -1325,6 +1391,10 @@ h6{
 		#idTableGlobalStats							{width: 504px; 		height: 209.92px;	}
 		#idTableGlobalList							{width: 504px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 504px;		height: 839.68px;	}
 		
@@ -1353,6 +1423,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 537.6px; 	height: 83.968px;	}
 		.classTableGlobalListRow					{width: 537.6px; 	height: 209.92px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 537.6px; 	height: 83.968px;	}
@@ -1396,6 +1469,10 @@ h6{
 		#idTableGlobalStats							{width: 537.6px; 	height: 167.94px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 671.74px;	}
 		
@@ -1421,6 +1498,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 537.6px; 	height: 104.96px;	}
 		.classTableGlobalListRow					{width: 537.6px; 	height: 262.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 537.6px; 	height: 104.96px;	}
@@ -1464,6 +1544,10 @@ h6{
 		#idTableGlobalStats							{width: 537.6px; 	height: 209.92px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 839.68px;	}
 		
@@ -1489,6 +1573,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 537.6px; 	height: 111.52px;	}
 		.classTableGlobalListRow					{width: 537.6px; 	height: 278.8px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 537.6px; 	height: 111.52px;	}
@@ -1532,6 +1619,10 @@ h6{
 		#idTableGlobalStats							{width: 537.6px; 	height: 223.04px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 892.16px;	}
 		
@@ -1557,6 +1648,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 537.6px; 	height: 112.01px;	}
 		.classTableGlobalListRow					{width: 537.6px; 	height: 280.03px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 537.6px; 	height: 112.01px;	}
@@ -1600,6 +1694,10 @@ h6{
 		#idTableGlobalStats							{width: 537.6px; 	height: 224.02px;	}
 		#idTableGlobalList							{width: 537.6px;	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 537.6px;	height: 896.1px;	}
 		
@@ -1628,6 +1726,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 560px; 		height: 49.2px;		}
 		.classTableGlobalListRow					{width: 560px; 		height: 123px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 560px; 		height: 49.2px;		}
@@ -1671,6 +1772,10 @@ h6{
 		#idTableGlobalStats							{width: 560px; 		height: 98.4px;		}
 		#idTableGlobalList							{width: 560px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 560px;		height: 393.6px;	}
 		
@@ -1696,6 +1801,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 560px; 		height: 104.96px;	}
 		.classTableGlobalListRow					{width: 560px; 		height: 262.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 560px; 		height: 104.96px;	}
@@ -1739,6 +1847,10 @@ h6{
 		#idTableGlobalStats							{width: 560px; 		height: 209.92px;	}
 		#idTableGlobalList							{width: 560px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 560px;		height: 839.68px;	}
 		
@@ -1767,6 +1879,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 600.6px; 	height: 39.36px;	}
 		.classTableGlobalListRow					{width: 600.6px; 	height: 98.4px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 600.6px; 	height: 39.36px;	}
@@ -1810,6 +1925,10 @@ h6{
 		#idTableGlobalStats							{width: 600.6px; 	height: 72px;		}
 		#idTableGlobalList							{width: 600.6px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 600.6px;	height: 314.88px;	}
 		
@@ -1838,6 +1957,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 604.8px; 	height: 94.464px;	}
 		.classTableGlobalListRow					{width: 604.8px; 	height: 236.16px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 604.8px; 	height: 94.464px;	}
@@ -1881,6 +2003,10 @@ h6{
 		#idTableGlobalStats							{width: 604.8px; 	height: 188.93px;	}
 		#idTableGlobalList							{width: 604.8px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 604.8px;	height: 755.71px;	}
 		
@@ -1906,6 +2032,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 604.8px; 	height: 125.95px;	}
 		.classTableGlobalListRow					{width: 604.8px; 	height: 314.88px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 604.8px; 	height: 125.95px;	}
@@ -1949,6 +2078,10 @@ h6{
 		#idTableGlobalStats							{width: 604.8px; 	height: 251.9px;	}
 		#idTableGlobalList							{width: 604.8px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 604.8px;	height: 1007.6px;	}
 		
@@ -1977,6 +2110,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 630px; 		height: 118.08px;	}
 		.classTableGlobalListRow					{width: 630px; 		height: 295.2px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 630px; 		height: 118.08px;	}
@@ -2020,6 +2156,10 @@ h6{
 		#idTableGlobalStats							{width: 630px; 		height: 236.16px;	}
 		#idTableGlobalList							{width: 630px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 630px;		height: 944.64px;	}
 		
@@ -2045,6 +2185,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 630px; 		height: 131.2px;	}
 		.classTableGlobalListRow					{width: 630px; 		height: 328px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 630px; 		height: 131.2px;	}
@@ -2088,6 +2231,10 @@ h6{
 		#idTableGlobalStats							{width: 630px; 		height: 262.4px;	}
 		#idTableGlobalList							{width: 630px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 630px;		height: 1049.6px;	}
 		
@@ -2116,6 +2263,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 716.8px; 	height: 62.976px;	}
 		.classTableGlobalListRow					{width: 716.8px; 	height: 157.44px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 716.8px; 	height: 62.976px;	}
@@ -2158,6 +2308,10 @@ h6{
 		#idTableGlobalStats							{width: 716.8px; 	height: 125.95px;	}
 		#idTableGlobalList							{width: 716.8px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 716.8px;	height: 503.81px;	}
 		
@@ -2183,6 +2337,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 716.8px; 	height: 104.96px;	}
 		.classTableGlobalListRow					{width: 716.8px; 	height: 262.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 716.8px; 	height: 104.96px;	}
@@ -2226,6 +2383,10 @@ h6{
 		#idTableGlobalStats							{width: 716.8px; 	height: 209.92px;	}
 		#idTableGlobalList							{width: 716.8px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 716.8px;	height: 839.68px;	}
 		
@@ -2254,6 +2415,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 735px; 		height: 137.76px;	}
 		.classTableGlobalListRow					{width: 735px; 		height: 344.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 735px; 		height: 137.76px;	}
@@ -2297,6 +2461,10 @@ h6{
 		#idTableGlobalStats							{width: 735px; 		height: 275.52px;	}
 		#idTableGlobalList							{width: 735px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 735px;		height: 1102.1px;	}
 		
@@ -2325,6 +2493,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 756px; 		height: 157.44px;	}
 		.classTableGlobalListRow					{width: 756px; 		height: 393.6px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 756px; 		height: 157.44px;	}
@@ -2368,6 +2539,10 @@ h6{
 		#idTableGlobalStats							{width: 756px; 		height: 314.88px;	}
 		#idTableGlobalList							{width: 756px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 756px;		height: 1259.5px;	}
 		
@@ -2393,6 +2568,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 756px; 		height: 209.92px;	}
 		.classTableGlobalListRow					{width: 756px; 		height: 524.8px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 756px; 		height: 209.92px;	}
@@ -2436,6 +2614,10 @@ h6{
 		#idTableGlobalStats							{width: 756px; 		height: 419.84px;	}
 		#idTableGlobalList							{width: 756px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 756px;		height: 1679.4px;	}
 		
@@ -2464,6 +2646,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 806.4px; 		height: 70.848px;	}
 		.classTableGlobalListRow					{width: 806.4px; 		height: 177.12px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 806.4px; 		height: 70.848px;	}
@@ -2507,6 +2692,10 @@ h6{
 		#idTableGlobalStats							{width: 806.4px; 		height: 141.7px;	}
 		#idTableGlobalList							{width: 806.4px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 806.4px;		height: 566.78px;	}
 		
@@ -2535,6 +2724,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 840px; 		height: 157.44px;	}
 		.classTableGlobalListRow					{width: 840px; 		height: 393.6px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 840px; 		height: 157.44px;	}
@@ -2578,6 +2770,10 @@ h6{
 		#idTableGlobalStats							{width: 840px; 		height: 314.88px;	}
 		#idTableGlobalList							{width: 840px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 840px;		height: 1259.5px;	}
 		
@@ -2606,6 +2802,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 896px; 		height: 59.04px;	}
 		.classTableGlobalListRow					{width: 896px; 		height: 147.6px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 896px; 		height: 59.04px;	}
@@ -2649,6 +2848,10 @@ h6{
 		#idTableGlobalStats							{width: 896px; 		height: 118.08px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 472.32px;	}
 		
@@ -2674,6 +2877,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 896px; 		height: 62.976px;	}
 		.classTableGlobalListRow					{width: 896px; 		height: 157.44px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 896px; 		height: 62.976px;	}
@@ -2717,6 +2923,10 @@ h6{
 		#idTableGlobalStats							{width: 896px; 		height: 125.95px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 503.81px;	}
 		
@@ -2742,6 +2952,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 896px; 		height: 65.6px;		}
 		.classTableGlobalListRow					{width: 896px; 		height: 164px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 896px; 		height: 65.6px;		}
@@ -2785,6 +2998,10 @@ h6{
 		#idTableGlobalStats							{width: 896px; 		height: 131.2px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 524.8px;	}
 		
@@ -2810,6 +3027,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 896px; 		height: 83.968px;	}
 		.classTableGlobalListRow					{width: 896px; 		height: 209.92px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 896px; 		height: 83.968px;	}
@@ -2853,6 +3073,10 @@ h6{
 		#idTableGlobalStats							{width: 896px; 		height: 167.94px;	}
 		#idTableGlobalList							{width: 896px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 896px;		height: 671.74px;	}
 		
@@ -2881,6 +3105,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 952px; 		height: 62.976px;	}
 		.classTableGlobalListRow					{width: 952px; 		height: 157.44px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 952px; 		height: 62.976px;	}
@@ -2924,6 +3151,10 @@ h6{
 		#idTableGlobalStats							{width: 952px; 		height: 125.95px;	}
 		#idTableGlobalList							{width: 952px; 		height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 952px;		height: 503.81px;	}
 		
@@ -2952,6 +3183,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 956.2px; 	height: 62.976px;	}
 		.classTableGlobalListRow					{width: 956.2px; 	height: 157.44px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 956.2px; 	height: 62.976px;	}
@@ -2995,6 +3229,10 @@ h6{
 		#idTableGlobalStats							{width: 956.2px; 	height: 125.95px;	}
 		#idTableGlobalList							{width: 956.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 956.2px;	height: 503.81px;	}
 		
@@ -3023,6 +3261,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1008px; 	height: 73.8px;		}
 		.classTableGlobalListRow					{width: 1008px; 	height: 184.5px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1008px; 	height: 73.8px;		}
@@ -3066,6 +3307,10 @@ h6{
 		#idTableGlobalStats							{width: 1008px; 	height: 147.6px;	}
 		#idTableGlobalList							{width: 1008px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1008px;		height: 590.4px;	}
 		
@@ -3091,6 +3336,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1008px; 	height: 209.92px;	}
 		.classTableGlobalListRow					{width: 1008px; 	height: 524.8px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1008px; 	height: 209.92px;	}
@@ -3134,6 +3382,10 @@ h6{
 		#idTableGlobalStats							{width: 1008px; 	height: 419.84px;	}
 		#idTableGlobalList							{width: 1008px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1008px;		height: 1679.4px;	}
 		
@@ -3159,6 +3411,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1008px; 	height: 282.08px;	}
 		.classTableGlobalListRow					{width: 1008px; 	height: 705.2px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1008px; 	height: 282.08px;	}
@@ -3202,6 +3457,10 @@ h6{
 		#idTableGlobalStats							{width: 1008px; 	height: 564.16px;	}
 		#idTableGlobalList							{width: 1008px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1008px;		height: 2256.6px;	}
 		
@@ -3230,6 +3489,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1075.2px; 	height: 70.848px;	}
 		.classTableGlobalListRow					{width: 1075.2px; 	height: 177.12px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1075.2px; 	height: 70.848px;	}
@@ -3273,6 +3535,10 @@ h6{
 		#idTableGlobalStats							{width: 1075.2px; 	height: 141.7px;	}
 		#idTableGlobalList							{width: 1075.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1075.2px;	height: 566.78px;	}
 		
@@ -3301,6 +3567,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1120px; 	height: 73.8px;		}
 		.classTableGlobalListRow					{width: 1120px; 	height: 184.5px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1120px; 	height: 73.8px;		}
@@ -3344,6 +3613,10 @@ h6{
 		#idTableGlobalStats							{width: 1120px; 	height: 147.6px;	}
 		#idTableGlobalList							{width: 1120px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1120px;		height: 590.4px;	}
 		
@@ -3372,6 +3645,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1176px; 	height: 86.1px;		}
 		.classTableGlobalListRow					{width: 1176px; 	height: 215.25px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1176px; 	height: 86.1px;		}
@@ -3415,6 +3691,10 @@ h6{
 		#idTableGlobalStats							{width: 1176px; 	height: 172.2px;	}
 		#idTableGlobalList							{width: 1176px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1176px;		height: 688.8px;	}
 		
@@ -3443,6 +3723,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1344px; 	height: 88.56px;	}
 		.classTableGlobalListRow					{width: 1344px; 	height: 221.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 96px; 		height: 88.56px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1344px; 	height: 88.56px;	}
@@ -3486,6 +3769,10 @@ h6{
 		#idTableGlobalStats							{width: 1344px; 	height: 177.12px;	}
 		#idTableGlobalList							{width: 1344px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 1344px; 	height: 265.68px;	}
+		#idContentAddSuggestion						{width: 1344px; 	height: 265.68px;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1344px;		height: 708.48px;	}
 		
@@ -3511,6 +3798,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1344px; 	height: 98.4px;		}
 		.classTableGlobalListRow					{width: 1344px; 	height: 246px;		}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1344px; 	height: 98.4px;		}
@@ -3554,6 +3844,10 @@ h6{
 		#idTableGlobalStats							{width: 1344px; 	height: 196.8px;	}
 		#idTableGlobalList							{width: 1344px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1344px;		height: 787.2px;	}
 		
@@ -3582,6 +3876,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1512px; 	height: 314.88px;	}
 		.classTableGlobalListRow					{width: 1512px; 	height: 787.2px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1512px; 	height: 314.88px;	}
@@ -3625,6 +3922,10 @@ h6{
 		#idTableGlobalStats							{width: 1512px; 	height: 629.76px;	}
 		#idTableGlobalList							{width: 1512px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1512px;		height: 2519px;		}
 		
@@ -3650,6 +3951,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1512px; 	height: 335.87px;	}
 		.classTableGlobalListRow					{width: 1512px; 	height: 839.68px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1512px; 	height: 335.87px;	}
@@ -3693,6 +3997,10 @@ h6{
 		#idTableGlobalStats							{width: 1512px; 	height: 671.74px;	}
 		#idTableGlobalList							{width: 1512px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1512px;		height: 2687px;		}
 		
@@ -3721,6 +4029,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1792px; 	height: 88.56px;	}
 		.classTableGlobalListRow					{width: 1792px; 	height: 221.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1792px; 	height: 88.56px;	}
@@ -3764,6 +4075,10 @@ h6{
 		#idTableGlobalStats							{width: 1792px; 	height: 177.12px;	}
 		#idTableGlobalList							{width: 1792px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1792px;		height: 708.48px;	}
 		
@@ -3789,6 +4104,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 1792px; 	height: 118.08px;	}
 		.classTableGlobalListRow					{width: 1792px; 	height: 295.2px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 1792px; 	height: 118.08px;	}
@@ -3832,6 +4150,10 @@ h6{
 		#idTableGlobalStats							{width: 1792px; 	height: 236.16px;	}
 		#idTableGlobalList							{width: 1792px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 1792px;		height: 944.64px;	}
 		
@@ -3860,6 +4182,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 2408px; 	height: 118.08px;	}
 		.classTableGlobalListRow					{width: 2408px; 	height: 295.2px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 2408px; 	height: 118.08px;	}
@@ -3903,6 +4228,10 @@ h6{
 		#idTableGlobalStats							{width: 2408px; 	height: 236.16px;	}
 		#idTableGlobalList							{width: 2408px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 2408px;		height: 944.64px;	}
 		
@@ -3931,6 +4260,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 2688px; 	height: 177.12px;	}
 		.classTableGlobalListRow					{width: 2688px; 	height: 442.8px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 2688px; 	height: 177.12px;	}
@@ -3974,6 +4306,10 @@ h6{
 		#idTableGlobalStats							{width: 2688px; 	height: 354.24px;	}
 		#idTableGlobalList							{width: 2688px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 2688px;		height: 1417px;		}
 		
@@ -4002,6 +4338,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 2867.2px; 	height: 177.12px;	}
 		.classTableGlobalListRow					{width: 2867.2px; 	height: 442.8px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 2867.2px; 	height: 177.12px;	}
@@ -4045,6 +4384,10 @@ h6{
 		#idTableGlobalStats							{width: 2867.2px; 	height: 354.24px;	}
 		#idTableGlobalList							{width: 2867.2px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 2867.2px;	height: 1417px;		}
 		
@@ -4073,6 +4416,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 3024px; 	height: 629.76px;	}
 		.classTableGlobalListRow					{width: 3024px; 	height: 1574.4px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 3024px; 	height: 629.76px;	}
@@ -4116,6 +4462,10 @@ h6{
 		#idTableGlobalStats							{width: 3024px; 	height: 1259.5px;	}
 		#idTableGlobalList							{width: 3024px; 	height: auto;		}
 		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
+		
 		/* Options */
 		#idTableOptions								{width: 3024px;		height: 5038.1px;	}
 		
@@ -4144,6 +4494,9 @@ h6{
 		/* Global List */
 		.classTableGlobalListHeaderRow				{width: 5376px; 	height: 354.24px;	}
 		.classTableGlobalListRow					{width: 5376px; 	height: 885.6px;	}
+		
+		/* Add Target */ 
+		.classAddLabel								{width: 168px; 		height: 28.864px;	}
 		
 		/* Management */
 		.classTableManagementHeaderRow				{width: 5376px; 	height: 354.24px;	}
@@ -4186,6 +4539,10 @@ h6{
 		/* Global List */
 		#idTableGlobalStats							{width: 5376px; 	height: 708.48px;	}
 		#idTableGlobalList							{width: 5376px; 	height: auto;		}
+		
+		/* Add Target */ 
+		#idContentAdd								{width: 240px; 	height: 140.8px;}
+		#idContentAddSuggestion						{width: 1600px; height: auto;	}
 		
 		/* Options */
 		#idTableOptions								{width: 5376px;		height: 2833.9px;	}
