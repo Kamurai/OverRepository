@@ -203,6 +203,7 @@ public class User
         
     
     public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, 
+            //Genres
             boolean boolComedyS, 
             boolean boolDramaS, 
             boolean boolActionS, 
@@ -210,6 +211,7 @@ public class User
             boolean boolThrillerS, 
             boolean boolMysteryS, 
             boolean boolDocumentaryS, 
+            //Settings
             boolean boolScienceFictionS, 
             boolean boolFantasyS, 
             boolean boolWesternS, 

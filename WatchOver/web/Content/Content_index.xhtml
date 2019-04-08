@@ -32,28 +32,36 @@
                     </div>
                 </div>
                 <div id="idTableCompareRowSecond">
-                    <div id="idTableCompareRowReleasesLeft">
-                        <h:outputText value='#{TargetBean.targetRelease1}' />
+                    <div id="idTableCompareRowSecondLeft">
+                        <div id="idTableCompareRowReleasesLeft">
+                            <h:outputText value='#{TargetBean.targetRelease1}' />
+                        </div>
+                        <div id="idTableCompareRowSettingsLeft">
+                            <h:outputText value='#{TargetBean.targetSetting1}' />
+                        </div>
+                        <div id="idTableCompareRowGenresLeft">
+                            <h:outputText value='#{TargetBean.targetGenre1}' />
+                        </div>
                     </div>
-                    <div id="idTableCompareRowSettingsLeft">
-                        <h:outputText value='#{TargetBean.targetSetting1}' />
-                    </div>
-                    <div id="idTableCompareRowGenresLeft">
-                        <h:outputText value='#{TargetBean.targetGenre1}' />
-                    </div>
-                    <div id="idTableCompareRowReleasesRight">
-                        <h:outputText value='#{TargetBean.targetRelease2}' />
-                    </div>
-                    <div id="idTableCompareRowSettingsRight">
-                        <h:outputText value='#{TargetBean.targetSetting2}' />
-                    </div>
-                    <div id="idTableCompareRowGenresRight">
-                        <h:outputText value='#{TargetBean.targetGenre2}' />
+                    <div id="idTableCompareRowSecondRight">
+                        <div id="idTableCompareRowReleasesRight">
+                            <h:outputText value='#{TargetBean.targetRelease2}' />
+                        </div>
+                        <div id="idTableCompareRowSettingsRight">
+                            <h:outputText value='#{TargetBean.targetSetting2}' />
+                        </div>
+                        <div id="idTableCompareRowGenresRight">
+                            <h:outputText value='#{TargetBean.targetGenre2}' />
+                        </div>
                     </div>
                 </div>
-                <p id="idCenterContent">
-                    Select which movie you'd watch over the other.
-                </p>
+                <div>
+                    <div>
+                        <div id="idCenterContent">
+                            Select which movie you'd watch over the other.
+                        </div>
+                    </div>
+                </div>
             </div>
         </c:when>
     </c:choose>

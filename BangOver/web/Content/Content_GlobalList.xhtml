@@ -46,7 +46,7 @@
                 </div>
                 <!--Celebrities-->
                 <!--<c:set value="#{TargetBean.setGlobalList(LoginBean)}" var="tickle"></c:set>-->
-                <ui:repeat var="x" value="#{TargetBean.gl}" size="#{TargetBean.getGLSize()}" varStatus="myVarStatus">
+                <ui:repeat var="x" value="#{TargetBean.gl}" size="#{TargetBean.gl.size()}" varStatus="myVarStatus">
                     <div class="classTableGlobalListRow">
                         <span class="classTableGlobalListRowSpanNumber"><h:outputText class="classTableGlobalListRowNumber" value="#{myVarStatus.index+1}" /></span>
                         <span class="classTableGlobalListRowSpanName"><h:outputText class="classTableGlobalListRowName" value="#{x[0]}" /></span>

@@ -191,6 +191,7 @@ public class User
     
     
     public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, 
+            //Genres
             boolean boolDeckBuilding, 
             boolean boolFixedDeck, 
             boolean boolConstructedDeck, 
@@ -205,15 +206,15 @@ public class User
             boolean boolBluffing,
             boolean boolPuzzle,
             boolean boolDexterity,
-            boolean boolParty,
-            
-            boolean boolLoggedOn)
-    {
+            boolean boolParty,            
+            boolean boolLoggedOn
+    ){
         UserIndex = intUserIndex;
         Username = strUsername;
         Email = strEmail;
         AdminLevel = intAdminLevel;
         
+        //Genres
         DeckBuilding = boolDeckBuilding;
         FixedDeck = boolFixedDeck;
         ConstructedDeck = boolConstructedDeck;

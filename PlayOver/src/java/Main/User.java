@@ -298,8 +298,7 @@ public class User
         N64 = input;
     }
     private boolean Gamecube;
-    public boolean getGamecube()
-    {
+    public boolean getGamecube() {
         return Gamecube;
     }
     public void setGamecube(boolean input)
@@ -597,6 +596,7 @@ public class User
         Username = strUsername;
         Email = strEmail;
         AdminLevel = intAdminLevel;
+        //Genres
         TwoDP = boolTwoDP;
         ThreeDP = boolThreeDP;
         FPS = boolFPS;

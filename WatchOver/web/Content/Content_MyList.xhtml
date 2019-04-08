@@ -20,10 +20,10 @@
                     <div class="classTableMyListRow">
                         <span class="classTableMyListRowSpanNumber"><h:outputText class="classTableMyListRowNumber" value="#{myVarStatus.index+1}" /></span>
                         <span class="classTableMyListRowSpanName"><h:outputText class="classTableMyListRowName" value="#{x[0]}" /></span>
-                        <span class="classTableMyListRowSpanRelease"><h:outputText class="classTableMyListRowRelease" value="#{x[1]}" /></span>
+                        <span class="classTableMyListRowSpanPicture"><h:graphicImage class="classTableMyListRowPicture" value="#{TargetBean.path}#{TargetBean.folder}#{x[1]}" /></span>
+                        <span class="classTableMyListRowSpanRelease"><h:outputText class="classTableMyListRowRelease" value="#{x[2]}" /></span>
                         <span class="classTableMyListRowSpanSetting"><h:outputText class="classTableMyListRowSetting" value="#{x[3]}" /></span>
-                        <span class="classTableMyListRowSpanGenre"><h:outputText class="classTableMyListRowGenre" value="#{x[2]}" /></span>
-                        <span class="classTableMyListRowSpanPicture"><h:graphicImage class="classTableMyListRowPicture" value="#{TargetBean.path}#{TargetBean.folder}#{x[4]}" /></span>
+                        <span class="classTableMyListRowSpanGenre"><h:outputText class="classTableMyListRowGenre" value="#{x[4]}" /></span>
                     </div>
                 </ui:repeat>
             </div>

@@ -31,26 +31,36 @@
                         <h:outputText value='#{TargetBean.targetName2}' />
                     </div>
                 </div>
-                <div id="idTableCompareRowReleases">
-                    <div id="idTableCompareRowReleaseRight">
-                        <h:outputText value='#{TargetBean.targetRelease1}' />
+                <div id="idTableCompareRowSecond">
+                    <div id="idTableCompareRowSecondLeft">
+                        <div id="idTableCompareRowReleasesLeft">
+                            <h:outputText value='#{TargetBean.targetRelease1}' />
+                        </div>
+                        <div id="idTableCompareRowPlatformsLeft">
+                            <h:outputText value='#{TargetBean.targetPlatform1}' />
+                        </div>
+                        <div id="idTableCompareRowGenresLeft">
+                            <h:outputText value='#{TargetBean.targetGenre1}' />
+                        </div>
                     </div>
-                    <div id="idTableCompareRowReleaseLeft">
-                        <h:outputText value='#{TargetBean.targetRelease2}' />
+                    <div id="idTableCompareRowSecondRight">
+                        <div id="idTableCompareRowReleasesRight">
+                            <h:outputText value='#{TargetBean.targetRelease2}' />
+                        </div>
+                        <div id="idTableCompareRowPlatformsRight">
+                            <h:outputText value='#{TargetBean.targetPlatform2}' />
+                        </div>
+                        <div id="idTableCompareRowGenresRight">
+                            <h:outputText value='#{TargetBean.targetGenre2}' />
+                        </div>
                     </div>
                 </div>
-                <div id="idTableCompareRowPlatforms">
-                    <div id="idTableCompareRowPlatformLeft">
-                        <h:outputText value='#{TargetBean.targetPlatform1}' />
-                    </div>
-                    <div id="idTableCompareRowPlatformRight">
-                        <h:outputText value='#{TargetBean.targetPlatform2}' />
+                <div>
+                    <div id="idCenterContent">
+                        Select which video game you'd play Over the other.
                     </div>
                 </div>
             </div>
-            <p id="idCenterContent">
-                Select which video game you'd play Over the other.
-            </p>
         </c:when>
     </c:choose>
 </html>

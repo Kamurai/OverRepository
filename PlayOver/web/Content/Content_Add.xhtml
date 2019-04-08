@@ -14,84 +14,170 @@
                 <h2>
                     Add it!
                 </h2>
-                <p id="idContentAdd">
-                    This is where you, manager, can add video games to the list!<br/>
-                    Video Game:<h:inputText id="idAddTarget2" value="#{TargetBean.strTargetToAdd}"/><br/>
-                    <h:message for="idAddTarget2"/><br/>
-                    Release Year:<h:inputText id="idAddTargetRelease2" value="#{TargetBean.strReleaseToAdd}"/><br/>
-                    <h:message for="idAddTargetRelease2"/><br/>
-                    Platform:<h:inputText id="idAddTargetPlatform2" value="#{TargetBean.strPlatformToAdd}"/><br/>
-                    <h:message for="idAddTargetPlatform2"/><br/>
-                    File:<h:inputFile id="idAddTargetUrl2" value="#{TargetBean.fileTargetToAdd}" /><br/>
-                    <h:message for="idAddTargetUrl2"/><br/>
-                    Genre:
-                    <h:selectOneRadio id="idRadioAddValue2" value="#{TargetBean.strValueToAdd}">
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "2D Platformers"            itemValue = "TwoDP" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "3D Platformers"            itemValue = "ThreeDP" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "First Person Shooter"      itemValue = "FPS" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "First Person Perspective"  itemValue = "FPP" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Puzzle"                    itemValue = "VPuzzle" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Bulletstorm"               itemValue = "Bullestorm" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Fighting"                  itemValue = "Fighting" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Stealth"                   itemValue = "Stealth" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Survival"                  itemValue = "Survival" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Visual Novel"              itemValue = "VN" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Interactive Movie"         itemValue = "IM" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Standard RPG"              itemValue = "RPG" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Tactical RPG"              itemValue = "TRPG" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Action RPG"                itemValue = "ARPG" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Sports"                    itemValue = "Sports" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Racing"                    itemValue = "Racing" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Real Time Strategy"        itemValue = "RTS" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Turn Based Strategy"       itemValue = "TBS" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Virtual Environment"       itemValue = "VE" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "MMO RPG"                   itemValue = "MMO" /> 
-                        <f:selectItem class="classRadioSelectAddValue2" itemLabel = "Moba"                   itemValue = "MMO" /> 
-                    </h:selectOneRadio>
-                    <h:message for="idRadioAddValue2"/><br/>
-                    <h:commandButton value ="Add" action="#{TargetBean.AddTarget()}"/><br/>
-                </p>
+                <div id="idContentAdd">
+                    <div>
+                        This is where you, manager, can add video games to the list!<br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Video Game:</span><h:inputText id="idAddTarget2" value="#{TargetBean.strTargetToAdd}"/><br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">File:</span><h:inputFile id="idAddTargetUrl2" value="#{TargetBean.fileTargetToAdd}" /><br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Release Year:</span><h:inputText id="idAddTargetRelease2" value="#{TargetBean.strReleaseToAdd}"/><br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Platform:</span>
+                        <h:selectOneMenu id="idRadioAddPlatform2" value="#{TargetBean.strPlatformToAdd}">
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PC"                        itemValue = "PC" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Atari"                     itemValue = "Atari" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Commodore 64"              itemValue = "Commodore64" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "FAMICOM"                   itemValue = "FAMICOM" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "NES"                       itemValue = "NES" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "SNES"                      itemValue = "SNES" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "N64"                       itemValue = "N64" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Gamecube"                  itemValue = "Gamecube" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Wii"                       itemValue = "Wii" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Wii U"                     itemValue = "WiiU" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Nintendo Switch"           itemValue = "NintendoSwitch" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Gameboy"                   itemValue = "Gameboy" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Virtual Boy"               itemValue = "VirtualBoy" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "GBA"                       itemValue = "GBA" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "DS"                        itemValue = "DS" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "3DS"                       itemValue = "ThreeDS" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sega Genesis"              itemValue = "SegaGenesis" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sega CD"                   itemValue = "SegaCD" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sega Dreamcast"            itemValue = "SegaDreamcast" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS1"                       itemValue = "PS1" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS2"                       itemValue = "PS2" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS3"                       itemValue = "PS3" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS4"                       itemValue = "PS4" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PSP"                       itemValue = "PSP" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS Vita"                   itemValue = "PSVita" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Xbox"                      itemValue = "Xbox" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Xbox 360"                  itemValue = "Xbox360" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Xbox One"                  itemValue = "XboxOne" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Ouya"                      itemValue = "Ouya" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Oculus Rift"               itemValue = "OculusRift" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Vive"                      itemValue = "Vive" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PSVR"                      itemValue = "PSVR" />
+                        </h:selectOneMenu>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Genre:</span>
+                        <h:selectOneMenu id="idRadioAddGenre2" value="#{TargetBean.strGenreToAdd}">
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "2D Platformers"            itemValue = "TwoDP" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "3D Platformers"            itemValue = "ThreeDP" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "First Person Shooter"      itemValue = "FPS" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "First Person Perspective"  itemValue = "FPP" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Puzzle"                    itemValue = "VPuzzle" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Bulletstorm"               itemValue = "Bullestorm" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Fighting"                  itemValue = "Fighting" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Stealth"                   itemValue = "Stealth" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Survival"                  itemValue = "Survival" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Visual Novel"              itemValue = "VN" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Interactive Movie"         itemValue = "IM" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Standard RPG"              itemValue = "RPG" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Tactical RPG"              itemValue = "TRPG" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Action RPG"                itemValue = "ARPG" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sports"                    itemValue = "Sports" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Racing"                    itemValue = "Racing" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Real Time Strategy"        itemValue = "RTS" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Turn Based Strategy"       itemValue = "TBS" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Virtual Environment"       itemValue = "VE" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "MMO RPG"                   itemValue = "MMO" /> 
+                            <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Moba"                      itemValue = "MMO" /> 
+                        </h:selectOneMenu>
+                    </div>
+                    <div>
+                        <h:commandButton value ="Add" action="#{TargetBean.AddTarget(LoginBean.currentUser.userIndex)}"/><br/>
+                    </div>
+                </div>
             </c:if>
             <h2>
                 Suggestion? Yes please!
             </h2>
-            <p id="idContentAddSuggestion">
-                This is where you can suggest video games to add to the list!<br/>
-                Video Game:<h:inputText id="idAddTarget1" value="#{TargetBean.strTargetToSuggest}"/><br/>
-                <h:message for="idAddTarget1"/><br/>
-                Release Year:<h:inputText id="idAddTargetRelease1" value="#{TargetBean.strReleaseToSuggest}"/><br/>
-                <h:message for="idAddTargetRelease1"/><br/>
-                Platform:<h:inputText id="idAddTargetPlatform1" value="#{TargetBean.strPlatformToSuggest}"/><br/>
-                <h:message for="idAddTargetPlatform1"/><br/>
-                URL:<h:inputText id="idAddTargetUrl1" value="#{TargetBean.strURLToSuggest}"/><br/>
-                <h:message for="idAddTargetUrl1"/><br/>
-                Genre:
-                <h:selectOneRadio id="idRadioAddValue1" value="#{TargetBean.strValueToSuggest}">
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "2D Platformers"            itemValue = "TwoDP" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "3D Platformers"            itemValue = "ThreeDP" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "First Person Shooter"      itemValue = "FPS" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "First Person Perspective"  itemValue = "FPP" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Puzzle"                    itemValue = "VPuzzle" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Bulletstorm"               itemValue = "Bullestorm" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Fighting"                  itemValue = "Fighting" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Stealth"                   itemValue = "Stealth" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Survival"                  itemValue = "Survival" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Visual Novel"              itemValue = "VN" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Interactive Movie"         itemValue = "IM" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Standard RPG"              itemValue = "RPG" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Tactical RPG"              itemValue = "TRPG" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Action RPG"                itemValue = "ARPG" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Sports"                    itemValue = "Sports" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Racing"                    itemValue = "Racing" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Real Time Strategy"        itemValue = "RTS" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Turn Based Strategy"       itemValue = "TBS" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Virtual Environment"       itemValue = "VE" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "MMO RPG"                   itemValue = "MMO" /> 
-                    <f:selectItem class="classRadioSelectAddValue1" itemLabel = "Moba"                   itemValue = "MMO" /> 
-                </h:selectOneRadio>
-                <h:message for="idRadioAddValue1"/><br/>
-                <h:commandButton value ="Add" action="#{TargetBean.AddTargetSuggestion()}"/><br/>
-            </p>
+            <div id="idContentAddSuggestion">
+                <div>
+                    This is where you can suggest video games to add to the list!
+                </div>
+                <div>
+                    <span class="idAddLabel">Video Game:</span><h:inputText id="idAddTarget1" value="#{TargetBean.strTargetToSuggest}"/>
+                </div>
+                <div>
+                    <span class="idAddLabel">URL:</span><h:inputText id="idAddTargetUrl1" value="#{TargetBean.strURLToSuggest}"/>
+                </div>
+                <div>
+                    <span class="idAddLabel">Release Year:</span><h:inputText id="idAddTargetRelease1" value="#{TargetBean.strReleaseToSuggest}"/>
+                </div>
+                <div>
+                    <span class="idAddLabel">Platform:</span>
+                    <h:selectOneMenu id="idRadioAddPlatform1" value="#{TargetBean.strPlatformToSuggest}">
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PC"                        itemValue = "PC" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Atari"                     itemValue = "Atari" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Commodore 64"              itemValue = "Commodore64" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "FAMICOM"                   itemValue = "FAMICOM" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "NES"                       itemValue = "NES" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "SNES"                      itemValue = "SNES" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "N64"                       itemValue = "N64" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Gamecube"                  itemValue = "Gamecube" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Wii"                       itemValue = "Wii" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Wii U"                     itemValue = "WiiU" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Nintendo Switch"           itemValue = "NintendoSwitch" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Gameboy"                   itemValue = "Gameboy" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Virtual Boy"               itemValue = "VirtualBoy" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "GBA"                       itemValue = "GBA" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "DS"                        itemValue = "DS" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "3DS"                       itemValue = "ThreeDS" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sega Genesis"              itemValue = "SegaGenesis" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sega CD"                   itemValue = "SegaCD" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Sega Dreamcast"            itemValue = "SegaDreamcast" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS1"                       itemValue = "PS1" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS2"                       itemValue = "PS2" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS3"                       itemValue = "PS3" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS4"                       itemValue = "PS4" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PSP"                       itemValue = "PSP" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PS Vita"                   itemValue = "PSVita" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Xbox"                      itemValue = "Xbox" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Xbox 360"                  itemValue = "Xbox360" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Xbox One"                  itemValue = "XboxOne" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Ouya"                      itemValue = "Ouya" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Oculus Rift"               itemValue = "OculusRift" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "Vive"                      itemValue = "Vive" /> 
+                        <f:selectItem class="classRadioSelectAddGenre2" itemLabel = "PSVR"                      itemValue = "PSVR" />
+                    </h:selectOneMenu>
+                </div>
+                <div>
+                    <span class="idAddLabel">Genre:</span>
+                    <h:selectOneMenu id="idRadioAddGenre1" value="#{TargetBean.strGenreToSuggest}">
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "2D Platformers"            itemValue = "TwoDP" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "3D Platformers"            itemValue = "ThreeDP" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "First Person Shooter"      itemValue = "FPS" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "First Person Perspective"  itemValue = "FPP" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Puzzle"                    itemValue = "VPuzzle" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Bulletstorm"               itemValue = "Bullestorm" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Fighting"                  itemValue = "Fighting" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Stealth"                   itemValue = "Stealth" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Survival"                  itemValue = "Survival" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Visual Novel"              itemValue = "VN" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Interactive Movie"         itemValue = "IM" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Standard RPG"              itemValue = "RPG" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Tactical RPG"              itemValue = "TRPG" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Action RPG"                itemValue = "ARPG" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Sports"                    itemValue = "Sports" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Racing"                    itemValue = "Racing" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Real Time Strategy"        itemValue = "RTS" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Turn Based Strategy"       itemValue = "TBS" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Virtual Environment"       itemValue = "VE" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "MMO RPG"                   itemValue = "MMO" /> 
+                        <f:selectItem class="classRadioSelectAddGenre1" itemLabel = "Moba"                   itemValue = "MMO" /> 
+                    </h:selectOneMenu>
+                </div>
+                <div>
+                    <h:commandButton value ="Add" action="#{TargetBean.AddTargetSuggestion(LoginBean.currentUser.userIndex)}"/>
+                </div>
+            </div>
         </c:when>
     </c:choose>
 </html>

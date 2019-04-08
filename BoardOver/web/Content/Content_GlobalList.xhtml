@@ -39,7 +39,7 @@
                 <!--Global Counts -->
                 <!--<c:set value="#{TargetBean.setGlobalCounts()}" var="tickle"></c:set>-->
                 <tr>
-                    <ui:repeat var="x" value="#{TargetBean.gc}" size="#{TargetBean.getGCSize()}" varStatus="myVarStatus">
+                    <ui:repeat var="x" value="#{TargetBean.gc}" size="#{TargetBean.gc.size()}" varStatus="myVarStatus">
                         <td><h:outputText value="#{x[0]}" /></td>
                     </ui:repeat>
                 </tr>
@@ -51,21 +51,21 @@
                 <div class="classTableGlobalListHeaderRow">
                     <span class="classTableGlobalListHeader">#</span>
                     <span class="classTableGlobalListHeader">Name</span>
-                    <span class="classTableGlobalListHeader">Release</span>
                     <span class="classTableGlobalListHeader">Picture</span>
+                    <span class="classTableGlobalListHeader">Release</span>
                     <span class="classTableGlobalListHeader">Genre</span>
                     <span class="classTableGlobalListHeader">Ranking</span>
                 </div>
                 <!--Celebrities-->
                 <!--<c:set value="#{TargetBean.setGlobalList(LoginBean)}" var="tickle"></c:set>-->
-                <ui:repeat var="x" value="#{TargetBean.gl}" size="#{TargetBean.getGLSize()}" varStatus="myVarStatus">
+                <ui:repeat var="x" value="#{TargetBean.gl}" size="#{TargetBean.gl.size()}" varStatus="myVarStatus">
                     <div class="classTableGlobalListRow">
                         <span class="classTableGlobalListRowSpanNumber"><h:outputText class="classTableGlobalListRowNumber" value="#{myVarStatus.index+1}" /></span>
                         <span class="classTableGlobalListRowSpanName"><h:outputText class="classTableGlobalListRowName" value="#{x[0]}" /></span>
-                        <span class="classTableGlobalListRowSpanRelease"><h:outputText class="classTableGlobalListRowRelease" value="#{x[0]}" /></span>
                         <span class="classTableGlobalListRowSpanPicture"><h:graphicImage class="classTableGlobalListRowPicture" value="#{TargetBean.path}#{TargetBean.folder}#{x[1]}" /></span>
-                        <span class="classTableGlobalListRowSpanValue"><h:outputText class="classTableGlobalListRowValue" value="#{x[2]}" /></span>
-                        <span class="classTableGlobalListRowSpanRanking"><h:outputText class="classTableGlobalListRowRanking" value="#{x[3]}" /></span>
+                        <span class="classTableGlobalListRowSpanRelease"><h:outputText class="classTableGlobalListRowRelease" value="#{x[2]}" /></span>
+                        <span class="classTableGlobalListRowSpanGenre"><h:outputText class="classTableGlobalListRowGenre" value="#{x[3]}" /></span>
+                        <span class="classTableGlobalListRowSpanRanking"><h:outputText class="classTableGlobalListRowRanking" value="#{x[4]}" /></span>
                     </div>
                 </ui:repeat>
             </div>

@@ -2,11 +2,12 @@
 
 create PROCEDURE BangOverAddTargetSuggestion
 (
-    @strCelebrityName varChar(max),
+    @strCelebrityName varChar(50),
 	@strCelebritySex varChar(1),
-	@strCelebrityPicture varChar(max)    
+	@strCelebrityPicture varChar(50),
+	@intUserIndex int
 )
 AS
 BEGIN
-	INSERT INTO CelebrityRequests (Name, Sex, Picture ) VALUES ( @strCelebrityName, @strCelebritySex, @strCelebrityPicture );
+	INSERT INTO CelebrityRequests (Name, Sex, Picture, UploadUserIndex) VALUES ( @strCelebrityName, @strCelebritySex, @strCelebrityPicture, @intUserIndex );
 END

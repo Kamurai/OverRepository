@@ -14,27 +14,69 @@
                 <h2>
                     Add it!
                 </h2>
-                <p id="idContentAdd">
-                    This is where you, manager, can add shows to the list!<br/>
-                    Show:<h:inputText id="idAddTarget2" value="#{TargetBean.strTargetToAdd}"/><br/>
-                    <h:message for="idAddTarget2"/><br/>
-                    Release Year:<h:inputText id="idAddTargetRelease2" value="#{TargetBean.strReleaseToAdd}"/><br/>
-                    <h:message for="idAddTargetRelease2"/><br/>
-                    File:<h:inputFile id="idAddTargetUrl2" value="#{TargetBean.fileTargetToAdd}" /><br/>
-                    <h:message for="idAddTargetUrl2"/><br/>
-                    Genre:
-                    <h:selectOneMenu id="idRadioAddGenre2" value="#{TargetBean.strGenreToAdd}" onchange="submit()">
-                        <f:selectItem itemLabel = "Comedy"          itemValue = "ComedyM" /> 
-                        <f:selectItem itemLabel = "Drama"           itemValue = "DramaM" /> 
-                        <f:selectItem itemLabel = "Action"          itemValue = "ActionM" /> 
-                        <f:selectItem itemLabel = "Horror"          itemValue = "HorrorM" /> 
-                        <f:selectItem itemLabel = "Thriller"        itemValue = "ThrillerM" /> 
-                        <f:selectItem itemLabel = "Mystery"         itemValue = "MysteryM" /> 
-                        <f:selectItem itemLabel = "Documentary"     itemValue = "DocumentaryM" /> 
-                    </h:selectOneMenu>
-                    <h:message for="idRadioAddGenre2"/><br/>
-                    Setting:
-                    <h:selectOneMenu id="idRadioAddSetting2" value="#{TargetBean.strSettingToAdd}" onchange="submit()">
+                <div id="idContentAdd">
+                    <div>
+                        This is where you, manager, can add shows to the list!<br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Show:</span><h:inputText id="idAddTarget2" value="#{TargetBean.strTargetToAdd}"/><br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">File:</span><h:inputFile id="idAddTargetUrl2" value="#{TargetBean.fileTargetToAdd}" /><br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Release Year:</span><h:inputText id="idAddTargetRelease2" value="#{TargetBean.strReleaseToAdd}"/><br/>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Setting:</span>
+                        <h:selectOneMenu id="idRadioAddSetting2" value="#{TargetBean.strSettingToAdd}" onchange="submit()">
+                            <f:selectItem itemLabel = "Science Fiction" itemValue = "ScienceFictionM" /> 
+                            <f:selectItem itemLabel = "Fantasy"         itemValue = "FantasyM" /> 
+                            <f:selectItem itemLabel = "Western"         itemValue = "WesternM" /> 
+                            <f:selectItem itemLabel = "Martial Arts"    itemValue = "MartialArtsM" /> 
+                            <f:selectItem itemLabel = "Modern"          itemValue = "ModernM" /> 
+                            <f:selectItem itemLabel = "Historic"        itemValue = "HistoricM" /> 
+                            <f:selectItem itemLabel = "Prehistoric"     itemValue = "PrehistoricM" /> 
+                            <f:selectItem itemLabel = "Comics"          itemValue = "ComicsM" /> 
+                            <f:selectItem itemLabel = "Period"          itemValue = "PeriodM" /> 
+                        </h:selectOneMenu>
+                    </div>
+                    <div>
+                        <span class="idAddLabel">Genre:</span>
+                        <h:selectOneMenu id="idRadioAddGenre2" value="#{TargetBean.strGenreToAdd}" onchange="submit()">
+                            <f:selectItem itemLabel = "Comedy"          itemValue = "ComedyM" /> 
+                            <f:selectItem itemLabel = "Drama"           itemValue = "DramaM" /> 
+                            <f:selectItem itemLabel = "Action"          itemValue = "ActionM" /> 
+                            <f:selectItem itemLabel = "Horror"          itemValue = "HorrorM" /> 
+                            <f:selectItem itemLabel = "Thriller"        itemValue = "ThrillerM" /> 
+                            <f:selectItem itemLabel = "Mystery"         itemValue = "MysteryM" /> 
+                            <f:selectItem itemLabel = "Documentary"     itemValue = "DocumentaryM" /> 
+                        </h:selectOneMenu>
+                    </div>
+                    <div>
+                        <h:commandButton value ="Add" action="#{TargetBean.AddTarget(LoginBean.currentUser.userIndex)}"/><br/>
+                    </div>
+                </div>
+            </c:if>
+            <h2>
+                Suggestion? Yes please!
+            </h2>
+            <div id="idContentAddSuggestion">
+                <div>
+                    This is where you can suggest shows to add to the list!<br/>
+                </div>
+                <div>
+                    <span class="idAddLabel">Show:</span><h:inputText id="idAddTarget1" value="#{TargetBean.strTargetToSuggest}"/><br/>
+                </div>
+                <div>
+                    <span class="idAddLabel">URL:</span><h:inputText id="idAddTargetUrl1" value="#{TargetBean.strURLToSuggest}"/><br/>
+                </div>
+                <div>
+                    <span class="idAddLabel">Release Year:</span><h:inputText id="idAddTargetRelease1" value="#{TargetBean.strReleaseToSuggest}"/><br/>
+                </div>
+                <div>
+                    <span class="idAddLabel">Setting:</span>
+                    <h:selectOneMenu id="idRadioAddSetting1" value="#{TargetBean.strSettingToAdd}" onchange="submit()">
                         <f:selectItem itemLabel = "Science Fiction" itemValue = "ScienceFictionM" /> 
                         <f:selectItem itemLabel = "Fantasy"         itemValue = "FantasyM" /> 
                         <f:selectItem itemLabel = "Western"         itemValue = "WesternM" /> 
@@ -45,47 +87,23 @@
                         <f:selectItem itemLabel = "Comics"          itemValue = "ComicsM" /> 
                         <f:selectItem itemLabel = "Period"          itemValue = "PeriodM" /> 
                     </h:selectOneMenu>
-                    <h:message for="idRadioAddSetting2"/><br/>
-                    <h:commandButton value ="Add" action="#{TargetBean.AddTarget()}"/><br/>
-                </p>
-            </c:if>
-            <h2>
-                Suggestion? Yes please!
-            </h2>
-            <p id="idContentAddSuggestion">
-                This is where you can suggest shows to add to the list!<br/>
-                Show:<h:inputText id="idAddTarget1" value="#{TargetBean.strTargetToSuggest}"/><br/>
-                <h:message for="idAddTarget1"/><br/>
-                Release Year:<h:inputText id="idAddTargetRelease1" value="#{TargetBean.strReleaseToSuggest}"/><br/>
-                <h:message for="idAddTargetRelease1"/><br/>
-                URL:<h:inputText id="idAddTargetUrl1" value="#{TargetBean.strURLToSuggest}"/><br/>
-                <h:message for="idAddTargetUrl1"/><br/>
-                Genre:
-                <h:selectOneMenu id="idRadioAddGenre1" value="#{TargetBean.strGenreToAdd}" onchange="submit()">
-                    <f:selectItem itemLabel = "Comedy"          itemValue = "ComedyM" /> 
-                    <f:selectItem itemLabel = "Drama"           itemValue = "DramaM" /> 
-                    <f:selectItem itemLabel = "Action"          itemValue = "ActionM" /> 
-                    <f:selectItem itemLabel = "Horror"          itemValue = "HorrorM" /> 
-                    <f:selectItem itemLabel = "Thriller"        itemValue = "ThrillerM" /> 
-                    <f:selectItem itemLabel = "Mystery"         itemValue = "MysteryM" /> 
-                    <f:selectItem itemLabel = "Documentary"     itemValue = "DocumentaryM" /> 
-                </h:selectOneMenu>
-                <h:message for="idRadioAddGenre1"/><br/>
-                Setting:
-                <h:selectOneMenu id="idRadioAddSetting1" value="#{TargetBean.strSettingToAdd}" onchange="submit()">
-                    <f:selectItem itemLabel = "Science Fiction" itemValue = "ScienceFictionM" /> 
-                    <f:selectItem itemLabel = "Fantasy"         itemValue = "FantasyM" /> 
-                    <f:selectItem itemLabel = "Western"         itemValue = "WesternM" /> 
-                    <f:selectItem itemLabel = "Martial Arts"    itemValue = "MartialArtsM" /> 
-                    <f:selectItem itemLabel = "Modern"          itemValue = "ModernM" /> 
-                    <f:selectItem itemLabel = "Historic"        itemValue = "HistoricM" /> 
-                    <f:selectItem itemLabel = "Prehistoric"     itemValue = "PrehistoricM" /> 
-                    <f:selectItem itemLabel = "Comics"          itemValue = "ComicsM" /> 
-                    <f:selectItem itemLabel = "Period"          itemValue = "PeriodM" /> 
-                </h:selectOneMenu>
-                <h:message for="idRadioAddSetting1"/><br/>
-                <h:commandButton value ="Add" action="#{TargetBean.AddTargetSuggestion()}"/><br/>
-            </p>
+                </div>
+                <div>
+                    <span class="idAddLabel">Genre:</span>
+                    <h:selectOneMenu id="idRadioAddGenre1" value="#{TargetBean.strGenreToAdd}" onchange="submit()">
+                        <f:selectItem itemLabel = "Comedy"          itemValue = "ComedyM" /> 
+                        <f:selectItem itemLabel = "Drama"           itemValue = "DramaM" /> 
+                        <f:selectItem itemLabel = "Action"          itemValue = "ActionM" /> 
+                        <f:selectItem itemLabel = "Horror"          itemValue = "HorrorM" /> 
+                        <f:selectItem itemLabel = "Thriller"        itemValue = "ThrillerM" /> 
+                        <f:selectItem itemLabel = "Mystery"         itemValue = "MysteryM" /> 
+                        <f:selectItem itemLabel = "Documentary"     itemValue = "DocumentaryM" /> 
+                    </h:selectOneMenu>
+                </div>
+                <div>
+                    <h:commandButton value ="Add" action="#{TargetBean.AddTargetSuggestion(LoginBean.currentUser.userIndex)}"/><br/>
+                </div>
+            </div>
         </c:when>
     </c:choose>
 </html>

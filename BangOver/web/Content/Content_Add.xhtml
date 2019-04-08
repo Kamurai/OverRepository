@@ -34,7 +34,7 @@
                         </h:selectOneMenu>
                     </div>
                     <div>
-                        <h:commandButton class="idAddLabel" value ="Add" action="#{TargetBean.AddTarget()}"/>
+                        <h:commandButton class="idAddLabel" value ="Add" action="#{TargetBean.AddTarget(LoginBean.currentUser.userIndex)}"/>
                     </div>
                 </div>
             </c:if>
@@ -61,7 +61,7 @@
                     </h:selectOneMenu>
                 </div>
                 <div>
-                    <h:commandButton class="idAddLabel" value ="Add" action="#{TargetBean.AddTargetSuggestion()}"/>
+                    <h:commandButton class="idAddLabel" value ="Add" action="#{TargetBean.AddTargetSuggestion(LoginBean.currentUser.userIndex)}"/>
                 </div>
             </div>
         </c:when>

@@ -2,14 +2,14 @@
 
 create PROCEDURE BangOverAddTarget
 (
-    @strCelebrityName varChar(max),
+    @strCelebrityName varChar(50),
 	@strCelebritySex varChar(1),
-	@strCelebrityPicture varChar(max)
-    
+	@strCelebrityPicture varChar(50),
+	@intUserIndex int
 )
 AS
 BEGIN
-	INSERT INTO Celebrities (Name, Sex, Picture ) VALUES ( @strCelebrityName, @strCelebritySex, @strCelebrityPicture );
+	INSERT INTO Celebrities (Name, Sex, Picture, UploadUserIndex) VALUES ( @strCelebrityName, @strCelebritySex, @strCelebrityPicture, @intUserIndex );
 
 	DELETE FROM CelebrityRequests where Name = @strCelebrityName;
 END

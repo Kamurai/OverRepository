@@ -353,19 +353,19 @@
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderMoba name = "header">Into Moba</f:facet>
-                        <ui:fragment rendered="#{user.moba}">
+                        <f:facet id="idTableManagementUsersColHeaderMoba" name = "header">Into Moba</f:facet>
+                        <ui:fragment rendered="#{user.MOBA}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.moba}">
+                        <ui:fragment rendered="#{!user.MOBA}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					
 					
 					
-					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PC</f:facet>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderPC" name = "header">Into PC</f:facet>
                         <ui:fragment rendered="#{user.PC}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -373,26 +373,26 @@
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
-					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderAtari name = "header">Into Atari</f:facet>
-                        <ui:fragment rendered="#{user.Atari}">
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderAtari" name = "header">Into Atari</f:facet>
+                        <ui:fragment rendered="#{user.atari}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Atari}">
+                        <ui:fragment rendered="#{!user.atari}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Commodore64</f:facet>
-                        <ui:fragment rendered="#{user.Commodore64}">
+                        <f:facet id="idTableManagementUsersColHeaderCommodore64" name = "header">Into Commodore64</f:facet>
+                        <ui:fragment rendered="#{user.commodore64}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Commodore64}">
+                        <ui:fragment rendered="#{!user.commodore64}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into FAMICOM</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderFAMICOM" name = "header">Into FAMICOM</f:facet>
                         <ui:fragment rendered="#{user.FAMICOM}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -401,7 +401,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into NES</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderNES" name = "header">Into NES</f:facet>
                         <ui:fragment rendered="#{user.NES}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -410,7 +410,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into SNES</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderSNES" name = "header">Into SNES</f:facet>
                         <ui:fragment rendered="#{user.SNES}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -419,70 +419,70 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into N64</f:facet>
-                        <ui:fragment rendered="#{user.N64}">
+                        <f:facet id="idTableManagementUsersColHeaderN64" name = "header">Into N64</f:facet>
+                        <ui:fragment rendered="#{user.n64}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.N64}">
+                        <ui:fragment rendered="#{!user.n64}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderGamecube" name = "header">Into Gamecube</f:facet>
+                        <ui:fragment rendered="#{user.gamecube}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.gamecube}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderWii" name = "header">Into Wii</f:facet>
+                        <ui:fragment rendered="#{user.wii}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.wii}">
+                            <h:outputText value="No" />
+                        </ui:fragment>
+                    </h:column>
+                    <h:column>
+                        <f:facet id="idTableManagementUsersColHeaderWiiU" name = "header">Into WiiU</f:facet>
+                        <ui:fragment rendered="#{user.wiiU}">
+                            <h:outputText value="Yes" />
+                        </ui:fragment>
+                        <ui:fragment rendered="#{!user.wiiU}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into GameCube</f:facet>
-                        <ui:fragment rendered="#{user.GameCube}">
+                        <f:facet id="idTableManagementUsersColHeaderNintendoSwitch" name = "header">Into NintendoSwitch</f:facet>
+                        <ui:fragment rendered="#{user.nintendoSwitch}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.GameCube}">
+                        <ui:fragment rendered="#{!user.nintendoSwitch}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Wii</f:facet>
-                        <ui:fragment rendered="#{user.Wii}">
+                        <f:facet id="idTableManagementUsersColHeaderGameboy" name = "header">Into Gameboy</f:facet>
+                        <ui:fragment rendered="#{user.gameboy}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Wii}">
+                        <ui:fragment rendered="#{!user.gameboy}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into WiiU</f:facet>
-                        <ui:fragment rendered="#{user.WiiU}">
+                        <f:facet id="idTableManagementUsersColHeaderVirtualBoy" name = "header">Into VirtualBoy</f:facet>
+                        <ui:fragment rendered="#{user.virtualBoy}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.WiiU}">
+                        <ui:fragment rendered="#{!user.virtualBoy}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into NintendoSwitch</f:facet>
-                        <ui:fragment rendered="#{user.NintendoSwitch}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.NintendoSwitch}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
-                    </h:column>
-					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Gameboy</f:facet>
-                        <ui:fragment rendered="#{user.Gameboy}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.Gameboy}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
-                    </h:column>
-					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into VirtualBoy</f:facet>
-                        <ui:fragment rendered="#{user.VirtualBoy}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.VirtualBoy}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
-                    </h:column>
-					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into GBA</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderGBA" name = "header">Into GBA</f:facet>
                         <ui:fragment rendered="#{user.GBA}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -491,7 +491,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into DS</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderDS" name = "header">Into DS</f:facet>
                         <ui:fragment rendered="#{user.DS}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -500,43 +500,43 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into ThreeDS</f:facet>
-                        <ui:fragment rendered="#{user.ThreeDS}">
+                        <f:facet id="idTableManagementUsersColHeaderThreeDS" name = "header">Into ThreeDS</f:facet>
+                        <ui:fragment rendered="#{user.threeDS}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.ThreeDS}">
+                        <ui:fragment rendered="#{!user.threeDS}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into SegaGenesis</f:facet>
-                        <ui:fragment rendered="#{user.SegaGenesis}">
+                        <f:facet id="idTableManagementUsersColHeaderSegaGenesis" name = "header">Into SegaGenesis</f:facet>
+                        <ui:fragment rendered="#{user.segaGenesis}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.SegaGenesis}">
+                        <ui:fragment rendered="#{!user.segaGenesis}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into SegaCD</f:facet>
-                        <ui:fragment rendered="#{user.SegaCD}">
+                        <f:facet id="idTableManagementUsersColHeaderSegaCD" name = "header">Into SegaCD</f:facet>
+                        <ui:fragment rendered="#{user.segaCD}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.SegaCD}">
+                        <ui:fragment rendered="#{!user.segaCD}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into SegaDreamcast</f:facet>
-                        <ui:fragment rendered="#{user.SegaDreamcast}">
+                        <f:facet id="idTableManagementUsersColHeaderSegaDreamcast" name = "header">Into SegaDreamcast</f:facet>
+                        <ui:fragment rendered="#{user.segaDreamcast}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.SegaDreamcast}">
+                        <ui:fragment rendered="#{!user.segaDreamcast}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PS1</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPS1" name = "header">Into PS1</f:facet>
                         <ui:fragment rendered="#{user.PS1}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -545,7 +545,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PS2</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPS2" name = "header">Into PS2</f:facet>
                         <ui:fragment rendered="#{user.PS2}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -554,7 +554,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PS3</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPS3" name = "header">Into PS3</f:facet>
                         <ui:fragment rendered="#{user.PS3}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -563,7 +563,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PS4</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPS4" name = "header">Into PS4</f:facet>
                         <ui:fragment rendered="#{user.PS4}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -572,7 +572,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PSP</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPSP" name = "header">Into PSP</f:facet>
                         <ui:fragment rendered="#{user.PSP}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -581,7 +581,7 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PSVita</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPSVita" name = "header">Into PSVita</f:facet>
                         <ui:fragment rendered="#{user.PSVita}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -590,61 +590,61 @@
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Xbox</f:facet>
-                        <ui:fragment rendered="#{user.Xbox}">
+                        <f:facet id="idTableManagementUsersColHeaderXbox" name = "header">Into Xbox</f:facet>
+                        <ui:fragment rendered="#{user.xbox}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Xbox}">
+                        <ui:fragment rendered="#{!user.xbox}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Xbox360</f:facet>
-                        <ui:fragment rendered="#{user.Xbox360}">
+                        <f:facet id="idTableManagementUsersColHeaderXbox360" name = "header">Into Xbox360</f:facet>
+                        <ui:fragment rendered="#{user.xbox360}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Xbox360}">
+                        <ui:fragment rendered="#{!user.xbox360}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into XboxOne</f:facet>
-                        <ui:fragment rendered="#{user.XboxOne}">
+                        <f:facet id="idTableManagementUsersColHeaderXboxOne" name = "header">Into XboxOne</f:facet>
+                        <ui:fragment rendered="#{user.xboxOne}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.XboxOne}">
+                        <ui:fragment rendered="#{!user.xboxOne}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Ouya</f:facet>
-                        <ui:fragment rendered="#{user.Ouya}">
+                        <f:facet id="idTableManagementUsersColHeaderOuya" name = "header">Into Ouya</f:facet>
+                        <ui:fragment rendered="#{user.ouya}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Ouya}">
+                        <ui:fragment rendered="#{!user.ouya}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into OculusRift</f:facet>
-                        <ui:fragment rendered="#{user.OculusRift}">
+                        <f:facet id="idTableManagementUsersColHeaderOculusRift" name = "header">Into OculusRift</f:facet>
+                        <ui:fragment rendered="#{user.oculusRift}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.OculusRift}">
+                        <ui:fragment rendered="#{!user.oculusRift}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into Vive</f:facet>
-                        <ui:fragment rendered="#{user.Vive}">
+                        <f:facet id="idTableManagementUsersColHeaderVive" name = "header">Into Vive</f:facet>
+                        <ui:fragment rendered="#{user.vive}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.Vive}">
+                        <ui:fragment rendered="#{!user.vive}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
 					<h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPC name = "header">Into PSVR</f:facet>
+                        <f:facet id="idTableManagementUsersColHeaderPSVR" name = "header">Into PSVR</f:facet>
                         <ui:fragment rendered="#{user.PSVR}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
@@ -652,7 +652,7 @@
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
-					<h:column>
+                    <h:column>
                         <f:facet id="idTableManagementUsersColHeaderLoggedOn" name = "header">Online</f:facet>
                         <ui:fragment rendered="#{user.loggedOn}">
                             <h:outputText value="Yes" />
