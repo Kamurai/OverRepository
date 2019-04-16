@@ -31,7 +31,7 @@ public class TargetDAO extends DAO{
             //Parameters
             stmt.setInt(1, intUserIndex);
             stmt.setString(2, strTarget1);
-            stmt.setString(3, strTarget2);            
+            stmt.setString(3, strTarget2);
             stmt.executeUpdate();
 
         }catch(Exception e){

@@ -35,10 +35,10 @@ public class LoginDAO extends DAO{
             rs.next();
             
             returnUser = new User(
-                rs.getInt("UserIndex"), 
+                rs.getInt("WatchOverUserIndex"), 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getInt("AdminLevel"),
+                rs.getInt("WatchOverAdminLevel"),
                 //Genres
                 rs.getBoolean("ComedyM"), 
                 rs.getBoolean("DramaM"), 
@@ -58,7 +58,7 @@ public class LoginDAO extends DAO{
                 rs.getBoolean("ComicsM"), 
                 rs.getBoolean("PeriodM"), 
                 
-                rs.getBoolean("LoggedOn") 
+                rs.getBoolean("WatchOverOnline") 
             );
             
         }
