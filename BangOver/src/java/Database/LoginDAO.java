@@ -36,16 +36,16 @@ public class LoginDAO extends DAO{
             
             returnUser = new User(
                 rs.getInt("BangOverUserIndex"), 
+                rs.getInt("BangOverAdminLevel"),
+                rs.getBoolean("BangOverOnline"),
+                    
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getInt("BangOverAdminLevel"),
-                    
+                /*Genders*/
                 rs.getBoolean("Women"), 
                 rs.getBoolean("Men"), 
                 rs.getBoolean("TransWomen"), 
-                rs.getBoolean("TransMen"), 
-                    
-                rs.getBoolean("BangOverOnline") 
+                rs.getBoolean("TransMen")                    
             );
             
         }

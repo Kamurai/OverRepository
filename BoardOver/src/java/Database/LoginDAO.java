@@ -36,9 +36,11 @@ public class LoginDAO extends DAO{
             
             returnUser = new User(
                 rs.getInt("BoardOverUserIndex"), 
+                rs.getInt("BoardOverAdminLevel"),
+                rs.getBoolean("BoardOverOnline"),
+                
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getInt("BoardOverAdminLevel"),
                     
                 rs.getBoolean("DeckBuilding"), 
                 rs.getBoolean("FixedDeck"), 
@@ -54,9 +56,7 @@ public class LoginDAO extends DAO{
                 rs.getBoolean("Bluffing"), 
                 rs.getBoolean("Puzzle"), 
                 rs.getBoolean("Dexterity"), 
-                rs.getBoolean("Party"), 
-                    
-                rs.getBoolean("BoardOverOnline") 
+                rs.getBoolean("Party")                    
             );
             
         }

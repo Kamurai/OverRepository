@@ -202,7 +202,14 @@ public class User
     }
     
     
-    public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, 
+    public User(
+            int intUserIndex, 
+            int intAdminLevel,
+            boolean boolLoggedOn, 
+            
+            String strUsername, 
+            String strEmail,             
+            //Genres
             boolean boolComedyM, 
             boolean boolDramaM, 
             boolean boolActionM, 
@@ -210,6 +217,7 @@ public class User
             boolean boolThrillerM, 
             boolean boolMysteryM, 
             boolean boolDocumentaryM, 
+            //Settings
             boolean boolScienceFictionM, 
             boolean boolFantasyM, 
             boolean boolWesternM, 
@@ -218,13 +226,14 @@ public class User
             boolean boolHistoricM, 
             boolean boolPreHistoricM, 
             boolean boolComicsM, 
-            boolean boolPeriodM,
-            boolean boolLoggedOn)
-    {
+            boolean boolPeriodM
+    ){
         UserIndex = intUserIndex;
+        AdminLevel = intAdminLevel;
+        LoggedOn = boolLoggedOn;
+        
         Username = strUsername;
         Email = strEmail;
-        AdminLevel = intAdminLevel;
         
         //Genres
         ComedyM = boolComedyM;
@@ -244,9 +253,6 @@ public class User
         PrehistoricM = boolPreHistoricM;
         ComicsM = boolComicsM;
         PeriodM = boolPeriodM;
-        
-        LoggedOn = boolLoggedOn;
-
     }
     
     public User(User newUser)

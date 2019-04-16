@@ -1,0 +1,3946 @@
+/* Page Specific Classes and IDs for Bang Over */
+
+/** Classes **/
+/* My List */
+.classTableMyListRow{}
+
+.classTableMyListRowSpanNumber{
+	color: #ffffff;
+}
+
+.classTableMyListRowNumber{
+	color: #ffffff;
+}
+
+.classTableMyListRowSpanName{
+    color: #ffffff;
+}
+
+.classTableMyListRowName{
+    color: #ffffff;
+}
+
+.classTableMyListRowSpanPicture{
+    display: table-cell;
+}
+
+.classTableMyListRowPicture{}
+
+.classTableMyListRowSpanGender{
+    color: #ffffff;
+    margin: auto;
+	vertical-align: top;
+    display: table-cell;
+}
+
+.classTableMyListRowGender{
+    color: #ffffff;
+    margin: auto;
+	vertical-align: top;
+}
+
+
+/* Global List */
+.classTableGlobalListHeaderRow{}
+
+.classTableGlobalListHeader{
+	color: #ffffff;
+}
+
+.classTableGlobalListRow{}
+
+.classTableGlobalListRowSpanNumber{}
+
+.classTableGlobalListRowNumber{
+    color: #ffffff; 
+}
+
+.classTableGlobalListRowSpanName{
+}
+
+.classTableGlobalListRowName{
+    color: #ffffff;
+}
+
+.classTableGlobalListRowSpanPicture{}
+
+.classTableGlobalListRowPicture{}
+
+.classTableGlobalListRowSpanGender{
+    color: #ffffff;
+	margin: auto;
+    vertical-align: top;
+    display: table-cell;
+}
+
+.classTableGlobalListRowGender{
+    color: #ffffff;
+    margin: auto;
+}
+
+.classTableGlobalListRowSpanRanking{}
+
+.classTableGlobalListRowRanking{
+    color: #ffffff;
+}
+
+/* Management */
+.classTableManagementHeaderRow{}
+
+.classTableManagementHeader{
+    color: #ffffff;
+}
+
+.classTableManagementRow{}
+
+.classTableManagementUsersColIndex{
+    color: #ffffff;
+}
+
+.classTableManagementUsersColUsername{
+    color: #ffffff;
+}
+
+.classTableManagementUsersColEmail{
+    color: #ffffff;
+}
+
+.classTableManagementUsersColAdminLevel{
+    color: #ffffff;
+}
+
+.classTableManagementUsersColWomen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+
+.classTableManagementUsersColMen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+
+.classTableManagementUsersColTransWomen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+
+.classTableManagementUsersColTransMen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+
+.classTableManagementUsersColLoggedOn{
+    color: #ffffff;
+}
+
+/** IDs **/
+/* Compare */
+#idTableCompare{}
+
+#idTableCompareRowPictures{}
+
+#idTableCompareRowDataPicturesLeft{}
+
+#idTableCompareRowDataPicturesRight{}
+
+#idTableCompareRowPicturesLeft{}
+
+#idTableCompareRowPicturesRight{}
+
+#idTableCompareRowNames{
+	color: #ffffff;
+}
+
+#idTableCompareRowNamesLeft{
+	color: #ffffff;
+}
+
+#idTableCompareRowNamesRight{
+	color: #ffffff;
+}
+
+/* My List */
+#idTableMyList{
+    color: #ffffff;
+}
+
+/* Global List */
+#idTableGlobalStats{
+    color: #ffffff;
+}
+
+#idTableGlobalList{
+    color: #ffffff;
+}
+
+/* Options */
+#idTableOptions{
+    color: #ffffff;
+}
+
+/* Management */
+#idTableManagementStats{
+    color: #ffffff;
+}
+
+#idTableManagementUsers{
+    color: #ffffff;
+}
+
+#idTableManagementUsersColHeaderIndex{
+    color: #ffffff;
+}
+    
+#idTableManagementUsersColHeaderUsername{
+    color: #ffffff;
+}
+    
+#idTableManagementUsersColHeaderEmail{
+    color: #ffffff;
+}
+    
+#idTableManagementUsersColHeaderAdminLevel{
+    color: #ffffff;
+}
+    
+#idTableManagementUsersColHeaderWomen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+    
+#idTableManagementUsersColHeaderMen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+    
+#idTableManagementUsersColHeaderaTransWomen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+    
+#idTableManagementUsersColHeaderTransMen{
+    border: 1px solid #f702f7;
+    
+    color: #ffffff;
+    margin: auto;
+    display: table-cell;
+}
+    
+#idTableManagementUsersColHeaderLoggedOn{
+    color: #ffffff;
+}
+ 
+/* Add Target */ 
+#idContentAdd{
+    color: #ffffff;
+}
+
+#idContentAddSuggestion{
+    color: #ffffff;
+}
+
+/* Sign Up */
+#idContentSignUp{
+    color: #ffffff;
+}
+
+#idTableSignUp{
+    color: #ffffff;
+}
+
+/** Media Queries **/
+
+/* 240 */
+@media screen and (min-width: 240px) {
+	/* 240 x 352 */
+	@media screen and (min-height: 352px){
+		/** Elements **/
+		body											{width: 240px; height: 352px; 	}
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 67.2px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 67.2px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 33.6px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 33.6px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 33.6px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 33.6px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 33.6px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeader					{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 33.6px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 16.8px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 16.8px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 33.6px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 16.8px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 16.8px; 	height: 35.2px;	}
+	}
+}
+
+/* 352 */
+@media screen and (min-width: 352px) {
+	/* 352 x 240 */
+	@media screen and (min-height: 240px){
+		/** Elements **/
+		body										{width: 352px; height: 240px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 360 */
+@media screen and (min-width: 360px) {
+	/* 360 x 480 */
+	@media screen and (min-height: 480px){
+		/** Elements **/
+		body										{width: 360px; height: 480px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 480 */
+@media screen and (min-width: 480px) {
+	/* 480 x 360 */
+	@media screen and (min-height: 360px){
+		/** Elements **/
+		body										{width: 480px; height: 360px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 480 x 720 */
+	@media screen and (min-height: 720px){
+		/** Elements **/
+		body										{width: 480px; height: 720px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 480 x 858 */
+	@media screen and (min-height: 858px){
+		/** Elements **/
+		body										{width: 480px; height: 858px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 576 */
+@media screen and (min-width: 576px) {
+	/* 576 x 720 */
+	@media screen and (min-height: 720px){
+		/** Elements **/
+		body										{width: 576px; height: 720px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 600 */
+@media screen and (min-width: 600px) {
+	/* 600 x 800 */
+	@media screen and (min-height: 800px){
+		/** Elements **/
+		body										{width: 600px; height: 800px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 720 */
+@media screen and (min-width: 480px) {
+	/* 720 x 480 */
+	@media screen and (min-height: 480px){
+		/** Elements **/
+		body										{width: 720px; height: 480px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+
+	/* 720 x 576 */
+	@media screen and (min-height: 576px){
+		/** Elements **/
+		body										{width: 720px; height: 576px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 720 x 1280 */
+	@media screen and (min-height: 1280px){
+		/** Elements **/
+		body										{width: 720px; height: 1280px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 768 */
+@media screen and (min-width: 768px) {
+	/* 768 x 1024 */
+	@media screen and (min-height: 1024px){
+		/** Elements **/
+		body										{width: 768px; height: 1024px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 768 x 1280 */
+	@media screen and (min-height: 1280px){
+		/** Elements **/
+		body										{width: 768px; height: 1280px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 768 x 1360 */
+	@media screen and (min-height: 1360px){
+		/** Elements **/
+		body										{width: 768px; height: 1360px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 768 x 1366 */
+	@media screen and (min-height: 1366px){
+		/** Elements **/
+		body										{width: 768px; height: 1366px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 800 */
+@media screen and (min-width: 800px) {
+	/* 800 x 600 */
+	@media screen and (min-height: 600px){
+		/** Elements **/
+		body										{width: 800px; height: 600px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 800 x 1280 */
+	@media screen and (min-height: 1280px){
+		/** Elements **/
+		body										{width: 800px; height: 1280px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 858 */
+@media screen and (min-width: 858px) {
+	/* 858 x 480 */
+	@media screen and (min-height: 480px){
+		/** Elements **/
+		body										{width: 858px; height: 480px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 864 */
+@media screen and (min-width: 864px) {
+	/* 864 x 1152 */
+	@media screen and (min-height: 1152px){
+		/** Elements **/
+		body										{width: 864px; height: 1152px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 864 x 1536 */
+	@media screen and (min-height: 1536px){
+		/** Elements **/
+		body										{width: 864px; height: 1536px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 900 */
+@media screen and (min-width: 900px) {
+	/* 900 x 1440 */
+	@media screen and (min-height: 1440px){
+		/** Elements **/
+		body										{width: 900px; height: 1440px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 900 x 1600 */
+	@media screen and (min-height: 1600px){
+		/** Elements **/
+		body										{width: 900px; height: 1600px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1024 */
+@media screen and (min-width: 1024px) {
+	/* 1024 x 768 */
+	@media screen and (min-height: 768px){
+		/** Elements **/
+		body										{width: 1024px; height: 768px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+		/* 1024 x 1280 */
+	@media screen and (min-height: 1280px){
+		/** Elements **/
+		body										{width: 1024px; height: 1280px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1050 */
+@media screen and (min-width: 1050px) {
+	/* 1050 x 1920 */
+	@media screen and (min-height: 1680px){
+		/** Elements **/
+		body										{width: 1050px; height: 1680px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1080 */
+@media screen and (min-width: 1080px) {
+	/* 1080 x 1920 */
+	@media screen and (min-height: 1920px){
+		/** Elements **/
+		body										{width: 1080px; height: 1920px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 1080 x 2560 */
+	@media screen and (min-height: 2560px){
+		/** Elements **/
+		body										{width: 1080px; height: 2560px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1152 */
+@media screen and (min-width: 1152px) {
+	/* 1152 x 864 */
+	@media screen and (min-height: 864px){
+		/** Elements **/
+		body										{width: 1152px; height: 864px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1200 */
+@media screen and (min-width: 1200px) {
+	/* 1200 x 1920 */
+	@media screen and (min-height: 1920px){
+		/** Elements **/
+		body										{width: 1200px; height: 1920px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1280 */
+@media screen and (min-width: 1280px) {
+	/* 1280 x 720 */
+	@media screen and (min-height: 720px){
+		/** Elements **/
+		body										{width: 1280px; height: 720px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+
+	/* 1280 x 768 */
+	@media screen and (min-height: 768px){
+		/** Elements **/
+		body										{width: 1280px; height: 768px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+
+	/* 1280 x 800 */
+	@media screen and (min-height: 800px){
+		/** Elements **/
+		body										{width: 1280px; height: 800px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+
+	/* 1280 x 1024 */
+	@media screen and (min-height: 1024px){
+		/** Elements **/
+		body										{width: 1280px; height: 1024px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1360 */
+@media screen and (min-width: 1360px){
+	/* 1360 x 768 */
+	@media screen and (min-height: 768px){
+		/** Elements **/
+		body										{width: 1360px; height: 768px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1366 */
+@media screen and (min-width: 1366px) {
+	/* 1366 x 768 */
+	@media screen and (min-height: 768px){
+		/** Elements **/
+		body										{width: 1366px; height: 768px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1440 */
+@media screen and (min-width: 1440px){
+	/* 1440 x 900 */
+	@media screen and (min-height: 900px){
+		/** Elements **/
+		body										{width: 1440px; height: 900px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 1440 x 2560 */
+	@media screen and (min-height: 2560px){
+		/** Elements **/
+		body										{width: 1440px; height: 2560px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 1440 x 3440 */
+	@media screen and (min-height: 3440px){
+		/** Elements **/
+		body										{width: 1440px; height: 3440px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1536 */
+@media screen and (min-width: 1536px){
+	/* 1536 x 864 */
+	@media screen and (min-height: 864px){
+		/** Elements **/
+		body										{width: 1536px; height: 864px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1600 */
+@media screen and (min-width: 1600px){
+	/* 1600 x 900 */
+	@media screen and (min-height: 900px){
+		/** Elements **/
+		body										{width: 1600px; height: 900px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1680 */
+@media screen and (min-width: 1680px){
+	/* 1680 x 1050 */
+	@media screen and (min-height: 1050px){
+		/** Elements **/
+		body										{width: 1680px; height: 1050px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 1920 */
+@media screen and (min-width: 1920px) {
+	/* 1920 x 1080 */
+	@media screen and (min-height: 1080px) {
+		/** Elements **/
+		body											{width: 1920px; 	height: 1080px; 	}
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowNumber					{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowSpanName				{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowName					{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowSpanPicture				{width: 537.6px; 	height: 221.4px;	}
+		.classTableMyListRowPicture					{width: auto; 		height: 221.4px;	}
+		.classTableMyListRowSpanGender				{width: 268.8px; 	height: 44.28px;	}
+		.classTableMyListRowGender					{width: 268.8px; 	height: 44.28px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 268.8px; 	height: 44.28px;	}
+		.classTableGlobalListRowSpanNumber			{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowNumber				{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowSpanName			{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowName				{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowSpanPicture			{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowPicture				{width: auto; 		height: 221.4px;	}
+		.classTableGlobalListRowSpanGender			{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowGender				{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowSpanRanking			{width: 268.8px; 	height: 221.4px;	}
+		.classTableGlobalListRowRanking				{width: 268.8px; 	height: 221.4px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 		height: 88.56px;	}
+		.classTableManagementHeader					{width: 24px; 		height: 88.56px;	}
+		.classTableManagementRow					{width: 240px; 		height: 88.56px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 		height: 88.56px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColMen			{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 		height: 88.56px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 		height: 88.56px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 		height: 88.56px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 		height: 88.56px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 1920 x 1200 */
+	@media screen and (min-height: 1200px){
+		/** Elements **/
+		body										{width: 1920px; height: 1200px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	
+}
+
+/* 2160 */
+@media screen and (min-width: 2160px) {
+	/* 2160 x 3840 */
+	@media screen and (min-height: 3840px) {
+		/** Elements **/
+		body										{width: 2160px; height: 3840px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 2160 x 4096 */
+	@media screen and (min-height: 4096px) {
+		/** Elements **/
+		body										{width: 2160px; height: 4096px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 2560 */
+@media screen and (min-width: 2560px){
+	/* 2560 x 1080 */
+	@media screen and (min-height: 1080px){
+		/** Elements **/
+		body										{width: 2560px; height: 1080px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+	
+	/* 2560 x 1440 */
+	@media screen and (min-height: 1440px){
+		/** Elements **/
+		body										{width: 2560px; height: 1440px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 3440 */
+@media screen and (min-width: 3440px){
+	/* 3440 x 1440 */
+	@media screen and (min-height: 1440px){
+		/** Elements **/
+		body										{width: 3440px; height: 1440px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 3840 */
+@media screen and (min-width: 3840px){
+	/* 3840 x 2160 */
+	@media screen and (min-height: 2160px){
+		/** Elements **/
+		body										{width: 3840px; height: 2160px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 4096 */
+@media screen and (min-width: 4096px){
+	/* 4096 x 2160 */
+	@media screen and (min-height: 2160px){
+		/** Elements **/
+		body										{width: 4096px; height: 2160px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 4320 */
+@media screen and (min-width: 4320px){
+	/* 4320 x 7680 */
+	@media screen and (min-height: 7680px){
+		/** Elements **/
+		body										{width: 4320px; height: 7680px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}
+
+/* 7680 */
+@media screen and (min-width: 7680px){
+	/* 7680 x 4320 */
+	@media screen and (min-height: 4320px){
+		/** Elements **/
+		body										{width: 7680px; height: 4320px; }
+		
+		/** Classes **/
+		/* My List */
+		.classTableMyListRowSpanNumber				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowNumber					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanName				{width: 48px; 	height: 176px;	}
+		.classTableMyListRowName					{width: 48px; 	height: 176px;	}
+		.classTableMyListRowSpanPicture				{width: 96px; 	height: 176px;	}
+		.classTableMyListRowSpanGender					{width: 96px; 	height: 176px;	}
+		.classTableMyListRowGender						{width: 48px; 	height: 176px;	}
+		.classTableMyListRowPicture					{width: 48px; 	height: 176px;	}
+		
+		/* Global List */
+		.classTableGlobalListHeader					{width: 48px; 	height: 17.6px;	}
+		.classTableGlobalListRowSpanNumber			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowNumber				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanName			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowName				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanPicture			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowPicture				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanGender				{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowGender					{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowSpanRanking			{width: 48px; 	height: 88px;	}
+		.classTableGlobalListRowRanking				{width: 48px; 	height: 88px;	}
+		
+		/* Management */
+		.classTableManagementHeaderRow				{width: 240px; 	height: 35.2px;	}
+		.classTableManagementHeader					{width: 24px; 	height: 35.2px;	}
+		.classTableManagementRow					{width: 240px; 	height: 35.2px;	}
+		.classTableManagementUsersColIndex			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColUsername		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColEmail			{width: 48px; 	height: 35.2px;	}
+		.classTableManagementUsersColAdminLevel		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColWomen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColMen			{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransWomen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColTransMen		{width: 24px; 	height: 35.2px;	}
+		.classTableManagementUsersColLoggedOn		{width: 24px; 	height: 35.2px;	}
+		
+		/** IDs **/
+		
+		/* Compare */
+		
+		/* My List */
+		
+		/* Global List */
+		
+		/* Add Target */ 
+		
+		/* Options */
+		
+		/* Management */
+		#idTableManagementUsersColHeaderIndex		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderUsername	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderEmail		{width: 48px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderAdminLevel	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderWomen		{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderMen			{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderaTransWomen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderTransMen	{width: 24px; 	height: 35.2px;	}
+		#idTableManagementUsersColHeaderLoggedOn	{width: 24px; 	height: 35.2px;	}
+		
+		/* Sign Up */
+	}
+}

@@ -190,7 +190,14 @@ public class User
     }
     
     
-    public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, 
+    public User(
+            int intUserIndex, 
+            int intAdminLevel, 
+            boolean boolLoggedOn,
+            
+            String strUsername, 
+            String strEmail, 
+            
             //Genres
             boolean boolDeckBuilding, 
             boolean boolFixedDeck, 
@@ -206,13 +213,14 @@ public class User
             boolean boolBluffing,
             boolean boolPuzzle,
             boolean boolDexterity,
-            boolean boolParty,            
-            boolean boolLoggedOn
+            boolean boolParty          
     ){
         UserIndex = intUserIndex;
+        AdminLevel = intAdminLevel;
+        LoggedOn = boolLoggedOn;
+        
         Username = strUsername;
         Email = strEmail;
-        AdminLevel = intAdminLevel;
         
         //Genres
         DeckBuilding = boolDeckBuilding;
@@ -230,9 +238,6 @@ public class User
         Puzzle = boolPuzzle;
         Dexterity = boolDexterity;
         Party = boolParty;
-        
-        LoggedOn = boolLoggedOn;
-
     }
     
     public User(User newUser)

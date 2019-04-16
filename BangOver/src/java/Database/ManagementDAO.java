@@ -83,22 +83,24 @@ public class ManagementDAO extends DAO{
                 }else{
                     boolTransMen = false;
                 }
-                if(rs.getInt("LoggedOn") == 1){
+                if(rs.getInt("BangOverOnline") == 1){
                     boolLoggedOn = true;
                 }else{
                     boolLoggedOn = false;
                 }
                 
                 tempUser = new User(
-                        rs.getInt("UserIndex"), 
+                        rs.getInt("BangOverUserIndex"), 
+                        rs.getInt("BangOverAdminLevel"),
+                        boolLoggedOn, 
+                        
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getInt("AdminLevel"),
+                        
                         boolWomen, 
                         boolMen, 
                         boolTransWomen, 
-                        boolTransMen, 
-                        boolLoggedOn
+                        boolTransMen
                 );
                 
                 ResultList.add(new User(tempUser));
@@ -129,12 +131,12 @@ public class ManagementDAO extends DAO{
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("AdminLevel")));
+                sub.add(Integer.toString(rs.getInt("BangOverAdminLevel")));
                 sub.add(Integer.toString(rs.getInt("Women")));
                 sub.add(Integer.toString(rs.getInt("Men")));
                 sub.add(Integer.toString(rs.getInt("TransWomen")));
                 sub.add(Integer.toString(rs.getInt("TransMen")));
-                sub.add(Integer.toString(rs.getInt("LoggedOn")));
+                sub.add(Integer.toString(rs.getInt("BangOverOnline")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();

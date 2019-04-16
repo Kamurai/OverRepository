@@ -137,10 +137,12 @@ public class LoginBean implements Serializable
 
         DefaultUser = new User(
         -1,
-        "",
-        "",
         0,
         false,
+                
+        "",
+        "",
+                
         false,
         false,
         false,

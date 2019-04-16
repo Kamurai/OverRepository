@@ -247,10 +247,12 @@ public class LoginBean implements Serializable
 
         DefaultUser = new User(
         -1,
-        "",
-        "",
         0,
         false,
+                
+        "",
+        "",
+        //Genres
         false,
         false,
         false,
@@ -258,6 +260,7 @@ public class LoginBean implements Serializable
         false,
         false,
         false,
+        //Settings
         false,
         false,
         false,

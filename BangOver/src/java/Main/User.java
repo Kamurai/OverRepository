@@ -95,20 +95,30 @@ public class User
     }
     
     
-    public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, boolean boolWomen, boolean boolMen, boolean boolTransWomen, boolean boolTransMen, boolean boolLoggedOn)
-    {
+    public User(
+            int intUserIndex, 
+            int intAdminLevel, 
+            boolean boolLoggedOn,
+            
+            String strUsername, 
+            String strEmail, 
+            
+            boolean boolWomen, 
+            boolean boolMen, 
+            boolean boolTransWomen, 
+            boolean boolTransMen
+    ){
         UserIndex = intUserIndex;
+        AdminLevel = intAdminLevel;
+        LoggedOn = boolLoggedOn;
+        
         Username = strUsername;
         Email = strEmail;
-        AdminLevel = intAdminLevel;
         
         Women = boolWomen;
         Men = boolMen;
         TransWomen = boolTransWomen;
         TransMen = boolTransMen;
-        
-        LoggedOn = boolLoggedOn;
-
     }
     
     public User(User newUser)

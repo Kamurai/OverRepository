@@ -58,10 +58,12 @@ public class ManagementDAO extends DAO{
             
             while(rs.next()){
                 tempUser = new User(
-                        rs.getInt("UserIndex"), 
+                        rs.getInt("WatchOverUserIndex"), 
+                        rs.getInt("WatchOverAdminLevel"),
+                        rs.getBoolean("WatchOverOnline"), 
+                        
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getInt("AdminLevel"),
                         //Genres
                         rs.getBoolean("ComedyM"), 
                         rs.getBoolean("DramaM"), 
@@ -79,8 +81,7 @@ public class ManagementDAO extends DAO{
                         rs.getBoolean("HistoricM"), 
                         rs.getBoolean("PrehistoricM"), 
                         rs.getBoolean("ComicsM"), 
-                        rs.getBoolean("PeriodM"), 
-                        rs.getBoolean("LoggedOn") 
+                        rs.getBoolean("PeriodM") 
                 );
                 
                 ResultList.add(new User(tempUser));
@@ -111,12 +112,12 @@ public class ManagementDAO extends DAO{
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("AdminLevel")));
+                sub.add(Integer.toString(rs.getInt("WatchOverAdminLevel")));
                 sub.add(Integer.toString(rs.getInt("Women")));
                 sub.add(Integer.toString(rs.getInt("Men")));
                 sub.add(Integer.toString(rs.getInt("TransWomen")));
                 sub.add(Integer.toString(rs.getInt("TransMen")));
-                sub.add(Integer.toString(rs.getInt("LoggedOn")));
+                sub.add(Integer.toString(rs.getInt("WatchOverOnline")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();

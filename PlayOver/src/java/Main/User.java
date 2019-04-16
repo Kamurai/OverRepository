@@ -532,9 +532,13 @@ public class User
         LoggedOn = input;
     }
     
-    
-    
-    public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, 
+    public User(
+            int intUserIndex, 
+            int intAdminLevel, 
+            boolean boolLoggedOn, 
+            
+            String strUsername, 
+            String strEmail,             
             //Genres
             boolean boolTwoDP, 
             boolean boolThreeDP, 
@@ -589,13 +593,15 @@ public class User
             boolean boolOuya, 
             boolean boolOculusRift, 
             boolean boolVive, 
-            boolean boolPSVR, 
-            boolean boolLoggedOn)
-    {
+            boolean boolPSVR
+    ){
         UserIndex = intUserIndex;
+        AdminLevel = intAdminLevel;
+        LoggedOn = boolLoggedOn;
+        
         Username = strUsername;
         Email = strEmail;
-        AdminLevel = intAdminLevel;
+        
         //Genres
         TwoDP = boolTwoDP;
         ThreeDP = boolThreeDP;
@@ -651,8 +657,6 @@ public class User
         OculusRift = boolOculusRift; 
         Vive = boolVive; 
         PSVR = boolPSVR; 
-        LoggedOn = boolLoggedOn;
-
     }
     
     public User(User newUser)

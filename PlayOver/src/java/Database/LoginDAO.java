@@ -36,9 +36,11 @@ public class LoginDAO extends DAO{
             
             returnUser = new User(
                 rs.getInt("PlayOverUserIndex"), 
+                rs.getInt("PlayOverAdminLevel"), 
+                rs.getBoolean("PlayOverOnline"),
+                
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getInt("PlayOverAdminLevel"),
                 //Genres
                 rs.getBoolean("TwoDP"), 
                 rs.getBoolean("ThreeDP"), 
@@ -93,9 +95,7 @@ public class LoginDAO extends DAO{
                 rs.getBoolean("Ouya"), 
                 rs.getBoolean("OculusRift"),
                 rs.getBoolean("Vive"),
-                rs.getBoolean("PSVR"), 
-                    
-                rs.getBoolean("PlayOverOnline") 
+                rs.getBoolean("PSVR")
             );
             
         }
