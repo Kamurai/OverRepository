@@ -17,26 +17,6 @@
         Confirm Password:<h:inputSecret id="confirmPassword" value="#{LoginBean.confirmPassword}"/><br/>
         <h:message for="confirmPassword"/><br/>
 
-        <table id="idTableSignUp">
-           <tr>
-               <td>Into Women?</td>
-               <td><h:selectBooleanCheckbox value="#{LoginBean.boolWomen}"/></td>
-           </tr>
-           <tr>
-               <td>Into Men?</td>
-               <td><h:selectBooleanCheckbox value="#{LoginBean.boolMen}"/></td>
-           </tr>
-           <tr>
-               <td>Into Trans Women?</td>
-               <td><h:selectBooleanCheckbox value="#{LoginBean.boolTransWomen}"/></td>
-           </tr>
-           <tr>
-               <td>Into Trans Men?</td>
-               <td><h:selectBooleanCheckbox value="#{LoginBean.boolTransMen}"/></td>
-           </tr>
-        </table>
-        <br/>
-        <br/>
         <h:outputText id="error" value="#{LoginBean.error}"/><br/>
         <h:commandButton value ="Back to Login" action="Login.xhtml"/>
         <h:commandButton value ="Sign Up" action="#{LoginBean.SignUp()}"/>

@@ -218,7 +218,7 @@ public class LoginDAO extends DAO{
             //open connection
             openConnection();
             
-            stmt = getConnect().prepareCall("{call WatchOverUpdateOptions(?,?,?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call WatchOverSignUp(?,?,?,?,?,?,?)}");
             stmt.setString(1, username);
             stmt.setString(2, email);
             stmt.setString(3, password);

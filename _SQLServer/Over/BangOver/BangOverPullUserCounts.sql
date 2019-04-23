@@ -9,6 +9,8 @@ BEGIN
     UNION all
     select count(BangOverAdminLevel)	from [Over].dbo.BangOveUsers where BangOverAdminLevel = 2
     UNION all
+    select count(BangOverAdminLevel)	from [Over].dbo.BangOveUsers where BangOverAdminLevel = 3
+    UNION all
     select count(Women)					from [Over].dbo.BangOveUsers where Women = 1
     UNION all
     select count(Men)					from [Over].dbo.BangOveUsers where Men = 1

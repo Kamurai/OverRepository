@@ -91,44 +91,6 @@ public class LoginBean implements Serializable
         error = input;
     }
     
-    private boolean boolWomen;
-    public boolean getboolWomen()
-    {
-        return boolWomen;
-    }
-    public void setboolWomen(boolean input)
-    {
-        boolWomen = input;
-    }
-    private boolean boolMen;
-    public boolean getboolMen()
-    {
-        return boolMen;
-    }
-    public void setboolMen(boolean input)
-    {
-        boolMen = input;
-    }
-    private boolean boolTransWomen;
-    public boolean getboolTransWomen()
-    {
-        return boolTransWomen;
-    }
-    public void setboolTransWomen(boolean input)
-    {
-        boolTransWomen = input;
-    }
-    private boolean boolTransMen;
-    public boolean getboolTransMen()
-    {
-        return boolTransMen;
-    }
-    public void setboolTransMen(boolean input)
-    {
-        boolTransMen = input;
-    }
-    
-    
     public LoginBean()
     {
         connect = null;
@@ -140,10 +102,6 @@ public class LoginBean implements Serializable
         "",
         "",
         0,
-        false,
-        false,
-        false,
-        false,
         false
         );
         CurrentUser = new User(DefaultUser);
@@ -154,12 +112,6 @@ public class LoginBean implements Serializable
         confirmPassword = "";
         email = "";
         error = "";
-        
-        boolWomen = false;
-        boolMen = false;
-        boolTransWomen = false;
-        boolTransMen = false;
-        
     }
     
     public String LogIn(String targetPage)
@@ -199,15 +151,6 @@ public class LoginBean implements Serializable
         dao.callableSetOffline(CurrentUser.getUsername());
     }
     
-    public void UpdateOptions()
-    {
-//        String result = "Options";
-        
-        dao.callableUpdateOptions(CurrentUser);
-        
-//        return result;
-    }
-    
     public String SignUp(){
         String result = "SignUp";
         
@@ -216,14 +159,6 @@ public class LoginBean implements Serializable
             //Return error for passwords not matching
             error = "Passwords do not match.";
             result = "SignUp";
-        }else if( !boolWomen &&
-                !boolMen &&
-                !boolTransWomen &&
-                !boolTransMen
-                )
-        {
-            error = "You didn't select any preferences.";
-            result = "SignUp";
         }else if( !validate.ValidateEmail(email) )
         {
             error = "You didn't enter a valid e-mail.";
@@ -231,11 +166,7 @@ public class LoginBean implements Serializable
         }else{
             if(dao.callableSignUp(username,
                     email,
-                    password,
-                    boolWomen,
-                    boolMen,
-                    boolTransWomen,
-                    boolTransMen
+                    password
             )){
                 result = "Login";
             }else{
@@ -246,5 +177,17 @@ public class LoginBean implements Serializable
         return result;
     }
     
-    
+    //Determine if current user is authorized to edit target user
+    public boolean isAuthorized(User rowUser)
+    {
+        boolean result = false;
+        
+        if(CurrentUser.getAdminLevel() >= rowUser.getAdminLevel()){
+            result = true;
+        }else{
+            result = false;
+        }
+        
+        return result;
+    }
 }

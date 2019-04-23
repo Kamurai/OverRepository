@@ -9,6 +9,8 @@ BEGIN
     UNION all
     select count(ShowOverAdminLevel)			from [Over].dbo.ShowOveUsers where ShowOverAdminLevel = 2
     UNION all
+    select count(ShowOverAdminLevel)			from [Over].dbo.ShowOveUsers where ShowOverAdminLevel = 3
+    UNION all
 	select count(ComedyS)						from [Over].dbo.ShowOveUsers where ComedyS = 1
     UNION all
     select count(DramaS)						from [Over].dbo.ShowOveUsers where DramaS = 1

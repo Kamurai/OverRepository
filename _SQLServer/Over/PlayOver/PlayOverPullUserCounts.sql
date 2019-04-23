@@ -9,6 +9,8 @@ BEGIN
     UNION all
     select count(PlayOverAdminLevel) from [Over].dbo.PlayOveUsers where PlayOverAdminLevel = 2
     UNION all
+    select count(PlayOverAdminLevel) from [Over].dbo.PlayOveUsers where PlayOverAdminLevel = 3
+    UNION all
 	--Genres
 	select count(TwoDP) from [Over].dbo.PlayOveUsers where TwoDP = 1
     UNION all

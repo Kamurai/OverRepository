@@ -9,6 +9,8 @@ BEGIN
     UNION all
     select count(BoardOverAdminLevel) from [Over].dbo.BoardOverUsers where BoardOverAdminLevel = 2
     UNION all
+    select count(BoardOverAdminLevel) from [Over].dbo.BoardOverUsers where BoardOverAdminLevel = 3
+    UNION all
 	select count(DeckBuilding) from [Over].dbo.BoardOveUsers where DeckBuilding = 1
     UNION all
     select count(FixedDeck) from [Over].dbo.BoardOveUsers where FixedDeck = 1

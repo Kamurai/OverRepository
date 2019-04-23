@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Bean;
 
 import Database.ConnInfo;
@@ -12,12 +7,11 @@ import javax.faces.bean.ManagedBean;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import javax.faces.bean.ViewScoped;
+import java.util.List;
 import java.util.ArrayList;
 import javax.servlet.http.Part;
+import Main.Box;
 
-/**
- * @author Kamurai
- */
 @ManagedBean(name="TargetBean")
 @ViewScoped
 public class TargetBean implements Serializable
@@ -106,47 +100,14 @@ public class TargetBean implements Serializable
     {
         TargetURL2 = input;
     }
-    private ArrayList<ArrayList<String>> gl = new ArrayList<ArrayList<String>>();
-    public ArrayList<ArrayList<String>> getgl()
+    private Box structure = new Box();
+    public Box getStructure()
     {
-        return gl;
+        return structure;
     }
-    public int getGLSize()
+    public void setStructure(LoginBean userBean) //set Personal List
     {
-        int monkey = gl.size();
-        return monkey;
-    }
-    public void setGlobalList(LoginBean userBean) //set Global List
-    {
-        gl = PullGlobalList(userBean);
-    }
-    private ArrayList<ArrayList<String>> gc = new ArrayList<ArrayList<String>>();
-    public ArrayList<ArrayList<String>> getgc()
-    {
-        return gc;
-    }
-    public int getGCSize()
-    {
-        int monkey = gc.size();
-        return monkey;
-    }
-    public void setGlobalCounts() //set Global Counts
-    {
-        gc = PullGlobalCounts();
-    }
-    private ArrayList<ArrayList<String>> pl = new ArrayList<ArrayList<String>>();
-    public ArrayList<ArrayList<String>> getpl()
-    {
-        return pl;
-    }
-    public void setPersonalList(LoginBean userBean) //set Personal List
-    {
-        pl = PullPersonalList(userBean.getCurrentUser().getUserIndex());
-    }
-    public int getPLSize()
-    {
-        int monkey = pl.size();
-        return monkey;
+        structure = PullStructure(userBean.getCurrentUser().getUserIndex());
     }
     private ArrayList<ArrayList<String>> ul = new ArrayList<ArrayList<String>>();
     public ArrayList<ArrayList<String>> getul()
@@ -267,6 +228,13 @@ public class TargetBean implements Serializable
     {
         strValueToSuggest = input;
     }
+    private Box currentBox;
+    public Box getCurrentBox(){
+        return currentBox;
+    }
+    public void setCurrentBox(Box input){
+        currentBox = input;
+    }
     
     
     public TargetBean()
@@ -284,9 +252,8 @@ public class TargetBean implements Serializable
         TargetName1 = new String();
         TargetName2 = new String();
         
-        gl = new ArrayList<ArrayList<String>>();
-        gc = new ArrayList<ArrayList<String>>();
-        pl = new ArrayList<ArrayList<String>>();
+        structure = new Box();
+        currentBox = new Box();
         ul = new ArrayList<ArrayList<String>>();
         uc = new ArrayList<ArrayList<String>>();
         
@@ -310,88 +277,16 @@ public class TargetBean implements Serializable
         
     }
     
-    //Swap Positions
-    public String SwapPositions(int intUserIndex, String strTarget1, String strTarget2)
-    {
-        String Result = "index";
+    //Pull Personal Structure
+    public Box PullStructure(int intUserIndex){
+        Box resultBox = new Box();
         
-        dao.callableSwapTargets(intUserIndex, strTarget1, strTarget2);
+        resultBox = dao.callablePullStructure(intUserIndex);
         
-        return Result;
-    }
-    
-    //Pull Global List
-    public ArrayList<ArrayList<String>> PullGlobalList(LoginBean userBean)
-    {
-        ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
-        ArrayList<String> Sub = new ArrayList<String>();
+        structure = resultBox;
+        currentBox = resultBox;
         
-        resultList = dao.callablePullGlobalList();
-        
-        return resultList;
-    }
-    
-    //Pull Personal List
-    public ArrayList<ArrayList<String>> PullPersonalList(int intUserIndex)
-    {
-        ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
-        
-        resultList = dao.callablePullPersonalList(intUserIndex);
-        
-        return resultList;
-    }
-    
-    //Pull Global Counts
-    public ArrayList<ArrayList<String>> PullGlobalCounts()
-    {
-        ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
-        
-        resultList = dao.callablePullGlobalCounts();
-        
-        return resultList;
-    }
-    
-    //Pull Random Target Pair: Pull 1 from Personal, plus adjacent (non-lock) or global if at ends
-    public ArrayList<ArrayList<String>> PullTargetPair(String strUserIndex)
-    {
-        ArrayList<ArrayList<String>> pairList = new ArrayList<ArrayList<String>>();
-        
-        pairList = dao.callablePullTargetPair(strUserIndex);
-        
-        System.out.println(pairList);
-        
-        while(pairList.size() > 2)
-        {
-            pairList.remove(2);           
-        }
-        
-        if(pairList.size() > 0)
-        {
-            TargetName1 = pairList.get(0).get(0);
-            //TargetRelease1 = pairList.get(0).get(1);
-            TargetURL1 = pairList.get(0).get(1);
-        }
-        else
-        {
-            TargetName1 = "Samara thinks there was an error: maybe refresh the page.";
-            //TargetRelease1 = "";
-            TargetURL1 = "_Samara.png";
-        }
-        
-        if(pairList.size() > 1)
-        {
-            TargetName2 = pairList.get(1).get(0);
-            //TargetRelease2 = pairList.get(1).get(1);
-            TargetURL2 = pairList.get(1).get(1);
-        }
-        else
-        {
-            TargetName2 = "Samara thinks there was an error: maybe refresh the page.";
-            //TargetRelease2 = "";
-            TargetURL2 = "_Samara.png";
-        }
-        
-        return pairList;
+        return resultBox;
     }
     
     //Pull Random Advert Pair
@@ -418,41 +313,5 @@ public class TargetBean implements Serializable
             Advert2     = "_Samara.png";
             AdvertURL2  = "http://www.google.com";
         }
-    }
-    
-    //Add Target
-    public String AddTarget(int intUserIndex)
-    {
-        String result = "Add";
-        ConnInfo FileConnection = new ConnInfo();
-        
-        try{
-            //take celebrity to add and connect to main site
-            FileConnection.UploadToServer(fileTargetToAdd);
-            
-            //massage strURLToAdd as necessary
-            setstrURLToAdd(fileTargetToAdd.getSubmittedFileName());
-
-            dao.callableAddTarget(strTargetToAdd,strValueToAdd,strURLToAdd,intUserIndex);
-        }catch(Exception ex){
-            result = "Index";
-        }
-        
-        return result;
-    }
-    
-    //Add Target Suggestion
-    public String AddTargetSuggestion(int intUserIndex)
-    {
-        String result = "Add";
-        
-        try{
-            dao.callableAddTargetSuggestion(strTargetToSuggest,strValueToSuggest,strURLToSuggest,intUserIndex);
-        }catch(Exception ex){
-            result = "Index";
-        }
-        
-        return result;
-    }
-    
+    }    
 }   

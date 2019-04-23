@@ -1035,13 +1035,11 @@ navlink a:hover
 
 
 /* IDs */
-#idForm
-{
+#idForm{
     
 }
 
-#idTableMain
-{
+#idTableMain{
     height: 125%;
     height: 125vh;
     max-height: 125%;
@@ -1241,6 +1239,8 @@ navlink a:hover
     
     vertical-align: top;
     //display: table;
+    
+    color: #ffffff;
 }
 
 #idTableCompareRowPictures

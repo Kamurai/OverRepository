@@ -21,26 +21,6 @@ public class Custom
         {
             Result += "./Content/Content_index.xhtml";
         }
-        else if(input == 1)
-        {
-            Result += "./Content/Content_BangOver.xhtml";
-        }
-        else if(input == 2)
-        {
-            Result += "./Content/Content_MyList.xhtml";
-        }
-        else if(input == 3)
-        {
-            Result += "./Content/Content_GlobalList.xhtml";
-        }
-        else if(input == 4)
-        {
-            Result += "./Content/Content_Options.xhtml";
-        }
-        else if(input == 5)
-        {
-            Result += "./Content/Content_Add.xhtml";
-        }
         else if(input == 6)
         {
             Result += "./Content/Content_Login.xhtml";
@@ -64,26 +44,6 @@ public class Custom
         if(input <= 0)
         {
             Result += "index";
-        }
-        else if(input == 1)
-        {
-            Result += "BangOver";
-        }
-        else if(input == 2)
-        {
-            Result += "MyList";
-        }
-        else if(input == 3)
-        {
-            Result += "GlobalList";
-        }
-        else if(input == 4)
-        {
-            Result += "Options";
-        }
-        else if(input == 5)
-        {
-            Result += "Add";
         }
         else if(input == 6)
         {

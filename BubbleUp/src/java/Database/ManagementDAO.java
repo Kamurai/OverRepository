@@ -53,51 +53,23 @@ public class ManagementDAO extends DAO{
         
         try{
             openConnection();
-            stmt = getConnect().prepareCall("{call BangOverPullUserList()}");
+            stmt = getConnect().prepareCall("{call BubbleUpPullUserList()}");
             rs = stmt.executeQuery();
             
-            boolean boolWomen = false;
-            boolean boolMen = false;
-            boolean boolTransWomen = false;
-            boolean boolTransMen = false;
             boolean boolLoggedOn = false;
             
             while(rs.next()){
-                if(rs.getInt("Women") == 1){
-                    boolWomen = true;
-                }else{
-                    boolWomen = false;
-                }
-                if(rs.getInt("Men") == 1){
-                    boolMen = true;
-                }else{
-                    boolMen = false;
-                }
-                if(rs.getInt("TransWomen") == 1){
-                    boolTransWomen = true;
-                }else{
-                    boolTransWomen = false;
-                }
-                if(rs.getInt("TransMen") == 1){
-                    boolTransMen = true;
-                }else{
-                    boolTransMen = false;
-                }
-                if(rs.getInt("LoggedOn") == 1){
+                if(rs.getInt("BubbleUpOnline") == 1){
                     boolLoggedOn = true;
                 }else{
                     boolLoggedOn = false;
                 }
                 
                 tempUser = new User(
-                        rs.getInt("UserIndex"), 
+                        rs.getInt("BubbleUpUserIndex"), 
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getInt("AdminLevel"),
-                        boolWomen, 
-                        boolMen, 
-                        boolTransWomen, 
-                        boolTransMen, 
+                        rs.getInt("BubbleUpAdminLevel"), 
                         boolLoggedOn
                 );
                 
@@ -122,19 +94,15 @@ public class ManagementDAO extends DAO{
         
         try{
             openConnection();
-            stmt = getConnect().prepareCall("{call BangOverPullUserList()}");
+            stmt = getConnect().prepareCall("{call BubbleUpPullUserList()}");
             rs = stmt.executeQuery();
             
             while(rs.next())
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("AdminLevel")));
-                sub.add(Integer.toString(rs.getInt("Women")));
-                sub.add(Integer.toString(rs.getInt("Men")));
-                sub.add(Integer.toString(rs.getInt("TransWomen")));
-                sub.add(Integer.toString(rs.getInt("TransMen")));
-                sub.add(Integer.toString(rs.getInt("LoggedOn")));
+                sub.add(Integer.toString(rs.getInt("BubbleUpAdminLevel")));
+                sub.add(Integer.toString(rs.getInt("BubbleUpOnline")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();
@@ -158,7 +126,7 @@ public class ManagementDAO extends DAO{
         
         try{
             openConnection();
-            stmt = getConnect().prepareCall("{call BangOverPullUserCounts()}");
+            stmt = getConnect().prepareCall("{call BubbleUpPullUserCounts()}");
             rs = stmt.executeQuery();
             
             while(rs.next()){

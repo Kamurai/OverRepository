@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Database;
 
-/**
- * @author Kamurai
- */
 public class DbInfo 
 {
     private String driver;
@@ -40,7 +32,7 @@ public class DbInfo
     {
         driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
         url = "jdbc:sqlserver://localhost\\SQLSERVER";
-        dbName = ";DatabaseName=Over";
+        dbName = ";DatabaseName=BubbleUp";
         dbUsername = "SA";
         dbPassword = "yellow23";
     }

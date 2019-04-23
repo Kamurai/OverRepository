@@ -203,7 +203,7 @@ public class LoginDAO extends DAO{
             //open connection
             openConnection();
             
-            stmt = getConnect().prepareCall("{call BoardOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call BoardOverSignUp(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             stmt.setString(1, username);
             stmt.setString(2, email);
             stmt.setString(3, password);

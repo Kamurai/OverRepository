@@ -147,5 +147,4 @@ public class ManagementBean implements Serializable
         
         return resultList;
     }
-    
 }   

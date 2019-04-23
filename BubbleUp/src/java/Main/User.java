@@ -47,43 +47,6 @@ public class User
         AdminLevel = input;
     }
     
-    private boolean Women;
-    public boolean getWomen()
-    {
-        return Women;
-    }
-    public void setWomen(boolean input)
-    {
-        Women = input;
-    }
-    private boolean Men;
-    public boolean getMen()
-    {
-        return Men;
-    }
-    public void setMen(boolean input)
-    {
-        Men = input;
-    }
-    private boolean TransWomen;
-    public boolean getTransWomen()
-    {
-        return TransWomen;
-    }
-    public void setTransWomen(boolean input)
-    {
-        TransWomen = input;
-    }
-    private boolean TransMen;
-    public boolean getTransMen()
-    {
-        return TransMen;
-    }
-    public void setTransMen(boolean input)
-    {
-        TransMen = input;
-    }
-    
     private boolean LoggedOn;
     public boolean getLoggedOn()
     {
@@ -95,20 +58,14 @@ public class User
     }
     
     
-    public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, boolean boolWomen, boolean boolMen, boolean boolTransWomen, boolean boolTransMen, boolean boolLoggedOn)
+    public User(int intUserIndex, String strUsername, String strEmail, int intAdminLevel, boolean boolLoggedOn)
     {
         UserIndex = intUserIndex;
         Username = strUsername;
         Email = strEmail;
         AdminLevel = intAdminLevel;
         
-        Women = boolWomen;
-        Men = boolMen;
-        TransWomen = boolTransWomen;
-        TransMen = boolTransMen;
-        
         LoggedOn = boolLoggedOn;
-
     }
     
     public User(User newUser)
@@ -118,13 +75,6 @@ public class User
         Email = newUser.Email;
         AdminLevel = newUser.AdminLevel;
         
-        Women = newUser.Women;
-        Men = newUser.Men;
-        TransWomen = newUser.TransWomen;
-        TransMen = newUser.TransMen;
-        
         LoggedOn = newUser.LoggedOn;
-
-    }
-    
+    }    
 }

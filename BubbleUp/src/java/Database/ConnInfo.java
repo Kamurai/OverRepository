@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Database;
 
 import java.io.InputStream;
@@ -20,7 +15,7 @@ public class ConnInfo
     
     public ConnInfo()
     {
-        uploadLocation = "C:/House/Programming/Netbeans/OverRepository/BangOver/web/Pictures/Targets/";
+        uploadLocation = "C:/House/Programming/Netbeans/OverRepository/BubbleUp/web/Pictures/Targets/";
     }
     
     public boolean UploadToServer(Part file) 

@@ -412,5 +412,17 @@ public class LoginBean implements Serializable
         return result;
     }
     
-    
+    //Determine if current user is authorized to edit target user
+    public boolean isAuthorized(User rowUser)
+    {
+        boolean result = false;
+        
+        if(CurrentUser.getAdminLevel() >= rowUser.getAdminLevel()){
+            result = true;
+        }else{
+            result = false;
+        }
+        
+        return result;
+    }
 }

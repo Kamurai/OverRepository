@@ -21,6 +21,7 @@
                         <td>Basic Users</td>
                         <td>Managers</td>
                         <td>Administrators</td>
+                        <td>Masters</td>
                         <td>Into Women</td>
                         <td>Into Men</td>
                         <td>Into Trans Women</td>
@@ -65,7 +66,8 @@
                     </h:column>
                     <h:column>
                         <f:facet id="idTableManagementUsersColHeaderAdminLevel" name = "header">Admin Level</f:facet>
-                        <h:selectOneMenu value="#{user.adminLevel}" onchange="submit()" valueChangeListener="#{ManagementBean.UpdateUser}" immediate="true" >
+                        <h:selectOneMenu value="#{user.adminLevel}" onchange="submit()" valueChangeListener="#{ManagementBean.UpdateUser}" immediate="true" disabled="#{LoginBean.isAuthorized(user)}">
+                            <f:selectItem itemValue="3" itemLabel="Master" />
                             <f:selectItem itemValue="2" itemLabel="Admin" />
                             <f:selectItem itemValue="1" itemLabel="Manager"/>
                             <f:selectItem itemValue="0" itemLabel="Basic"/>

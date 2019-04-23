@@ -1,4 +1,4 @@
---drop table [HTKB].dbo.Users, [Over].dbo.Users, [Over].dbo.BangOverUsers, [Over].dbo.BoardOverUsers, [Over].dbo.PlayOverUsers, [Over].dbo.ShowOverUsers, [Over].dbo.WatchOverUsers, [BubbleUp].dbo.Users, [Shout].dbo.Users, [Mist].dbo.Users;
+--drop table [HTKB].dbo.Users, [Over].dbo.Users, [Over].dbo.BangOverUsers, [Over].dbo.BoardOverUsers, [Over].dbo.PlayOverUsers, [Over].dbo.ShowOverUsers, [Over].dbo.WatchOverUsers, [BubbleUp].dbo.Users, [BubbleUp].dbo.Boxes, [BubbleUp].dbo.Targets, [Shout].dbo.Users, [Mist].dbo.Users;
 
 create table [HTKB].dbo.Users (
 	HTKBUserIndex	bigint IDENTITY(0,1) PRIMARY KEY, 
@@ -168,6 +168,37 @@ create table [BubbleUp].dbo.Users (
 	HTKBUserIndex		bigint not null, 
 	BubbleUpAdminLevel	int not null,
 	BubbleUpOnline		bit not null
+);
+
+create table [BubbleUp].dbo.Adverts (
+	AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, 
+	Name varchar(50) not null, 
+	Picture varchar(50) not null, 
+	Link varchar(50) not null 
+);
+
+insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
+insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');
+insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 3', 'RoosterTeeth3.jpg', 'http://www.RoosterTeeth.com');
+insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 4', 'RoosterTeeth4.jpg', 'http://www.RoosterTeeth.com');
+insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 5', 'RoosterTeeth5.jpg', 'http://www.RoosterTeeth.com');
+insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 6', 'RoosterTeeth6.jpg', 'http://www.RoosterTeeth.com');
+
+create table [BubbleUp].dbo.Boxes (
+	BoxIndex			bigint IDENTITY(0,1) PRIMARY KEY, 
+	BubbleUpUserIndex	bigint not null, 
+	Direction			varchar(max) NOT NULL CHECK (Direction IN('Horizontal', 'Vertical')),
+	Label				varchar(max),
+	ParentBoxIndex		bigint not null,
+	OrderRank			int not null
+);
+
+create table [BubbleUp].dbo.Targets (
+	TargetIndex			bigint IDENTITY(0,1) PRIMARY KEY, 
+	BubbleUpUserIndex	bigint not null, 
+	Label				varchar(max),
+	ParentBoxIndex		bigint not null,
+	OrderRank			int not null
 );
 
 create table [Shout].dbo.Users (

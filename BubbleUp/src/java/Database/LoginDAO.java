@@ -27,7 +27,7 @@ public class LoginDAO extends DAO{
         try{
             openConnection();
         
-            stmt = connect.prepareCall("{call BangOverGetValidUser(?,?)}");
+            stmt = connect.prepareCall("{call BubbleUpGetValidUser(?,?)}");
             stmt.setString(1, strUsername);
             stmt.setString(2, strPassword);
             rs = stmt.executeQuery();
@@ -35,15 +35,11 @@ public class LoginDAO extends DAO{
             rs.next();
             
             returnUser = new User(
-                rs.getInt("UserIndex"), 
+                rs.getInt("BubbleUpUserIndex"), 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getInt("AdminLevel"),
-                rs.getBoolean("Women"), 
-                rs.getBoolean("Men"), 
-                rs.getBoolean("TransWomen"), 
-                rs.getBoolean("TransMen"), 
-                rs.getBoolean("LoggedOn") 
+                rs.getInt("BubbleUpAdminLevel"),
+                rs.getBoolean("BubbleUpOnline") 
             );
             
         }
@@ -65,7 +61,7 @@ public class LoginDAO extends DAO{
         try{
             openConnection();
         
-            stmt = getConnect().prepareCall("{call BangOverSetOnlineStatus(?,?)}");
+            stmt = getConnect().prepareCall("{call BubbleUpSetOnlineStatus(?,?)}");
             stmt.setInt(1, 1);
             stmt.setString(2, user);
             stmt.executeUpdate();
@@ -89,7 +85,7 @@ public class LoginDAO extends DAO{
         try{
             openConnection();
         
-            stmt = getConnect().prepareCall("{call BangOverSetOnlineStatus(?,?)}");
+            stmt = getConnect().prepareCall("{call BubbleUpSetOnlineStatus(?,?)}");
             stmt.setInt(1, 0);
             stmt.setString(2, user);
             stmt.executeUpdate();
@@ -105,47 +101,9 @@ public class LoginDAO extends DAO{
         return result;
     }
     
-    public void callableUpdateOptions(User targetUser)
-    {
-        CallableStatement stmt = null;
-        ResultSet rs;
-        
-        //if all are false
-        if( !targetUser.getWomen() && 
-            !targetUser.getMen() && 
-            !targetUser.getTransWomen() && 
-            !targetUser.getTransMen())
-        {
-            //then set default to true
-            targetUser.setWomen(true);
-        }
-        
-        //Update preferences to match check boxes (local variables)
-        try
-        {
-            openConnection();
-        
-            stmt = getConnect().prepareCall("{call BangOverUpdateOptions(?,?,?,?,?)}");
-            stmt.setInt(1, targetUser.getUserIndex());
-            stmt.setBoolean(2, targetUser.getWomen());
-            stmt.setBoolean(3, targetUser.getMen());
-            stmt.setBoolean(4, targetUser.getTransWomen());
-            stmt.setBoolean(5, targetUser.getTransMen());
-            rs = stmt.executeQuery();
-        }catch(Exception e){
-            e.printStackTrace();
-        }finally{
-            closeConnection();
-        }
-    }
-    
     public boolean callableSignUp(String username, 
         String email,
-        String password,
-        boolean boolWomen,
-        boolean boolMen,
-        boolean boolTransWomen,
-        boolean boolTransMen
+        String password
     )
     {
         CallableStatement stmt = null;
@@ -157,14 +115,10 @@ public class LoginDAO extends DAO{
             //open connection
             openConnection();
             
-            stmt = getConnect().prepareCall("{call BangOverUpdateOptions(?,?,?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call BubbleUpSignUp(?,?,?)}");
             stmt.setString(1, username);
             stmt.setString(2, email);
             stmt.setString(3, password);
-            stmt.setBoolean(4, boolWomen);
-            stmt.setBoolean(5, boolMen);
-            stmt.setBoolean(6, boolTransWomen);
-            stmt.setBoolean(7, boolTransMen);
             rs = stmt.executeQuery();
             
             result = true;
