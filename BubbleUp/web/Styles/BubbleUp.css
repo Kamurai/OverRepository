@@ -1,0 +1,27 @@
+/* Elements */
+/* Classes */
+.classHorizontal{
+    display: block;
+}
+
+.classVertical{
+    display: inline-block;
+}
+
+.classBox{
+    border: 1px solid #f702f7;
+    height: auto !important;
+    vertical-align: top;
+}
+
+.classTarget{
+    border: 1px solid #b702b7;
+    vertical-align: top;
+}
+
+/* IDs */
+#idMainStructure{
+    height: 100% !important;
+    border: 1px solid #FE0101;
+    color: #ffffff;
+}

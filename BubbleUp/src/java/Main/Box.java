@@ -78,22 +78,79 @@ public class Box {
             if(tempBoxes.get(x).getParentIndex() == boxIndex){
                 getBoxList().add(tempBoxes.get(x));
                 tempBoxes.remove(x);
+                x--;
                 
                 //find children of last added child
                 getBoxList().get(getBoxList().size()-1).addBoxesAndTargets(tempBoxes, tempTargets);
             }
         }
         
-        for( int x = 0; x < tempTargets.size(); x++){
+        for( int y = 0; y < tempTargets.size(); y++){
             //if a child of this box
-            if(tempTargets.get(x).getParentIndex() == boxIndex){
-                getTargetList().add(tempTargets.get(x));
-                tempTargets.remove(x);
+            if(tempTargets.get(y).getParentIndex() == boxIndex){
+                getTargetList().add(tempTargets.get(y));
+                tempTargets.remove(y);
+                y--;
             }
         }
     }
     
+    public String printToHTML(){
+        String resultString = "";
+        
+        resultString = "<div id='idMainStructure'>";
+        
+        for(int x = 0; x < boxList.size(); x++){
+            resultString += "<div class='";
+            if(getDirection() == "Horizontal"){
+                resultString += "classHorizontal ";
+            }else{
+                resultString += "classVertical ";
+            }            
+            resultString += "classBox'>";
+            resultString += boxList.get(x).getLabel();
+            resultString += printToHTML(boxList.get(x));
+                        
+            resultString += "</div>";
+        }   
+        
+        for(int x = 0; x < targetList.size(); x++){
+            resultString += "<div class='classTarget'>";
+            resultString += targetList.get(x).getLabel();
+                        
+            resultString += "</div>";
+        }
+        
+        resultString += "</div>";
+        
+        return resultString;
+    }
     
-    
-    
+    private String printToHTML(Box box){
+        String resultString = "";
+        
+        for(int x = 0; x < box.boxList.size(); x++){
+            resultString += "<div class='";
+            if(box.boxList.get(x).getDirection().equals("Horizontal")){
+                resultString += "classHorizontal ";
+            }else{
+                resultString += "classVertical ";
+            }            
+            resultString += "classBox'>";
+            resultString += box.boxList.get(x).getLabel();
+            resultString += printToHTML(box.boxList.get(x));
+                        
+            resultString += "</div>";
+        }   
+        
+        for(int x = 0; x < box.targetList.size(); x++){
+            resultString += "<div class='classTarget'>";
+            resultString += box.targetList.get(x).getLabel();
+                        
+            resultString += "</div>";
+        }
+        
+        
+        return resultString;
+    }
 }
