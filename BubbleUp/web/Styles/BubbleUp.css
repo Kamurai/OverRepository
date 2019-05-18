@@ -1,4 +1,7 @@
 /* Elements */
+body{
+    color: #ffffff;
+}
 /* Classes */
 .classHorizontal{
     display: block;
@@ -9,19 +12,122 @@
 }
 
 .classBox{
-    border: 1px solid #f702f7;
-    height: auto !important;
+    background: #f44242;
+    width: 100% !important;
+    height: 100% !important;
     vertical-align: top;
+    text-align: center;
 }
 
 .classTarget{
-    border: 1px solid #b702b7;
+    background: #b702b7;
+    width:  100%;
     vertical-align: top;
+    text-align: center;
+}
+
+.classBoxLabelSection{
+    /*background: #68f442;*/
+    width:  100%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classBoxLabelRow{
+    /*background: #f44242;*/
+    width: 100%;
+    height: 3%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classBoxLabelHeader{
+    background: #00ffff;
+    width:  100%;
+}
+
+.classBoxSubRow{
+    /*background: #41f45c;*/
+    width: 100%;
+    height: 97%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classTargetLabelRow{
+    height: 3%;
+    width:  100%;
+}
+
+.classTargetLabel{
+    /*background: #00edff;*/
+    width:  100%;
+}
+
+/* Div Classes */
+.classDivHorizontal{
+    display: block;
+}
+
+.classDivVertical{
+    display: inline-block;
+}
+
+.classDivBox{
+    background: #f44242;
+    height: 100% !important;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classDivTarget{
+    background: #b702b7;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classDivBoxLabelSection{
+    /*background: #68f442;*/
+    vertical-align: top;
+    text-align: center;
+}
+
+.classDivBoxLabelRow{
+    /*background: #f44242;*/
+    height: 3%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classDivBoxLabelHeader{
+    background: #00ffff;
+}
+
+.classDivBoxSubRow{
+    /*background: #41f45c;*/
+    height: 97%;
+    vertical-align: top;
+    text-align: center;
+}
+
+.classDivTargetLabelRow{
+    height: 3%;
+}
+
+.classDivTargetLabel{
+    /*background: #00edff;*/
 }
 
 /* IDs */
 #idMainStructure{
+    background: #fe00ed;
+    width:  100%;
     height: 100% !important;
-    border: 1px solid #FE0101;
+    color: #ffffff;
+}
+
+#idDivMainStructure{
+    background: #fe00ed;
+    height: 100% !important;
     color: #ffffff;
 }

@@ -53,6 +53,13 @@ public class Box {
     public void setTargetList(List<Target> targetList){
         this.targetList = targetList;
     }
+    String newValue = "";
+    public String getNewValue(){
+        return newValue;
+    }
+    public void setNewValue(String newValue){
+        this.newValue = newValue;
+    }
     
     public Box(){}
     
@@ -98,30 +105,38 @@ public class Box {
     public String printToHTML(){
         String resultString = "";
         
-        resultString = "<div id='idMainStructure'>";
-        
-        for(int x = 0; x < boxList.size(); x++){
-            resultString += "<div class='";
-            if(getDirection() == "Horizontal"){
-                resultString += "classHorizontal ";
-            }else{
-                resultString += "classVertical ";
-            }            
-            resultString += "classBox'>";
-            resultString += boxList.get(x).getLabel();
-            resultString += printToHTML(boxList.get(x));
-                        
-            resultString += "</div>";
-        }   
-        
-        for(int x = 0; x < targetList.size(); x++){
-            resultString += "<div class='classTarget'>";
-            resultString += targetList.get(x).getLabel();
-                        
-            resultString += "</div>";
-        }
-        
-        resultString += "</div>";
+        resultString = "<table id='idMainStructure' class='classBox'>";
+            resultString += "<tr class='classBoxLabelRow'>";
+                resultString += "<td class='classBoxLabelHeader'>";
+                    resultString += "Bubble Up! Dynamic Table Test";
+                resultString += "</td>";
+            resultString += "</tr>";
+            
+            resultString += "<tr class='classBoxSubRow'>";
+                for(int x = 0; x < boxList.size(); x++){
+                    if(getDirection() == "Horizontal"){
+                        resultString += "<tr><td>";
+                    }else{
+                        resultString += "<td>";
+                    }            
+                        resultString += printToHTML(boxList.get(x));
+                    if(getDirection() == "Horizontal"){
+                        resultString += "</td></tr>";
+                    }else{
+                        resultString += "</td>";
+                    }            
+                }
+                resultString += "<td>";
+                    resultString += "<table class='classBoxLabelSection'>";
+                        for(int y = 0; y < targetList.size(); y++){
+                            resultString += "<tr><td class='classTarget'>";
+                                resultString += targetList.get(y).getLabel();
+                            resultString += "</td></tr>";
+                        }
+                    resultString += "</table>";
+                resultString += "</td>";
+            resultString += "</tr>";
+        resultString += "</table>";
         
         return resultString;
     }
@@ -129,27 +144,104 @@ public class Box {
     private String printToHTML(Box box){
         String resultString = "";
         
-        for(int x = 0; x < box.boxList.size(); x++){
-            resultString += "<div class='";
-            if(box.boxList.get(x).getDirection().equals("Horizontal")){
-                resultString += "classHorizontal ";
-            }else{
-                resultString += "classVertical ";
-            }            
-            resultString += "classBox'>";
-            resultString += box.boxList.get(x).getLabel();
-            resultString += printToHTML(box.boxList.get(x));
-                        
-            resultString += "</div>";
-        }   
+        resultString = "<table class='classBox'>";
+            resultString += "<tr class='classBoxLabelRow'>";
+                resultString += "<td class='classBoxLabelHeader'>";
+                    resultString += box.getLabel();
+                resultString += "</td>";
+            resultString += "</tr>";
+            resultString += "<tr class='classBoxSubRow'>";
+                for(int x = 0; x < box.boxList.size(); x++){
+                    if(getDirection() == "Horizontal"){
+                        resultString += "<tr><td>";
+                    }else{
+                        resultString += "<td>";
+                    }            
+                        resultString += printToHTML(box.boxList.get(x));
+                    if(getDirection() == "Horizontal"){
+                        resultString += "</td></tr>";
+                    }else{
+                        resultString += "</td>";
+                    }            
+                }
+                resultString += "<td>";
+                    resultString += "<table class='classBoxLabelSection'>";
+                        for(int y = 0; y < box.targetList.size(); y++){
+                            resultString += "<tr><td class='classTarget'>";
+                                resultString += box.targetList.get(y).getLabel();
+                            resultString += "</td></tr>";
+                        }
+                    resultString += "</table>";
+                resultString += "</td>";
+            resultString += "</tr>";
+        resultString += "</table>";
         
-        for(int x = 0; x < box.targetList.size(); x++){
-            resultString += "<div class='classTarget'>";
-            resultString += box.targetList.get(x).getLabel();
-                        
-            resultString += "</div>";
-        }
+        return resultString;
+    }
+    
+    public String printToHTML1(){
+        String resultString = "";
         
+        resultString = "<div id='idDivMainStructure' class='classDivBox'>";
+            resultString += "<div class='classDivBoxLabelRow'>";
+                resultString += "<div class='classDivBoxLabelHeader'>";
+                    resultString += "Bubble Up! Dynamic Div Test";
+                resultString += "</div>";
+            resultString += "</div>";
+            
+            resultString += "<div class='classDivBoxSubRow'>";
+                for(int x = 0; x < boxList.size(); x++){
+                    resultString += "<div class='";
+                    if(getDirection() == "Horizontal"){
+                        resultString += "classDivHorizontal ";
+                    }else{
+                        resultString += "classDivVertical ";
+                    }            
+                    resultString += "classDivBox'>";
+                        resultString += printToHTML1(boxList.get(x));
+                    resultString += "</div>";
+                }   
+
+                for(int x = 0; x < targetList.size(); x++){
+                    resultString += "<div class='classDivTarget'>";
+                        resultString += targetList.get(x).getLabel();
+                    resultString += "</div>";
+                }
+            resultString += "</div>";
+        resultString += "</div>";
+        
+        return resultString;
+    }
+    
+    private String printToHTML1(Box box){
+        String resultString = "";
+        
+        resultString = "<div class='classDivBox'>";
+            resultString += "<div class='classDivBoxLabelRow'>";
+                resultString += "<div class='classDivBoxLabelHeader'>";
+                    resultString += box.getLabel();
+                resultString += "</div>";
+            resultString += "</div>";
+            resultString += "<div class='classDivBoxSubRow'>";
+                for(int x = 0; x < box.boxList.size(); x++){
+                    resultString += "<div class='";
+                    if(box.boxList.get(x).getDirection().equals("Horizontal")){
+                        resultString += "classDivHorizontal ";
+                    }else{
+                        resultString += "classDivVertical ";
+                    }            
+                    resultString += "classDivBox'>";
+                        resultString += printToHTML1(box.boxList.get(x));
+                    resultString += "</div>";
+                }   
+
+                for(int x = 0; x < box.targetList.size(); x++){
+                    resultString += "<div class='classDivTarget'>";
+                        resultString += box.targetList.get(x).getLabel();
+                    resultString += "</div>";
+                }
+            resultString += "</div>";
+        resultString += "</div>";
         
         return resultString;
     }
