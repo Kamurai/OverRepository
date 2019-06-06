@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/web/Content/Content_index.xhtml</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/src/java/Database/DAO.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/src/java/Bean/ManagementBean.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/src/java/Database/ManagementDAO.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/web/Content/Content_Management.xhtml</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/src/java/Bean/TargetBean.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BangOver/src/java/Database/TargetDAO.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

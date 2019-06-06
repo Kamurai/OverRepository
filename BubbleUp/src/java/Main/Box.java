@@ -61,6 +61,14 @@ public class Box {
         this.newValue = newValue;
     }
     
+    public boolean isDirectionHorizontal(){
+        return direction.equals("Horizontal");
+    }
+    
+    public boolean isDirectionVertical(){
+        return direction.equals("Vertical");
+    }
+    
     public Box(){}
     
     public Box(
@@ -113,19 +121,26 @@ public class Box {
             resultString += "</tr>";
             
             resultString += "<tr class='classBoxSubRow'>";
-                for(int x = 0; x < boxList.size(); x++){
-                    if(getDirection() == "Horizontal"){
-                        resultString += "<tr><td>";
-                    }else{
-                        resultString += "<td>";
-                    }            
-                        resultString += printToHTML(boxList.get(x));
-                    if(getDirection() == "Horizontal"){
-                        resultString += "</td></tr>";
-                    }else{
-                        resultString += "</td>";
-                    }            
-                }
+                
+            
+            
+            
+            for(int x = 0; x < boxList.size(); x++){
+                if(getDirection() == "Horizontal"){
+                    resultString += "<tr><td>";
+                }else{
+                    resultString += "<td>";
+                }            
+                    resultString += printToHTML(boxList.get(x));
+                if(getDirection() == "Horizontal"){
+                    resultString += "</td></tr>";
+                }else{
+                    resultString += "</td>";
+                }            
+            }
+            
+            
+            
                 resultString += "<td>";
                     resultString += "<table class='classBoxLabelSection'>";
                         for(int y = 0; y < targetList.size(); y++){

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    
+    Test 1:<br/>
+    <c:forEach var = "i" begin = "0" end = "#{TargetBean.PullStructure(0).boxList.size()-1}">
+        Result 1!<br/>
+    </c:forEach>
+    
+    #{TargetBean}<br/>            
+    #{TargetBean.structure.boxList}<br/>
+    #{TargetBean.structure.getBoxList()}<br/>
+    #{TargetBean.structure.boxList.get(0)}<br/>
+    #{TargetBean.structure.boxList.size()}<br/>    
+    <br/><br/>
+    
+    Static:<br/>
+    <c:forEach var = "i" begin = "0" end = "4">
+        #{i}: #{TargetBean.structure.boxList.get(i)}<br/>
+    </c:forEach>
+    Test 2:<br/>
+    <c:forEach var = "i" begin = "1" end = "#{TargetBean.structure.boxList.size()-1}">
+        Result 2!<br/>
+    </c:forEach>
+    Test 3:<br/>
+    <c:forEach var = "i" items = "#{TargetBean.structure.getBoxList()}">
+        Result 3!<br/>
+    </c:forEach>
+    Test 4:<br/>
+    <c:forEach var = "i" begin = "1" end = "#{TargetBean.structure.getBoxList().size()-1}">
+        Result 4!<br/>
+    </c:forEach>
+    Test 5:<br/>
+    <c:forEach var = "i" begin = "1" end = "${TargetBean.structure.boxList.size()-1}">
+        Result 5!<br/>
+    </c:forEach>
+    Test 6:<br/>
+    <c:forEach var = "i" items = "${TargetBean.structure.getBoxList()}">
+        Result 6!<br/>
+    </c:forEach>
+    <c:forEach var = "i" begin = "1" end = "${TargetBean.structure.getBoxList().size()-1}">
+        Test6<br/>
+    </c:forEach>
+    Test 7:<br/>
+    <c:forEach var = "i" begin = "0" end = "${TargetBean.structure.boxList.size()-1}">
+        #{TargetBean.structure.boxList.get(i)}<br/>
+    </c:forEach>
+</html>
+
