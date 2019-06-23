@@ -8,13 +8,13 @@
     <c:choose>
         <c:when test="#{LoginBean.currentUser.loggedOn}">
             <title>
-                Bang Over!
+                Bubble Up!
             </title>
             <h2>
                 The User List!
             </h2>
             <p id="idCenterContent">
-                This is a list of the users on Bang Over.<br/>
+                This is a list of the users on Bubble Up.<br/>
                 <table id="idTableManagementStats">
                     <!--User Count Headers -->
                     <tr>
@@ -22,10 +22,6 @@
                         <td>Managers</td>
                         <td>Administrators</td>
                         <td>Masters</td>
-                        <td>Into Women</td>
-                        <td>Into Men</td>
-                        <td>Into Trans Women</td>
-                        <td>Into Trans Men</td>
                         <td>Users Online</td>
                     </tr>
                     <!--User Counts -->
@@ -46,10 +42,6 @@
                     classTableManagementUsersColUsername,
                     classTableManagementUsersColEmail,
                     classTableManagementUsersColAdminLevel,
-                    classTableManagementUsersColWomen,
-                    classTableManagementUsersColMen,
-                    classTableManagementUsersColTransWomen,
-                    classTableManagementUsersColTransMen,
                     classTableManagementUsersColLoggedOn            
                     ">
                     <h:column> 
@@ -66,48 +58,12 @@
                     </h:column>
                     <h:column>
                         <f:facet id="idTableManagementUsersColHeaderAdminLevel" name = "header">Admin Level</f:facet>
-                        <h:selectOneMenu value="#{user.adminLevel}" onchange="submit()" valueChangeListener="#{ManagementBean.UpdateUser}" immediate="true" disabled="#{LoginBean.isAuthorized(user)}">
+                        <h:selectOneMenu value="#{user.adminLevel}" onchange="submit()" valueChangeListener="#{ManagementBean.UpdateUser}" immediate="true" disabled="#{!LoginBean.isAuthorized(user)}">
                             <f:selectItem itemValue="3" itemLabel="Master" />
                             <f:selectItem itemValue="2" itemLabel="Admin" />
                             <f:selectItem itemValue="1" itemLabel="Manager"/>
                             <f:selectItem itemValue="0" itemLabel="Basic"/>
                         </h:selectOneMenu>
-                    </h:column>
-                    <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderWomen" name = "header">Into Women</f:facet>
-                        <ui:fragment rendered="#{user.women}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.women}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
-                    </h:column>
-                    <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderMen" name = "header">Into Men</f:facet>
-                        <ui:fragment rendered="#{user.men}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.men}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
-                    </h:column>
-                    <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderTransWomen" name = "header">Into Trans Women</f:facet>
-                        <ui:fragment rendered="#{user.transWomen}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.transWomen}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
-                    </h:column>
-                    <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderTransMen" name = "header">Into Trans Men</f:facet>
-                        <ui:fragment rendered="#{user.transMen}">
-                            <h:outputText value="Yes" />
-                        </ui:fragment>
-                        <ui:fragment rendered="#{!user.transMen}">
-                            <h:outputText value="No" />
-                        </ui:fragment>
                     </h:column>
                     <h:column>
                         <f:facet id="idTableManagementUsersColHeaderLoggedOn" name = "header">Online</f:facet>

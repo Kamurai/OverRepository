@@ -417,7 +417,7 @@ public class LoginBean implements Serializable
     {
         boolean result = false;
         
-        if(CurrentUser.getAdminLevel() >= rowUser.getAdminLevel()){
+        if(CurrentUser.getAdminLevel() >= rowUser.getAdminLevel() && CurrentUser.getAdminLevel() != 0){
             result = true;
         }else{
             result = false;

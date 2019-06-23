@@ -8,11 +8,7 @@
     <c:choose>
         <c:when test="#{LoginBean.currentUser.loggedOn}">
             <a href="http://htkb.dyndns.org:8080/JSFApplication/Index.xhtml">HTKB</a>
-            <a href="#{MainBean.GetPath()}index.xhtml">Compare</a>
-            <a href="#{MainBean.GetPath()}MyList.xhtml">My List</a>
-            <a href="#{MainBean.GetPath()}GlobalList.xhtml">Global List</a>
-            <a href="#{MainBean.GetPath()}Add.xhtml">Add</a>
-            <a href="#{MainBean.GetPath()}Options.xhtml">Options</a>
+            <a href="#{MainBean.GetPath()}index.xhtml">My Structure</a>
             <c:when test="#{LoginBean.admin} > 0">
                 <a href="#{MainBean.GetPath()}Management.xhtml">Management</a>
             </c:when>
