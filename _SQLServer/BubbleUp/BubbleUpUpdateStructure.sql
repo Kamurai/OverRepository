@@ -51,7 +51,13 @@ BEGIN
 		SET @trackerLabels	= @trackerLabels + 1;
 		SET @startLabels	= @trackerLabels;
 
-		UPDATE Boxes SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @strId;		
+		IF(
+		(LEN(@strLabel) > 0) AND
+		(LEN(@strId) > 0)
+		)
+		BEGIN
+			UPDATE Boxes SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @strId;
+		END
 	END
 
 	SET @trackerIds		= 0;
@@ -94,7 +100,13 @@ BEGIN
 		SET @trackerLabels	= @trackerLabels + 1;
 		SET @startLabels	= @trackerLabels;
 
-		UPDATE Targets SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @strId;
+		IF(
+		(LEN(@strLabel) > 0) AND
+		(LEN(@strId) > 0)
+		)
+		BEGIN
+			UPDATE Targets SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @strId;
+		END
 	END
 	
 END
