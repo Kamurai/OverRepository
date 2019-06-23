@@ -85,6 +85,22 @@ public class Box {
         this.orderRank = orderRank;
     }
     
+    public Box(Box inBox){
+        this.boxIndex       = inBox.boxIndex;
+        this.direction      = inBox.direction;
+        this.label          = inBox.label;
+        this.parentIndex    = inBox.parentIndex;
+        this.orderRank      = inBox.orderRank;
+        
+        for(int x = 0; x < inBox.boxList.size(); x++){
+            this.boxList.add(new Box(inBox.boxList.get(x)));
+        }
+        
+        for(int y = 0; y < inBox.targetList.size(); y++){
+            this.targetList.add(inBox.targetList.get(y));
+        }
+    }
+    
     public void addBoxesAndTargets(List<Box> tempBoxes, List<Target> tempTargets){
         Box resultBox = new Box();
         

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.ArrayList;
 import javax.servlet.http.Part;
 import Main.Box;
+import javax.faces.bean.SessionScoped;
 
 @ManagedBean(name="TargetBean")
 @ViewScoped
@@ -105,9 +106,9 @@ public class TargetBean implements Serializable
     {
         return structure;
     }
-    public void setStructure(LoginBean userBean) //set Personal List
+    public void setStructure(Box structure) //set Personal List
     {
-        structure = PullStructure(userBean.getCurrentUser().getUserIndex());
+        this.structure = structure;
     }
     private ArrayList<ArrayList<String>> ul = new ArrayList<ArrayList<String>>();
     public ArrayList<ArrayList<String>> getul()
@@ -228,13 +229,7 @@ public class TargetBean implements Serializable
     {
         strValueToSuggest = input;
     }
-    private Box currentBox;
-    public Box getCurrentBox(){
-        return currentBox;
-    }
-    public void setCurrentBox(Box input){
-        currentBox = input;
-    }
+    private Box originalStructure;
     
     
     public TargetBean()
@@ -253,7 +248,7 @@ public class TargetBean implements Serializable
         TargetName2 = new String();
         
         structure = new Box();
-        currentBox = new Box();
+        originalStructure = new Box();
         ul = new ArrayList<ArrayList<String>>();
         uc = new ArrayList<ArrayList<String>>();
         
@@ -283,10 +278,23 @@ public class TargetBean implements Serializable
         
         resultBox = dao.callablePullStructure(intUserIndex);
         
-        structure = resultBox;
-        currentBox = resultBox;
+        originalStructure = new Box(resultBox);
+        structure = new Box(resultBox);
         
         return resultBox;
+    }
+    
+    //Update Personal Structure
+    public String UpdateStructure(int intUserIndex){
+        String result = "Index";
+        
+//        System.out.println("Top: " + originalStructure.getLabel() + " vs " + structure.getLabel());
+        
+        System.out.println("Structures: " + originalStructure.boxList + " vs " + structure.boxList);
+        
+        dao.callableUpdateStructure(intUserIndex, structure, originalStructure);
+        
+        return result;
     }
     
     //Pull Random Advert Pair

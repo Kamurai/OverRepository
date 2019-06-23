@@ -10,12 +10,88 @@
             <title>
                 Bubble Up!
             </title>
-            <ui:include src="Recursive_Box.xhtml">
-                <ui:param name="box" value="#{TargetBean.PullStructure(LoginBean.currentUser.userIndex)}" />
-            </ui:include>
+            <c:forEach var = "x" items = "#{TargetBean.PullStructure(LoginBean.currentUser.userIndex).boxList}"/>
             
-            <h:outputText value="#{ TargetBean.structure.printToHTML() }" escape="false"/>
-            <h:outputText value="#{ TargetBean.structure.printToHTML1() }" escape="false"/>
+            <h:commandButton  value ="Update Structure" action='#{TargetBean.UpdateStructure(LoginBean.currentUser.userIndex)}'/>
+            <br/>
+            Bubble Up!  Recursive Table Test:
+            <table id='idMainStructure' class='classBox'>
+                <tr class='classBoxLabelRow'>
+                    <td class='classBoxLabelHeader'>
+                        <h:inputText class='classBoxInput' value="#{TargetBean.getStructure().label}"/>
+                    </td>
+                </tr>
+                <tr class='classBoxSubRow'>
+                <c:forEach var = "x" items = "#{TargetBean.getStructure().boxList}">
+                <c:if test="#{x.direction == 'Horizontal'}">
+                    <tr>
+                        <td>
+                            <ui:include src="Recursive_Box.xhtml">
+                                <ui:param name="box" value="#{x}" />
+                            </ui:include>
+                        </td>
+                    </tr>
+                </c:if>
+                <c:if test="#{x.direction == 'Vertical'}">
+                    <td>
+                        <ui:include src="Recursive_Box.xhtml">
+                            <ui:param name="box" value="#{x}" />
+                        </ui:include>
+                    </td>
+                </c:if>
+                </c:forEach>
+                    <td>
+                        <table class='classBoxLabelSection'>
+                            <c:forEach var = "y" items = "#{TargetBean.getStructure().targetList}">
+                                <tr>
+                                    <td class='classTarget'>
+                                        <h:inputText class='classTargetInput' value="#{y.label}"/>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                    </td>
+                </tr>        
+            </table>
+            
+<!--            <br/>
+            Bubble Up!  Recursive Div Test:
+            <div id='idDivMainStructure' class='classDivBox'>
+                <div class='classDivBoxLabelRow'>
+                    <div class='classDivBoxLabelHeader'>
+                        <input class='classDivBoxInput' type="text" value="#{TargetBean.structure.label}"/>
+                    </div>
+                </div>
+                <div class='classDivBoxSubRow'>
+                <c:forEach var = "x" items = "#{TargetBean.structure.boxList}">
+                <c:if test="#{x.direction == 'Horizontal'}">
+                        <div class='classDivHorizontal classDivBox'>
+                            <ui:include src="Recursive_Div_Box.xhtml">
+                                <ui:param name="box" value="#{x}" />
+                            </ui:include>
+                        </div>
+                </c:if>
+                <c:if test="#{x.direction == 'Vertical'}">
+                    <div class='classDivVertical classDivBox'>
+                        <ui:include src="Recursive_Div_Box.xhtml">
+                            <ui:param name="box" value="#{x}" />
+                        </ui:include>
+                    </div>
+                </c:if>
+                </c:forEach>
+                    <div>
+                        <div class='classBoxLabelSection'>
+                            <c:forEach var = "y" items = "#{TargetBean.structure.targetList}">
+                                <div>
+                                    <div class='classDivTarget'>
+                                        <input class='classDivTargetInput' type="text" value="#{y.label}"/>
+                                    </div>
+                                </div>
+                            </c:forEach>
+                        </div>
+                    </div>
+                </div>        
+            </div>-->
             
             
         </c:when>

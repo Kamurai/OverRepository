@@ -19,11 +19,26 @@ body{
     text-align: center;
 }
 
+.classBoxInput{
+    background: #00ffff;
+    width: 100px;
+    vertical-align: top;
+    text-align: center;
+}
+
 .classTarget{
     background: #b702b7;
     width:  100%;
     vertical-align: top;
     text-align: center;
+}
+
+.classTargetInput{
+    background: #b702b7;
+    vertical-align: top;
+    text-align: center;
+    
+    width: 100px;
 }
 
 .classBoxLabelSection{
@@ -80,10 +95,25 @@ body{
     text-align: center;
 }
 
+.classDivBoxInput{
+    background: #00ffff;
+    width: 100px;
+    vertical-align: top;
+    text-align: center;
+}
+
 .classDivTarget{
     background: #b702b7;
     vertical-align: top;
     text-align: center;
+}
+
+.classDivTargetInput{
+    background: #b702b7;
+    vertical-align: top;
+    text-align: center;
+    
+    width: 100px;
 }
 
 .classDivBoxLabelSection{

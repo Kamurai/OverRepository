@@ -81,6 +81,117 @@ public class TargetDAO extends DAO{
         return resultBox;
     }
     
+    //Update Personal List
+    public void callableUpdateStructure(int intUserIndex, Box structure, Box originalStructure){
+        CallableStatement stmt = null;
+        
+        List<String> bigList    = new ArrayList<String>();
+        String boxIdList        = "";
+        String boxLabelList     = "";
+        String targetIdList     = "";
+        String targetLabelList  = "";
+        
+        bigList         = createStringLists(structure, originalStructure);
+        boxIdList       = bigList.get(0);
+        boxLabelList    = bigList.get(1);
+        targetIdList    = bigList.get(2);
+        targetLabelList = bigList.get(3);
+        
+        System.out.println("BoxIdList: " + boxIdList);
+        System.out.println("BoxLabelList: " + boxLabelList);
+        System.out.println("TargetIdList: " + targetIdList);
+        System.out.println("TargetLabelList: " + targetLabelList);
+        
+        if(
+            boxIdList.length() > 0 ||
+            boxLabelList.length() > 0 ||
+            targetIdList.length() > 0 ||
+            targetLabelList.length() > 0
+        ){
+            try{
+                openConnection();
+
+                stmt = connect.prepareCall("{call BubbleUpUpdateStructure(?,?,?,?,?)}");
+                stmt.setInt(1, intUserIndex);
+                stmt.setString(2, boxIdList);
+                stmt.setString(3, boxLabelList);
+                stmt.setString(4, targetIdList);
+                stmt.setString(5, targetLabelList);
+                stmt.executeUpdate();
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }finally{
+                closeConnection();
+            }
+        }
+        
+    }
+    
+    private List<String> createStringLists(Box structure, Box originalStructure){
+        List<String> bigList    = new ArrayList<String>();
+        List<String> tempList   = new ArrayList<String>();
+        bigList.add("");
+        bigList.add("");
+        bigList.add("");
+        bigList.add("");
+        
+//        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
+        
+        
+        if(!structure.getLabel().equals(originalStructure.getLabel())){
+            if(bigList.get(0).length() > 0){
+                bigList.set(0, bigList.get(0) + ",");
+            }
+            bigList.set(0, bigList.get(0) + structure.getBoxIndex());
+//            System.out.println(structure.getBoxIndex());
+        
+            if(bigList.get(1).length() > 0){
+                bigList.set(1, bigList.get(1) + ",");
+            }
+            bigList.set(1, bigList.get(1) + structure.getLabel());
+//            System.out.println(structure.getLabel());
+        
+        }
+        
+        for(int x = 0; x < structure.boxList.size(); x++){
+            tempList = createStringLists(structure.boxList.get(x), originalStructure.boxList.get(x));
+            
+            if(bigList.get(0).length() > 0 && tempList.get(0).length() > 0){
+                bigList.set(0, bigList.get(0) + ",");
+            }
+            bigList.set(0, bigList.get(0) + tempList.get(0));
+            if(bigList.get(1).length() > 0 && tempList.get(1).length() > 0){
+                bigList.set(1, bigList.get(1) + ",");
+            }
+            bigList.set(1, bigList.get(1) + tempList.get(1));
+            if(bigList.get(2).length() > 0 && tempList.get(2).length() > 0){
+                bigList.set(2, bigList.get(2) + ",");
+            }
+            bigList.set(2, bigList.get(2) + tempList.get(2));
+            if(bigList.get(3).length() > 0 && tempList.get(3).length() > 0){
+                bigList.set(3, bigList.get(3) + ",");
+            }
+            bigList.set(3, bigList.get(3) + tempList.get(3));
+            
+        }
+        
+        for(int y = 0; y < structure.targetList.size(); y++){
+            if(!structure.targetList.get(y).getLabel().equals(originalStructure.targetList.get(y).getLabel())){
+                if(bigList.get(2).length() > 0){
+                    bigList.set(2, bigList.get(2) + ",");
+                }
+                bigList.set(2, bigList.get(2) + structure.targetList.get(y).getTargetIndex());
+                if(bigList.get(3).length() > 0){
+                    bigList.set(3, bigList.get(3) + ",");
+                }
+                bigList.set(3, bigList.get(3) + structure.targetList.get(y).getLabel());
+            }
+        }
+        
+        return bigList;
+    }
+    
     //Pull Random Advert Pair
     public ArrayList<ArrayList<String>> callablePullAdvertPair(){
         CallableStatement stmt = null;
@@ -90,8 +201,6 @@ public class TargetDAO extends DAO{
         
         try{
             openConnection();
-            
-            System.out.print(connect);
             
             stmt = connect.prepareCall("{call BubbleUpPullAdvertPair}");
             rs = stmt.executeQuery();
