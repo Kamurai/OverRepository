@@ -11,5 +11,14 @@ BEGIN
 
 	SET @direction = (SELECT TOP 1 Direction FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @intBoxIndex);
 
+	IF(@direction = 'Horizontal')
+	BEGIN
+		SET @direction = 'Vertical';
+	END
+	ELSE
+	BEGIN
+		SET @direction = 'Horizontal';
+	END
+
 	UPDATE BOXES SET Direction = @direction WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @intBoxIndex;
 END

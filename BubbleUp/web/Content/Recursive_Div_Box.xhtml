@@ -19,14 +19,14 @@
         </div>
         <div class='classDivBoxSubRow'>
         <c:forEach var = "x" items = "#{box.boxList}">
-        <c:if test="#{x.direction == 'Horizontal'}">
+        <c:if test="#{box.direction == 'Vertical'}">
                 <div class='classDivHorizontal classDivBox'>
                     <ui:include src="Recursive_Box.xhtml">
                         <ui:param name="box" value="#{x}" />
                     </ui:include>
                 </div>
         </c:if>
-        <c:if test="#{x.direction == 'Vertical'}">
+        <c:if test="#{box.direction == 'Horizontal'}">
             <div class='classDivVertical classDivBox'>
                 <ui:include src="Recursive_Box.xhtml">
                     <ui:param name="box" value="#{x}" />

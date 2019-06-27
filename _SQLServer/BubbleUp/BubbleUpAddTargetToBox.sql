@@ -7,7 +7,12 @@ create PROCEDURE BubbleUpAddTargetToBox
 )
 AS
 BEGIN
-	DECLARE @newOrderRank int = (select max(OrderRank) from targets where BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intBoxIndex);
-	SET @newOrderRank = @newOrderRank + 1;
+	DECLARE @newOrderRank int = 0;
+	if((select count(OrderRank) from targets where BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intBoxIndex) > 0)
+	BEGIN
+		SET @newOrderRank = (select max(OrderRank) from targets where BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intBoxIndex);
+		SET @newOrderRank = @newOrderRank + 1;
+	END
+
 	INSERT INTO Targets (BubbleUpUserIndex, ParentBoxIndex, OrderRank) VALUES (@intUserIndex, @intBoxIndex, @newOrderRank);
 END

@@ -27,7 +27,7 @@
                 </tr>
                 <tr class='classBoxSubRow'>
                 <c:forEach var = "x" items = "#{TargetBean.getStructure().boxList}">
-                <c:if test="#{x.direction == 'Horizontal'}">
+                <c:if test="#{TargetBean.getStructure().direction == 'Vertical'}">
                     <tr>
                         <td>
                             <ui:include src="Recursive_Box.xhtml">
@@ -36,7 +36,7 @@
                         </td>
                     </tr>
                 </c:if>
-                <c:if test="#{x.direction == 'Vertical'}">
+                <c:if test="#{TargetBean.getStructure().direction == 'Horizontal'}">
                     <td>
                         <ui:include src="Recursive_Box.xhtml">
                             <ui:param name="box" value="#{x}" />
