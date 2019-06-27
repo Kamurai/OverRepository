@@ -97,10 +97,10 @@ public class TargetDAO extends DAO{
         targetIdList    = bigList.get(2);
         targetLabelList = bigList.get(3);
         
-        System.out.println("BoxIdList: " + boxIdList);
-        System.out.println("BoxLabelList: " + boxLabelList);
-        System.out.println("TargetIdList: " + targetIdList);
-        System.out.println("TargetLabelList: " + targetLabelList);
+//        System.out.println("BoxIdList: " + boxIdList);
+//        System.out.println("BoxLabelList: " + boxLabelList);
+//        System.out.println("TargetIdList: " + targetIdList);
+//        System.out.println("TargetLabelList: " + targetLabelList);
         
         if(
             boxIdList.length() > 0 ||
@@ -190,6 +190,60 @@ public class TargetDAO extends DAO{
         }
         
         return bigList;
+    }
+    
+    public void callableDeleteTarget(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpDeleteTarget(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableAddTargetToBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpAddTargetToBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableChangeDirectionOfBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpChangeDirectionOfBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
     }
     
     //Pull Random Advert Pair

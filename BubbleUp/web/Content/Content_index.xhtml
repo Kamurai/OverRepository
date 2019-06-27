@@ -18,7 +18,11 @@
             <table id='idMainStructure' class='classBox'>
                 <tr class='classBoxLabelRow'>
                     <td class='classBoxLabelHeader'>
+                        <h:commandButton value="D" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, 0)}'/>
                         <h:inputText class='classBoxInput' value="#{TargetBean.getStructure().label}"/>
+                        <h:commandButton value="v" action='index.xhtml'/>
+                        <h:commandButton value="^" action='index.xhtml'/>
+                        <h:commandButton value="X" action='index.xhtml'/>
                     </td>
                 </tr>
                 <tr class='classBoxSubRow'>
@@ -40,18 +44,33 @@
                     </td>
                 </c:if>
                 </c:forEach>
+                </tr>        
+                <tr class='classBoxSubRow'>
                     <td>
                         <table class='classBoxLabelSection'>
                             <c:forEach var = "y" items = "#{TargetBean.getStructure().targetList}">
                                 <tr>
                                     <td class='classTarget'>
                                         <h:inputText class='classTargetInput' value="#{y.label}"/>
+                                        <h:commandButton value="v" action='index.xhtml'/>
+                                        <h:commandButton value="^" action='index.xhtml'/>
+                                        <h:commandButton value="X" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                                     </td>
                                 </tr>
-                            </c:forEach>
-                        </table>
+                             </c:forEach>
+                                <tr>
+                                    <td>
+                                        <h:commandButton value="T+" action='#{TargetBean.AddTargetToBox(LoginBean.currentUser.userIndex, 0)}'/>
+                                    </td>
+                                </tr>
+                       </table>
                     </td>
-                </tr>        
+                </tr>
+                <tr>
+                    <td>
+                        <h:commandButton value="B+" action='index.xhtml'/>
+                    </td>
+                </tr>
             </table>
             
 <!--            <br/>

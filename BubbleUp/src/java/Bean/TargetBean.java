@@ -290,9 +290,36 @@ public class TargetBean implements Serializable
         
 //        System.out.println("Top: " + originalStructure.getLabel() + " vs " + structure.getLabel());
         
-        System.out.println("Structures: " + originalStructure.boxList + " vs " + structure.boxList);
+//        System.out.println("Structures: " + originalStructure.boxList + " vs " + structure.boxList);
         
         dao.callableUpdateStructure(intUserIndex, structure, originalStructure);
+        
+        return result;
+    }
+    
+    //Delete Target
+    public String DeleteTarget(int intUserIndex, int intTargetIndex){
+        String result = "Index";
+        
+        dao.callableDeleteTarget(intUserIndex, intTargetIndex);
+        
+        return result;
+    }
+    
+    //Add Target to Box
+    public String AddTargetToBox(int intUserIndex, int intBoxIndex){
+        String result = "Index";
+        
+        dao.callableAddTargetToBox(intUserIndex, intBoxIndex);
+        
+        return result;
+    }
+    
+    //Change direction of Box
+    public String ChangeDirectionOfBox(int intUserIndex, int intBoxIndex){
+        String result = "Index";
+        
+        dao.callableChangeDirectionOfBox(intUserIndex, intBoxIndex);
         
         return result;
     }

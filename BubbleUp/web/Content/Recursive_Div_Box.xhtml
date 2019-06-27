@@ -10,7 +10,11 @@
     <div class='classDivBox'>
         <div class='classDivBoxLabelRow'>
             <div class='classDivBoxLabelHeader'>
+                <h:commandButton value="D" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
                 <input class='classDivBoxInput' type="text" value="#{box.label}"/>
+                <h:commandButton value="v" action='index.xhtml'/>
+                <h:commandButton value="^" action='index.xhtml'/>
+                <h:commandButton value="X" action='index.xhtml'/>
             </div>
         </div>
         <div class='classDivBoxSubRow'>
@@ -36,10 +40,19 @@
                         <div>
                             <div class='classDivTarget'>
                                 <input class='classDivTargetInput' type="text" value="#{y.label}"/>
+                                <h:commandButton value="v" action='index.xhtml'/>
+                                <h:commandButton value="^" action='index.xhtml'/>
+                                <h:commandButton value="X" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                             </div>
                         </div>
                     </c:forEach>
+                        <div>
+                            <h:commandButton value="T+" action='#{TargetBean.AddTargetToBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+                        </div>
                 </div>
+            </div>
+            <div>
+                <h:commandButton value="B+" action='index.xhtml'/>
             </div>
         </div>        
     </div>
