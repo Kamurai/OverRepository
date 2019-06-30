@@ -246,6 +246,78 @@ public class TargetDAO extends DAO{
         }
     }
     
+    public void callableMoveBoxAfter(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveBoxAfter(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveBoxBefore(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveBoxBefore(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveTargetAfter(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveTargetAfter(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveTargetBefore(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveTargetBefore(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
     //Pull Random Advert Pair
     public ArrayList<ArrayList<String>> callablePullAdvertPair(){
         CallableStatement stmt = null;

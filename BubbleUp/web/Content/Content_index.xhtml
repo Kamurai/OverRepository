@@ -20,8 +20,6 @@
                     <td class='classBoxLabelHeader'>
                         <h:commandButton value="D" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, 0)}'/>
                         <h:inputText class='classBoxInput' value="#{TargetBean.getStructure().label}"/>
-                        <h:commandButton value="v" action='index.xhtml'/>
-                        <h:commandButton value="^" action='index.xhtml'/>
                         <h:commandButton value="X" action='index.xhtml'/>
                     </td>
                 </tr>
@@ -52,8 +50,12 @@
                                 <tr>
                                     <td class='classTarget'>
                                         <h:inputText class='classTargetInput' value="#{y.label}"/>
-                                        <h:commandButton value="v" action='index.xhtml'/>
-                                        <h:commandButton value="^" action='index.xhtml'/>
+                                    <c:if test="#{y.orderRank lt TargetBean.getStructure().targetList.size()}">
+                                        <h:commandButton value="v" action='#{TargetBean.MoveTargetAfter(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                    </c:if>
+                                    <c:if test="#{y.orderRank gt 0}">
+                                        <h:commandButton value="^" action='#{TargetBean.MoveTargetBefore(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                    </c:if>
                                         <h:commandButton value="X" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                                     </td>
                                 </tr>
