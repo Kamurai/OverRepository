@@ -97,10 +97,10 @@ public class TargetDAO extends DAO{
         targetIdList    = bigList.get(2);
         targetLabelList = bigList.get(3);
         
-//        System.out.println("BoxIdList: " + boxIdList);
-//        System.out.println("BoxLabelList: " + boxLabelList);
-//        System.out.println("TargetIdList: " + targetIdList);
-//        System.out.println("TargetLabelList: " + targetLabelList);
+        System.out.println("BoxIdList: " + boxIdList);
+        System.out.println("BoxLabelList: " + boxLabelList);
+        System.out.println("TargetIdList: " + targetIdList);
+        System.out.println("TargetLabelList: " + targetLabelList);
         
         if(
             boxIdList.length() > 0 ||
@@ -136,7 +136,7 @@ public class TargetDAO extends DAO{
         bigList.add("");
         bigList.add("");
         
-//        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
+        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
         
         
         if(!structure.getLabel().equals(originalStructure.getLabel())){
@@ -177,7 +177,12 @@ public class TargetDAO extends DAO{
         }
         
         for(int y = 0; y < structure.targetList.size(); y++){
+            
+            System.out.println(originalStructure.targetList.get(y).getLabel() + " vs " + structure.targetList.get(y).getLabel());
+            
             if(!structure.targetList.get(y).getLabel().equals(originalStructure.targetList.get(y).getLabel())){
+                System.out.println("Safety 1");
+                
                 if(bigList.get(2).length() > 0){
                     bigList.set(2, bigList.get(2) + ",");
                 }
@@ -188,6 +193,10 @@ public class TargetDAO extends DAO{
                 bigList.set(3, bigList.get(3) + structure.targetList.get(y).getLabel());
             }
         }
+        
+        System.out.println("Indexes: " + bigList.get(2));
+        System.out.println("Labels: " + bigList.get(3));
+                
         
         return bigList;
     }
@@ -210,6 +219,24 @@ public class TargetDAO extends DAO{
         }
     }
     
+    public void callableDeleteBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpDeleteBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
     public void callableAddTargetToBox(int intUserIndex, int intBoxIndex){
         CallableStatement stmt = null;
         
@@ -219,6 +246,24 @@ public class TargetDAO extends DAO{
             stmt = connect.prepareCall("{call BubbleUpAddTargetToBox(?,?)}");
             stmt.setInt(1, intUserIndex);
             stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableAddBoxToBox(int intUserIndex, int intParentIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpAddBoxToBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intParentIndex);
             stmt.executeUpdate();
         }
         catch(Exception e){

@@ -97,7 +97,7 @@ public class Box {
         }
         
         for(int y = 0; y < inBox.targetList.size(); y++){
-            this.targetList.add(inBox.targetList.get(y));
+            this.targetList.add(new Target(inBox.targetList.get(y)));
         }
     }
     

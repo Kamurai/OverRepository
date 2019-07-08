@@ -21,10 +21,10 @@ BEGIN
 
 	DECLARE @checkTargets	BIT = 1;
 	
-	WHILE (@checkBoxes = 1)
+	WHILE (@checkBoxes = 1) 
 	BEGIN
 		--while we are searching for the next id
-		WHILE ((SUBSTRING(@boxIdList,@trackerIds,1) != ',') AND (@trackerIds < LEN(@boxIdList)))
+		WHILE ((SUBSTRING(@boxIdList,@trackerIds,1) != ',') AND (@trackerIds <= LEN(@boxIdList)))
 		BEGIN
 			SET @trackerIds = @trackerIds + 1;
 		END
@@ -33,12 +33,12 @@ BEGIN
 			SET @checkBoxes = 0;
 			BREAK;
 		END
-		SET @strId		= SUBSTRING(@boxIdList,@startIds,@trackerIds-@startIds+1);
+		SET @strId		= SUBSTRING(@boxIdList,@startIds,@trackerIds-@startIds);
 		SET @trackerIds = @trackerIds + 1;
 		SET @startIds	= @trackerIds;
 				
 		--while we are searching for the next label
-		WHILE ((SUBSTRING(@boxLabelList,@trackerLabels,1) != ',') AND (@trackerLabels < LEN(@boxLabelList)))
+		WHILE ((SUBSTRING(@boxLabelList,@trackerLabels,1) != ',') AND (@trackerLabels <= LEN(@boxLabelList)))
 		BEGIN
 			SET @trackerLabels = @trackerLabels + 1;
 		END
@@ -47,7 +47,7 @@ BEGIN
 			SET @checkBoxes = 0;
 			BREAK;
 		END
-		SET @strLabel		= SUBSTRING(@boxLabelList,@startLabels,@trackerLabels-@startLabels+1);
+		SET @strLabel		= SUBSTRING(@boxLabelList,@startLabels,@trackerLabels-@startLabels);
 		SET @trackerLabels	= @trackerLabels + 1;
 		SET @startLabels	= @trackerLabels;
 
@@ -71,32 +71,34 @@ BEGIN
 	WHILE (@checkTargets = 1)
 	BEGIN
 		--while we are searching for the next id
-		WHILE ((SUBSTRING(@targetIdList,@trackerIds,1) != ',') AND (@trackerIds < LEN(@targetIdList)))
+		WHILE ((SUBSTRING(@targetIdList,@trackerIds,1) != ',') AND (@trackerIds <= LEN(@targetIdList)))
 		BEGIN
 			SET @trackerIds = @trackerIds + 1;
 		END
-		IF((@trackerIds >= LEN(@targetIdList)))
+		IF((@trackerIds > LEN(@targetIdList)))
 		BEGIN
 			SET @checkTargets = 0;
-			BREAK;
+		--	BREAK;
 		END
-		SET @strId		= SUBSTRING(@targetIdList,@startIds,@trackerIds-@startIds+1);
+		
+		PRINT SUBSTRING(@targetIdList,@startIds,@trackerIds-@startIds);
+		SET @strId		= SUBSTRING(@targetIdList,@startIds,@trackerIds-@startIds);
 		SET @trackerIds = @trackerIds + 1;
 		SET @startIds	= @trackerIds;
 
-		UPDATE Boxes SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @strId;
-				
 		--while we are searching for the next label
-		WHILE ((SUBSTRING(@targetLabelList,@trackerLabels,1) != ',') AND (@trackerLabels < LEN(@targetLabelList)))
+		WHILE ((SUBSTRING(@targetLabelList,@trackerLabels,1) != ',') AND (@trackerLabels <= LEN(@targetLabelList)))
 		BEGIN
 			SET @trackerLabels = @trackerLabels + 1;
 		END
-		IF((@trackerLabels >= LEN(@targetLabelList)))
+		IF((@trackerLabels > LEN(@targetLabelList)))
 		BEGIN
 			SET @checkTargets = 0;
-			BREAK;
+		--	BREAK;
 		END
-		SET @strLabel		= SUBSTRING(@targetLabelList,@startLabels,@trackerLabels-@startLabels+1);
+
+		PRINT SUBSTRING(@targetLabelList,@startLabels,@trackerLabels-@startLabels);
+		SET @strLabel		= SUBSTRING(@targetLabelList,@startLabels,@trackerLabels-@startLabels);
 		SET @trackerLabels	= @trackerLabels + 1;
 		SET @startLabels	= @trackerLabels;
 
@@ -106,6 +108,8 @@ BEGIN
 		)
 		BEGIN
 			UPDATE Targets SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @strId;
+			SET @strId			= '';
+			SET @strLabel		= '';
 		END
 	END
 	

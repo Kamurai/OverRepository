@@ -1,5 +1,6 @@
 --drop table [HTKB].dbo.Users, [Over].dbo.Users, [Over].dbo.BangOverUsers, [Over].dbo.BoardOverUsers, [Over].dbo.PlayOverUsers, [Over].dbo.ShowOverUsers, [Over].dbo.WatchOverUsers, [BubbleUp].dbo.Users, [BubbleUp].dbo.Boxes, [BubbleUp].dbo.Targets, [Shout].dbo.Users, [Mist].dbo.Users;
 
+
 create table [HTKB].dbo.Users (
 	HTKBUserIndex	bigint IDENTITY(0,1) PRIMARY KEY, 
 	HTKBAdminLevel	int not null,
@@ -183,6 +184,9 @@ insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 3
 insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 4', 'RoosterTeeth4.jpg', 'http://www.RoosterTeeth.com');
 insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 5', 'RoosterTeeth5.jpg', 'http://www.RoosterTeeth.com');
 insert into [BubbleUp].dbo.Adverts (Name, Picture, Link) VALUES ('Roosterteeth 6', 'RoosterTeeth6.jpg', 'http://www.RoosterTeeth.com');
+
+--drop table [BubbleUp].dbo.Boxes;
+--drop table [BubbleUp].dbo.Targets;
 
 create table [BubbleUp].dbo.Boxes (
 	BoxIndex			bigint IDENTITY(0,1) PRIMARY KEY, 

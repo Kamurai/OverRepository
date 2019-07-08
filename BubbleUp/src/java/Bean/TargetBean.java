@@ -286,7 +286,7 @@ public class TargetBean implements Serializable
     
     //Update Personal Structure
     public String UpdateStructure(int intUserIndex){
-        String result = "Index";
+        String result = "index";
         
 //        System.out.println("Top: " + originalStructure.getLabel() + " vs " + structure.getLabel());
         
@@ -297,9 +297,18 @@ public class TargetBean implements Serializable
         return result;
     }
     
+    //Delete Box
+    public String DeleteBox(int intUserIndex, int intBoxIndex){
+        String result = "index";
+        
+        dao.callableDeleteBox(intUserIndex, intBoxIndex);
+        
+        return result;
+    }
+    
     //Delete Target
     public String DeleteTarget(int intUserIndex, int intTargetIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableDeleteTarget(intUserIndex, intTargetIndex);
         
@@ -308,16 +317,25 @@ public class TargetBean implements Serializable
     
     //Add Target to Box
     public String AddTargetToBox(int intUserIndex, int intTargetIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableAddTargetToBox(intUserIndex, intTargetIndex);
         
         return result;
     }
     
+    //Add Box to Box
+    public String AddBoxToBox(int intUserIndex, int intParentIndex){
+        String result = "index";
+        
+        dao.callableAddBoxToBox(intUserIndex, intParentIndex);
+        
+        return result;
+    }
+    
     //Change direction of Box
     public String ChangeDirectionOfBox(int intUserIndex, int intBoxIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableChangeDirectionOfBox(intUserIndex, intBoxIndex);
         
@@ -326,7 +344,7 @@ public class TargetBean implements Serializable
     
     //Move Box after following Box
     public String MoveBoxAfter(int intUserIndex, int intBoxIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableMoveBoxAfter(intUserIndex, intBoxIndex);
         
@@ -335,7 +353,7 @@ public class TargetBean implements Serializable
     
     //Move Box before previous Box
     public String MoveBoxBefore(int intUserIndex, int intBoxIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableMoveBoxBefore(intUserIndex, intBoxIndex);
         
@@ -344,7 +362,7 @@ public class TargetBean implements Serializable
     
     //Move Target after following Target
     public String MoveTargetAfter(int intUserIndex, int intTargetIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableMoveTargetAfter(intUserIndex, intTargetIndex);
         
@@ -353,7 +371,7 @@ public class TargetBean implements Serializable
     
     //Move Target before previous Target
     public String MoveTargetBefore(int intUserIndex, int intTargetIndex){
-        String result = "Index";
+        String result = "index";
         
         dao.callableMoveTargetBefore(intUserIndex, intTargetIndex);
         

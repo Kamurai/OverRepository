@@ -41,9 +41,18 @@ public class Target {
         int parentIndex, 
         int orderRank
     ){
-        this.targetIndex = targetIndex;
-        this.label = label;
-        this.parentIndex = parentIndex;
-        this.orderRank = orderRank;
+        this.targetIndex    = targetIndex;
+        this.label          = label;
+        this.parentIndex    = parentIndex;
+        this.orderRank      = orderRank;
+    }
+    
+    public Target(
+        Target inTarget
+    ){
+        this.targetIndex    = inTarget.targetIndex;
+        this.label          = inTarget.label;
+        this.parentIndex    = inTarget.parentIndex;
+        this.orderRank      = inTarget.orderRank;
     }
 }
