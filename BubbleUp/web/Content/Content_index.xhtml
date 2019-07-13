@@ -20,7 +20,7 @@
                     <td class='classBoxLabelHeader'>
                         <h:commandButton value="Switch Direction" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>
                         <h:inputText class='classBoxInput' value="#{TargetBean.getStructure().label}"/>
-                        <h:commandButton value="Delete" action='#{TargetBean.DeleteBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>
+                        <h:commandButton image="#{MainBean.GetPath()}Pictures/UI/Delete.png" action='#{TargetBean.DeleteBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>
                     </td>
                 </tr>
                 <tr class='classBoxSubRow'>
