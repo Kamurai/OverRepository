@@ -8,6 +8,9 @@ AS
 	DECLARE @intParentBoxIndex	int = (SELECT TOP 1 deleted.ParentBoxIndex		FROM deleted);
 	DECLARE @intOrderRank		int = (SELECT TOP 1 deleted.OrderRank			FROM deleted);
 
-	--Adjust other orderRanks for deleted box's parentIndex
-	UPDATE Targets set OrderRank = OrderRank - 1 WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intParentBoxIndex AND OrderRank > @intOrderRank;
+	IF(@intUserIndex IS NOT NULL AND @intUserIndex != '')
+	BEGIN
+		--Adjust other orderRanks for deleted box's parentIndex
+		UPDATE Targets set OrderRank = OrderRank - 1 WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intParentBoxIndex AND OrderRank > @intOrderRank;
+	END
 GO

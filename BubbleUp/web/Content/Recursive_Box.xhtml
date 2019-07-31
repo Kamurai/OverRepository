@@ -21,6 +21,14 @@
                 <h:commandButton value="Delete" action='#{TargetBean.DeleteBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
             </td>
         </tr>
+        <tr class='classBoxLabelRow'>
+            <td class='classBoxLabelHeader'>
+                <h:commandButton value="Move Out Left"  action='#{TargetBean.MoveOutLeftBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+                <h:commandButton value="Move Out"   action='#{TargetBean.MoveOutBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+                <h:commandButton value="Move In"    action='#{TargetBean.MoveInBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+                <h:commandButton value="Move Out Right" action='#{TargetBean.MoveOutRightBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+            </td>
+        </tr>
         <tr class='classBoxSubRow'>
         <c:forEach var = "x" items = "#{box.boxList}">
         <c:if test="#{box.direction == 'Vertical'}">
@@ -55,6 +63,14 @@
                                 <h:commandButton value="Move Up" action='#{TargetBean.MoveTargetBefore(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                             </c:if>
                                 <h:commandButton value="Delete" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class='classTarget'>
+                                <h:commandButton value="Move Left"  action='#{TargetBean.MoveOutLeftTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                <h:commandButton value="Move Out"   action='#{TargetBean.MoveOutTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                <h:commandButton value="Move In"    action='#{TargetBean.MoveInTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                <h:commandButton value="Move Right" action='#{TargetBean.MoveOutRightTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                             </td>
                         </tr>
                      </c:forEach>

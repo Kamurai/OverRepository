@@ -17,6 +17,4 @@ BEGIN
 
 	--Adjust other orderRanks for same parentIndex
 	UPDATE Targets set OrderRank = OrderRank - 1 WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @parentIndex AND OrderRank > @orderRank;
-
-
 END

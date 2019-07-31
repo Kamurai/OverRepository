@@ -378,6 +378,90 @@ public class TargetBean implements Serializable
         return result;
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    //Move Box Out to left neighbor
+    public String MoveOutLeftBox(int intUserIndex, int intBoxIndex){
+        String result = "index";
+    
+        dao.callableMoveOutLeftBox(intUserIndex, intBoxIndex);
+        
+        return result;
+    }
+    
+    //Move Box Out to right neighbor
+    public String MoveOutRightBox(int intUserIndex, int intBoxIndex){
+        String result = "index";
+    
+        dao.callableMoveOutRightBox(intUserIndex, intBoxIndex);
+        
+        return result;
+    }
+    
+    //Move Box Out to Parent
+    public String MoveOutBox(int intUserIndex, int intBoxIndex){
+        String result = "index";
+    
+        dao.callableMoveOutLeftBox(intUserIndex, intBoxIndex);
+        
+        return result;
+    }
+    
+    //Move Box Into first child
+    public String MoveInBox(int intUserIndex, int intBoxIndex){
+        String result = "index";
+    
+        dao.callableMoveInBox(intUserIndex, intBoxIndex);
+        
+        return result;
+    }
+    
+    //Move Target Out to left neighbor of Parent
+    public String MoveOutLeftTarget(int intUserIndex, int intTargetIndex){
+        String result = "index";
+    
+        dao.callableMoveOutLeftTarget(intUserIndex, intTargetIndex);
+        
+        return result;
+    }
+    
+    //Move Target Out to right neighbor of Parent
+    public String MoveOutRightTarget(int intUserIndex, int intTargetIndex){
+        String result = "index";
+    
+        dao.callableMoveOutRightTarget(intUserIndex, intTargetIndex);
+        
+        return result;
+    }
+    
+    //Move Target Out to Parent of Parent
+    public String MoveOutTarget(int intUserIndex, int intTargetIndex){
+        String result = "index";
+    
+        dao.callableMoveOutTarget(intUserIndex, intTargetIndex);
+        
+        return result;
+    }
+    
+    //Move Target Into first child of Parent
+    public String MoveInTarget(int intUserIndex, int intTargetIndex){
+        String result = "index";
+    
+        dao.callableMoveInTarget(intUserIndex, intTargetIndex);
+        
+        return result;
+    }
+    
+    
+    
+    
+    
     //Pull Random Advert Pair
     public void PullAdvertPair(){
         ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();

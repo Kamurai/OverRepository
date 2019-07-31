@@ -104,25 +104,33 @@ public class Box {
     public void addBoxesAndTargets(List<Box> tempBoxes, List<Target> tempTargets){
         Box resultBox = new Box();
         
-        for( int x = 0; x < tempBoxes.size(); x++){
+//        for( int x = 0; x < tempBoxes.size(); x++){
+//            System.out.println("Box Index: " + boxIndex + ": " + label + " :: Parent Index: " + tempBoxes.get(x).getParentIndex() + ": " + tempBoxes.get(x).getLabel());
+//        }
+        
+        for(int x = 0; x < tempBoxes.size(); x++){
+//            System.out.println("Box Index: " + boxIndex + ": " + label + " :: Parent Index: " + tempBoxes.get(x).getParentIndex() + ": " + tempBoxes.get(x).getLabel());
+            
             //if a child of this box
             if(tempBoxes.get(x).getParentIndex() == boxIndex){
-                getBoxList().add(tempBoxes.get(x));
+//                System.out.println("Added: " + tempBoxes.get(x).getLabel());
+                boxList.add(new Box(tempBoxes.get(x)));
                 tempBoxes.remove(x);
                 x--;
-                
-                //find children of last added child
-                getBoxList().get(getBoxList().size()-1).addBoxesAndTargets(tempBoxes, tempTargets);
             }
         }
         
-        for( int y = 0; y < tempTargets.size(); y++){
+        for(int y = 0; y < tempTargets.size(); y++){
             //if a child of this box
             if(tempTargets.get(y).getParentIndex() == boxIndex){
-                getTargetList().add(tempTargets.get(y));
+                targetList.add(new Target(tempTargets.get(y)));
                 tempTargets.remove(y);
                 y--;
             }
+        }
+        
+        for(int x = 0; x < boxList.size(); x++){
+            boxList.get(x).addBoxesAndTargets(tempBoxes, tempTargets);
         }
     }
     

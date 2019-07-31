@@ -150,6 +150,11 @@ body{
     /*background: #00edff;*/
 }
 
+.classButtons{
+    width: 2.5%;
+    height: 2.5%;
+}
+
 /* IDs */
 #idMainStructure{
     background: #fe00ed;

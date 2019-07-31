@@ -71,12 +71,23 @@ public class TargetDAO extends DAO{
         for( int x = 0; x < tempBoxes.size(); x++){
             if(tempBoxes.get(x).getParentIndex() == -1){
                 resultBox = tempBoxes.get(x);
+//                System.out.println("Removed: " + tempBoxes.get(x).getLabel());
                 tempBoxes.remove(x);
                 break;
             }
         }
         
+//        System.out.println("Temp Boxes");
+        for(int x = 0; x < tempBoxes.size(); x++){
+//            System.out.println(tempBoxes.get(x).getLabel());
+        }
+        
         resultBox.addBoxesAndTargets(tempBoxes, tempTargets);
+        
+//        System.out.println("Result Box");
+        for(int x = 0; x < resultBox.getBoxList().size(); x++){
+//            System.out.println(resultBox.getBoxList().get(x).getLabel());
+        }
                 
         return resultBox;
     }
@@ -97,10 +108,10 @@ public class TargetDAO extends DAO{
         targetIdList    = bigList.get(2);
         targetLabelList = bigList.get(3);
         
-        System.out.println("BoxIdList: " + boxIdList);
-        System.out.println("BoxLabelList: " + boxLabelList);
-        System.out.println("TargetIdList: " + targetIdList);
-        System.out.println("TargetLabelList: " + targetLabelList);
+//        System.out.println("BoxIdList: " + boxIdList);
+//        System.out.println("BoxLabelList: " + boxLabelList);
+//        System.out.println("TargetIdList: " + targetIdList);
+//        System.out.println("TargetLabelList: " + targetLabelList);
         
         if(
             boxIdList.length() > 0 ||
@@ -136,7 +147,7 @@ public class TargetDAO extends DAO{
         bigList.add("");
         bigList.add("");
         
-        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
+//        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
         
         
         if(!structure.getLabel().equals(originalStructure.getLabel())){
@@ -178,10 +189,10 @@ public class TargetDAO extends DAO{
         
         for(int y = 0; y < structure.targetList.size(); y++){
             
-            System.out.println(originalStructure.targetList.get(y).getLabel() + " vs " + structure.targetList.get(y).getLabel());
+//            System.out.println(originalStructure.targetList.get(y).getLabel() + " vs " + structure.targetList.get(y).getLabel());
             
             if(!structure.targetList.get(y).getLabel().equals(originalStructure.targetList.get(y).getLabel())){
-                System.out.println("Safety 1");
+//                System.out.println("Safety 1");
                 
                 if(bigList.get(2).length() > 0){
                     bigList.set(2, bigList.get(2) + ",");
@@ -194,8 +205,8 @@ public class TargetDAO extends DAO{
             }
         }
         
-        System.out.println("Indexes: " + bigList.get(2));
-        System.out.println("Labels: " + bigList.get(3));
+//        System.out.println("Indexes: " + bigList.get(2));
+//        System.out.println("Labels: " + bigList.get(3));
                 
         
         return bigList;
@@ -362,6 +373,162 @@ public class TargetDAO extends DAO{
             closeConnection();
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    public void callableMoveOutLeftBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveOutLeftBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveOutRightBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveOutRightBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveOutBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveOutBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveInBox(int intUserIndex, int intBoxIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveInBox(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intBoxIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveOutLeftTarget(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveOutLeftTarget(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveOutRightTarget(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveOutRightTarget(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveOutTarget(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveOutTarget(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableMoveInTarget(int intUserIndex, int intTargetIndex){
+        CallableStatement stmt = null;
+        
+        try{
+            openConnection();
+
+            stmt = connect.prepareCall("{call BubbleUpMoveInTarget(?,?)}");
+            stmt.setInt(1, intUserIndex);
+            stmt.setInt(2, intTargetIndex);
+            stmt.executeUpdate();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    
+    
+    
+    
+    
     
     //Pull Random Advert Pair
     public ArrayList<ArrayList<String>> callablePullAdvertPair(){
