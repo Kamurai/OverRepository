@@ -1,22 +1,17 @@
 --drop PROCEDURE BubbleUpMoveTargetBefore;
 
-create PROCEDURE BubbleUpMoveTargetBefore
-(
+create PROCEDURE BubbleUpMoveTargetBefore(
 	@intUserIndex		int,
 	@intTargetIndex		int
 )
 AS
 BEGIN
-	DECLARE @intOrderRank int;
-	DECLARE @intSecondTarget int;
+	PRINT('BubbleUpMoveTargetBefore');
+	PRINT(CONCAT('@intUserIndex: ',		@intUserIndex));
+	PRINT(CONCAT('@intTargetIndex: ',	@intTargetIndex));
 	
-	SET @intOrderRank		= (SELECT TOP 1 OrderRank FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex);
+	DECLARE @intOrderRank	int = (SELECT TOP 1 OrderRank		FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex) - 1;
+	DECLARE @parentIndex	int = (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex);
 	
-	IF(@intOrderRank > 0)
-	BEGIN
-		SET @intSecondTarget	= (SELECT TOP 1 T1.TargetIndex FROM TARGETS T1 JOIN TARGETS T2 ON T1.ParentBoxIndex = T2.ParentBoxIndex
-			WHERE T2.BubbleUpUserIndex = @intUserIndex AND T2.TargetIndex = @intTargetIndex AND T1.OrderRank = T2.OrderRank-1);
-		UPDATE TARGETS SET OrderRank = @intOrderRank WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intSecondTarget;
-		UPDATE TARGETS SET OrderRank = @intOrderRank-1 WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex;
-	END
+	EXEC BubbleUpMoveTarget @intUserIndex, @intTargetIndex, @parentIndex, @intOrderRank;
 END

@@ -16,5 +16,5 @@ BEGIN
 	DELETE FROM Boxes WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @intBoxIndex;
 
 	--Adjust other orderRanks for same parentIndex
-	UPDATE Boxes set OrderRank = OrderRank - 1 WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @parentIndex AND OrderRank > @orderRank;
+	EXEC BubbleUpUpdateOrderRankBoxes @intUserIndex, @parentIndex, @orderRank, -1;
 END

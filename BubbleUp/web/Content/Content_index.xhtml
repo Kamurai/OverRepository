@@ -29,7 +29,8 @@
                     <tr>
                         <td>
                             <ui:include src="Recursive_Box.xhtml">
-                                <ui:param name="box" value="#{x}" />
+                                <ui:param name="box"        value="#{x}" />
+                                <ui:param name="maxOrder"   value="#{TargetBean.getStructure().boxList.size()-1}" />
                             </ui:include>
                         </td>
                     </tr>
@@ -37,7 +38,8 @@
                 <c:if test="#{TargetBean.getStructure().direction == 'Horizontal'}">
                     <td>
                         <ui:include src="Recursive_Box.xhtml">
-                            <ui:param name="box" value="#{x}" />
+                            <ui:param name="box"        value="#{x}" />
+                            <ui:param name="maxOrder"   value="#{TargetBean.getStructure().boxList.size()-1}" />
                         </ui:include>
                     </td>
                 </c:if>

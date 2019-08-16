@@ -7,7 +7,7 @@ create PROCEDURE BubbleUpUpdateUser
 )
 AS
 BEGIN
-	UPDATE O SET
+	UPDATE [BubbleUp].dbo.Users SET
 	BubbleUpAdminLevel = @AdminLevel 
 	FROM [BubbleUp].dbo.Users B
 	JOIN [HTKB].dbo.Users H ON B.HTKBUserIndex = H.HTKBUserIndex

@@ -12,7 +12,7 @@
             <td class='classBoxLabelHeader'>
                 <h:commandButton value="Switch Direction" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
                 <h:inputText class='classBoxInput' value="#{box.label}"/>
-            <c:if test="#{box.orderRank lt box.targetList.size()}">
+            <c:if test="#{box.orderRank lt maxOrder}">
                 <h:commandButton value="Move Down" action='#{TargetBean.MoveBoxAfter(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
             </c:if>
             <c:if test="#{box.orderRank gt 0}">

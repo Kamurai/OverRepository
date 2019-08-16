@@ -10,7 +10,6 @@ AS
 
 	IF(@intUserIndex IS NOT NULL AND @intUserIndex != '')
 	BEGIN
-		--Adjust other orderRanks for deleted box's parentIndex
-		UPDATE Targets set OrderRank = OrderRank - 1 WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intParentBoxIndex AND OrderRank > @intOrderRank;
+		EXEC BubbleUpUpdateOrderRankTargets @intUserIndex, @intParentBoxIndex, @intOrderRank, -1;
 	END
 GO

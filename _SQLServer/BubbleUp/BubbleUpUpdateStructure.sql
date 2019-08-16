@@ -111,6 +111,5 @@ BEGIN
 			SET @strId			= '';
 			SET @strLabel		= '';
 		END
-	END
-	
+	END	
 END
