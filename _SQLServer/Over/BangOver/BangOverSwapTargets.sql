@@ -102,7 +102,7 @@ BEGIN
 		update BangOverLists set UpLock = 1 where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2;
 	END
 	
-	INSERT INTO BangOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (intCelebrityIndex1, intCelebrityIndex2);
+	INSERT INTO BangOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (@intCelebrityIndex1, @intCelebrityIndex2);
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Celebrities

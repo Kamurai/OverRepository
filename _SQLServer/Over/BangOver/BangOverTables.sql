@@ -1,14 +1,14 @@
---drop table BangOverAdverts, BangOverLists, Celebrities, CelebrityRequests;
+--drop table BangOverAdverts, BangOverLists, BangOverMemories, Celebrities, CelebrityRequests;
 
 create table BangOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 
 create table BangOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, BangOverUserIndex bigint not null, OrderRank bigint not null, CelebrityIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
+create table BangOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
+
 create table Celebrities (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Sex varchar(1) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
 create table CelebrityRequests (RequestIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Sex varchar(1) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
-
-create table BangOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
 
 insert into BangOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
 insert into BangOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');

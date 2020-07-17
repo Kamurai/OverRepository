@@ -101,7 +101,7 @@ BEGIN
 		update ShowOverLists set UpLock = 1 where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2;
 	END
 	
-	INSERT INTO ShowOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (intCelebrityIndex1, intCelebrityIndex2);
+	INSERT INTO ShowOverMemories (ShowIndex1, ShowIndex2) VALUES (@intShowIndex1, @intShowIndex2);
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Shows

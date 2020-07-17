@@ -102,7 +102,7 @@ BEGIN
 		update BoardOverLists set UpLock = 1 where BoardOverUserIndex = @intUserIndex and BoardGameIndex = @intBoardGameIndex2;
 	END
 	
-	INSERT INTO BoardOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (intCelebrityIndex1, intCelebrityIndex2);
+	INSERT INTO BoardOverMemories (BoardGameIndex1, BoardGameIndex2) VALUES (@intBoardGameIndex1, @intBoardGameIndex2);
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped BoardGames

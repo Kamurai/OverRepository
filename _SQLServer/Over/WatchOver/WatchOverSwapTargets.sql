@@ -101,7 +101,7 @@ BEGIN
 		update WatchOverLists set UpLock = 1 where WatchOverUserIndex = @intUserIndex and MovieIndex = @intMovieIndex2;
 	END
 	
-	INSERT INTO WatchOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (intCelebrityIndex1, intCelebrityIndex2);
+	INSERT INTO WatchOverMemories (MovieIndex1, MovieIndex2) VALUES (@intMovieIndex1, @intMovieIndex2);
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Movies

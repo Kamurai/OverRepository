@@ -1,14 +1,14 @@
---drop table BoardOverAdverts, BoardOverLists, BoardGames, BoardGameRequests;
+--drop table BoardOverAdverts, BoardOverLists, BoardOverMemories, BoardGames, BoardGameRequests;
 
 create table BoardOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 
 create table BoardOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, BoardOverUserIndex bigint not null, OrderRank bigint not null, BoardGameIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
+create table BoardOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, BoardGameIndex1 bigint not null, BoardGameIndex2 bigint not null );
+
 create table BoardGames (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
 create table BoardGameRequests (RequestIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
-
-create table BoardOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
 
 insert into BoardOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
 insert into BoardOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');
