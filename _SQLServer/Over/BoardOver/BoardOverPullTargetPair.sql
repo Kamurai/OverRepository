@@ -10,6 +10,7 @@ BEGIN
 	DECLARE @OrderCount int = 0;
 	DECLARE @GlobalExclusionCount int = 0;
 	DECLARE @TargetIndex int = 0;
+	DECLARE @SecondTargetIndex int = 0;
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
@@ -21,8 +22,14 @@ BEGIN
 		--//request count of random non-locked BoardGames from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(ListIndex) from BoardOverLists where BoardOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
+			select count(ListIndex) from BoardOverLists where BoardOverUserIndex = @intUserIndex 
+			and (
+				UpLock = 0 or DownLock = 0
+			)and not (
+				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+			) and not (
+				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			)
 		);
 		SET @GlobalExclusionCount = (
 			select count(BoardGames.TargetIndex) from BoardGames
@@ -124,24 +131,27 @@ BEGIN
 			ELSE
 			BEGIN
 				SET @SavedOrder = (select OrderRank from BoardOverLists where ListIndex = @TargetIndex);
+				
+				if( (SELECT UpLock FROM BoardOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM BoardOverLists WHERE OrderRank = @SavedOrder-1);
+				END
+				else if( (SELECT DownLock FROM BoardOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM BoardOverLists WHERE OrderRank = @SavedOrder+1);
+				END
+
 				--//request @TargetIndex from personal list
-				select BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames
+				(select BoardGames.TargetIndex, Name, Sex, Picture from BoardGames
 				JOIN BoardOverLists ON
-					BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
-				where BoardOverLists.ListIndex = @TargetIndex
+					BoardGames.TargetIndex = BoardOverLists.CelebrityIndex
+				where BoardOverLists.ListIndex = @TargetIndex 
 				UNION
-				--//request adjacent non-locked Target from personal list
-				select * from (
-					select top 1 BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames
-					JOIN BoardOverLists ON
-						BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
-					where BoardOverUserIndex = @intUserIndex 
-					and 
-					(
-						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
-						(OrderRank = @SavedOrder+1 and UpLock = 0) 
-					) order by newid()
-				) T2;
+				select BoardGames.TargetIndex, Name, Sex, Picture from BoardGames
+				JOIN BoardOverLists ON
+					BoardGames.TargetIndex = BoardOverLists.CelebrityIndex
+				where BoardOverLists.ListIndex = @SecondTargetIndex
+				); --T2
 			END
 		END                    
 		--//else (there are no unlocked records)

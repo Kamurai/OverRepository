@@ -10,6 +10,7 @@ BEGIN
 	DECLARE @OrderCount int = 0;
 	DECLARE @GlobalExclusionCount int = 0;
 	DECLARE @TargetIndex int = 0;
+	DECLARE @SecondTargetIndex int = 0;
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
@@ -21,8 +22,14 @@ BEGIN
 		--//request count of random non-locked Movies from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(ListIndex) from WatchOverLists where WatchOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
+			select count(ListIndex) from WatchOverLists where WatchOverUserIndex = @intUserIndex 
+			and (
+				UpLock = 0 or DownLock = 0
+			)and not (
+				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+			) and not (
+				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			)
 		);
 		SET @GlobalExclusionCount = (select count(Movies.TargetIndex) from Movies
 			JOIN WatchOverUsers ON
@@ -139,24 +146,27 @@ BEGIN
 			ELSE
 			BEGIN
 				SET @SavedOrder = (select OrderRank from WatchOverLists where ListIndex = @TargetIndex);
+				
+				if( (SELECT UpLock FROM WatchOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM WatchOverLists WHERE OrderRank = @SavedOrder-1);
+				END
+				else if( (SELECT DownLock FROM WatchOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM WatchOverLists WHERE OrderRank = @SavedOrder+1);
+				END
+
 				--//request @TargetIndex from personal list
-				select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from  Movies
+				(select Movies.TargetIndex, Name, Sex, Picture from Movies
 				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.MovieIndex
+					Movies.TargetIndex = WatchOverLists.CelebrityIndex
 				where WatchOverLists.ListIndex = @TargetIndex 
 				UNION
-				--//request adjacent non-locked Target from personal list
-				select * from (
-					select top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-					JOIN WatchOverLists ON
-						Movies.TargetIndex = WatchOverLists.MovieIndex
-					where WatchOverUserIndex = @intUserIndex 
-					and 
-					( 
-						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
-						(OrderRank = @SavedOrder+1 and UpLock = 0) 
-					) order by newid()
-				) T2;
+				select Movies.TargetIndex, Name, Sex, Picture from Movies
+				JOIN WatchOverLists ON
+					Movies.TargetIndex = WatchOverLists.CelebrityIndex
+				where WatchOverLists.ListIndex = @SecondTargetIndex
+				); --T2
 			END
 		END                    
 		--//else (there are no unlocked records)

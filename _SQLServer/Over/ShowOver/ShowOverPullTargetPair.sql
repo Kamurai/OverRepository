@@ -10,6 +10,7 @@ BEGIN
 	DECLARE @OrderCount int = 0;
 	DECLARE @GlobalExclusionCount int = 0;
 	DECLARE @TargetIndex int = 0;
+	DECLARE @SecondTargetIndex int = 0;
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
@@ -21,8 +22,14 @@ BEGIN
 		--//request count of random non-locked Shows from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
+			select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex 
+			and (
+				UpLock = 0 or DownLock = 0
+			)and not (
+				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+			) and not (
+				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			)
 		);
 		SET @GlobalExclusionCount = (select count(Shows.TargetIndex) from Shows
 			JOIN ShowOverUsers ON
@@ -138,24 +145,27 @@ BEGIN
 			ELSE
 			BEGIN
 				SET @SavedOrder = (select OrderRank from ShowOverLists where ListIndex = @TargetIndex);
+				
+				if( (SELECT UpLock FROM ShowOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM ShowOverLists WHERE OrderRank = @SavedOrder-1);
+				END
+				else if( (SELECT DownLock FROM ShowOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM ShowOverLists WHERE OrderRank = @SavedOrder+1);
+				END
+
 				--//request @TargetIndex from personal list
-				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from  Shows
+				(select Shows.TargetIndex, Name, Sex, Picture from Shows
 				JOIN ShowOverLists ON
-					Shows.TargetIndex = ShowOverLists.ShowIndex
-				where ShowOverLists.ListIndex = @TargetIndex
+					Shows.TargetIndex = ShowOverLists.CelebrityIndex
+				where ShowOverLists.ListIndex = @TargetIndex 
 				UNION
-				--//request adjacent non-locked Target from personal list
-				select * from (
-					select top 1 Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
-					JOIN ShowOverLists ON
-						Shows.TargetIndex = ShowOverLists.ShowIndex
-					where ShowOverUserIndex = @intUserIndex 
-					and
-					( 
-						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
-						(OrderRank = @SavedOrder+1 and UpLock = 0) 
-					) order by newid()
-				) T2;
+				select Shows.TargetIndex, Name, Sex, Picture from Shows
+				JOIN ShowOverLists ON
+					Shows.TargetIndex = ShowOverLists.CelebrityIndex
+				where ShowOverLists.ListIndex = @SecondTargetIndex
+				); --T2
 			END
 		END                    
 		--//else (there are no unlocked records)

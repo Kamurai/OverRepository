@@ -10,6 +10,7 @@ BEGIN
 	DECLARE @OrderCount int = 0;
 	DECLARE @GlobalExclusionCount int = 0;
 	DECLARE @TargetIndex int = 0;
+	DECLARE @SecondTargetIndex int = 0;
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
@@ -21,8 +22,14 @@ BEGIN
 		--//request count of random non-locked VideoGames from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
+			select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex 
+			and (
+				UpLock = 0 or DownLock = 0
+			)and not (
+				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+			) and not (
+				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			)
 		);
 		SET @GlobalExclusionCount = (select count(VideoGames.TargetIndex) from VideoGames
 			JOIN PlayOverUsers ON
@@ -210,24 +217,27 @@ BEGIN
 			ELSE
 			BEGIN
 				SET @SavedOrder = (select OrderRank from PlayOverLists where ListIndex = @TargetIndex);
+				
+				if( (SELECT UpLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder-1);
+				END
+				else if( (SELECT DownLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder+1);
+				END
+
 				--//request @TargetIndex from personal list
-				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
+				(select VideoGames.TargetIndex, Name, Sex, Picture from VideoGames
 				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
+					VideoGames.TargetIndex = PlayOverLists.CelebrityIndex
 				where PlayOverLists.ListIndex = @TargetIndex 
 				UNION
-				--//request adjacent non-locked Target from personal list
-				select * from (
-					select top 1 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-					JOIN PlayOverLists ON
-						VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-					where PlayOverUserIndex = @intUserIndex 
-					and 
-					(
-						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
-						(OrderRank = @SavedOrder+1 and UpLock = 0) 
-					) order by newid()
-				) T2;
+				select VideoGames.TargetIndex, Name, Sex, Picture from VideoGames
+				JOIN PlayOverLists ON
+					VideoGames.TargetIndex = PlayOverLists.CelebrityIndex
+				where PlayOverLists.ListIndex = @SecondTargetIndex
+				); --T2
 			END
 		END                    
 		--//else (there are no unlocked records)

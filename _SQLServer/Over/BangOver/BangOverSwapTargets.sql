@@ -105,6 +105,7 @@ BEGIN
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Celebrities
+	/*
 	DECLARE @intCelebrityOrder1 int = -2;
 	DECLARE @intCelebrityOrder2 int = -2;
 	DECLARE @intCelebrityTotal int = 0;
@@ -130,4 +131,5 @@ BEGIN
 			update BangOverLists set UpLock = 0 where BangOverUserIndex = @intUserIndex and (OrderRank = @intCelebrityOrder2+1 or OrderRank = @intCelebrityOrder1);
 		END
 	END
+	*/
 END

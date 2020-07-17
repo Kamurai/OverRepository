@@ -10,6 +10,7 @@ BEGIN
 	DECLARE @OrderCount int = 0;
 	DECLARE @GlobalExclusionCount int = 0;
 	DECLARE @TargetIndex int = 0;
+	DECLARE @SecondTargetIndex int = 0;
 	DECLARE @SavedOrder int = 0;
 
 	--//request count of records related to user
@@ -21,8 +22,14 @@ BEGIN
 		--//request count of random non-locked celebrities from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-		select count(ListIndex) from BangOverLists where BangOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-		and not ( OrderRank = 0 and UpLock = 0 and DownLock = 1 ) and not (OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0)
+			select count(ListIndex) from BangOverLists where BangOverUserIndex = @intUserIndex 
+			and (
+				UpLock = 0 or DownLock = 0
+			)and not (
+				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+			) and not (
+				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			)
 		);
 		SET @GlobalExclusionCount = (
 			select count(Celebrities.TargetIndex) from Celebrities
@@ -102,24 +109,27 @@ BEGIN
 			ELSE
 			BEGIN
 				SET @SavedOrder = (select OrderRank from BangOverLists where ListIndex = @TargetIndex);
+				
+				if( (SELECT UpLock FROM BangOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM BangOverLists WHERE OrderRank = @SavedOrder-1);
+				END
+				else if( (SELECT DownLock FROM BangOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				BEGIN
+					SET @SecondTargetIndex = (SELECT ListIndex FROM BangOverLists WHERE OrderRank = @SavedOrder+1);
+				END
+
 				--//request @TargetIndex from personal list
-				select Celebrities.TargetIndex, Name, Sex, Picture from Celebrities
+				(select Celebrities.TargetIndex, Name, Sex, Picture from Celebrities
 				JOIN BangOverLists ON
 					Celebrities.TargetIndex = BangOverLists.CelebrityIndex
 				where BangOverLists.ListIndex = @TargetIndex 
 				UNION
-				--//request adjacent non-locked Target from personal list
-				select * from (
-					select top 1 Celebrities.TargetIndex, Name, Sex, Picture from Celebrities
-					JOIN BangOverLists ON 
-						Celebrities.TargetIndex = BangOverLists.CelebrityIndex
-					where BangOverUserIndex = @intUserIndex 
-					and 
-					(
-						(OrderRank = @SavedOrder-1 and DownLock = 0) or 
-						(OrderRank = @SavedOrder+1 and UpLock = 0) 
-					) order by newid()
-				) T2;
+				select Celebrities.TargetIndex, Name, Sex, Picture from Celebrities
+				JOIN BangOverLists ON
+					Celebrities.TargetIndex = BangOverLists.CelebrityIndex
+				where BangOverLists.ListIndex = @SecondTargetIndex
+				);
 			END
 		END                    
 		--//else (there are no unlocked records)
