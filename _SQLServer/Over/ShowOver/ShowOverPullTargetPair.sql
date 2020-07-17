@@ -8,7 +8,7 @@ AS
 BEGIN
 	DECLARE @UserCount int = 0;
 	DECLARE @OrderCount int = 0;
-	DECLARE @GlobalExclusionCount int = 0;
+	DECLARE @GlobalCount int = 0;
 	DECLARE @TargetIndex int = 0;
 	DECLARE @SecondTargetIndex int = 0;
 	DECLARE @SavedOrder int = 0;
@@ -31,7 +31,7 @@ BEGIN
 				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
 			)
 		);
-		SET @GlobalExclusionCount = (select count(Shows.TargetIndex) from Shows
+		SET @GlobalCount = (select count(Shows.TargetIndex) from Shows
 			JOIN ShowOverUsers ON
 			(
 				(
@@ -73,7 +73,7 @@ BEGIN
 		if( @OrderCount != 0 )
 		BEGIN
 			--//there are Shows left in the global list
-			IF( @GlobalExclusionCount > 0 )
+			IF( @GlobalCount > 0 )
 			BEGIN
 				--//request random non-locked Target from personal list
 				SET @TargetIndex = (select top 1 ListIndex from ShowOverLists where ShowOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
@@ -92,7 +92,7 @@ BEGIN
 					--//there are Shows left in the global list
 			if ( (select count(ShowOverUserIndex) from ShowOverLists 
 			where (ListIndex = @TargetIndex and OrderRank = 0) or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
-			and @GlobalExclusionCount > 0 )
+			and @GlobalCount > 0 )
 			BEGIN    
 				--//request @TargetIndex from personal list
 				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from ShowOverLists
@@ -172,7 +172,7 @@ BEGIN
 		ELSE
 		BEGIN
 			--//there are Shows left in the global list
-			IF( @GlobalExclusionCount > 0 )
+			IF( @GlobalCount > 0 )
 			BEGIN
 				--//request Order = 0 or Order = count from personal list
 				select * from (

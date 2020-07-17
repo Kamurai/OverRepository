@@ -8,6 +8,8 @@ create table Shows (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(m
 
 create table ShowRequests (RequestIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(max) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(max) not null, UploadUserIndex bigint not null );
 
+create table ShowOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
+
 insert into ShowOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
 insert into ShowOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');
 insert into ShowOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 3', 'RoosterTeeth3.jpg', 'http://www.RoosterTeeth.com');

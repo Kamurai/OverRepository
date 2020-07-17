@@ -101,10 +101,12 @@ BEGIN
 			--//Only lock up
 		update PlayOverLists set UpLock = 1 where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2;
 	END
-
+	
+	INSERT INTO PlayOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (intCelebrityIndex1, intCelebrityIndex2);
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped VideoGames
+	/*
 	DECLARE @intVideoGameOrder1 int = -2;
 	DECLARE @intVideoGameOrder2 int = -2;
 	DECLARE @intVideoGameTotal int = 0;
@@ -130,4 +132,5 @@ BEGIN
 			update PlayOverLists set UpLock = 0 where PlayOverUserIndex = @intUserIndex and (OrderRank = @intVideoGameOrder2+1 or OrderRank = @intVideoGameOrder1);
 		END
 	END
+	*/
 END

@@ -8,6 +8,8 @@ create table Movies (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(
 
 create table MovieRequests (RequestIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
+create table WatchOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
+
 insert into WatchOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 1', 'RoosterTeeth1.png', 'http://www.RoosterTeeth.com');
 insert into WatchOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 2', 'RoosterTeeth2.jpg', 'http://www.RoosterTeeth.com');
 insert into WatchOverAdverts (Name, Picture, Link) VALUES ('Roosterteeth 3', 'RoosterTeeth3.jpg', 'http://www.RoosterTeeth.com');
