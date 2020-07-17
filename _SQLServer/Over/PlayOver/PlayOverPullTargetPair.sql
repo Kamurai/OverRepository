@@ -228,14 +228,14 @@ BEGIN
 				END
 
 				--//request @TargetIndex from personal list
-				(select VideoGames.TargetIndex, Name, Sex, Picture from VideoGames
+				(select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
 				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.CelebrityIndex
+					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
 				where PlayOverLists.ListIndex = @TargetIndex 
 				UNION
-				select VideoGames.TargetIndex, Name, Sex, Picture from VideoGames
+				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
 				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.CelebrityIndex
+					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
 				where PlayOverLists.ListIndex = @SecondTargetIndex
 				); --T2
 			END
