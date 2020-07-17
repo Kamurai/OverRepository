@@ -157,14 +157,14 @@ BEGIN
 				END
 
 				--//request @TargetIndex from personal list
-				(select Movies.TargetIndex, Name, Sex, Picture from Movies
+				(select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
 				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.CelebrityIndex
+					Movies.TargetIndex = WatchOverLists.MovieIndex
 				where WatchOverLists.ListIndex = @TargetIndex 
 				UNION
-				select Movies.TargetIndex, Name, Sex, Picture from Movies
+				select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
 				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.CelebrityIndex
+					Movies.TargetIndex = WatchOverLists.MovieIndex
 				where WatchOverLists.ListIndex = @SecondTargetIndex
 				); --T2
 			END

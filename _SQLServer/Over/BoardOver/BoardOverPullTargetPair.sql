@@ -142,14 +142,14 @@ BEGIN
 				END
 
 				--//request @TargetIndex from personal list
-				(select BoardGames.TargetIndex, Name, Sex, Picture from BoardGames
+				(select BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames
 				JOIN BoardOverLists ON
-					BoardGames.TargetIndex = BoardOverLists.CelebrityIndex
+					BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
 				where BoardOverLists.ListIndex = @TargetIndex 
 				UNION
-				select BoardGames.TargetIndex, Name, Sex, Picture from BoardGames
+				select BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames
 				JOIN BoardOverLists ON
-					BoardGames.TargetIndex = BoardOverLists.CelebrityIndex
+					BoardGames.TargetIndex = BoardOverLists.BoardGameIndex
 				where BoardOverLists.ListIndex = @SecondTargetIndex
 				); --T2
 			END

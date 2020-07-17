@@ -156,14 +156,14 @@ BEGIN
 				END
 
 				--//request @TargetIndex from personal list
-				(select Shows.TargetIndex, Name, Sex, Picture from Shows
+				(select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
 				JOIN ShowOverLists ON
-					Shows.TargetIndex = ShowOverLists.CelebrityIndex
+					Shows.TargetIndex = ShowOverLists.ShowIndex
 				where ShowOverLists.ListIndex = @TargetIndex 
 				UNION
-				select Shows.TargetIndex, Name, Sex, Picture from Shows
+				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
 				JOIN ShowOverLists ON
-					Shows.TargetIndex = ShowOverLists.CelebrityIndex
+					Shows.TargetIndex = ShowOverLists.ShowIndex
 				where ShowOverLists.ListIndex = @SecondTargetIndex
 				); --T2
 			END
