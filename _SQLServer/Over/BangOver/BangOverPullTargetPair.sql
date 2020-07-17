@@ -129,7 +129,7 @@ BEGIN
 				JOIN BangOverLists ON
 					Celebrities.TargetIndex = BangOverLists.CelebrityIndex
 				where BangOverLists.ListIndex = @SecondTargetIndex
-				);
+				); --T2
 			END
 		END                    
 		--//else (there are no unlocked records)
