@@ -253,6 +253,7 @@ public class LoginBean implements Serializable
         
         "",
         "",
+        true,
         //Genres
         false,
         false,
@@ -338,13 +339,12 @@ public class LoginBean implements Serializable
         dao.callableSetOffline(CurrentUser.getUsername());
     }
     
-    public void UpdateOptions()
-    {
-//        String result = "Options";
-        
+    public void UpdateOptions(){
         dao.callableUpdateOptions(CurrentUser);
-        
-//        return result;
+    }
+    
+    public void clearMemories(){
+        dao.callableClearMemories(CurrentUser);
     }
     
     public String SignUp(){

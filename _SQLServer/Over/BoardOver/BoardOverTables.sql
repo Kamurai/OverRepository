@@ -4,7 +4,7 @@ create table BoardOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Nam
 
 create table BoardOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, BoardOverUserIndex bigint not null, OrderRank bigint not null, BoardGameIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table BoardOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, BoardGameIndex1 bigint not null, BoardGameIndex2 bigint not null );
+create table BoardOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, BoardOverUserIndex bigint not null, BoardGameIndex1 bigint not null, BoardGameIndex2 bigint not null );
 
 create table BoardGames (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 

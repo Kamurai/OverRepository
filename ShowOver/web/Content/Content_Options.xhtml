@@ -18,6 +18,10 @@
                 Just click what you're into.
                 <table id="idTableOptions">
                     <tr>
+                        <td>Would you like to remember your choices?</td>
+                        <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.memory}"/></td>
+                    </tr>
+                    <tr>
                         <td>Into Comedy shows?</td>
                         <td><h:selectBooleanCheckbox value="#{LoginBean.currentUser.comedyS}"/></td>
                     </tr>
@@ -84,6 +88,7 @@
                 </table>
             </p>
             <h:commandButton  value ="Update" action='#{LoginBean.UpdateOptions()}'/>
+            <h:commandButton  value ="Clear Memories" action='#{LoginBean.clearMemories()}'/>
         </c:when>
     </c:choose>
 </html>

@@ -44,8 +44,7 @@ public class ManagementDAO extends DAO{
     }
     
     //Pull User Data Model
-    public List<User> callablePullUserDataModel()
-    {
+    public List<User> callablePullUserDataModel(){
         CallableStatement stmt = null;
         List<User> ResultList = new ArrayList<User>();
         User tempUser;
@@ -64,6 +63,7 @@ public class ManagementDAO extends DAO{
                         
                         rs.getString("Username"), 
                         rs.getString("Email"), 
+                        rs.getBoolean("ShowOverMemory"), 
                         //Genres
                         rs.getBoolean("ComedyS"), 
                         rs.getBoolean("DramaS"), 

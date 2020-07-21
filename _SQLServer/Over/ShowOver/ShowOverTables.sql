@@ -4,7 +4,7 @@ create table ShowOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name
 
 create table ShowOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, ShowOverUserIndex bigint not null, OrderRank bigint not null, ShowIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table ShowOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, ShowIndex1 bigint not null, ShowIndex2 bigint not null );
+create table ShowOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, ShowOverUserIndex bigint not null, ShowIndex1 bigint not null, ShowIndex2 bigint not null );
 
 create table Shows (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(max) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(max) not null, UploadUserIndex bigint not null );
 

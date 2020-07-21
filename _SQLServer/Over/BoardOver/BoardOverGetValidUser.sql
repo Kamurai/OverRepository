@@ -51,7 +51,7 @@ BEGIN
 			);
 
 			--create default user in Board Over User table
-			INSERT INTO BoardOverUsers (OverUserIndex, BoardOverOnline, 
+			INSERT INTO BoardOverUsers (OverUserIndex, BoardOverOnline, BoardOverMemory,
 			DeckBuilding, 
 			FixedDeck, 
 			ConstructedDeck, 
@@ -68,7 +68,7 @@ BEGIN
 			Dexterity, 
 			Party 			
 			)
-			VALUES ( @OverUserIndex, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+			VALUES ( @OverUserIndex, 0, 1, /*Types*/ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
 		END
 	END
 		

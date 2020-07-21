@@ -41,6 +41,7 @@ public class LoginDAO extends DAO{
                 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
+                rs.getBoolean("WatchOverMemory"), 
                 //Genres
                 rs.getBoolean("ComedyM"), 
                 rs.getBoolean("DramaM"), 
@@ -178,6 +179,24 @@ public class LoginDAO extends DAO{
             stmt.setBoolean(5, targetUser.getPrehistoricM());
             stmt.setBoolean(5, targetUser.getComicsM());
             stmt.setBoolean(5, targetUser.getPeriodM());
+            rs = stmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableClearMemories(User targetUser){
+        CallableStatement stmt = null;
+        ResultSet rs;
+        
+        //Update preferences to match check boxes (local variables)
+        try{
+            openConnection();
+        
+            stmt = getConnect().prepareCall("{call WatchOverClearMemories(?)}");
+            stmt.setInt(1, targetUser.getUserIndex());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

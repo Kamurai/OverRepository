@@ -15,6 +15,10 @@ public class User
     {
         return UserIndex;
     }
+    public void setUserIndex(int input)
+    {
+        UserIndex = input;
+    }
     private String Username;
     public String getUsername()
     {
@@ -41,6 +45,13 @@ public class User
     public void setAdminLevel(int input)
     {
         AdminLevel = input;
+    }
+    private boolean Memory;
+    public boolean getMemory(){
+        return Memory;
+    }
+    public void setMemory(boolean input){
+        Memory = input;
     }
     
     private boolean DeckBuilding;
@@ -197,7 +208,7 @@ public class User
             
             String strUsername, 
             String strEmail, 
-            
+            boolean boolMemory, 
             //Genres
             boolean boolDeckBuilding, 
             boolean boolFixedDeck, 
@@ -221,6 +232,7 @@ public class User
         
         Username = strUsername;
         Email = strEmail;
+        Memory = boolMemory;
         
         //Genres
         DeckBuilding = boolDeckBuilding;
@@ -240,13 +252,13 @@ public class User
         Party = boolParty;
     }
     
-    public User(User newUser)
-    {
+    public User(User newUser){
         UserIndex = newUser.UserIndex;
         Username = newUser.Username;
         Email = newUser.Email;
         AdminLevel = newUser.AdminLevel;
-        
+        Memory = newUser.Memory;
+        /*Types*/
         DeckBuilding = newUser.DeckBuilding;
         FixedDeck = newUser.FixedDeck;
         ConstructedDeck = newUser.ConstructedDeck;

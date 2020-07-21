@@ -4,7 +4,7 @@ create table WatchOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Nam
 
 create table WatchOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, WatchOverUserIndex bigint not null, OrderRank bigint not null, MovieIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table WatchOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, MovieIndex1 bigint not null, MovieIndex2 bigint not null );
+create table WatchOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, WatchOverUserIndex bigint not null, MovieIndex1 bigint not null, MovieIndex2 bigint not null );
 
 create table Movies (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 

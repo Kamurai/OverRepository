@@ -1,7 +1,6 @@
 --drop procedure BangOverSwapTargets;
 
-create PROCEDURE BangOverSwapTargets
-(
+create PROCEDURE BangOverSwapTargets(
     @intUserIndex int,
     @strCelebrity1 VARCHAR(50),
 	@strCelebrity2 VARCHAR(50)
@@ -102,7 +101,24 @@ BEGIN
 		update BangOverLists set UpLock = 1 where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2;
 	END
 	
-	INSERT INTO BangOverMemories (CelebrityIndex1, CelebrityIndex2) VALUES (@intCelebrityIndex1, @intCelebrityIndex2);
+	--if pair of targets is not already remembered
+	if(
+		(
+			SELECT COUNT(MemoryIndex) FROM BangOverMemories 
+			WHERE (CelebrityIndex1 = @intCelebrityIndex1 or CelebrityIndex1 = @intCelebrityIndex2)
+			AND (CelebrityIndex2 = @intCelebrityIndex1 or CelebrityIndex2 = @intCelebrityIndex2)
+		) = 0
+		AND (
+			(
+				(SELECT top 1 BangOverMemory FROM BangOverUsers WHERE BangOverUserIndex = @intUserIndex) = 1
+			)
+		)
+	)
+	BEGIN
+		--add memory to table
+		INSERT INTO BangOverMemories (BangOverUserIndex, CelebrityIndex1, CelebrityIndex2) VALUES (@intUserIndex, @intCelebrityIndex1, @intCelebrityIndex2);
+	END
+
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Celebrities

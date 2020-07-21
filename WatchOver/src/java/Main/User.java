@@ -43,6 +43,13 @@ public class User
     {
         AdminLevel = input;
     }
+    private boolean Memory;
+    public boolean getMemory(){
+        return Memory;
+    }
+    public void setMemory(boolean input){
+        Memory = input;
+    }
     
     //Genres
     private boolean ComedyM;
@@ -209,6 +216,7 @@ public class User
             
             String strUsername, 
             String strEmail,             
+            boolean boolMemory, 
             //Genres
             boolean boolComedyM, 
             boolean boolDramaM, 
@@ -234,6 +242,7 @@ public class User
         
         Username = strUsername;
         Email = strEmail;
+        Memory = boolMemory;
         
         //Genres
         ComedyM = boolComedyM;
@@ -255,12 +264,12 @@ public class User
         PeriodM = boolPeriodM;
     }
     
-    public User(User newUser)
-    {
+    public User(User newUser){
         UserIndex = newUser.UserIndex;
         Username = newUser.Username;
         Email = newUser.Email;
         AdminLevel = newUser.AdminLevel;
+        Memory = newUser.Memory;
         
         //Genres
         ComedyM = newUser.ComedyM;

@@ -1,9 +1,10 @@
 --drop procedure BangOverUpdateOptions;
 
-create PROCEDURE BangOverUpdateOptions
-(
+create PROCEDURE BangOverUpdateOptions(
     @intUserIndex	int,
-    @bitWomen		bit,
+    @bitMemory		bit,
+	--Genders
+	@bitWomen		bit,
 	@bitMen			bit,
 	@bitTransWomen	bit,
 	@bitTransMen	bit
@@ -12,10 +13,12 @@ AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update BangOverUsers set 
-	Women		= @bitWomen, 
-	Men			= @bitMen, 
-	TransWomen	= @bitTransWomen, 
-	TransMen	= @bitTransMen 
+	BangOverMemory	= @bitMemory, 
+	--Genders
+	Women			= @bitWomen, 
+	Men				= @bitMen, 
+	TransWomen		= @bitTransWomen, 
+	TransMen		= @bitTransMen 
 	where BangOverUsers.BangOverUserIndex = @intUserIndex;
 
 	--//Adjust Personal list to match new preferences

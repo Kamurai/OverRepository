@@ -1,7 +1,6 @@
 --drop PROCEDURE WatchOverPullTargetPair;
 
-create PROCEDURE WatchOverPullTargetPair
-(
+create PROCEDURE WatchOverPullTargetPair(
     @intUserIndex int        
 )
 AS
@@ -22,15 +21,25 @@ BEGIN
 		--//request count of random non-locked Movies from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-			select count(ListIndex) from WatchOverLists where WatchOverUserIndex = @intUserIndex 
-			and (
-				UpLock = 0 or DownLock = 0
-			)and not (
-				OrderRank = 0 and UpLock = 0 and DownLock = 1 
-			) and not (
-				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			SELECT count(L1.ListIndex) FROM WatchOverLists L1
+			JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+			JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
+			WHERE L1.WatchOverUserIndex = @intUserIndex
+			AND(
+				 L1.MovieIndex NOT IN(
+					SELECT M.MovieIndex1 FROM WatchOverMemories M
+					WHERE L1.MovieIndex = M.MovieIndex1
+					AND L2.MovieIndex = M.MovieIndex2
+					UNION
+					SELECT M.MovieIndex2 FROM WatchOverMemories M
+					WHERE L1.MovieIndex = M.MovieIndex2
+					AND L2.MovieIndex = M.MovieIndex1
+				) OR (
+					U.WatchOverMemory = 0
+				)				
 			)
 		);
+
 		SET @GlobalCount = (select count(Movies.TargetIndex) from Movies
 			JOIN WatchOverUsers ON
 			(
@@ -76,15 +85,54 @@ BEGIN
 			IF( @GlobalCount > 0 )
 			BEGIN
 				--//request random non-locked Target from personal list
-				SET @TargetIndex = (select top 1 ListIndex from WatchOverLists where WatchOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				SET @TargetIndex = 
+				(
+					SELECT top 1 L1.ListIndex FROM WatchOverLists L1
+					JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
+					WHERE L1.WatchOverUserIndex = @intUserIndex
+					AND(
+						 L1.MovieIndex NOT IN(
+							SELECT M.MovieIndex1 FROM WatchOverMemories M
+							WHERE L1.MovieIndex = M.MovieIndex1
+							AND L2.MovieIndex = M.MovieIndex2
+							UNION
+							SELECT M.MovieIndex2 FROM WatchOverMemories M
+							WHERE L1.MovieIndex = M.MovieIndex2
+							AND L2.MovieIndex = M.MovieIndex1
+						) OR (
+							U.WatchOverMemory = 0
+						)				
+					)
+					order by newid()
+				);
 			END
 			ELSE
 			BEGIN
 				--//request random non-locked Target from personal list
+				SET @TargetIndex = 
+				(
+					SELECT top 1 L1.ListIndex FROM WatchOverLists L1
+					JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
+					WHERE L1.WatchOverUserIndex = @intUserIndex
+					AND(
+						 L1.MovieIndex NOT IN(
+							SELECT M.MovieIndex1 FROM WatchOverMemories M
+							WHERE L1.MovieIndex = M.MovieIndex1
+							AND L2.MovieIndex = M.MovieIndex2
+							UNION
+							SELECT M.MovieIndex2 FROM WatchOverMemories M
+							WHERE L1.MovieIndex = M.MovieIndex2
+							AND L2.MovieIndex = M.MovieIndex1
+						) OR (
+							U.WatchOverMemory = 0
+						)
+					)
 					--//exclude the first and last Movies
-				SET @TargetIndex = (select top 1 ListIndex from WatchOverLists 
-				where WatchOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-				and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+					and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+					order by newid()
+				);
 			END
 			
 			--//find a record to compare to the one we have
@@ -147,14 +195,28 @@ BEGIN
 			BEGIN
 				SET @SavedOrder = (select OrderRank from WatchOverLists where ListIndex = @TargetIndex);
 				
-				if( (SELECT UpLock FROM WatchOverLists WHERE OrderRank = @SavedOrder) = 0 )
-				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM WatchOverLists WHERE OrderRank = @SavedOrder-1);
-				END
-				else if( (SELECT DownLock FROM WatchOverLists WHERE OrderRank = @SavedOrder) = 0 )
-				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM WatchOverLists WHERE OrderRank = @SavedOrder+1);
-				END
+				SET @SecondTargetIndex = (
+
+					SELECT top 1 L2.ListIndex FROM WatchOverLists L1
+					JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
+					WHERE L1.WatchOverUserIndex = @intUserIndex
+					AND L1.ListIndex = @TargetIndex
+					AND(
+						 L1.MovieIndex NOT IN(
+							SELECT M.MovieIndex1 FROM WatchOverMemories M
+							WHERE L1.MovieIndex = M.MovieIndex1
+							AND L2.MovieIndex = M.MovieIndex2
+							UNION
+							SELECT M.MovieIndex2 FROM WatchOverMemories M
+							WHERE L1.MovieIndex = M.MovieIndex2
+							AND L2.MovieIndex = M.MovieIndex1
+						) OR (
+							U.WatchOverMemory = 0
+						)				
+					)
+					order by newid()
+				);
 
 				--//request @TargetIndex from personal list
 				(select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies

@@ -1,8 +1,8 @@
 --drop procedure PlayOverUpdateOptions;
 
-create PROCEDURE PlayOverUpdateOptions
-(
+create PROCEDURE PlayOverUpdateOptions(
     @intUserIndex		int,
+	@bitMemory			bit,
 	--Genres
     @bitTwoDP			bit,
 	@bitThreeDP			bit,
@@ -63,6 +63,7 @@ AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update PlayOverUsers set 
+	PlayOverMemory	= @bitMemory, 
 	--Genres
     TwoDP			= @bitTwoDP, 
 	ThreeDP			= @bitThreeDP, 

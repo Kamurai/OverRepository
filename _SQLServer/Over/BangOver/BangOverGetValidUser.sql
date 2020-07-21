@@ -1,7 +1,6 @@
 --drop PROCEDURE BangOverGetValidUser;
 
-create PROCEDURE BangOverGetValidUser
-(
+create PROCEDURE BangOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )
@@ -51,13 +50,13 @@ BEGIN
 			);
 
 			--create default user in Bang Over User table
-			INSERT INTO BangOverUsers (OverUserIndex, BangOverOnline, 
+			INSERT INTO BangOverUsers (OverUserIndex, BangOverOnline, BangOverMemory,
 				Women, 
 				Men, 
 				TransWomen, 
 				TransMen
 			)
-			VALUES ( @OverUserIndex, 0, 1, 0, 0, 0 );
+			VALUES ( @OverUserIndex, 0, 1, /*Genders*/ 1, 0, 0, 0 );
 		END
 	END
 		

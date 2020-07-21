@@ -1,7 +1,6 @@
 --drop PROCEDURE WatchOverGetValidUser;
 
-create PROCEDURE WatchOverGetValidUser
-(
+create PROCEDURE WatchOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )
@@ -51,7 +50,7 @@ BEGIN
 			);
 
 			--create default user in Watch Over table
-			INSERT INTO WatchOverUsers (WatchOverUserIndex, WatchOverOnline, 
+			INSERT INTO WatchOverUsers (WatchOverUserIndex, WatchOverOnline, WatchOverMemory,
 				/*Genres*/ 
 				ComedyM, 
 				DramaM, 
@@ -71,7 +70,7 @@ BEGIN
 				ComicsM, 
 				PeriodM 
 			)
-			VALUES ( @OverUserIndex, 0, 
+			VALUES ( @OverUserIndex, 0, 1, 
 				/*Genres*/ 1, 1, 1, 1, 1, 1, 1, 
 				/*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1
 			);

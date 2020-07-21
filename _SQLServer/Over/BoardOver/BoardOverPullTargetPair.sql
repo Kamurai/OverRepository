@@ -1,7 +1,6 @@
 --drop PROCEDURE BoardOverPullTargetPair;
 
-create PROCEDURE BoardOverPullTargetPair
-(
+create PROCEDURE BoardOverPullTargetPair(
     @intUserIndex int        
 )
 AS
@@ -19,18 +18,27 @@ BEGIN
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
 	BEGIN
-		--//request count of random non-locked BoardGames from personal list
-			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
+		--//request count of random non-locked celebrities from personal list
 		SET @OrderCount = (
-			select count(ListIndex) from BoardOverLists where BoardOverUserIndex = @intUserIndex 
-			and (
-				UpLock = 0 or DownLock = 0
-			)and not (
-				OrderRank = 0 and UpLock = 0 and DownLock = 1 
-			) and not (
-				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			SELECT count(L1.ListIndex) FROM BoardOverLists L1
+			JOIN BoardOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+			JOIN BoardOverUsers U ON L1.BoardOverUserIndex = U.BoardOverUserIndex
+			WHERE L1.BoardOverUserIndex = @intUserIndex
+			AND(
+				 L1.BoardGameIndex NOT IN(
+					SELECT M.BoardGameIndex1 FROM BoardOverMemories M
+					WHERE L1.BoardGameIndex = M.BoardGameIndex1
+					AND L2.BoardGameIndex = M.BoardGameIndex2
+					UNION
+					SELECT M.BoardGameIndex2 FROM BoardOverMemories M
+					WHERE L1.BoardGameIndex = M.BoardGameIndex2
+					AND L2.BoardGameIndex = M.BoardGameIndex1
+				) OR (
+					U.BoardOverMemory = 0
+				)				
 			)
 		);
+
 		SET @GlobalCount = (
 			select count(BoardGames.TargetIndex) from BoardGames
 			JOIN BoardOverUsers ON
@@ -69,15 +77,53 @@ BEGIN
 			IF( @GlobalCount > 0 )
 			BEGIN
 				--//request random non-locked Target from personal list
-				SET @TargetIndex = (select top 1 ListIndex from BoardOverLists where BoardOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				SET @TargetIndex = (
+					SELECT top 1 L1.ListIndex FROM BoardOverLists L1
+					JOIN BoardOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN BoardOverUsers U ON L1.BoardOverUserIndex = U.BoardOverUserIndex
+					WHERE L1.BoardOverUserIndex = @intUserIndex
+					AND(
+						 L1.BoardGameIndex NOT IN(
+							SELECT M.BoardGameIndex1 FROM BoardOverMemories M
+							WHERE L1.BoardGameIndex = M.BoardGameIndex1
+							AND L2.BoardGameIndex = M.BoardGameIndex2
+							UNION
+							SELECT M.BoardGameIndex2 FROM BoardOverMemories M
+							WHERE L1.BoardGameIndex = M.BoardGameIndex2
+							AND L2.BoardGameIndex = M.BoardGameIndex1
+						) OR (
+							U.BoardOverMemory = 0
+						)				
+					)
+					order by newid()
+				);
 			END
 			ELSE
 			BEGIN
 				--//request random non-locked Target from personal list
-					--//exclude the first and last BoardGames
-				SET @TargetIndex = (select top 1 ListIndex from BoardOverLists 
-				where BoardOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-				and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+				SET @TargetIndex = 
+				(
+					SELECT top 1 L1.ListIndex FROM BoardOverLists L1
+					JOIN BoardOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN BoardOverUsers U ON L1.BoardOverUserIndex = U.BoardOverUserIndex
+					WHERE L1.BoardOverUserIndex = @intUserIndex
+					AND(
+						 L1.BoardGameIndex NOT IN(
+							SELECT M.BoardGameIndex1 FROM BoardOverMemories M
+							WHERE L1.BoardGameIndex = M.BoardGameIndex1
+							AND L2.BoardGameIndex = M.BoardGameIndex2
+							UNION
+							SELECT M.BoardGameIndex2 FROM BoardOverMemories M
+							WHERE L1.BoardGameIndex = M.BoardGameIndex2
+							AND L2.BoardGameIndex = M.BoardGameIndex1
+						) OR (
+							U.BoardOverMemory = 0
+						)
+				)
+				--//exclude the first and last BoardGames
+				and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+				order by newid()
+				);
 			END
 			
 			--//find a record to compare to the one we have
@@ -132,14 +178,28 @@ BEGIN
 			BEGIN
 				SET @SavedOrder = (select OrderRank from BoardOverLists where ListIndex = @TargetIndex);
 				
-				if( (SELECT UpLock FROM BoardOverLists WHERE OrderRank = @SavedOrder) = 0 )
-				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM BoardOverLists WHERE OrderRank = @SavedOrder-1);
-				END
-				else if( (SELECT DownLock FROM BoardOverLists WHERE OrderRank = @SavedOrder) = 0 )
-				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM BoardOverLists WHERE OrderRank = @SavedOrder+1);
-				END
+				SET @SecondTargetIndex = (
+
+					SELECT top 1 L2.ListIndex FROM BoardOverLists L1
+					JOIN BoardOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN BoardOverUsers U ON L1.BoardOverUserIndex = U.BoardOverUserIndex
+					WHERE L1.BoardOverUserIndex = @intUserIndex
+					AND L1.ListIndex = @TargetIndex
+					AND(
+						 L1.BoardGameIndex NOT IN(
+							SELECT M.BoardGameIndex1 FROM BoardOverMemories M
+							WHERE L1.BoardGameIndex = M.BoardGameIndex1
+							AND L2.BoardGameIndex = M.BoardGameIndex2
+							UNION
+							SELECT M.BoardGameIndex2 FROM BoardOverMemories M
+							WHERE L1.BoardGameIndex = M.BoardGameIndex2
+							AND L2.BoardGameIndex = M.BoardGameIndex1
+						) OR (
+							U.BoardOverMemory = 0
+						)				
+					)
+					order by newid()
+				);
 
 				--//request @TargetIndex from personal list
 				(select BoardGames.TargetIndex, Name, Release, Genre, Picture from BoardGames

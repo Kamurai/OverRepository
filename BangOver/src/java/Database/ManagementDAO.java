@@ -44,8 +44,7 @@ public class ManagementDAO extends DAO{
     }
     
     //Pull User Data Model
-    public List<User> callablePullUserDataModel()
-    {
+    public List<User> callablePullUserDataModel(){
         CallableStatement stmt = null;
         List<User> ResultList = new ArrayList<User>();
         User tempUser;
@@ -56,51 +55,20 @@ public class ManagementDAO extends DAO{
             stmt = getConnect().prepareCall("{call BangOverPullUserList()}");
             rs = stmt.executeQuery();
             
-            boolean boolWomen = false;
-            boolean boolMen = false;
-            boolean boolTransWomen = false;
-            boolean boolTransMen = false;
-            boolean boolLoggedOn = false;
-            
             while(rs.next()){
-                if(rs.getInt("Women") == 1){
-                    boolWomen = true;
-                }else{
-                    boolWomen = false;
-                }
-                if(rs.getInt("Men") == 1){
-                    boolMen = true;
-                }else{
-                    boolMen = false;
-                }
-                if(rs.getInt("TransWomen") == 1){
-                    boolTransWomen = true;
-                }else{
-                    boolTransWomen = false;
-                }
-                if(rs.getInt("TransMen") == 1){
-                    boolTransMen = true;
-                }else{
-                    boolTransMen = false;
-                }
-                if(rs.getInt("BangOverOnline") == 1){
-                    boolLoggedOn = true;
-                }else{
-                    boolLoggedOn = false;
-                }
-                
                 tempUser = new User(
                         rs.getInt("BangOverUserIndex"), 
                         rs.getInt("BangOverAdminLevel"),
-                        boolLoggedOn, 
+                        rs.getBoolean("BangOverOnline"), 
                         
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        
-                        boolWomen, 
-                        boolMen, 
-                        boolTransWomen, 
-                        boolTransMen
+                        rs.getBoolean("BangOverMemory"), 
+                        //Gender
+                        rs.getBoolean("Women"), 
+                        rs.getBoolean("Men"), 
+                        rs.getBoolean("TransWomen"), 
+                        rs.getBoolean("TransMen")
                 );
                 
                 ResultList.add(new User(tempUser));

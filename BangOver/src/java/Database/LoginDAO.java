@@ -41,6 +41,7 @@ public class LoginDAO extends DAO{
                     
                 rs.getString("Username"), 
                 rs.getString("Email"), 
+                rs.getBoolean("BangOverMemory"), 
                 /*Genders*/
                 rs.getBoolean("Women"), 
                 rs.getBoolean("Men"), 
@@ -107,8 +108,7 @@ public class LoginDAO extends DAO{
         return result;
     }
     
-    public void callableUpdateOptions(User targetUser)
-    {
+    public void callableUpdateOptions(User targetUser){
         CallableStatement stmt = null;
         ResultSet rs;
         
@@ -127,12 +127,31 @@ public class LoginDAO extends DAO{
         {
             openConnection();
         
-            stmt = getConnect().prepareCall("{call BangOverUpdateOptions(?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call BangOverUpdateOptions(?,?,?,?,?,?)}");
             stmt.setInt(1, targetUser.getUserIndex());
-            stmt.setBoolean(2, targetUser.getWomen());
-            stmt.setBoolean(3, targetUser.getMen());
-            stmt.setBoolean(4, targetUser.getTransWomen());
-            stmt.setBoolean(5, targetUser.getTransMen());
+            stmt.setBoolean(2, targetUser.getMemory());
+            stmt.setBoolean(3, targetUser.getWomen());
+            stmt.setBoolean(4, targetUser.getMen());
+            stmt.setBoolean(5, targetUser.getTransWomen());
+            stmt.setBoolean(6, targetUser.getTransMen());
+            rs = stmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableClearMemories(User targetUser){
+        CallableStatement stmt = null;
+        ResultSet rs;
+        
+        //Update preferences to match check boxes (local variables)
+        try{
+            openConnection();
+        
+            stmt = getConnect().prepareCall("{call BangOverClearMemories(?)}");
+            stmt.setInt(1, targetUser.getUserIndex());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

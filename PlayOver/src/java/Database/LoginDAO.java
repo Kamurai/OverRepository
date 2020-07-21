@@ -41,6 +41,7 @@ public class LoginDAO extends DAO{
                 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
+                rs.getBoolean("PlayOverMemory"), 
                 //Genres
                 rs.getBoolean("TwoDP"), 
                 rs.getBoolean("ThreeDP"), 
@@ -289,6 +290,24 @@ public class LoginDAO extends DAO{
             stmt.setBoolean(52, targetUser.getOculusRift());
             stmt.setBoolean(53, targetUser.getVive());
             stmt.setBoolean(54, targetUser.getPSVR());
+            rs = stmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableClearMemories(User targetUser){
+        CallableStatement stmt = null;
+        ResultSet rs;
+        
+        //Update preferences to match check boxes (local variables)
+        try{
+            openConnection();
+        
+            stmt = getConnect().prepareCall("{call PlayOverClearMemories(?)}");
+            stmt.setInt(1, targetUser.getUserIndex());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

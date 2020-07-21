@@ -1,7 +1,6 @@
 --drop procedure ShowOverSwapTargets;
 
-create PROCEDURE ShowOverSwapTargets
-(
+create PROCEDURE ShowOverSwapTargets(
     @intUserIndex int,
     @strShow1 VARCHAR(50),
 	@strShow2 VARCHAR(50)
@@ -100,8 +99,25 @@ BEGIN
 			--//Only lock up
 		update ShowOverLists set UpLock = 1 where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2;
 	END
+
+	--if pair of targets is not already remembered
+	if(
+		(
+			SELECT COUNT(MemoryIndex) FROM ShowOverMemories 
+			WHERE (ShowIndex1 = @intShowIndex1 or ShowIndex1 = @intShowIndex2)
+			AND (ShowIndex2 = @intShowIndex1 or ShowIndex2 = @intShowIndex2)
+		) = 0
+		AND (
+			(
+				(SELECT top 1 ShowOverMemory FROM ShowOverUsers WHERE ShowOverUserIndex = @intUserIndex) = 1
+			)
+		)
+	)
+	BEGIN
+		--add memory to table
+		INSERT INTO ShowOverMemories (ShowOverUserIndex, ShowIndex1, ShowIndex2) VALUES (@intUserIndex, @intShowIndex1, @intShowIndex2);
+	END
 	
-	INSERT INTO ShowOverMemories (ShowIndex1, ShowIndex2) VALUES (@intShowIndex1, @intShowIndex2);
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Shows

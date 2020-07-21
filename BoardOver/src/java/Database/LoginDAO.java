@@ -41,7 +41,8 @@ public class LoginDAO extends DAO{
                 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                    
+                rs.getBoolean("BoardOverMemory"), 
+                /*Types*/   
                 rs.getBoolean("DeckBuilding"), 
                 rs.getBoolean("FixedDeck"), 
                 rs.getBoolean("ConstructedDeck"), 
@@ -166,6 +167,24 @@ public class LoginDAO extends DAO{
             stmt.setBoolean(14, targetUser.getPuzzle());
             stmt.setBoolean(15, targetUser.getDexterity());
             stmt.setBoolean(16, targetUser.getParty());
+            rs = stmt.executeQuery();
+        }catch(Exception e){
+            e.printStackTrace();
+        }finally{
+            closeConnection();
+        }
+    }
+    
+    public void callableClearMemories(User targetUser){
+        CallableStatement stmt = null;
+        ResultSet rs;
+        
+        //Update preferences to match check boxes (local variables)
+        try{
+            openConnection();
+        
+            stmt = getConnect().prepareCall("{call BoardOverClearMemories(?)}");
+            stmt.setInt(1, targetUser.getUserIndex());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

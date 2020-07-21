@@ -46,6 +46,15 @@ public class User
     {
         AdminLevel = input;
     }
+    private boolean Memory;
+    public boolean getMemory()
+    {
+        return Memory;
+    }
+    public void setMemory(boolean input)
+    {
+        Memory = input;
+    }
     
     private boolean Women;
     public boolean getWomen()
@@ -102,6 +111,7 @@ public class User
             
             String strUsername, 
             String strEmail, 
+            boolean boolMemory, 
             
             boolean boolWomen, 
             boolean boolMen, 
@@ -114,6 +124,7 @@ public class User
         
         Username = strUsername;
         Email = strEmail;
+        Memory = boolMemory;
         
         Women = boolWomen;
         Men = boolMen;
@@ -121,12 +132,12 @@ public class User
         TransMen = boolTransMen;
     }
     
-    public User(User newUser)
-    {
+    public User(User newUser){
         UserIndex = newUser.UserIndex;
         Username = newUser.Username;
         Email = newUser.Email;
         AdminLevel = newUser.AdminLevel;
+        Memory = newUser.Memory;
         
         Women = newUser.Women;
         Men = newUser.Men;

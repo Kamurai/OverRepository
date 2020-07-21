@@ -1,29 +1,32 @@
 --drop procedure BoardOverUpdateOptions;
 
-create PROCEDURE BoardOverUpdateOptions
-(
-    @intUserIndex int,
-    @bitDeckBuilding bit,
-	@bitFixedDeck bit,
+create PROCEDURE BoardOverUpdateOptions(
+    @intUserIndex		int,
+    @bitMemory			bit,
+	--Types
+	@bitDeckBuilding	bit,
+	@bitFixedDeck		bit,
 	@bitConstructedDeck bit,
-	@bitStrategy bit,
-	@bitWar bit,
-	@bitEconomy bit,
+	@bitStrategy		bit,
+	@bitWar				bit,
+	@bitEconomy			bit,
 	@bitTableauBuilding bit,
-	@bitCoop bit,
-	@bitMystery bit,
-	@bitSemiCoop bit,
-	@bitPPRPG bit,
-	@bitBluffing bit,
-	@bitPuzzle bit,
-	@bitDexterity bit,
-	@bitParty bit
+	@bitCoop			bit,
+	@bitMystery			bit,
+	@bitSemiCoop		bit,
+	@bitPPRPG			bit,
+	@bitBluffing		bit,
+	@bitPuzzle			bit,
+	@bitDexterity		bit,
+	@bitParty			bit
 
 )
 AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update BoardOverUsers set 
+		BoardOverMemory		= @bitMemory, 
+		--Types
 		DeckBuilding		= @bitDeckBuilding, 
 		FixedDeck			= @bitFixedDeck, 
 		ConstructedDeck		= @bitConstructedDeck, 

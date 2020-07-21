@@ -1,7 +1,6 @@
 --drop PROCEDURE ShowOverPullTargetPair;
 
-create PROCEDURE ShowOverPullTargetPair
-(
+create PROCEDURE ShowOverPullTargetPair(
     @intUserIndex int        
 )
 AS
@@ -22,15 +21,25 @@ BEGIN
 		--//request count of random non-locked Shows from personal list
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
 		SET @OrderCount = (
-			select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex 
-			and (
-				UpLock = 0 or DownLock = 0
-			)and not (
-				OrderRank = 0 and UpLock = 0 and DownLock = 1 
-			) and not (
-				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+			SELECT count(L1.ListIndex) FROM ShowOverLists L1
+			JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+			JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+			WHERE L1.ShowOverUserIndex = @intUserIndex
+			AND(
+				 L1.ShowIndex NOT IN(
+					SELECT M.ShowIndex1 FROM ShowOverMemories M
+					WHERE L1.ShowIndex = M.ShowIndex1
+					AND L2.ShowIndex = M.ShowIndex2
+					UNION
+					SELECT M.ShowIndex2 FROM ShowOverMemories M
+					WHERE L1.ShowIndex = M.ShowIndex2
+					AND L2.ShowIndex = M.ShowIndex1
+				) OR (
+					U.ShowOverMemory = 0
+				)				
 			)
 		);
+
 		SET @GlobalCount = (select count(Shows.TargetIndex) from Shows
 			JOIN ShowOverUsers ON
 			(
@@ -76,24 +85,68 @@ BEGIN
 			IF( @GlobalCount > 0 )
 			BEGIN
 				--//request random non-locked Target from personal list
-				SET @TargetIndex = (select top 1 ListIndex from ShowOverLists where ShowOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				SET @TargetIndex = 
+				(
+					SELECT top 1 L1.ListIndex FROM ShowOverLists L1
+					JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+					WHERE L1.ShowOverUserIndex = @intUserIndex
+					AND(
+						 L1.ShowIndex NOT IN(
+							SELECT M.ShowIndex1 FROM ShowOverMemories M
+							WHERE L1.ShowIndex = M.ShowIndex1
+							AND L2.ShowIndex = M.ShowIndex2
+							UNION
+							SELECT M.ShowIndex2 FROM ShowOverMemories M
+							WHERE L1.ShowIndex = M.ShowIndex2
+							AND L2.ShowIndex = M.ShowIndex1
+						) OR (
+							U.ShowOverMemory = 0
+						)				
+					)
+					order by newid()
+				);
 			END
 			ELSE
 			BEGIN
 				--//request random non-locked Target from personal list
 					--//exclude the first and last Shows
-				SET @TargetIndex = (select top 1 ListIndex from ShowOverLists 
-				where ShowOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-				and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+				SET @TargetIndex = 
+				(
+					SELECT top 1 L1.ListIndex FROM ShowOverLists L1
+					JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+					WHERE L1.ShowOverUserIndex = @intUserIndex
+					AND(
+						 L1.ShowIndex NOT IN(
+							SELECT M.ShowIndex1 FROM ShowOverMemories M
+							WHERE L1.ShowIndex = M.ShowIndex1
+							AND L2.ShowIndex = M.ShowIndex2
+							UNION
+							SELECT M.ShowIndex2 FROM ShowOverMemories M
+							WHERE L1.ShowIndex = M.ShowIndex2
+							AND L2.ShowIndex = M.ShowIndex1
+						) OR (
+							U.ShowOverMemory = 0
+						)
+					)
+					--//exclude the first and last celebrities
+					and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+					order by newid()
+				);
 			END
 
 			--//find a record to compare to the one we have
 				--//if order is 0 or equal to count
 					--//there are Shows left in the global list
-			if ( (select count(ShowOverUserIndex) from ShowOverLists 
-			where (ListIndex = @TargetIndex and OrderRank = 0) or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
-			and @GlobalCount > 0 )
-			BEGIN    
+			if (
+				(
+					select count(ShowOverUserIndex) from ShowOverLists 
+					where (ListIndex = @TargetIndex and OrderRank = 0) 
+					or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
+					and @GlobalCount > 0 
+			)
+			BEGIN
 				--//request @TargetIndex from personal list
 				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from ShowOverLists
 				JOIN Shows ON
@@ -138,7 +191,8 @@ BEGIN
 						JOIN ShowOverUsers ON
 							ShowOverLists.ShowOverUserIndex = ShowOverUsers.ShowOverUserIndex
 						where ShowOverUsers.ShowOverUserIndex = @intUserIndex
-					) order by newid() 
+					) 
+					order by newid() 
 				) T1;
 			END
 			--//else we're looking for an adjacent Target from the personal list
@@ -146,14 +200,28 @@ BEGIN
 			BEGIN
 				SET @SavedOrder = (select OrderRank from ShowOverLists where ListIndex = @TargetIndex);
 				
-				if( (SELECT UpLock FROM ShowOverLists WHERE OrderRank = @SavedOrder) = 0 )
-				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM ShowOverLists WHERE OrderRank = @SavedOrder-1);
-				END
-				else if( (SELECT DownLock FROM ShowOverLists WHERE OrderRank = @SavedOrder) = 0 )
-				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM ShowOverLists WHERE OrderRank = @SavedOrder+1);
-				END
+				SET @SecondTargetIndex = (
+
+					SELECT top 1 L2.ListIndex FROM ShowOverLists L1
+					JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+					JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+					WHERE L1.ShowOverUserIndex = @intUserIndex
+					AND L1.ListIndex = @TargetIndex
+					AND(
+						 L1.ShowIndex NOT IN(
+							SELECT M.ShowIndex1 FROM ShowOverMemories M
+							WHERE L1.ShowIndex = M.ShowIndex1
+							AND L2.ShowIndex = M.ShowIndex2
+							UNION
+							SELECT M.ShowIndex2 FROM ShowOverMemories M
+							WHERE L1.ShowIndex = M.ShowIndex2
+							AND L2.ShowIndex = M.ShowIndex1
+						) OR (
+							U.ShowOverMemory = 0
+						)				
+					)
+					order by newid()
+				);
 
 				--//request @TargetIndex from personal list
 				(select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows

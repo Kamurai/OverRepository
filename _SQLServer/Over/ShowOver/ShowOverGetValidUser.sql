@@ -1,7 +1,6 @@
 --drop PROCEDURE ShowOverGetValidUser;
 
-create PROCEDURE ShowOverGetValidUser
-(
+create PROCEDURE ShowOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )
@@ -51,7 +50,7 @@ BEGIN
 			);
 
 			--create default user in Video Over table
-			INSERT INTO ShowOverUsers (OverUserIndex, ShowOverOnline, 
+			INSERT INTO ShowOverUsers (OverUserIndex, ShowOverOnline, ShowOverMemory,
 				/*Genres*/ 
 				ComedyS, 
 				DramaS, 
@@ -71,7 +70,7 @@ BEGIN
 				ComicsS, 
 				PeriodS
 			)
-			VALUES ( @OverUserIndex, 0, 
+			VALUES ( @OverUserIndex, 0, 1,
 				/*Genres*/ 1, 1, 1, 1, 1, 1, 1, 
 				/*Settings*/ 1, 1, 1, 1, 1, 1, 1, 1, 1
 			);

@@ -1,7 +1,6 @@
 --drop procedure BoardOverSwapTargets;
 
-create PROCEDURE BoardOverSwapTargets
-(
+create PROCEDURE BoardOverSwapTargets(
     @intUserIndex int,
     @strBoardGame1 VARCHAR(50),
 	@strBoardGame2 VARCHAR(50)
@@ -102,7 +101,24 @@ BEGIN
 		update BoardOverLists set UpLock = 1 where BoardOverUserIndex = @intUserIndex and BoardGameIndex = @intBoardGameIndex2;
 	END
 	
-	INSERT INTO BoardOverMemories (BoardGameIndex1, BoardGameIndex2) VALUES (@intBoardGameIndex1, @intBoardGameIndex2);
+	--if pair of targets is not already remembered
+	if(
+		(
+			SELECT COUNT(MemoryIndex) FROM BoardOverMemories 
+			WHERE (BoardGameIndex1 = @intBoardGameIndex1 or BoardGameIndex1 = @intBoardGameIndex2)
+			AND (BoardGameIndex2 = @intBoardGameIndex1 or BoardGameIndex2 = @intBoardGameIndex2)
+		) = 0
+		AND (
+			(
+				(SELECT top 1 BangOverMemory FROM BangOverUsers WHERE BangOverUserIndex = @intUserIndex) = 1
+			)
+		)
+	)
+	BEGIN
+		--add memory to table
+		INSERT INTO BoardOverMemories (BoardOverUserIndex, BoardGameIndex1, BoardGameIndex2) VALUES (@intUserIndex, @intBoardGameIndex1, @intBoardGameIndex2);
+	END
+	
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped BoardGames

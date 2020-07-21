@@ -1,7 +1,6 @@
 --drop procedure WatchOverSwapTargets;
 
-create PROCEDURE WatchOverSwapTargets
-(
+create PROCEDURE WatchOverSwapTargets(
     @intUserIndex int,
     @strMovie1 VARCHAR(50),
 	@strMovie2 VARCHAR(50)
@@ -101,7 +100,24 @@ BEGIN
 		update WatchOverLists set UpLock = 1 where WatchOverUserIndex = @intUserIndex and MovieIndex = @intMovieIndex2;
 	END
 	
-	INSERT INTO WatchOverMemories (MovieIndex1, MovieIndex2) VALUES (@intMovieIndex1, @intMovieIndex2);
+	--if pair of targets is not already remembered
+	if(
+		(
+			SELECT COUNT(MemoryIndex) FROM WatchOverMemories 
+			WHERE (MovieIndex1 = @intMovieIndex1 or MovieIndex1 = @intMovieIndex2)
+			AND (MovieIndex2 = @intMovieIndex1 or MovieIndex2 = @intMovieIndex2)
+		) = 0
+		AND (
+			(
+				(SELECT top 1 WatchOverMemory FROM WatchOverUsers WHERE WatchOverUserIndex = @intUserIndex) = 1
+			)
+		)
+	)
+	BEGIN
+		--add memory to table
+		INSERT INTO WatchOverMemories (WatchOverUserIndex, MovieIndex1, MovieIndex2) VALUES (@intUserIndex, @intMovieIndex1, @intMovieIndex2);
+	END
+	
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped Movies

@@ -1,7 +1,6 @@
 --drop procedure PlayOverSwapTargets;
 
-create PROCEDURE PlayOverSwapTargets
-(
+create PROCEDURE PlayOverSwapTargets(
     @intUserIndex int,
     @strVideoGame1 VARCHAR(50),
 	@strVideoGame2 VARCHAR(50)
@@ -102,7 +101,24 @@ BEGIN
 		update PlayOverLists set UpLock = 1 where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2;
 	END
 	
-	INSERT INTO PlayOverMemories (VideoGameIndex1, VideoGameIndex2) VALUES (@intVideoGameIndex1, @intVideoGameIndex2);
+	--if pair of targets is not already remembered
+	if(
+		(
+			SELECT COUNT(MemoryIndex) FROM PlayOverMemories 
+			WHERE (VideoGameIndex1 = @intVideoGameIndex1 or VideoGameIndex1 = @intVideoGameIndex2)
+			AND (VideoGameIndex2 = @intVideoGameIndex1 or VideoGameIndex2 = @intVideoGameIndex2)
+		) = 0
+		AND (
+			(
+				(SELECT top 1 PlayOverMemory FROM PlayOverUsers WHERE PlayOverUserIndex = @intUserIndex) = 1
+			)
+		)
+	)
+	BEGIN
+		--add memory to table
+		INSERT INTO PlayOverMemories (PlayOverUserIndex, VideoGameIndex1, VideoGameIndex2) VALUES (@intUserIndex, @intVideoGameIndex1, @intVideoGameIndex2);
+	END
+
 
 	--//Clear adjacent locks
 		--//Get Orders of swapped VideoGames

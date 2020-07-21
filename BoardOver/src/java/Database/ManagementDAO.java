@@ -64,6 +64,7 @@ public class ManagementDAO extends DAO{
                         
                         rs.getString("Username"), 
                         rs.getString("Email"), 
+                        rs.getBoolean("BangOverMemory"), 
                         //Genres
                         rs.getBoolean("DeckBuilding"), 
                         rs.getBoolean("FixedDeck"), 

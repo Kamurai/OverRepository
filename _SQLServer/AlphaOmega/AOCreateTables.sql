@@ -1,5 +1,4 @@
---drop table [HTKB].dbo.Users, [Over].dbo.Users, [Over].dbo.BangOverUsers, [Over].dbo.BoardOverUsers, [Over].dbo.PlayOverUsers, [Over].dbo.ShowOverUsers, [Over].dbo.WatchOverUsers, [BubbleUp].dbo.Users, [BubbleUp].dbo.Boxes, [BubbleUp].dbo.Targets, [Shout].dbo.Users, [Mist].dbo.Users;
-
+--drop table [HTKB].dbo.Users, [Over].dbo.Users, [Over].dbo.BangOverUsers, [Over].dbo.BoardOverUsers, [Over].dbo.PlayOverUsers, [Over].dbo.ShowOverUsers, [Over].dbo.WatchOverUsers, [BubbleUp].dbo.Users, [BubbleUp].dbo.Adverts, [BubbleUp].dbo.Boxes, [BubbleUp].dbo.Targets, [Shout].dbo.Users, [Mist].dbo.Users;
 
 create table [HTKB].dbo.Users (
 	HTKBUserIndex	bigint IDENTITY(0,1) PRIMARY KEY, 
@@ -22,6 +21,7 @@ create table [Over].dbo.BangOverUsers (
 	OverUserIndex		bigint not null, 
 	BangOverAdminLevel	int not null,
 	BangOverOnline		bit not null, 
+	BangOverMemory		bit not null, 
 	--Genders
 	Women				bit not null, 
 	Men					bit not null, 
@@ -34,6 +34,7 @@ create table [Over].dbo.BoardOverUsers (
 	OverUserIndex		bigint not null, 
 	BoardOverAdminLevel	int not null,
 	BoardOverOnline		bit not null, 
+	BoardOverMemory		bit not null, 
 	--Genres
 	DeckBuilding		bit not null, 
 	FixedDeck			bit not null, 
@@ -57,6 +58,7 @@ create table [Over].dbo.PlayOverUsers (
 	OverUserIndex		bigint not null, 
 	PlayOverAdminLevel	int not null,
 	PlayOverOnline		bit not null, 
+	PlayOverMemory		bit not null, 
 	--Genres
 	TwoDP				bit not null, 
 	ThreeDP				bit not null, 
@@ -119,6 +121,7 @@ create table [Over].dbo.ShowOverUsers (
 	OverUserIndex		bigint not null, 
 	ShowOverAdminLevel	int not null,
 	ShowOverOnline		bit not null, 
+	ShowOverMemory		bit not null, 
 	--Genres
 	ComedyS				bit not null, 
 	DramaS				bit not null, 
@@ -144,6 +147,7 @@ create table [Over].dbo.WatchOverUsers (
 	OverUserIndex		bigint not null, 
 	WatchOverAdminLevel	int not null,
 	WatchOverOnline		bit not null, 
+	WatchOverMemory		bit not null, 
 	--Genres
 	ComedyM				bit not null, 
 	DramaM				bit not null, 

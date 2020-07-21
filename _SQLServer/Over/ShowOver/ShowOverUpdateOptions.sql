@@ -1,8 +1,8 @@
 --drop procedure ShowOverUpdateOptions;
 
-create PROCEDURE ShowOverUpdateOptions
-(
+create PROCEDURE ShowOverUpdateOptions(
     @intUserIndex		int,
+	@bitMemory			bit,
 	--Genres
     @bitComedyS			bit,
 	@bitDramaS			bit,
@@ -26,7 +26,7 @@ AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update ShowOverUsers set
-	
+	ShowOverMemory		= @bitMemory, 
 	--Genres
     ComedyS				= @bitComedyS, 
 	DramaS				= @bitDramaS, 

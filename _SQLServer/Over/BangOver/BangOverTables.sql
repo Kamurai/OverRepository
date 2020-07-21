@@ -4,7 +4,7 @@ create table BangOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name
 
 create table BangOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, BangOverUserIndex bigint not null, OrderRank bigint not null, CelebrityIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table BangOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
+create table BangOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, BangOverUserIndex bigint not null, CelebrityIndex1 bigint not null, CelebrityIndex2 bigint not null );
 
 create table Celebrities (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Sex varchar(1) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 

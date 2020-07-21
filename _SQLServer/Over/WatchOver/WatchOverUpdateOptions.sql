@@ -1,31 +1,32 @@
 --drop procedure WatchOverUpdateOptions;
 
-create PROCEDURE WatchOverUpdateOptions
-(
-    @intUserIndex int,
+create PROCEDURE WatchOverUpdateOptions(
+    @intUserIndex		int,
+	@bitMemory			bit,
 	--Genres
-    @bitComedyM bit,
-	@bitDramaM bit,
-	@bitActionM bit,
-	@bitHorrorM bit,
-	@bitThrillerM bit,
-	@bitMysteryM bit,
-	@bitDocumentaryM bit,
+    @bitComedyM			bit,
+	@bitDramaM			bit,
+	@bitActionM			bit,
+	@bitHorrorM			bit,
+	@bitThrillerM		bit,
+	@bitMysteryM		bit,
+	@bitDocumentaryM	bit,
 	--Settings
 	@bitScienceFictionM bit,
-	@bitFantasyM bit,
-	@bitWesternM bit,
-	@bitMartialArtsM bit,
-	@bitModernM bit,
-	@bitHistoricM bit,
-	@bitPrehistoricM bit,
-	@bitComicsM bit,
-	@bitPeriodM bit
+	@bitFantasyM		bit,
+	@bitWesternM		bit,
+	@bitMartialArtsM	bit,
+	@bitModernM			bit,
+	@bitHistoricM		bit,
+	@bitPrehistoricM	bit,
+	@bitComicsM			bit,
+	@bitPeriodM			bit
 )
 AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update WatchOverUsers set 
+	WatchOverMemory		= @bitMemory, 
 	--Genres
     ComedyM				= @bitComedyM, 
 	DramaM				= @bitDramaM, 
