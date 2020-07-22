@@ -6,5 +6,5 @@ create PROCEDURE PlayOverClearMemories
 )
 AS
 BEGIN
-	DELETE FROM PlayOverMemories where UserIndex = @intUserIndex;
+	DELETE FROM PlayOverMemories where PlayOverUserIndex = @intUserIndex;
 END

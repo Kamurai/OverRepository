@@ -6,5 +6,5 @@ create PROCEDURE BangOverClearMemories
 )
 AS
 BEGIN
-	DELETE FROM BangOverMemories where UserIndex = @intUserIndex;
+	DELETE FROM BangOverMemories where BangOverUserIndex = @intUserIndex;
 END

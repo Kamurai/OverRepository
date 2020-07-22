@@ -6,5 +6,5 @@ create PROCEDURE ShowOverClearMemories
 )
 AS
 BEGIN
-	DELETE FROM ShowOverMemories where UserIndex = @intUserIndex;
+	DELETE FROM ShowOverMemories where ShowOverUserIndex = @intUserIndex;
 END

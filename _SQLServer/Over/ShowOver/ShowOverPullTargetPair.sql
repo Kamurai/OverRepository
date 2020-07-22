@@ -5,12 +5,12 @@ create PROCEDURE ShowOverPullTargetPair(
 )
 AS
 BEGIN
-	DECLARE @UserCount int = 0;
-	DECLARE @OrderCount int = 0;
-	DECLARE @GlobalCount int = 0;
-	DECLARE @TargetIndex int = 0;
-	DECLARE @SecondTargetIndex int = 0;
-	DECLARE @SavedOrder int = 0;
+	DECLARE @UserCount 			int = 0;
+	DECLARE @OrderCount 		int = 0;
+	DECLARE @GlobalCount 		int = 0;
+	DECLARE @TargetIndex 		int = 0;
+	DECLARE @SecondTargetIndex 	int = 0;
+	DECLARE @SavedOrder 		int = 0;
 
 	--//request count of records related to user
 	SET @UserCount = (select count(ShowOverUserIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex);
@@ -19,26 +19,40 @@ BEGIN
 	if( @UserCount > 0 )
 	BEGIN
 		--//request count of random non-locked Shows from personal list
+		IF( (SELECT TOP 1 U.ShowOverMemory FROM ShowOverUsers U WHERE U.ShowOverUserIndex = @intUserIndex) = 1 )
+		BEGIN
+			SET @OrderCount = (
+				SELECT count(L1.ListIndex) FROM ShowOverLists L1
+				JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+				JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+				WHERE L1.ShowOverUserIndex = @intUserIndex
+				AND(
+					 L1.ShowIndex NOT IN(
+						SELECT M.ShowIndex1 FROM ShowOverMemories M
+						WHERE L1.ShowIndex = M.ShowIndex1
+						AND L2.ShowIndex = M.ShowIndex2
+						UNION
+						SELECT M.ShowIndex2 FROM ShowOverMemories M
+						WHERE L1.ShowIndex = M.ShowIndex2
+						AND L2.ShowIndex = M.ShowIndex1
+					) OR (
+						U.ShowOverMemory = 0
+					)				
+				)
+			);
+		END
+		ELSE
+		BEGIN
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
-		SET @OrderCount = (
-			SELECT count(L1.ListIndex) FROM ShowOverLists L1
-			JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-			JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
-			WHERE L1.ShowOverUserIndex = @intUserIndex
-			AND(
-				 L1.ShowIndex NOT IN(
-					SELECT M.ShowIndex1 FROM ShowOverMemories M
-					WHERE L1.ShowIndex = M.ShowIndex1
-					AND L2.ShowIndex = M.ShowIndex2
-					UNION
-					SELECT M.ShowIndex2 FROM ShowOverMemories M
-					WHERE L1.ShowIndex = M.ShowIndex2
-					AND L2.ShowIndex = M.ShowIndex1
-				) OR (
-					U.ShowOverMemory = 0
-				)				
+			select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex 
+			and (
+				UpLock = 0 or DownLock = 0
+			)and not (
+				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+			) and not (
+				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
 			)
-		);
+		END
 
 		SET @GlobalCount = (select count(Shows.TargetIndex) from Shows
 			JOIN ShowOverUsers ON
@@ -84,56 +98,75 @@ BEGIN
 			--//there are Shows left in the global list
 			IF( @GlobalCount > 0 )
 			BEGIN
-				--//request random non-locked Target from personal list
-				SET @TargetIndex = 
-				(
-					SELECT top 1 L1.ListIndex FROM ShowOverLists L1
-					JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-					JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
-					WHERE L1.ShowOverUserIndex = @intUserIndex
-					AND(
-						 L1.ShowIndex NOT IN(
-							SELECT M.ShowIndex1 FROM ShowOverMemories M
-							WHERE L1.ShowIndex = M.ShowIndex1
-							AND L2.ShowIndex = M.ShowIndex2
-							UNION
-							SELECT M.ShowIndex2 FROM ShowOverMemories M
-							WHERE L1.ShowIndex = M.ShowIndex2
-							AND L2.ShowIndex = M.ShowIndex1
-						) OR (
-							U.ShowOverMemory = 0
-						)				
-					)
-					order by newid()
-				);
+				IF( (SELECT TOP 1 U.ShowOverMemory FROM ShowOverUsers U WHERE U.ShowOverUserIndex = @intUserIndex) = 1 )
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = 
+					(
+						SELECT top 1 L1.ListIndex FROM ShowOverLists L1
+						JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+						JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+						WHERE L1.ShowOverUserIndex = @intUserIndex
+						AND(
+							 L1.ShowIndex NOT IN(
+								SELECT M.ShowIndex1 FROM ShowOverMemories M
+								WHERE L1.ShowIndex = M.ShowIndex1
+								AND L2.ShowIndex = M.ShowIndex2
+								UNION
+								SELECT M.ShowIndex2 FROM ShowOverMemories M
+								WHERE L1.ShowIndex = M.ShowIndex2
+								AND L2.ShowIndex = M.ShowIndex1
+							) OR (
+								U.ShowOverMemory = 0
+							)				
+						)
+						order by newid()
+					);
+				END
+				ELSE
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = (select top 1 ListIndex from ShowOverLists where ShowOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				END
 			END
 			ELSE
 			BEGIN
-				--//request random non-locked Target from personal list
-					--//exclude the first and last Shows
-				SET @TargetIndex = 
-				(
-					SELECT top 1 L1.ListIndex FROM ShowOverLists L1
-					JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-					JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
-					WHERE L1.ShowOverUserIndex = @intUserIndex
-					AND(
-						 L1.ShowIndex NOT IN(
-							SELECT M.ShowIndex1 FROM ShowOverMemories M
-							WHERE L1.ShowIndex = M.ShowIndex1
-							AND L2.ShowIndex = M.ShowIndex2
-							UNION
-							SELECT M.ShowIndex2 FROM ShowOverMemories M
-							WHERE L1.ShowIndex = M.ShowIndex2
-							AND L2.ShowIndex = M.ShowIndex1
-						) OR (
-							U.ShowOverMemory = 0
+				IF( (SELECT TOP 1 U.ShowOverMemory FROM ShowOverUsers U WHERE U.ShowOverUserIndex = @intUserIndex) = 1 )
+				BEGIN
+					--//request random non-locked Target from personal list
+						--//exclude the first and last Shows
+					SET @TargetIndex = 
+					(
+						SELECT top 1 L1.ListIndex FROM ShowOverLists L1
+						JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+						JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+						WHERE L1.ShowOverUserIndex = @intUserIndex
+						AND(
+							 L1.ShowIndex NOT IN(
+								SELECT M.ShowIndex1 FROM ShowOverMemories M
+								WHERE L1.ShowIndex = M.ShowIndex1
+								AND L2.ShowIndex = M.ShowIndex2
+								UNION
+								SELECT M.ShowIndex2 FROM ShowOverMemories M
+								WHERE L1.ShowIndex = M.ShowIndex2
+								AND L2.ShowIndex = M.ShowIndex1
+							) OR (
+								U.ShowOverMemory = 0
+							)
 						)
-					)
-					--//exclude the first and last celebrities
-					and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
-					order by newid()
-				);
+						--//exclude the first and last Shows
+						and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+						order by newid()
+					);
+				END
+				ELSE
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = (select top 1 ListIndex from ShowOverLists 
+					where ShowOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+					--//exclude the first and last Shows
+					and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+				END
 			END
 
 			--//find a record to compare to the one we have
@@ -143,9 +176,9 @@ BEGIN
 				(
 					select count(ShowOverUserIndex) from ShowOverLists 
 					where (ListIndex = @TargetIndex and OrderRank = 0) 
-					or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
-					and @GlobalCount > 0 
-			)
+					or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) 
+					) > 0 
+					and @GlobalCount > 0 )
 			BEGIN
 				--//request @TargetIndex from personal list
 				select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from ShowOverLists
@@ -200,29 +233,43 @@ BEGIN
 			BEGIN
 				SET @SavedOrder = (select OrderRank from ShowOverLists where ListIndex = @TargetIndex);
 				
-				SET @SecondTargetIndex = (
+				IF( (SELECT TOP 1 U.ShowOverMemory FROM ShowOverUsers U WHERE U.ShowOverUserIndex = @intUserIndex) = 1 )
+				BEGIN
+					SET @SecondTargetIndex = (
 
-					SELECT top 1 L2.ListIndex FROM ShowOverLists L1
-					JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-					JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
-					WHERE L1.ShowOverUserIndex = @intUserIndex
-					AND L1.ListIndex = @TargetIndex
-					AND(
-						 L1.ShowIndex NOT IN(
-							SELECT M.ShowIndex1 FROM ShowOverMemories M
-							WHERE L1.ShowIndex = M.ShowIndex1
-							AND L2.ShowIndex = M.ShowIndex2
-							UNION
-							SELECT M.ShowIndex2 FROM ShowOverMemories M
-							WHERE L1.ShowIndex = M.ShowIndex2
-							AND L2.ShowIndex = M.ShowIndex1
-						) OR (
-							U.ShowOverMemory = 0
-						)				
-					)
-					order by newid()
-				);
-
+						SELECT top 1 L2.ListIndex FROM ShowOverLists L1
+						JOIN ShowOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+						JOIN ShowOverUsers U ON L1.ShowOverUserIndex = U.ShowOverUserIndex
+						WHERE L1.ShowOverUserIndex = @intUserIndex
+						AND L1.ListIndex = @TargetIndex
+						AND(
+							 L1.ShowIndex NOT IN(
+								SELECT M.ShowIndex1 FROM ShowOverMemories M
+								WHERE L1.ShowIndex = M.ShowIndex1
+								AND L2.ShowIndex = M.ShowIndex2
+								UNION
+								SELECT M.ShowIndex2 FROM ShowOverMemories M
+								WHERE L1.ShowIndex = M.ShowIndex2
+								AND L2.ShowIndex = M.ShowIndex1
+							) OR (
+								U.ShowOverMemory = 0
+							)				
+						)
+						order by newid()
+					);
+				END
+				ELSE
+				BEGIN
+					if( (SELECT UpLock FROM ShowOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					BEGIN
+						SET @SecondTargetIndex = (SELECT ListIndex FROM ShowOverLists WHERE OrderRank = @SavedOrder-1);
+					END
+					else if( (SELECT DownLock FROM ShowOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					BEGIN
+						SET @SecondTargetIndex = (SELECT ListIndex FROM ShowOverLists WHERE OrderRank = @SavedOrder+1);
+					END
+				END
+				
 				--//request @TargetIndex from personal list
 				(select Shows.TargetIndex, Name, Release, Picture, Genre, Setting from Shows
 				JOIN ShowOverLists ON

@@ -6,5 +6,5 @@ create PROCEDURE WatchOverClearMemories
 )
 AS
 BEGIN
-	DELETE FROM WatchOverMemories where UserIndex = @intUserIndex;
+	DELETE FROM WatchOverMemories where WatchOverUserIndex = @intUserIndex;
 END

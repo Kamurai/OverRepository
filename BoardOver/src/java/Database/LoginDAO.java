@@ -119,8 +119,7 @@ public class LoginDAO extends DAO{
         return result;
     }
     
-    public void callableUpdateOptions(User targetUser)
-    {
+    public void callableUpdateOptions(User targetUser){
         CallableStatement stmt = null;
         ResultSet rs;
         
@@ -146,12 +145,12 @@ public class LoginDAO extends DAO{
         }
         
         //Update preferences to match check boxes (local variables)
-        try
-        {
+        try{
             openConnection();
         
-            stmt = getConnect().prepareCall("{call BoardOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call BoardOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             stmt.setInt(1, targetUser.getUserIndex());
+            stmt.setBoolean(2, targetUser.getMemory());
             stmt.setBoolean(2, targetUser.getDeckBuilding());
             stmt.setBoolean(3, targetUser.getFixedDeck());
             stmt.setBoolean(4, targetUser.getConstructedDeck());

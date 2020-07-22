@@ -6,5 +6,5 @@ create PROCEDURE BoardOverClearMemories
 )
 AS
 BEGIN
-	DELETE FROM BoardOverMemories where UserIndex = @intUserIndex;
+	DELETE FROM BoardOverMemories where BoardOverUserIndex = @intUserIndex;
 END

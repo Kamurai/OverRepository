@@ -1,17 +1,16 @@
 --drop PROCEDURE PlayOverPullTargetPair;
 
-create PROCEDURE PlayOverPullTargetPair
-(
+create PROCEDURE PlayOverPullTargetPair(
     @intUserIndex int        
 )
 AS
 BEGIN
-	DECLARE @UserCount int = 0;
-	DECLARE @OrderCount int = 0;
-	DECLARE @GlobalCount int = 0;
-	DECLARE @TargetIndex int = 0;
-	DECLARE @SecondTargetIndex int = 0;
-	DECLARE @SavedOrder int = 0;
+	DECLARE @UserCount 			int = 0;
+	DECLARE @OrderCount 		int = 0;
+	DECLARE @GlobalCount 		int = 0;
+	DECLARE @TargetIndex 		int = 0;
+	DECLARE @SecondTargetIndex 	int = 0;
+	DECLARE @SavedOrder 		int = 0;
 
 	--//request count of records related to user
 	SET @UserCount = (select count(PlayOverUserIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex);
@@ -19,18 +18,44 @@ BEGIN
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
 	BEGIN
-		--//request count of random non-locked VideoGames from personal list
+		--//request count of random non-locked Video Games from personal list
+		IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+		BEGIN
+			SET @OrderCount = (
+				SELECT count(L1.ListIndex) FROM PlayOverLists L1
+				JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+				JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
+				WHERE L1.PlayOverUserIndex = @intUserIndex
+				AND(
+					 L1.VideoGameIndex NOT IN(
+						SELECT M.VideoGameIndex1 FROM PlayOverMemories M
+						WHERE L1.VideoGameIndex = M.VideoGameIndex1
+						AND L2.VideoGameIndex = M.VideoGameIndex2
+						UNION
+						SELECT M.VideoGameIndex2 FROM PlayOverMemories M
+						WHERE L1.VideoGameIndex = M.VideoGameIndex2
+						AND L2.VideoGameIndex = M.VideoGameIndex1
+					) OR (
+						U.PlayOverMemory = 0
+					)				
+				)
+			);
+		END
+		ELSE
+		BEGIN
 			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
-		SET @OrderCount = (
-			select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex 
-			and (
-				UpLock = 0 or DownLock = 0
-			)and not (
-				OrderRank = 0 and UpLock = 0 and DownLock = 1 
-			) and not (
-				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
-			)
-		);
+			SET @OrderCount = (
+				select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex 
+				and (
+					UpLock = 0 or DownLock = 0
+				)and not (
+					OrderRank = 0 and UpLock = 0 and DownLock = 1 
+				) and not (
+					OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+				)
+			);		
+		END
+		
 		SET @GlobalCount = (select count(VideoGames.TargetIndex) from VideoGames
 			JOIN PlayOverUsers ON
 			(
@@ -110,25 +135,87 @@ BEGIN
 			--//there are VideoGames left in the global list
 			IF( @GlobalCount > 0 )
 			BEGIN
-				--//request random non-locked Target from personal list
-				SET @TargetIndex = (select top 1 ListIndex from PlayOverLists where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = 
+					(
+						SELECT top 1 L1.ListIndex FROM PlayOverLists L1
+						JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+						JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
+						WHERE L1.PlayOverUserIndex = @intUserIndex
+						AND(
+							 L1.VideoGameIndex NOT IN(
+								SELECT M.VideoGameIndex1 FROM PlayOverMemories M
+								WHERE L1.VideoGameIndex = M.VideoGameIndex1
+								AND L2.VideoGameIndex = M.VideoGameIndex2
+								UNION
+								SELECT M.VideoGameIndex2 FROM PlayOverMemories M
+								WHERE L1.VideoGameIndex = M.VideoGameIndex2
+								AND L2.VideoGameIndex = M.VideoGameIndex1
+							) OR (
+								U.PlayOverMemory = 0
+							)				
+						)
+						order by newid()
+					);
+				END
+				ELSE
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = (select top 1 ListIndex from PlayOverLists where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+				END	
 			END
 			ELSE
 			BEGIN
-				--//request random non-locked Target from personal list
+				IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = 
+					(
+						SELECT top 1 L1.ListIndex FROM PlayOverLists L1
+						JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+						JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
+						WHERE L1.PlayOverUserIndex = @intUserIndex
+						AND(
+							 L1.VideoGameIndex NOT IN(
+								SELECT M.VideoGameIndex1 FROM PlayOverMemories M
+								WHERE L1.VideoGameIndex = M.VideoGameIndex1
+								AND L2.VideoGameIndex = M.VideoGameIndex2
+								UNION
+								SELECT M.VideoGameIndex2 FROM PlayOverMemories M
+								WHERE L1.VideoGameIndex = M.VideoGameIndex2
+								AND L2.VideoGameIndex = M.VideoGameIndex1
+							) OR (
+								U.PlayOverMemory = 0
+							)
+						)
+						--//exclude the first and last Video Games
+						and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+						order by newid()
+					);
+				END
+				ELSE
+				BEGIN
+					--//request random non-locked Target from personal list
+					SET @TargetIndex = (select top 1 ListIndex from PlayOverLists 
+					where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
 					--//exclude the first and last VideoGames
-				SET @TargetIndex = (select top 1 ListIndex from PlayOverLists 
-				where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
-				and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+					and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+				END
 			END
 
 
 			--//find a record to compare to the one we have
 				--//if order is 0 or equal to count
 					--//there are VideoGames left in the global list
-			if ( (select count(PlayOverUserIndex) from PlayOverLists 
-			where (ListIndex = @TargetIndex and OrderRank = 0) or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) ) > 0 
-			and @GlobalCount > 0 )
+			if (
+				(
+					select count(PlayOverUserIndex) from PlayOverLists 
+					where (ListIndex = @TargetIndex and OrderRank = 0)
+					or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) 
+				) > 0 
+				and @GlobalCount > 0 )
 			BEGIN    
 				--//request @TargetIndex from personal list
 				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from PlayOverLists
@@ -218,13 +305,41 @@ BEGIN
 			BEGIN
 				SET @SavedOrder = (select OrderRank from PlayOverLists where ListIndex = @TargetIndex);
 				
-				if( (SELECT UpLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
 				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder-1);
+					SET @SecondTargetIndex = (
+
+						SELECT top 1 L2.ListIndex FROM PlayOverLists L1
+						JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
+						JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
+						WHERE L1.PlayOverUserIndex = @intUserIndex
+						AND L1.ListIndex = @TargetIndex
+						AND(
+							 L1.VideoGameIndex NOT IN(
+								SELECT M.VideoGameIndex1 FROM PlayOverMemories M
+								WHERE L1.VideoGameIndex = M.VideoGameIndex1
+								AND L2.VideoGameIndex = M.VideoGameIndex2
+								UNION
+								SELECT M.VideoGameIndex2 FROM PlayOverMemories M
+								WHERE L1.VideoGameIndex = M.VideoGameIndex2
+								AND L2.VideoGameIndex = M.VideoGameIndex1
+							) OR (
+								U.PlayOverMemory = 0
+							)				
+						)
+						order by newid()
+					);
 				END
-				else if( (SELECT DownLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+				ELSE
 				BEGIN
-					SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder+1);
+					if( (SELECT UpLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					BEGIN
+						SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder-1);
+					END
+					else if( (SELECT DownLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					BEGIN
+						SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder+1);
+					END
 				END
 
 				--//request @TargetIndex from personal list

@@ -167,8 +167,7 @@ public class LoginDAO extends DAO{
         boolean boolMen,
         boolean boolTransWomen,
         boolean boolTransMen
-    )
-    {
+    ){
         CallableStatement stmt = null;
         boolean result = false;
         ResultSet rs;
