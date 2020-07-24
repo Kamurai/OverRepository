@@ -85,8 +85,7 @@ public class ManagementDAO extends DAO{
     }
     
     //Pull User List
-    public ArrayList<ArrayList<String>> callablePullUserList()
-    {
+    public ArrayList<ArrayList<String>> callablePullUserList(){
         CallableStatement stmt = null;
         ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
         ArrayList<String> sub = new ArrayList<String>();
@@ -97,8 +96,7 @@ public class ManagementDAO extends DAO{
             stmt = getConnect().prepareCall("{call BubbleUpPullUserList()}");
             rs = stmt.executeQuery();
             
-            while(rs.next())
-            {
+            while(rs.next()){
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
                 sub.add(Integer.toString(rs.getInt("AdminLevel")));
