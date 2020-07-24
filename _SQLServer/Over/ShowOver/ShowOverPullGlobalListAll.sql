@@ -3,9 +3,9 @@
 create PROCEDURE ShowOverPullGlobalListAll
 AS
 BEGIN
-	select ShowIndex, Name, Picture, Release, Genre, Setting, avg(OrderRank)+1 as Ranking 
-	from ShowOverLists 
-	JOIN Shows ON ShowOverLists.ShowIndex = Shows.TargetIndex
-	group by ShowIndex, Name, Picture, Release, Genre, Setting order by Ranking
+	select L.TargetIndex, T.Name, T.Picture, T.Release, T.Genre, T.Setting, avg(L.Rank)+1 as Ranking 
+	from ShowOverLists L
+	JOIN Shows T ON L.TargetIndex = T.TargetIndex
+	group by L.TargetIndex, T.Name, T.Picture, T.Release, T.Genre, T.Setting order by Ranking
 	;
 END

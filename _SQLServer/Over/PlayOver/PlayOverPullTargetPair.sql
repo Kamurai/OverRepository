@@ -8,124 +8,124 @@ BEGIN
 	DECLARE @UserCount 			int = 0;
 	DECLARE @OrderCount 		int = 0;
 	DECLARE @GlobalCount 		int = 0;
-	DECLARE @TargetIndex 		int = 0;
-	DECLARE @SecondTargetIndex 	int = 0;
+	DECLARE @ListIndex 			int = 0;
+	DECLARE @SecondListIndex 	int = 0;
 	DECLARE @SavedOrder 		int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(PlayOverUserIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex);
+	SET @UserCount = (select count(L.UserIndex) from PlayOverLists L where L.UserIndex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
 	BEGIN
 		--//request count of random non-locked Video Games from personal list
-		IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+		IF( (SELECT TOP 1 U.Memory FROM PlayOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 		BEGIN
 			SET @OrderCount = (
 				SELECT count(L1.ListIndex) FROM PlayOverLists L1
-				JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-				JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
-				WHERE L1.PlayOverUserIndex = @intUserIndex
+				JOIN PlayOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+				JOIN PlayOverUsers U ON L1.UserIndex = U.UserIndex
+				WHERE L1.UserIndex = @intUserIndex
 				AND(
-					 L1.VideoGameIndex NOT IN(
-						SELECT M.VideoGameIndex1 FROM PlayOverMemories M
-						WHERE L1.VideoGameIndex = M.VideoGameIndex1
-						AND L2.VideoGameIndex = M.VideoGameIndex2
+					 L1.TargetIndex NOT IN(
+						SELECT M.TargetIndex1 FROM PlayOverMemories M
+						WHERE L1.TargetIndex = M.TargetIndex1
+						AND L2.TargetIndex = M.TargetIndex2
 						UNION
-						SELECT M.VideoGameIndex2 FROM PlayOverMemories M
-						WHERE L1.VideoGameIndex = M.VideoGameIndex2
-						AND L2.VideoGameIndex = M.VideoGameIndex1
+						SELECT M.TargetIndex2 FROM PlayOverMemories M
+						WHERE L1.TargetIndex = M.TargetIndex2
+						AND L2.TargetIndex = M.TargetIndex1
 					) OR (
-						U.PlayOverMemory = 0
+						U.Memory = 0
 					)				
 				)
 			);
 		END
 		ELSE
 		BEGIN
-			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
+			--//adjust OrderCount to exclude (1's L.UpLock and count's L.DownLock only available)
 			SET @OrderCount = (
-				select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex 
+				select count(L.ListIndex) from PlayOverLists L where L.UserIndex = @intUserIndex 
 				and (
-					UpLock = 0 or DownLock = 0
+					L.UpLock = 0 or L.DownLock = 0
 				)and not (
-					OrderRank = 0 and UpLock = 0 and DownLock = 1 
+					L.Rank = 0 and L.UpLock = 0 and L.DownLock = 1 
 				) and not (
-					OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+					L.Rank = (@UserCount-1) and L.UpLock = 1 and L.DownLock = 0
 				)
 			);		
 		END
 		
-		SET @GlobalCount = (select count(VideoGames.TargetIndex) from VideoGames
-			JOIN PlayOverUsers ON
+		SET @GlobalCount = (select count(T.TargetIndex) from VideoGames T
+			JOIN PlayOverUsers U ON
 			(
 				(
-					(VideoGames.Genre = 'TwoDP'				and PlayOverUsers.TwoDP = 1)		or 
-					(VideoGames.Genre = 'ThreeDP'			and PlayOverUsers.ThreeDP = 1)		or 
-					(VideoGames.Genre = 'FPS'				and PlayOverUsers.FPS = 1)			or 
-					(VideoGames.Genre = 'FPP'				and PlayOverUsers.FPP = 1)			or 
-					(VideoGames.Genre = 'VPuzzle'			and PlayOverUsers.VPuzzle = 1)		or 
-					(VideoGames.Genre = 'Bulletstorm'		and PlayOverUsers.Bulletstorm = 1)	or 
-					(VideoGames.Genre = 'Fighting'			and PlayOverUsers.Fighting = 1)		or 
-					(VideoGames.Genre = 'Stealth'			and PlayOverUsers.Stealth = 1)		or 
-					(VideoGames.Genre = 'Survival'			and PlayOverUsers.Survival = 1)		or 
-					(VideoGames.Genre = 'VN'				and PlayOverUsers.VN = 1)			or 
-					(VideoGames.Genre = 'IM'				and PlayOverUsers.IM = 1)			or 
-					(VideoGames.Genre = 'RPG'				and PlayOverUsers.RPG = 1)			or 
-					(VideoGames.Genre = 'TRPG'				and PlayOverUsers.TRPG = 1)			or 
-					(VideoGames.Genre = 'ARPG'				and PlayOverUsers.ARPG = 1)			or 
-					(VideoGames.Genre = 'Sports'			and PlayOverUsers.Sports = 1)		or 
-					(VideoGames.Genre = 'Racing'			and PlayOverUsers.Racing = 1)		or 
-					(VideoGames.Genre = 'RTS'				and PlayOverUsers.RTS = 1)			or 
-					(VideoGames.Genre = 'TBS'				and PlayOverUsers.TBS = 1)			or 
-					(VideoGames.Genre = 'VE'				and PlayOverUsers.VE = 1)			or 
-					(VideoGames.Genre = 'MMO'				and PlayOverUsers.MMO = 1)			or
-					(VideoGames.Genre = 'MOBA'				and PlayOverUsers.MOBA = 1)
+					(T.Genre = 'TwoDP'					and U.TwoDP = 1)		or 
+					(T.Genre = 'ThreeDP'				and U.ThreeDP = 1)		or 
+					(T.Genre = 'FPS'					and U.FPS = 1)			or 
+					(T.Genre = 'FPP'					and U.FPP = 1)			or 
+					(T.Genre = 'VPuzzle'				and U.VPuzzle = 1)		or 
+					(T.Genre = 'Bulletstorm'			and U.Bulletstorm = 1)	or 
+					(T.Genre = 'Fighting'				and U.Fighting = 1)		or 
+					(T.Genre = 'Stealth'				and U.Stealth = 1)		or 
+					(T.Genre = 'Survival'				and U.Survival = 1)		or 
+					(T.Genre = 'VN'						and U.VN = 1)			or 
+					(T.Genre = 'IM'						and U.IM = 1)			or 
+					(T.Genre = 'RPG'					and U.RPG = 1)			or 
+					(T.Genre = 'TRPG'					and U.TRPG = 1)			or 
+					(T.Genre = 'ARPG'					and U.ARPG = 1)			or 
+					(T.Genre = 'Sports'					and U.Sports = 1)		or 
+					(T.Genre = 'Racing'					and U.Racing = 1)		or 
+					(T.Genre = 'RTS'					and U.RTS = 1)			or 
+					(T.Genre = 'TBS'					and U.TBS = 1)			or 
+					(T.Genre = 'VE'						and U.VE = 1)			or 
+					(T.Genre = 'MMO'					and U.MMO = 1)			or
+					(T.Genre = 'MOBA'					and U.MOBA = 1)
 				)
 				and
 				(
-					(VideoGames.GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
-					(VideoGames.GamePlatform = 'Atari'			and PlayOverUsers.Atari = 1)			or 
-					(VideoGames.GamePlatform = 'Commodore64'	and PlayOverUsers.Commodore64 = 1)		or 
-					(VideoGames.GamePlatform = 'FAMICOM'		and PlayOverUsers.FAMICOM = 1)			or 
-					(VideoGames.GamePlatform = 'NES'			and PlayOverUsers.NES = 1)				or 
-					(VideoGames.GamePlatform = 'SNES'			and PlayOverUsers.SNES = 1)				or 
-					(VideoGames.GamePlatform = 'N64'			and PlayOverUsers.N64 = 1)				or 
-					(VideoGames.GamePlatform = 'Gamecube'		and PlayOverUsers.Gamecube = 1)			or 
-					(VideoGames.GamePlatform = 'Wii'			and PlayOverUsers.Wii = 1)				or 
-					(VideoGames.GamePlatform = 'WiiU'			and PlayOverUsers.WiiU = 1)				or 
-					(VideoGames.GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
-					(VideoGames.GamePlatform = 'Gameboy'		and PlayOverUsers.Gameboy = 1)			or 
-					(VideoGames.GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
-					(VideoGames.GamePlatform = 'GBA'			and PlayOverUsers.GBA = 1)				or 
-					(VideoGames.GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
-					(VideoGames.GamePlatform = 'ThreeDS'		and PlayOverUsers.ThreeDS = 1)			or 
-					(VideoGames.GamePlatform = 'SegaGenesis'	and PlayOverUsers.SegaGenesis = 1)		or 
-					(VideoGames.GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
-					(VideoGames.GamePlatform = 'SegaDreamcast'	and PlayOverUsers.SegaDreamcast = 1)	or 
-					(VideoGames.GamePlatform = 'PS1'			and PlayOverUsers.PS1 = 1)				or
-					(VideoGames.GamePlatform = 'PS2'			and PlayOverUsers.PS2 = 1)				or
-					(VideoGames.GamePlatform = 'PS3'			and PlayOverUsers.PS3 = 1)				or
-					(VideoGames.GamePlatform = 'PS4'			and PlayOverUsers.PS4 = 1)				or
-					(VideoGames.GamePlatform = 'PSP'			and PlayOverUsers.PSP = 1)				or
-					(VideoGames.GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
-					(VideoGames.GamePlatform = 'Xbox'			and PlayOverUsers.Xbox = 1)				or
-					(VideoGames.GamePlatform = 'Xbox360'		and PlayOverUsers.Xbox360 = 1)			or
-					(VideoGames.GamePlatform = 'XboxOne'		and PlayOverUsers.XboxOne = 1)			or
-					(VideoGames.GamePlatform = 'Ouya'			and PlayOverUsers.Ouya = 1)				or
-					(VideoGames.GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
-					(VideoGames.GamePlatform = 'Vive'			and PlayOverUsers.Vive = 1)				or
-					(VideoGames.GamePlatform = 'PSVR'			and PlayOverUsers.PSVR = 1)
+					(T.GamePlatform = 'PC'				and U.PC = 1)				or 
+					(T.GamePlatform = 'Atari'			and U.Atari = 1)			or 
+					(T.GamePlatform = 'Commodore64'		and U.Commodore64 = 1)		or 
+					(T.GamePlatform = 'FAMICOM'			and U.FAMICOM = 1)			or 
+					(T.GamePlatform = 'NES'				and U.NES = 1)				or 
+					(T.GamePlatform = 'SNES'			and U.SNES = 1)				or 
+					(T.GamePlatform = 'N64'				and U.N64 = 1)				or 
+					(T.GamePlatform = 'Gamecube'		and U.Gamecube = 1)			or 
+					(T.GamePlatform = 'Wii'				and U.Wii = 1)				or 
+					(T.GamePlatform = 'WiiU'			and U.WiiU = 1)				or 
+					(T.GamePlatform = 'NintendoSwitch'	and U.NintendoSwitch = 1)	or 
+					(T.GamePlatform = 'Gameboy'			and U.Gameboy = 1)			or 
+					(T.GamePlatform = 'VirtualBoy'		and U.VirtualBoy = 1)		or 
+					(T.GamePlatform = 'GBA'				and U.GBA = 1)				or 
+					(T.GamePlatform = 'DS'				and U.DS = 1)				or 
+					(T.GamePlatform = 'ThreeDS'			and U.ThreeDS = 1)			or 
+					(T.GamePlatform = 'SegaGenesis'		and U.SegaGenesis = 1)		or 
+					(T.GamePlatform = 'SegaCD'			and U.SegaCD = 1)			or 
+					(T.GamePlatform = 'SegaDreamcast'	and U.SegaDreamcast = 1)	or 
+					(T.GamePlatform = 'PS1'				and U.PS1 = 1)				or
+					(T.GamePlatform = 'PS2'				and U.PS2 = 1)				or
+					(T.GamePlatform = 'PS3'				and U.PS3 = 1)				or
+					(T.GamePlatform = 'PS4'				and U.PS4 = 1)				or
+					(T.GamePlatform = 'PSP'				and U.PSP = 1)				or
+					(T.GamePlatform = 'PSVita'			and U.PSVita = 1)			or
+					(T.GamePlatform = 'Xbox'			and U.Xbox = 1)				or
+					(T.GamePlatform = 'Xbox360'			and U.Xbox360 = 1)			or
+					(T.GamePlatform = 'XboxOne'			and U.XboxOne = 1)			or
+					(T.GamePlatform = 'Ouya'			and U.Ouya = 1)				or
+					(T.GamePlatform = 'OculusRift'		and U.OculusRift = 1)		or
+					(T.GamePlatform = 'Vive'			and U.Vive = 1)				or
+					(T.GamePlatform = 'PSVR'			and U.PSVR = 1)
 				)
 			) 
-			WHERE PlayOverUsers.PlayOverUserIndex = @intUserIndex
-			and VideoGames.TargetIndex not in(
-				select VideoGames.TargetIndex from VideoGames
-				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-				JOIN PlayOverUsers ON
-					PlayOverLists.PlayOverUserIndex = PlayOverUsers.PlayOverUserIndex
-				where PlayOverUsers.PlayOverUserIndex = @intUserIndex
+			WHERE U.UserIndex = @intUserIndex
+			and T.TargetIndex not in(
+				select T2.TargetIndex from VideoGames T2
+				JOIN PlayOverLists L2 ON
+					T2.TargetIndex = L2.TargetIndex
+				JOIN PlayOverUsers U2 ON
+					L2.UserIndex = U2.UserIndex
+				where U2.UserIndex = @intUserIndex
 			)
 		);
 	
@@ -135,26 +135,26 @@ BEGIN
 			--//there are VideoGames left in the global list
 			IF( @GlobalCount > 0 )
 			BEGIN
-				IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+				IF( (SELECT TOP 1 U.Memory FROM PlayOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = 
+					SET @ListIndex = 
 					(
 						SELECT top 1 L1.ListIndex FROM PlayOverLists L1
-						JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-						JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
-						WHERE L1.PlayOverUserIndex = @intUserIndex
+						JOIN PlayOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+						JOIN PlayOverUsers U ON L1.UserIndex = U.UserIndex
+						WHERE L1.UserIndex = @intUserIndex
 						AND(
-							 L1.VideoGameIndex NOT IN(
-								SELECT M.VideoGameIndex1 FROM PlayOverMemories M
-								WHERE L1.VideoGameIndex = M.VideoGameIndex1
-								AND L2.VideoGameIndex = M.VideoGameIndex2
+							 L1.TargetIndex NOT IN(
+								SELECT M.TargetIndex1 FROM PlayOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex1
+								AND L2.TargetIndex = M.TargetIndex2
 								UNION
-								SELECT M.VideoGameIndex2 FROM PlayOverMemories M
-								WHERE L1.VideoGameIndex = M.VideoGameIndex2
-								AND L2.VideoGameIndex = M.VideoGameIndex1
+								SELECT M.TargetIndex2 FROM PlayOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex2
+								AND L2.TargetIndex = M.TargetIndex1
 							) OR (
-								U.PlayOverMemory = 0
+								U.Memory = 0
 							)				
 						)
 						order by newid()
@@ -163,45 +163,45 @@ BEGIN
 				ELSE
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = (select top 1 ListIndex from PlayOverLists where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+					SET @ListIndex = (select top 1 L.ListIndex from PlayOverLists L where L.UserIndex = @intUserIndex and (L.UpLock = 0 or L.DownLock = 0) order by newid());
 				END	
 			END
 			ELSE
 			BEGIN
-				IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+				IF( (SELECT TOP 1 U.Memory FROM PlayOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = 
+					SET @ListIndex = 
 					(
 						SELECT top 1 L1.ListIndex FROM PlayOverLists L1
-						JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-						JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
-						WHERE L1.PlayOverUserIndex = @intUserIndex
+						JOIN PlayOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+						JOIN PlayOverUsers U ON L1.UserIndex = U.UserIndex
+						WHERE L1.UserIndex = @intUserIndex
 						AND(
-							 L1.VideoGameIndex NOT IN(
-								SELECT M.VideoGameIndex1 FROM PlayOverMemories M
-								WHERE L1.VideoGameIndex = M.VideoGameIndex1
-								AND L2.VideoGameIndex = M.VideoGameIndex2
+							 L1.TargetIndex NOT IN(
+								SELECT M.TargetIndex1 FROM PlayOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex1
+								AND L2.TargetIndex = M.TargetIndex2
 								UNION
-								SELECT M.VideoGameIndex2 FROM PlayOverMemories M
-								WHERE L1.VideoGameIndex = M.VideoGameIndex2
-								AND L2.VideoGameIndex = M.VideoGameIndex1
+								SELECT M.TargetIndex2 FROM PlayOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex2
+								AND L2.TargetIndex = M.TargetIndex1
 							) OR (
-								U.PlayOverMemory = 0
+								U.Memory = 0
 							)
 						)
 						--//exclude the first and last Video Games
-						and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+						and (L1.Rank != 0 and L1.Rank != @UserCount-1 )
 						order by newid()
 					);
 				END
 				ELSE
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = (select top 1 ListIndex from PlayOverLists 
-					where PlayOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+					SET @ListIndex = (select top 1 L.ListIndex from PlayOverLists L
+					where L.UserIndex = @intUserIndex and (L.UpLock = 0 or L.DownLock = 0)
 					--//exclude the first and last VideoGames
-					and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+					and (L.Rank != 0 and L.Rank != @UserCount-1 ) order by newid());
 				END
 			END
 
@@ -211,120 +211,120 @@ BEGIN
 					--//there are VideoGames left in the global list
 			if (
 				(
-					select count(PlayOverUserIndex) from PlayOverLists 
-					where (ListIndex = @TargetIndex and OrderRank = 0)
-					or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) 
+					select count(L.UserIndex) from PlayOverLists L
+					where (L.ListIndex = @ListIndex and L.Rank = 0)
+					or (L.ListIndex = @ListIndex and L.Rank = @UserCount-1) 
 				) > 0 
 				and @GlobalCount > 0 )
 			BEGIN    
-				--//request @TargetIndex from personal list
-				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from PlayOverLists
-				JOIN VideoGames ON
-					PlayOverLists.VideoGameIndex = VideoGames.TargetIndex
-				where PlayOverLists.ListIndex = @TargetIndex
+				--//request @ListIndex from personal list
+				select T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from PlayOverLists L
+				JOIN VideoGames T ON
+					L.TargetIndex = T.TargetIndex
+				where L.ListIndex = @ListIndex
 				UNION
 				--//request random from global list
 					--//exclude from personal list
 				select * from ( 
-					select Top 1 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-					JOIN PlayOverUsers ON
+					select Top 1 T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames T
+					JOIN PlayOverUsers U ON
 						(
 							(
-								(VideoGames.Genre = 'TwoDP'						and PlayOverUsers.TwoDP = 1)			or 
-								(VideoGames.Genre = 'ThreeDP'					and PlayOverUsers.ThreeDP = 1)			or 
-								(VideoGames.Genre = 'FPS'						and PlayOverUsers.FPS = 1)				or 
-								(VideoGames.Genre = 'FPP'						and PlayOverUsers.FPP = 1)				or 
-								(VideoGames.Genre = 'VPuzzle'					and PlayOverUsers.VPuzzle = 1)			or 
-								(VideoGames.Genre = 'Bulletstorm'				and PlayOverUsers.Bulletstorm = 1)		or 
-								(VideoGames.Genre = 'Fighting'					and PlayOverUsers.Fighting = 1)			or 
-								(VideoGames.Genre = 'Stealth'					and PlayOverUsers.Stealth = 1)			or 
-								(VideoGames.Genre = 'Survival'					and PlayOverUsers.Survival = 1)			or 
-								(VideoGames.Genre = 'VN'						and PlayOverUsers.VN = 1)				or 
-								(VideoGames.Genre = 'IM'						and PlayOverUsers.IM = 1)				or 
-								(VideoGames.Genre = 'RPG'						and PlayOverUsers.RPG = 1)				or 
-								(VideoGames.Genre = 'TRPG'						and PlayOverUsers.TRPG = 1)				or 
-								(VideoGames.Genre = 'ARPG'						and PlayOverUsers.ARPG = 1)				or 
-								(VideoGames.Genre = 'Sports'					and PlayOverUsers.Sports = 1)			or 
-								(VideoGames.Genre = 'Racing'					and PlayOverUsers.Racing = 1)			or 
-								(VideoGames.Genre = 'RTS'						and PlayOverUsers.RTS = 1)				or 
-								(VideoGames.Genre = 'TBS'						and PlayOverUsers.TBS = 1)				or 
-								(VideoGames.Genre = 'VE'						and PlayOverUsers.VE = 1)				or 
-								(VideoGames.Genre = 'MMO'						and PlayOverUsers.MMO = 1)				or
-								(VideoGames.Genre = 'MOBA'						and PlayOverUsers.MOBA = 1)
+								(T.Genre = 'TwoDP'					and U.TwoDP = 1)			or 
+								(T.Genre = 'ThreeDP'				and U.ThreeDP = 1)			or 
+								(T.Genre = 'FPS'					and U.FPS = 1)				or 
+								(T.Genre = 'FPP'					and U.FPP = 1)				or 
+								(T.Genre = 'VPuzzle'				and U.VPuzzle = 1)			or 
+								(T.Genre = 'Bulletstorm'			and U.Bulletstorm = 1)		or 
+								(T.Genre = 'Fighting'				and U.Fighting = 1)			or 
+								(T.Genre = 'Stealth'				and U.Stealth = 1)			or 
+								(T.Genre = 'Survival'				and U.Survival = 1)			or 
+								(T.Genre = 'VN'						and U.VN = 1)				or 
+								(T.Genre = 'IM'						and U.IM = 1)				or 
+								(T.Genre = 'RPG'					and U.RPG = 1)				or 
+								(T.Genre = 'TRPG'					and U.TRPG = 1)				or 
+								(T.Genre = 'ARPG'					and U.ARPG = 1)				or 
+								(T.Genre = 'Sports'					and U.Sports = 1)			or 
+								(T.Genre = 'Racing'					and U.Racing = 1)			or 
+								(T.Genre = 'RTS'					and U.RTS = 1)				or 
+								(T.Genre = 'TBS'					and U.TBS = 1)				or 
+								(T.Genre = 'VE'						and U.VE = 1)				or 
+								(T.Genre = 'MMO'					and U.MMO = 1)				or
+								(T.Genre = 'MOBA'					and U.MOBA = 1)
 							)
 							and
 							(
-								(GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
-								(GamePlatform = 'Atari'				and PlayOverUsers.Atari = 1)			or 
-								(GamePlatform = 'Commodore64'		and PlayOverUsers.Commodore64 = 1)		or 
-								(GamePlatform = 'FAMICOM'			and PlayOverUsers.FAMICOM = 1)			or 
-								(GamePlatform = 'NES'				and PlayOverUsers.NES = 1)				or 
-								(GamePlatform = 'SNES'				and PlayOverUsers.SNES = 1)				or 
-								(GamePlatform = 'N64'				and PlayOverUsers.N64 = 1)				or 
-								(GamePlatform = 'Gamecube'			and PlayOverUsers.Gamecube = 1)			or 
-								(GamePlatform = 'Wii'				and PlayOverUsers.Wii = 1)				or 
-								(GamePlatform = 'WiiU'				and PlayOverUsers.WiiU = 1)				or 
-								(GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
-								(GamePlatform = 'Gameboy'			and PlayOverUsers.Gameboy = 1)			or 
-								(GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
-								(GamePlatform = 'GBA'				and PlayOverUsers.GBA = 1)				or 
-								(GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
-								(GamePlatform = 'ThreeDS'			and PlayOverUsers.ThreeDS = 1)			or 
-								(GamePlatform = 'SegaGenesis'		and PlayOverUsers.SegaGenesis = 1)		or 
-								(GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
-								(GamePlatform = 'SegaDreamcast'		and PlayOverUsers.SegaDreamcast = 1)	or 
-								(GamePlatform = 'PS1'				and PlayOverUsers.PS1 = 1)				or
-								(GamePlatform = 'PS2'				and PlayOverUsers.PS2 = 1)				or
-								(GamePlatform = 'PS3'				and PlayOverUsers.PS3 = 1)				or
-								(GamePlatform = 'PS4'				and PlayOverUsers.PS4 = 1)				or
-								(GamePlatform = 'PSP'				and PlayOverUsers.PSP = 1)				or
-								(GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
-								(GamePlatform = 'Xbox'				and PlayOverUsers.Xbox = 1)				or
-								(GamePlatform = 'Xbox360'			and PlayOverUsers.Xbox360 = 1)			or
-								(GamePlatform = 'XboxOne'			and PlayOverUsers.XboxOne = 1)			or
-								(GamePlatform = 'Ouya'				and PlayOverUsers.Ouya = 1)				or
-								(GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
-								(GamePlatform = 'Vive'				and PlayOverUsers.Vive = 1)				or
-								(GamePlatform = 'PSVR'				and PlayOverUsers.PSVR = 1)
+								(T.GamePlatform = 'PC'				and U.PC = 1)				or 
+								(T.GamePlatform = 'Atari'			and U.Atari = 1)			or 
+								(T.GamePlatform = 'Commodore64'		and U.Commodore64 = 1)		or 
+								(T.GamePlatform = 'FAMICOM'			and U.FAMICOM = 1)			or 
+								(T.GamePlatform = 'NES'				and U.NES = 1)				or 
+								(T.GamePlatform = 'SNES'			and U.SNES = 1)				or 
+								(T.GamePlatform = 'N64'				and U.N64 = 1)				or 
+								(T.GamePlatform = 'Gamecube'		and U.Gamecube = 1)			or 
+								(T.GamePlatform = 'Wii'				and U.Wii = 1)				or 
+								(T.GamePlatform = 'WiiU'			and U.WiiU = 1)				or 
+								(T.GamePlatform = 'NintendoSwitch'	and U.NintendoSwitch = 1)	or 
+								(T.GamePlatform = 'Gameboy'			and U.Gameboy = 1)			or 
+								(T.GamePlatform = 'VirtualBoy'		and U.VirtualBoy = 1)		or 
+								(T.GamePlatform = 'GBA'				and U.GBA = 1)				or 
+								(T.GamePlatform = 'DS'				and U.DS = 1)				or 
+								(T.GamePlatform = 'ThreeDS'			and U.ThreeDS = 1)			or 
+								(T.GamePlatform = 'SegaGenesis'		and U.SegaGenesis = 1)		or 
+								(T.GamePlatform = 'SegaCD'			and U.SegaCD = 1)			or 
+								(T.GamePlatform = 'SegaDreamcast'	and U.SegaDreamcast = 1)	or 
+								(T.GamePlatform = 'PS1'				and U.PS1 = 1)				or
+								(T.GamePlatform = 'PS2'				and U.PS2 = 1)				or
+								(T.GamePlatform = 'PS3'				and U.PS3 = 1)				or
+								(T.GamePlatform = 'PS4'				and U.PS4 = 1)				or
+								(T.GamePlatform = 'PSP'				and U.PSP = 1)				or
+								(T.GamePlatform = 'PSVita'			and U.PSVita = 1)			or
+								(T.GamePlatform = 'Xbox'			and U.Xbox = 1)				or
+								(T.GamePlatform = 'Xbox360'			and U.Xbox360 = 1)			or
+								(T.GamePlatform = 'XboxOne'			and U.XboxOne = 1)			or
+								(T.GamePlatform = 'Ouya'			and U.Ouya = 1)				or
+								(T.GamePlatform = 'OculusRift'		and U.OculusRift = 1)		or
+								(T.GamePlatform = 'Vive'			and U.Vive = 1)				or
+								(T.GamePlatform = 'PSVR'			and U.PSVR = 1)
 							)
 						) 
-					WHERE PlayOverUsers.PlayOverUserIndex = @intUserIndex
-					and VideoGames.TargetIndex not in(
-						select VideoGames.TargetIndex from VideoGames
-						JOIN PlayOverLists ON
-							VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-						JOIN PlayOverUsers ON
-							PlayOverLists.PlayOverUserIndex = PlayOverUsers.PlayOverUserIndex
-						where PlayOverUsers.PlayOverUserIndex = @intUserIndex
+					WHERE U.UserIndex = @intUserIndex
+					and T.TargetIndex not in(
+						select T2.TargetIndex from VideoGames T2
+						JOIN PlayOverLists L2 ON
+							T2.TargetIndex = L2.TargetIndex
+						JOIN PlayOverUsers U2 ON
+							L2.UserIndex = U2.UserIndex
+						where U2.UserIndex = @intUserIndex
 	   
 					) order by newid() 
-				) T1;
+				) AS TABLE1;
 			END
 			--//else we're looking for an adjacent Target from the personal list
 			ELSE
 			BEGIN
-				SET @SavedOrder = (select OrderRank from PlayOverLists where ListIndex = @TargetIndex);
+				SET @SavedOrder = (select L.Rank from PlayOverLists L where L.ListIndex = @ListIndex);
 				
-				IF( (SELECT TOP 1 U.PlayOverMemory FROM PlayOverUsers U WHERE U.PlayOverUserIndex = @intUserIndex) = 1 )
+				IF( (SELECT TOP 1 U.Memory FROM PlayOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 				BEGIN
-					SET @SecondTargetIndex = (
+					SET @SecondListIndex = (
 
 						SELECT top 1 L2.ListIndex FROM PlayOverLists L1
-						JOIN PlayOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-						JOIN PlayOverUsers U ON L1.PlayOverUserIndex = U.PlayOverUserIndex
-						WHERE L1.PlayOverUserIndex = @intUserIndex
-						AND L1.ListIndex = @TargetIndex
+						JOIN PlayOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+						JOIN PlayOverUsers U ON L1.UserIndex = U.UserIndex
+						WHERE L1.UserIndex = @intUserIndex
+						AND L1.ListIndex = @ListIndex
 						AND(
-							 L1.VideoGameIndex NOT IN(
-								SELECT M.VideoGameIndex1 FROM PlayOverMemories M
-								WHERE L1.VideoGameIndex = M.VideoGameIndex1
-								AND L2.VideoGameIndex = M.VideoGameIndex2
+							 L1.TargetIndex NOT IN(
+								SELECT M.TargetIndex1 FROM PlayOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex1
+								AND L2.TargetIndex = M.TargetIndex2
 								UNION
-								SELECT M.VideoGameIndex2 FROM PlayOverMemories M
-								WHERE L1.VideoGameIndex = M.VideoGameIndex2
-								AND L2.VideoGameIndex = M.VideoGameIndex1
+								SELECT M.TargetIndex2 FROM PlayOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex2
+								AND L2.TargetIndex = M.TargetIndex1
 							) OR (
-								U.PlayOverMemory = 0
+								U.Memory = 0
 							)				
 						)
 						order by newid()
@@ -332,27 +332,27 @@ BEGIN
 				END
 				ELSE
 				BEGIN
-					if( (SELECT UpLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					if( (SELECT L.UpLock FROM PlayOverLists L WHERE L.Rank = @SavedOrder) = 0 )
 					BEGIN
-						SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder-1);
+						SET @SecondListIndex = (SELECT L.ListIndex FROM PlayOverLists L WHERE L.Rank = @SavedOrder-1);
 					END
-					else if( (SELECT DownLock FROM PlayOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					else if( (SELECT L.DownLock FROM PlayOverLists L WHERE L.Rank = @SavedOrder) = 0 )
 					BEGIN
-						SET @SecondTargetIndex = (SELECT ListIndex FROM PlayOverLists WHERE OrderRank = @SavedOrder+1);
+						SET @SecondListIndex = (SELECT L.ListIndex FROM PlayOverLists L WHERE L.Rank = @SavedOrder+1);
 					END
 				END
 
-				--//request @TargetIndex from personal list
-				(select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-				where PlayOverLists.ListIndex = @TargetIndex 
+				--//request @ListIndex from personal list
+				(select T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames T
+				JOIN PlayOverLists L ON
+					T.TargetIndex = L.TargetIndex
+				where L.ListIndex = @ListIndex 
 				UNION
-				select VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-				where PlayOverLists.ListIndex = @SecondTargetIndex
-				); --T2
+				select T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames T
+				JOIN PlayOverLists L ON
+					T.TargetIndex = L.TargetIndex
+				where L.ListIndex = @SecondListIndex
+				);
 			END
 		END                    
 		--//else (there are no unlocked records)
@@ -363,101 +363,101 @@ BEGIN
 			BEGIN
 				--//request Order = 0 or Order = count from personal list
 				select * from (
-					select top 1 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-					JOIN PlayOverLists ON
-						VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-					where PlayOverUserIndex = @intUserIndex 
+					select top 1 T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames T
+					JOIN PlayOverLists L ON
+						T.TargetIndex = L.TargetIndex
+					where L.UserIndex = @intUserIndex 
 					and 
-						( OrderRank = 0 or OrderRank = @UserCount-1 )
+						( L.Rank = 0 or L.Rank = @UserCount-1 )
 					order by newid() 
-				) T3
+				) AS TABLE2
 				UNION
 				--//request random from global list
 					--//exclude from personal list
 				select * from ( 
-					select Top 1 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-					JOIN PlayOverUsers ON
+					select Top 1 T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames T
+					JOIN PlayOverUsers U ON
 					(
 						(
-							(VideoGames.Genre = 'TwoDP'				and PlayOverUsers.TwoDP = 1)		or 
-							(VideoGames.Genre = 'ThreeDP'			and PlayOverUsers.ThreeDP = 1)		or 
-							(VideoGames.Genre = 'FPS'				and PlayOverUsers.FPS = 1)			or 
-							(VideoGames.Genre = 'FPP'				and PlayOverUsers.FPP = 1)			or 
-							(VideoGames.Genre = 'VPuzzle'			and PlayOverUsers.VPuzzle = 1)		or 
-							(VideoGames.Genre = 'Bulletstorm'		and PlayOverUsers.Bulletstorm = 1)	or 
-							(VideoGames.Genre = 'Fighting'			and PlayOverUsers.Fighting = 1)		or 
-							(VideoGames.Genre = 'Stealth'			and PlayOverUsers.Stealth = 1)		or 
-							(VideoGames.Genre = 'Survival'			and PlayOverUsers.Survival = 1)		or 
-							(VideoGames.Genre = 'VN'				and PlayOverUsers.VN = 1)			or 
-							(VideoGames.Genre = 'IM'				and PlayOverUsers.IM = 1)			or 
-							(VideoGames.Genre = 'RPG'				and PlayOverUsers.RPG = 1)			or 
-							(VideoGames.Genre = 'TRPG'				and PlayOverUsers.TRPG = 1)			or 
-							(VideoGames.Genre = 'ARPG'				and PlayOverUsers.ARPG = 1)			or 
-							(VideoGames.Genre = 'Sports'			and PlayOverUsers.Sports = 1)		or 
-							(VideoGames.Genre = 'Racing'			and PlayOverUsers.Racing = 1)		or 
-							(VideoGames.Genre = 'RTS'				and PlayOverUsers.RTS = 1)			or 
-							(VideoGames.Genre = 'TBS'				and PlayOverUsers.TBS = 1)			or 
-							(VideoGames.Genre = 'VE'				and PlayOverUsers.VE = 1)			or 
-							(VideoGames.Genre = 'MMO'				and PlayOverUsers.MMO = 1)			or
-							(VideoGames.Genre = 'MOBA'				and PlayOverUsers.MOBA = 1)
+							(T.Genre = 'TwoDP'					and U.TwoDP = 1)			or 
+							(T.Genre = 'ThreeDP'				and U.ThreeDP = 1)			or 
+							(T.Genre = 'FPS'					and U.FPS = 1)				or 
+							(T.Genre = 'FPP'					and U.FPP = 1)				or 
+							(T.Genre = 'VPuzzle'				and U.VPuzzle = 1)			or 
+							(T.Genre = 'Bulletstorm'			and U.Bulletstorm = 1)		or 
+							(T.Genre = 'Fighting'				and U.Fighting = 1)			or 
+							(T.Genre = 'Stealth'				and U.Stealth = 1)			or 
+							(T.Genre = 'Survival'				and U.Survival = 1)			or 
+							(T.Genre = 'VN'						and U.VN = 1)				or 
+							(T.Genre = 'IM'						and U.IM = 1)				or 
+							(T.Genre = 'RPG'					and U.RPG = 1)				or 
+							(T.Genre = 'TRPG'					and U.TRPG = 1)				or 
+							(T.Genre = 'ARPG'					and U.ARPG = 1)				or 
+							(T.Genre = 'Sports'					and U.Sports = 1)			or 
+							(T.Genre = 'Racing'					and U.Racing = 1)			or 
+							(T.Genre = 'RTS'					and U.RTS = 1)				or 
+							(T.Genre = 'TBS'					and U.TBS = 1)				or 
+							(T.Genre = 'VE'						and U.VE = 1)				or 
+							(T.Genre = 'MMO'					and U.MMO = 1)				or
+							(T.Genre = 'MOBA'					and U.MOBA = 1)
 						)
 						and
 						(
-							(VideoGames.GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
-							(VideoGames.GamePlatform = 'Atari'			and PlayOverUsers.Atari = 1)			or 
-							(VideoGames.GamePlatform = 'Commodore64'	and PlayOverUsers.Commodore64 = 1)		or 
-							(VideoGames.GamePlatform = 'FAMICOM'		and PlayOverUsers.FAMICOM = 1)			or 
-							(VideoGames.GamePlatform = 'NES'			and PlayOverUsers.NES = 1)				or 
-							(VideoGames.GamePlatform = 'SNES'			and PlayOverUsers.SNES = 1)				or 
-							(VideoGames.GamePlatform = 'N64'			and PlayOverUsers.N64 = 1)				or 
-							(VideoGames.GamePlatform = 'Gamecube'		and PlayOverUsers.Gamecube = 1)			or 
-							(VideoGames.GamePlatform = 'Wii'			and PlayOverUsers.Wii = 1)				or 
-							(VideoGames.GamePlatform = 'WiiU'			and PlayOverUsers.WiiU = 1)				or 
-							(VideoGames.GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
-							(VideoGames.GamePlatform = 'Gameboy'		and PlayOverUsers.Gameboy = 1)			or 
-							(VideoGames.GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
-							(VideoGames.GamePlatform = 'GBA'			and PlayOverUsers.GBA = 1)				or 
-							(VideoGames.GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
-							(VideoGames.GamePlatform = 'ThreeDS'		and PlayOverUsers.ThreeDS = 1)			or 
-							(VideoGames.GamePlatform = 'SegaGenesis'	and PlayOverUsers.SegaGenesis = 1)		or 
-							(VideoGames.GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
-							(VideoGames.GamePlatform = 'SegaDreamcast'	and PlayOverUsers.SegaDreamcast = 1)	or 
-							(VideoGames.GamePlatform = 'PS1'			and PlayOverUsers.PS1 = 1)				or
-							(VideoGames.GamePlatform = 'PS2'			and PlayOverUsers.PS2 = 1)				or
-							(VideoGames.GamePlatform = 'PS3'			and PlayOverUsers.PS3 = 1)				or
-							(VideoGames.GamePlatform = 'PS4'			and PlayOverUsers.PS4 = 1)				or
-							(VideoGames.GamePlatform = 'PSP'			and PlayOverUsers.PSP = 1)				or
-							(VideoGames.GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
-							(VideoGames.GamePlatform = 'Xbox'			and PlayOverUsers.Xbox = 1)				or
-							(VideoGames.GamePlatform = 'Xbox360'		and PlayOverUsers.Xbox360 = 1)			or
-							(VideoGames.GamePlatform = 'XboxOne'		and PlayOverUsers.XboxOne = 1)			or
-							(VideoGames.GamePlatform = 'Ouya'			and PlayOverUsers.Ouya = 1)				or
-							(VideoGames.GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
-							(VideoGames.GamePlatform = 'Vive'			and PlayOverUsers.Vive = 1)				or
-							(VideoGames.GamePlatform = 'PSVR'			and PlayOverUsers.PSVR = 1)
+							(T.GamePlatform = 'PC'				and U.PC = 1)				or 
+							(T.GamePlatform = 'Atari'			and U.Atari = 1)			or 
+							(T.GamePlatform = 'Commodore64'		and U.Commodore64 = 1)		or 
+							(T.GamePlatform = 'FAMICOM'			and U.FAMICOM = 1)			or 
+							(T.GamePlatform = 'NES'				and U.NES = 1)				or 
+							(T.GamePlatform = 'SNES'			and U.SNES = 1)				or 
+							(T.GamePlatform = 'N64'				and U.N64 = 1)				or 
+							(T.GamePlatform = 'Gamecube'		and U.Gamecube = 1)			or 
+							(T.GamePlatform = 'Wii'				and U.Wii = 1)				or 
+							(T.GamePlatform = 'WiiU'			and U.WiiU = 1)				or 
+							(T.GamePlatform = 'NintendoSwitch'	and U.NintendoSwitch = 1)	or 
+							(T.GamePlatform = 'Gameboy'			and U.Gameboy = 1)			or 
+							(T.GamePlatform = 'VirtualBoy'		and U.VirtualBoy = 1)		or 
+							(T.GamePlatform = 'GBA'				and U.GBA = 1)				or 
+							(T.GamePlatform = 'DS'				and U.DS = 1)				or 
+							(T.GamePlatform = 'ThreeDS'			and U.ThreeDS = 1)			or 
+							(T.GamePlatform = 'SegaGenesis'		and U.SegaGenesis = 1)		or 
+							(T.GamePlatform = 'SegaCD'			and U.SegaCD = 1)			or 
+							(T.GamePlatform = 'SegaDreamcast'	and U.SegaDreamcast = 1)	or 
+							(T.GamePlatform = 'PS1'				and U.PS1 = 1)				or
+							(T.GamePlatform = 'PS2'				and U.PS2 = 1)				or
+							(T.GamePlatform = 'PS3'				and U.PS3 = 1)				or
+							(T.GamePlatform = 'PS4'				and U.PS4 = 1)				or
+							(T.GamePlatform = 'PSP'				and U.PSP = 1)				or
+							(T.GamePlatform = 'PSVita'			and U.PSVita = 1)			or
+							(T.GamePlatform = 'Xbox'			and U.Xbox = 1)				or
+							(T.GamePlatform = 'Xbox360'			and U.Xbox360 = 1)			or
+							(T.GamePlatform = 'XboxOne'			and U.XboxOne = 1)			or
+							(T.GamePlatform = 'Ouya'			and U.Ouya = 1)				or
+							(T.GamePlatform = 'OculusRift'		and U.OculusRift = 1)		or
+							(T.GamePlatform = 'Vive'			and U.Vive = 1)				or
+							(T.GamePlatform = 'PSVR'			and U.PSVR = 1)
 						)
 					)
-					WHERE PlayOverUsers.PlayOverUserIndex = @intUserIndex
-					and VideoGames.TargetIndex not in(
-						select VideoGames.TargetIndex from VideoGames
-						JOIN PlayOverLists ON
-							VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-						JOIN PlayOverUsers ON
-							PlayOverLists.PlayOverUserIndex = PlayOverUsers.PlayOverUserIndex
-						where PlayOverUsers.PlayOverUserIndex = @intUserIndex
+					WHERE U.UserIndex = @intUserIndex
+					and T.TargetIndex not in(
+						select T2.TargetIndex from VideoGames T2
+						JOIN PlayOverLists L2 ON
+							T2.TargetIndex = L2.TargetIndex
+						JOIN PlayOverUsers U2 ON
+							L2.UserIndex = U2.UserIndex
+						where U2.UserIndex = @intUserIndex
 					) order by newid() 
-				) T4;
+				) AS TABLE3;
 			END
 			ELSE
 			--//there are no selections left in the global list
 				--//there are no unlocked records
 			BEGIN
 				--//return the top two records from personal list
-				select top 2 VideoGames.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames
-				JOIN PlayOverLists ON
-					VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-				where PlayOverUserIndex = @intUserIndex
-				and ( (OrderRank = 0) or (OrderRank = 1) );
+				select top 2 T.TargetIndex, Name, Release, GamePlatform, Genre, Picture from VideoGames T
+				JOIN PlayOverLists L ON
+					T.TargetIndex = L.TargetIndex
+				where L.UserIndex = @intUserIndex
+				and ( (L.Rank = 0) or (L.Rank = 1) );
 			END
 		END
 	END
@@ -465,68 +465,68 @@ BEGIN
 	ELSE
 	BEGIN
 		--//request 2 random VideoGames from global list
-		select top 2 VideoGames.TargetIndex, Name, Picture, Release, GamePlatform, Genre from VideoGames
-		JOIN PlayOverUsers ON
+		select top 2 T.TargetIndex, Name, Picture, Release, GamePlatform, Genre from VideoGames T
+		JOIN PlayOverUsers U ON
 		(
 			(
-				(VideoGames.Genre = 'TwoDP'				and PlayOverUsers.TwoDP = 1)		or 
-				(VideoGames.Genre = 'ThreeDP'			and PlayOverUsers.ThreeDP = 1)		or 
-				(VideoGames.Genre = 'FPS'				and PlayOverUsers.FPS = 1)			or 
-				(VideoGames.Genre = 'FPP'				and PlayOverUsers.FPP = 1)			or 
-				(VideoGames.Genre = 'VPuzzle'			and PlayOverUsers.VPuzzle = 1)		or 
-				(VideoGames.Genre = 'Bulletstorm'		and	PlayOverUsers.Bulletstorm = 1)	or 
-				(VideoGames.Genre = 'Fighting'			and PlayOverUsers.Fighting = 1)		or 
-				(VideoGames.Genre = 'Stealth'			and PlayOverUsers.Stealth = 1)		or 
-				(VideoGames.Genre = 'Survival'			and PlayOverUsers.Survival = 1)		or 
-				(VideoGames.Genre = 'VN'				and PlayOverUsers.VN = 1)			or 
-				(VideoGames.Genre = 'IM'				and PlayOverUsers.IM = 1)			or 
-				(VideoGames.Genre = 'RPG'				and PlayOverUsers.RPG = 1)			or 
-				(VideoGames.Genre = 'TRPG'				and PlayOverUsers.TRPG = 1)			or 
-				(VideoGames.Genre = 'ARPG'				and PlayOverUsers.ARPG = 1)			or 
-				(VideoGames.Genre = 'Sports'			and PlayOverUsers.Sports = 1)		or 
-				(VideoGames.Genre = 'Racing'			and PlayOverUsers.Racing = 1)		or 
-				(VideoGames.Genre = 'RTS'				and PlayOverUsers.RTS = 1)			or 
-				(VideoGames.Genre = 'TBS'				and PlayOverUsers.TBS = 1)			or 
-				(VideoGames.Genre = 'VE'				and PlayOverUsers.VE = 1)			or 
-				(VideoGames.Genre = 'MMO'				and PlayOverUsers.MMO = 1)			or
-				(VideoGames.Genre = 'MOBA'				and PlayOverUsers.MOBA = 1)
+				(T.Genre = 'TwoDP'					and U.TwoDP = 1)			or 
+				(T.Genre = 'ThreeDP'				and U.ThreeDP = 1)			or 
+				(T.Genre = 'FPS'					and U.FPS = 1)				or 
+				(T.Genre = 'FPP'					and U.FPP = 1)				or 
+				(T.Genre = 'VPuzzle'				and U.VPuzzle = 1)			or 
+				(T.Genre = 'Bulletstorm'			and	U.Bulletstorm = 1)		or 
+				(T.Genre = 'Fighting'				and U.Fighting = 1)			or 
+				(T.Genre = 'Stealth'				and U.Stealth = 1)			or 
+				(T.Genre = 'Survival'				and U.Survival = 1)			or 
+				(T.Genre = 'VN'						and U.VN = 1)				or 
+				(T.Genre = 'IM'						and U.IM = 1)				or 
+				(T.Genre = 'RPG'					and U.RPG = 1)				or 
+				(T.Genre = 'TRPG'					and U.TRPG = 1)				or 
+				(T.Genre = 'ARPG'					and U.ARPG = 1)				or 
+				(T.Genre = 'Sports'					and U.Sports = 1)			or 
+				(T.Genre = 'Racing'					and U.Racing = 1)			or 
+				(T.Genre = 'RTS'					and U.RTS = 1)				or 
+				(T.Genre = 'TBS'					and U.TBS = 1)				or 
+				(T.Genre = 'VE'						and U.VE = 1)				or 
+				(T.Genre = 'MMO'					and U.MMO = 1)				or
+				(T.Genre = 'MOBA'					and U.MOBA = 1)
 			)
 			and
 			(
-				(VideoGames.GamePlatform = 'PC'				and PlayOverUsers.PC = 1)				or 
-				(VideoGames.GamePlatform = 'Atari'			and PlayOverUsers.Atari = 1)			or 
-				(VideoGames.GamePlatform = 'Commodore64'	and PlayOverUsers.Commodore64 = 1)		or 
-				(VideoGames.GamePlatform = 'FAMICOM'		and PlayOverUsers.FAMICOM = 1)			or 
-				(VideoGames.GamePlatform = 'NES'			and PlayOverUsers.NES = 1)				or 
-				(VideoGames.GamePlatform = 'SNES'			and PlayOverUsers.SNES = 1)				or 
-				(VideoGames.GamePlatform = 'N64'			and PlayOverUsers.N64 = 1)				or 
-				(VideoGames.GamePlatform = 'Gamecube'		and PlayOverUsers.Gamecube = 1)			or 
-				(VideoGames.GamePlatform = 'Wii'			and PlayOverUsers.Wii = 1)				or 
-				(VideoGames.GamePlatform = 'WiiU'			and PlayOverUsers.WiiU = 1)				or 
-				(VideoGames.GamePlatform = 'NintendoSwitch'	and PlayOverUsers.NintendoSwitch = 1)	or 
-				(VideoGames.GamePlatform = 'Gameboy'		and PlayOverUsers.Gameboy = 1)			or 
-				(VideoGames.GamePlatform = 'VirtualBoy'		and PlayOverUsers.VirtualBoy = 1)		or 
-				(VideoGames.GamePlatform = 'GBA'			and PlayOverUsers.GBA = 1)				or 
-				(VideoGames.GamePlatform = 'DS'				and PlayOverUsers.DS = 1)				or 
-				(VideoGames.GamePlatform = 'ThreeDS'		and PlayOverUsers.ThreeDS = 1)			or 
-				(VideoGames.GamePlatform = 'SegaGenesis'	and PlayOverUsers.SegaGenesis = 1)		or 
-				(VideoGames.GamePlatform = 'SegaCD'			and PlayOverUsers.SegaCD = 1)			or 
-				(VideoGames.GamePlatform = 'SegaDreamcast'	and PlayOverUsers.SegaDreamcast = 1)	or 
-				(VideoGames.GamePlatform = 'PS1'			and PlayOverUsers.PS1 = 1)				or
-				(VideoGames.GamePlatform = 'PS2'			and PlayOverUsers.PS2 = 1)				or
-				(VideoGames.GamePlatform = 'PS3'			and PlayOverUsers.PS3 = 1)				or
-				(VideoGames.GamePlatform = 'PS4'			and PlayOverUsers.PS4 = 1)				or
-				(VideoGames.GamePlatform = 'PSP'			and PlayOverUsers.PSP = 1)				or
-				(VideoGames.GamePlatform = 'PSVita'			and PlayOverUsers.PSVita = 1)			or
-				(VideoGames.GamePlatform = 'Xbox'			and PlayOverUsers.Xbox = 1)				or
-				(VideoGames.GamePlatform = 'Xbox360'		and PlayOverUsers.Xbox360 = 1)			or
-				(VideoGames.GamePlatform = 'XboxOne'		and PlayOverUsers.XboxOne = 1)			or
-				(VideoGames.GamePlatform = 'Ouya'			and PlayOverUsers.Ouya = 1)				or
-				(VideoGames.GamePlatform = 'OculusRift'		and PlayOverUsers.OculusRift = 1)		or
-				(VideoGames.GamePlatform = 'Vive'			and PlayOverUsers.Vive = 1)				or
-				(VideoGames.GamePlatform = 'PSVR'			and PlayOverUsers.PSVR = 1)
+				(T.GamePlatform = 'PC'				and U.PC = 1)				or 
+				(T.GamePlatform = 'Atari'			and U.Atari = 1)			or 
+				(T.GamePlatform = 'Commodore64'		and U.Commodore64 = 1)		or 
+				(T.GamePlatform = 'FAMICOM'			and U.FAMICOM = 1)			or 
+				(T.GamePlatform = 'NES'				and U.NES = 1)				or 
+				(T.GamePlatform = 'SNES'			and U.SNES = 1)				or 
+				(T.GamePlatform = 'N64'				and U.N64 = 1)				or 
+				(T.GamePlatform = 'Gamecube'		and U.Gamecube = 1)			or 
+				(T.GamePlatform = 'Wii'				and U.Wii = 1)				or 
+				(T.GamePlatform = 'WiiU'			and U.WiiU = 1)				or 
+				(T.GamePlatform = 'NintendoSwitch'	and U.NintendoSwitch = 1)	or 
+				(T.GamePlatform = 'Gameboy'			and U.Gameboy = 1)			or 
+				(T.GamePlatform = 'VirtualBoy'		and U.VirtualBoy = 1)		or 
+				(T.GamePlatform = 'GBA'				and U.GBA = 1)				or 
+				(T.GamePlatform = 'DS'				and U.DS = 1)				or 
+				(T.GamePlatform = 'ThreeDS'			and U.ThreeDS = 1)			or 
+				(T.GamePlatform = 'SegaGenesis'		and U.SegaGenesis = 1)		or 
+				(T.GamePlatform = 'SegaCD'			and U.SegaCD = 1)			or 
+				(T.GamePlatform = 'SegaDreamcast'	and U.SegaDreamcast = 1)	or 
+				(T.GamePlatform = 'PS1'				and U.PS1 = 1)				or
+				(T.GamePlatform = 'PS2'				and U.PS2 = 1)				or
+				(T.GamePlatform = 'PS3'				and U.PS3 = 1)				or
+				(T.GamePlatform = 'PS4'				and U.PS4 = 1)				or
+				(T.GamePlatform = 'PSP'				and U.PSP = 1)				or
+				(T.GamePlatform = 'PSVita'			and U.PSVita = 1)			or
+				(T.GamePlatform = 'Xbox'			and U.Xbox = 1)				or
+				(T.GamePlatform = 'Xbox360'			and U.Xbox360 = 1)			or
+				(T.GamePlatform = 'XboxOne'			and U.XboxOne = 1)			or
+				(T.GamePlatform = 'Ouya'			and U.Ouya = 1)				or
+				(T.GamePlatform = 'OculusRift'		and U.OculusRift = 1)		or
+				(T.GamePlatform = 'Vive'			and U.Vive = 1)				or
+				(T.GamePlatform = 'PSVR'			and U.PSVR = 1)
 			)
 		)
-		where PlayOverUsers.PlayOverUserIndex = @intUserIndex order by newid();
+		where U.UserIndex = @intUserIndex order by newid();
 	END
 END

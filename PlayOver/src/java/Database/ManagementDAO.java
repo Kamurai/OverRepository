@@ -57,13 +57,13 @@ public class ManagementDAO extends DAO{
             
             while(rs.next()){
                 tempUser = new User(
-                        rs.getInt("PlayOverUserIndex"), 
-                        rs.getInt("PlayOverAdminLevel"), 
-                        rs.getBoolean("PlayOverOnline"),
+                        rs.getInt("UserIndex"), 
+                        rs.getInt("AdminLevel"), 
+                        rs.getBoolean("Online"),
                         
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getBoolean("PlayOverMemory"), 
+                        rs.getBoolean("Memory"), 
                         //Genres
                         rs.getBoolean("TwoDP"), 
                         rs.getBoolean("ThreeDP"), 
@@ -149,12 +149,13 @@ public class ManagementDAO extends DAO{
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("PlayOverAdminLevel")));
+                sub.add(Integer.toString(rs.getInt("AdminLevel")));
+                sub.add(Integer.toString(rs.getInt("Memory")));
                 sub.add(Integer.toString(rs.getInt("Women")));
                 sub.add(Integer.toString(rs.getInt("Men")));
                 sub.add(Integer.toString(rs.getInt("TransWomen")));
                 sub.add(Integer.toString(rs.getInt("TransMen")));
-                sub.add(Integer.toString(rs.getInt("PlayOverOnline")));
+                sub.add(Integer.toString(rs.getInt("Online")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();

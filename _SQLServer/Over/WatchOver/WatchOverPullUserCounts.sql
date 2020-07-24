@@ -3,45 +3,45 @@
 create PROCEDURE WatchOverPullUserCounts
 AS
 BEGIN
-	select count(WatchOverAdminLevel) as retNum	from [Over].dbo.WatchOveUsers where WatchOverAdminLevel = 0
+	select count(AdminLevel) as retNum			from [Over].dbo.WatchOverUsers where AdminLevel = 0
     UNION all
-    select count(WatchOverAdminLevel)			from [Over].dbo.WatchOveUsers where WatchOverAdminLevel = 1
+    select count(AdminLevel)					from [Over].dbo.WatchOverUsers where AdminLevel = 1
     UNION all
-    select count(WatchOverAdminLevel)			from [Over].dbo.WatchOveUsers where WatchOverAdminLevel = 2
+    select count(AdminLevel)					from [Over].dbo.WatchOverUsers where AdminLevel = 2
     UNION all
-    select count(WatchOverAdminLevel)			from [Over].dbo.WatchOveUsers where WatchOverAdminLevel = 3
+    select count(AdminLevel)					from [Over].dbo.WatchOverUsers where AdminLevel = 3
     UNION all
-	select count(ComedyM)						from [Over].dbo.WatchOveUsers where ComedyM = 1
+	select count(Comedy)						from [Over].dbo.WatchOverUsers where Comedy = 1
     UNION all
-    select count(DramaM)						from [Over].dbo.WatchOveUsers where DramaM = 1
+    select count(Drama)							from [Over].dbo.WatchOverUsers where Drama = 1
     UNION all
-    select count(ActionM)						from [Over].dbo.WatchOveUsers where ActionM = 1
+    select count(Action)						from [Over].dbo.WatchOverUsers where Action = 1
     UNION all
-    select count(HorrorM)						from [Over].dbo.WatchOveUsers where HorrorM = 1
+    select count(Horror)						from [Over].dbo.WatchOverUsers where Horror = 1
 	UNION all
-    select count(ThrillerM)						from [Over].dbo.WatchOveUsers where ThrillerM = 1
+    select count(Thriller)						from [Over].dbo.WatchOverUsers where Thriller = 1
 	UNION all
-	select count(MysteryM)						from [Over].dbo.WatchOveUsers where MysteryM = 1
+	select count(Mystery)						from [Over].dbo.WatchOverUsers where Mystery = 1
 	UNION all
-	select count(DocumentaryM)					from [Over].dbo.WatchOveUsers where DocumentaryM = 1
+	select count(Documentary)					from [Over].dbo.WatchOverUsers where Documentary = 1
 	UNION all
-	select count(ScienceFictionM)				from [Over].dbo.WatchOveUsers where ScienceFictionM = 1
+	select count(ScienceFiction)				from [Over].dbo.WatchOverUsers where ScienceFiction = 1
 	UNION all
-	select count(FantasyM)						from [Over].dbo.WatchOveUsers where FantasyM = 1
+	select count(Fantasy)						from [Over].dbo.WatchOverUsers where Fantasy = 1
 	UNION all
-	select count(WesternM)						from [Over].dbo.WatchOveUsers where WesternM = 1
+	select count(Western)						from [Over].dbo.WatchOverUsers where Western = 1
 	UNION all
-	select count(MartialArtsM)					from [Over].dbo.WatchOveUsers where MartialArtsM = 1
+	select count(MartialArts)					from [Over].dbo.WatchOverUsers where MartialArts = 1
 	UNION all
-	select count(ModernM)						from [Over].dbo.WatchOveUsers where ModernM = 1
+	select count(Modern)						from [Over].dbo.WatchOverUsers where Modern = 1
 	UNION all
-	select count(HistoricM)						from [Over].dbo.WatchOveUsers where HistoricM = 1
+	select count(Historic)						from [Over].dbo.WatchOverUsers where Historic = 1
 	UNION all
-	select count(PreHistoricM)					from [Over].dbo.WatchOveUsers where PreHistoricM = 1
+	select count(PreHistoric)					from [Over].dbo.WatchOverUsers where PreHistoric = 1
 	UNION all
-	select count(ComicsM)						from [Over].dbo.WatchOveUsers where ComicsM = 1
+	select count(Comics)						from [Over].dbo.WatchOverUsers where Comics = 1
 	UNION all
-	select count(PeriodM)						from [Over].dbo.WatchOveUsers where PeriodM = 1
+	select count(Period)						from [Over].dbo.WatchOverUsers where Period = 1
 	UNION all
-	select count(WatchOverOnline)				from [Over].dbo.WatchOveUsers where WatchOverOnline = 1;
+	select count(Online)						from [Over].dbo.WatchOverUsers where Online = 1;
 END

@@ -25,12 +25,12 @@ public class Target {
     public void setParentIndex(int parentIndex){
         this.parentIndex = parentIndex;
     }
-    int orderRank = -1;
-    public int getOrderRank(){
-        return orderRank;
+    int rank = -1;
+    public int getRank(){
+        return rank;
     }
-    public void setOrderRank(int orderRank){
-        this.orderRank = orderRank;
+    public void setRank(int rank){
+        this.rank = rank;
     }
     
     public Target(){}
@@ -39,12 +39,12 @@ public class Target {
         int targetIndex, 
         String label, 
         int parentIndex, 
-        int orderRank
+        int rank
     ){
         this.targetIndex    = targetIndex;
         this.label          = label;
         this.parentIndex    = parentIndex;
-        this.orderRank      = orderRank;
+        this.rank           = rank;
     }
     
     public Target(
@@ -53,6 +53,6 @@ public class Target {
         this.targetIndex    = inTarget.targetIndex;
         this.label          = inTarget.label;
         this.parentIndex    = inTarget.parentIndex;
-        this.orderRank      = inTarget.orderRank;
+        this.rank           = inTarget.rank;
     }
 }

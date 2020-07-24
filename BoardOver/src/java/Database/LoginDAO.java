@@ -35,13 +35,13 @@ public class LoginDAO extends DAO{
             rs.next();
             
             returnUser = new User(
-                rs.getInt("BoardOverUserIndex"), 
-                rs.getInt("BoardOverAdminLevel"),
-                rs.getBoolean("BoardOverOnline"),
+                rs.getInt("UserIndex"), 
+                rs.getInt("AdminLevel"),
+                rs.getBoolean("Online"),
                 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getBoolean("BoardOverMemory"), 
+                rs.getBoolean("Memory"), 
                 /*Types*/   
                 rs.getBoolean("DeckBuilding"), 
                 rs.getBoolean("FixedDeck"), 
@@ -151,21 +151,22 @@ public class LoginDAO extends DAO{
             stmt = getConnect().prepareCall("{call BoardOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             stmt.setInt(1, targetUser.getUserIndex());
             stmt.setBoolean(2, targetUser.getMemory());
-            stmt.setBoolean(2, targetUser.getDeckBuilding());
-            stmt.setBoolean(3, targetUser.getFixedDeck());
-            stmt.setBoolean(4, targetUser.getConstructedDeck());
-            stmt.setBoolean(5, targetUser.getStrategy());
-            stmt.setBoolean(6, targetUser.getWar());
-            stmt.setBoolean(7, targetUser.getEconomy());
-            stmt.setBoolean(8, targetUser.getTableauBuilding());
-            stmt.setBoolean(9, targetUser.getCoop());
-            stmt.setBoolean(10, targetUser.getMystery());
-            stmt.setBoolean(11, targetUser.getSemiCoop());
-            stmt.setBoolean(12, targetUser.getPPRPG());
-            stmt.setBoolean(13, targetUser.getBluffing());
-            stmt.setBoolean(14, targetUser.getPuzzle());
-            stmt.setBoolean(15, targetUser.getDexterity());
-            stmt.setBoolean(16, targetUser.getParty());
+            //Types
+            stmt.setBoolean(3, targetUser.getDeckBuilding());
+            stmt.setBoolean(4, targetUser.getFixedDeck());
+            stmt.setBoolean(5, targetUser.getConstructedDeck());
+            stmt.setBoolean(6, targetUser.getStrategy());
+            stmt.setBoolean(7, targetUser.getWar());
+            stmt.setBoolean(8, targetUser.getEconomy());
+            stmt.setBoolean(9, targetUser.getTableauBuilding());
+            stmt.setBoolean(10, targetUser.getCoop());
+            stmt.setBoolean(11, targetUser.getMystery());
+            stmt.setBoolean(12, targetUser.getSemiCoop());
+            stmt.setBoolean(13, targetUser.getPPRPG());
+            stmt.setBoolean(14, targetUser.getBluffing());
+            stmt.setBoolean(15, targetUser.getPuzzle());
+            stmt.setBoolean(16, targetUser.getDexterity());
+            stmt.setBoolean(17, targetUser.getParty());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

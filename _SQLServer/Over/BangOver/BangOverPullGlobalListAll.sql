@@ -3,9 +3,9 @@
 create PROCEDURE BangOverPullGlobalListAll
 AS
 BEGIN
-	select CelebrityIndex, Name, Picture, Sex, avg(OrderRank)+1 as Ranking 
-	from BangOverLists 
-	JOIN Celebrities ON BangOverLists.CelebrityIndex = Celebrities.TargetIndex
-	group by CelebrityIndex, Name, Picture, Sex order by Ranking
+	select L.TargetIndex, T.Name, T.Picture, T.Gender, avg(L.Rank)+1 as Ranking 
+	from BangOverLists L
+	JOIN Celebrities T ON L.TargetIndex = T.TargetIndex
+	group by L.TargetIndex, T.Name, T.Picture, T.Gender order by Ranking
 	;
 END

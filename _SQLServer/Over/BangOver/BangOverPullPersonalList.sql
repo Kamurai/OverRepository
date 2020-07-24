@@ -1,16 +1,15 @@
 --drop PROCEDURE BangOverPullPersonalList;
 
-create PROCEDURE BangOverPullPersonalList
-(
+create PROCEDURE BangOverPullPersonalList(
 	@intUserIndex int
 )
 AS
 BEGIN
 	select * 
-	from Celebrities 
-	JOIN BangOverLists ON BangOverLists.CelebrityIndex = Celebrities.TargetIndex  
-    WHERE BangOverLists.BangOverUserIndex = @intUserIndex
-    --sort by Order Ranking
-    order by OrderRank
+	from Celebrities T
+	JOIN BangOverLists L ON L.TargetIndex = T.TargetIndex  
+    WHERE L.UserIndex = @intUserIndex
+    --sort by Order L.Ranking
+    order by L.Rank
     ;
 END

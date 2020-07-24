@@ -4,109 +4,109 @@ create PROCEDURE ShowOverUpdateOptions(
     @intUserIndex		int,
 	@bitMemory			bit,
 	--Genres
-    @bitComedyS			bit,
-	@bitDramaS			bit,
-	@bitActionS			bit,
-	@bitHorrorS			bit,
-	@bitThrillerS		bit,
-	@bitMysteryS		bit,
-	@bitDocumentaryS	bit,
+    @bitComedy			bit,
+	@bitDrama			bit,
+	@bitAction			bit,
+	@bitHorror			bit,
+	@bitThriller		bit,
+	@bitMystery			bit,
+	@bitDocumentary		bit,
 	--Settings
-	@bitScienceFictionS bit,
-	@bitFantasyS		bit,
-	@bitWesternS		bit,
-	@bitMartialArtsS	bit,
-	@bitModernS			bit,
-	@bitHistoricS		bit,
-	@bitPrehistoricS	bit,
-	@bitComicsS			bit,
-	@bitPeriodS			bit
+	@bitScienceFiction 	bit,
+	@bitFantasy			bit,
+	@bitWestern			bit,
+	@bitMartialArts		bit,
+	@bitModern			bit,
+	@bitHistoric		bit,
+	@bitPrehistoric		bit,
+	@bitComics			bit,
+	@bitPeriod			bit
 )
 AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update ShowOverUsers set
-	ShowOverMemory		= @bitMemory, 
+	Memory				= @bitMemory, 
 	--Genres
-    ComedyS				= @bitComedyS, 
-	DramaS				= @bitDramaS, 
-	ActionS				= @bitActionS, 
-	HorrorS				= @bitHorrorS, 
-	ThrillerS			= @bitThrillerS, 
-	MysteryS			= @bitMysteryS, 
-	DocumentaryS		= @bitDocumentaryS, 
+    Comedy				= @bitComedy, 
+	Drama				= @bitDrama, 
+	Action				= @bitAction, 
+	Horror				= @bitHorror, 
+	Thriller			= @bitThriller, 
+	Mystery				= @bitMystery, 
+	Documentary			= @bitDocumentary, 
 	--Settings
-	ScienceFictionS		= @bitScienceFictionS, 
-	FantasyS			= @bitFantasyS, 
-	WesternS			= @bitWesternS, 
-	MartialArtsS		= @bitMartialArtsS, 
-	ModernS				= @bitModernS, 
-	HistoricS			= @bitHistoricS, 
-	PreHistoricS		= @bitPreHistoricS, 
-	ComicsS				= @bitComicsS, 
-	PeriodS				= @bitPeriodS
+	ScienceFiction		= @bitScienceFiction, 
+	Fantasy				= @bitFantasy, 
+	Western				= @bitWestern, 
+	MartialArts			= @bitMartialArts, 
+	Modern				= @bitModern, 
+	Historic			= @bitHistoric, 
+	PreHistoric			= @bitPreHistoric, 
+	Comics				= @bitComics, 
+	Period				= @bitPeriod
 
-	where ShowOverUsers.ShowOverUserIndex = @intUserIndex;
+	where UserIndex = @intUserIndex;
 
 	--//Adjust Personal list to match new preferences
-	delete from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex IN (
-	select Shows.TargetIndex from Shows JOIN ShowOverUsers 
+	delete from ShowOverLists where UserIndex = @intUserIndex and TargetIndex IN (
+	select T.TargetIndex from Shows T JOIN ShowOverUsers U
 		ON (
 			(
-				( Genre = 'ComedyS'				and ShowOverUsers.ComedyS			= 0 )	or 
-				( Genre = 'DramaS'				and ShowOverUsers.DramaS			= 0 )	or 
-				( Genre = 'ActionS'				and ShowOverUsers.ActionS			= 0 )	or 
-				( Genre = 'HorrorS'				and ShowOverUsers.HorrorS			= 0 )	or
-				( Genre = 'ThrillerS'			and ShowOverUsers.ThrillerS			= 0 )	or
-				( Genre = 'MysteryS'			and ShowOverUsers.MysteryS			= 0 )	or
-				( Genre = 'DocumentaryS'		and ShowOverUsers.DocumentaryS		= 0 )
+				( T.Genre = 'Comedy'			and U.Comedy			= 0 )	or 
+				( T.Genre = 'Drama'				and U.Drama				= 0 )	or 
+				( T.Genre = 'Action'			and U.Action			= 0 )	or 
+				( T.Genre = 'Horror'			and U.Horror			= 0 )	or
+				( T.Genre = 'Thriller'			and U.Thriller			= 0 )	or
+				( T.Genre = 'Mystery'			and U.Mystery			= 0 )	or
+				( T.Genre = 'Documentary'		and U.Documentary		= 0 )
 			) 
 			and
 			(
-				( Setting = 'ScienceFictionS'	and ShowOverUsers.ScienceFictionS	= 0 )	or
-				( Setting = 'FantasyS'			and ShowOverUsers.FantasyS			= 0 )	or
-				( Setting = 'WesternS'			and ShowOverUsers.WesternS			= 0 )	or
-				( Setting = 'MartialArtsS'		and ShowOverUsers.MartialArtsS		= 0 )	or
-				( Setting = 'ModernS'			and ShowOverUsers.ModernS			= 0 )	or
-				( Setting = 'HistoricS'			and ShowOverUsers.HistoricS			= 0 )	or
-				( Setting = 'PrehistoricS'		and ShowOverUsers.PrehistoricS		= 0 )	or
-				( Setting = 'ComicsS'			and ShowOverUsers.ComicsS			= 0 )	or
-				( Setting = 'PeriodS'			and ShowOverUsers.PeriodS			= 0 )
+				( T.Setting = 'ScienceFiction'	and U.ScienceFiction	= 0 )	or
+				( T.Setting = 'Fantasy'			and U.Fantasy			= 0 )	or
+				( T.Setting = 'Western'			and U.Western			= 0 )	or
+				( T.Setting = 'MartialArts'		and U.MartialArts		= 0 )	or
+				( T.Setting = 'Modern'			and U.Modern			= 0 )	or
+				( T.Setting = 'Historic'		and U.Historic			= 0 )	or
+				( T.Setting = 'Prehistoric'		and U.Prehistoric		= 0 )	or
+				( T.Setting = 'Comics'			and U.Comics			= 0 )	or
+				( T.Setting = 'Period'			and U.Period			= 0 )
 			)
 		)
-		where ShowOverUsers.ShowOverUserIndex = @intUserIndex
+		where U.UserIndex = @intUserIndex
 	);
 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumOne from ShowOverLists where ShowOverUserIndex = @intUserIndex; 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumTwo from ShowOverLists where ShowOverUserIndex = @intUserIndex; 
+	select *, ROW_NUMBER() Over(order by L.Rank) as RowNum INTO #NumOne from ShowOverLists L where L.UserIndex = @intUserIndex; 
+	select *, ROW_NUMBER() Over(order by L.Rank) as RowNum INTO #NumTwo from ShowOverLists L where L.UserIndex = @intUserIndex; 
 	
 	--//Unlock records adacent to removed records
-		--//Unlock DownLock for OrderRank+1 < 1
-		Update ShowOverLists set Downlock = 0 where 
+		--//Unlock L.DownLock for L.Rank+1 < 1
+		Update ShowOverLists set DownLock = 0 where 
 		ListIndex IN(
 			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum + 1 = #NumTwo.RowNum and 
-			#NumTwo.OrderRank - #NumOne.OrderRank > 1
+			#NumTwo.Rank - #NumOne.Rank > 1
 		);
 		
-		--//Unlock UpLock for OrderRank-1 < 1
-		Update ShowOverLists set Uplock = 0 where 
+		--//Unlock L.UpLock for L.Rank-1 < 1
+		Update ShowOverLists set UpLock = 0 where 
 		ListIndex IN(
 			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum - 1 = #NumTwo.RowNum and 
-			#NumOne.OrderRank - #NumTwo.OrderRank > 1
+			#NumOne.Rank - #NumTwo.Rank > 1
 		);
 
 	drop table #NumOne;
 	drop table #NumTwo;
 
-	--//Reorder rankings
+	--//Reorder L.Rankings
 	With cte As
 	(
 		SELECT *,
-		ROW_NUMBER() OVER (ORDER BY OrderRank) AS RowNum
-		FROM ShowOverLists where ShowOverUserIndex = @intUserIndex
+		ROW_NUMBER() OVER (ORDER BY Rank) AS RowNum
+		FROM ShowOverLists where UserIndex = @intUserIndex
 	)
-	UPDATE cte SET OrderRank=RowNum-1
+	UPDATE cte SET Rank=RowNum-1
 END
 

@@ -10,8 +10,8 @@ BEGIN
 	PRINT(CONCAT('@intUserIndex: ',		@intUserIndex));
 	PRINT(CONCAT('@intTargetIndex: ',	@intTargetIndex));
 	
-	DECLARE @intOrderRank	int = (SELECT TOP 1 OrderRank		FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex) + 1;
-	DECLARE @parentIndex	int = (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex);
+	DECLARE @intRank		int = (SELECT TOP 1 Rank			FROM TARGETS WHERE UserIndex = @intUserIndex AND TargetIndex = @intTargetIndex) + 1;
+	DECLARE @parentIndex	int = (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE UserIndex = @intUserIndex AND TargetIndex = @intTargetIndex);
 	
-	EXEC BubbleUpMoveTarget @intUserIndex, @intTargetIndex, @parentIndex, @intOrderRank;
+	EXEC BubbleUpMoveTarget @intUserIndex, @intTargetIndex, @parentIndex, @intRank;
 END

@@ -25,7 +25,7 @@ AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update BoardOverUsers set 
-		BoardOverMemory		= @bitMemory, 
+		Memory				= @bitMemory, 
 		--Types
 		DeckBuilding		= @bitDeckBuilding, 
 		FixedDeck			= @bitFixedDeck, 
@@ -42,64 +42,64 @@ BEGIN
 		Puzzle				= @bitPuzzle, 
 		Dexterity			= @bitDexterity, 
 		Party				= @bitParty 	
-	where BoardOverUsers.BoardOverUserIndex = @intUserIndex;
+	where UserIndex = @intUserIndex;
 
 	--//Adjust Personal list to match new preferences
 	delete from BoardOverLists 
-	where BoardOverUserIndex = @intUserIndex and BoardGameIndex IN (
-		select BoardGames.TargetIndex 
-		from BoardGames JOIN BoardOverUsers 
+	where UserIndex = @intUserIndex and TargetIndex IN (
+		select T.TargetIndex 
+		from BoardGames T JOIN BoardOverUsers U
 			ON (
-				( Genre = 'DeckBuilding'	and BoardOverUsers.DeckBuilding		= 0 )	or 
-				( Genre = 'FixedDeck'		and BoardOverUsers.FixedDeck		= 0 )	or 
-				( Genre = 'ConstructedDeck' and BoardOverUsers.ConstructedDeck	= 0 )	or 
-				( Genre = 'Strategy'		and BoardOverUsers.Strategy			= 0 )	or
-				( Genre = 'War'				and BoardOverUsers.War				= 0 )	or
-				( Genre = 'Economy'			and BoardOverUsers.Economy			= 0 )	or
-				( Genre = 'TableauBuilding' and BoardOverUsers.TableauBuilding	= 0 )	or
-				( Genre = 'Coop'			and BoardOverUsers.Coop				= 0 )	or
-				( Genre = 'Mystery'			and BoardOverUsers.Mystery			= 0 )	or
-				( Genre = 'SemiCoop'		and BoardOverUsers.SemiCoop			= 0 )	or
-				( Genre = 'PPRPG'			and BoardOverUsers.PPRPG			= 0 )	or
-				( Genre = 'Bluffing'		and BoardOverUsers.Bluffing			= 0 )	or
-				( Genre = 'Puzzle'			and BoardOverUsers.Puzzle			= 0 )	or
-				( Genre = 'Dexterity'		and BoardOverUsers.Dexterity		= 0 )	or
-				( Genre = 'Party'			and BoardOverUsers.Party			= 0 ) 
+				( T.Genre = 'DeckBuilding'		and U.DeckBuilding		= 0 )	or 
+				( T.Genre = 'FixedDeck'			and U.FixedDeck			= 0 )	or 
+				( T.Genre = 'ConstructedDeck'	and U.ConstructedDeck	= 0 )	or 
+				( T.Genre = 'Strategy'			and U.Strategy			= 0 )	or
+				( T.Genre = 'War'				and U.War				= 0 )	or
+				( T.Genre = 'Economy'			and U.Economy			= 0 )	or
+				( T.Genre = 'TableauBuilding'	and U.TableauBuilding	= 0 )	or
+				( T.Genre = 'Coop'				and U.Coop				= 0 )	or
+				( T.Genre = 'Mystery'			and U.Mystery			= 0 )	or
+				( T.Genre = 'SemiCoop'			and U.SemiCoop			= 0 )	or
+				( T.Genre = 'PPRPG'				and U.PPRPG				= 0 )	or
+				( T.Genre = 'Bluffing'			and U.Bluffing			= 0 )	or
+				( T.Genre = 'Puzzle'			and U.Puzzle			= 0 )	or
+				( T.Genre = 'Dexterity'			and U.Dexterity			= 0 )	or
+				( T.Genre = 'Party'				and U.Party				= 0 ) 
 			) 
-			where BoardOverUsers.BoardOverUserIndex = @intUserIndex
+			where U.UserIndex = @intUserIndex
 	);
 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumOne from BoardOverLists where BoardOverUserIndex = @intUserIndex; 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumTwo from BoardOverLists where BoardOverUserIndex = @intUserIndex; 
+	select *, ROW_NUMBER() Over(order by L.Rank) as RowNum INTO #NumOne from BoardOverLists L where L.UserIndex = @intUserIndex; 
+	select *, ROW_NUMBER() Over(order by L.Rank) as RowNum INTO #NumTwo from BoardOverLists L where L.UserIndex = @intUserIndex; 
 	
 	--//Unlock records adacent to removed records
-		--//Unlock DownLock for OrderRank+1 < 1
-		Update BoardOverLists set Downlock = 0 where 
+		--//Unlock L.DownLock for L.Rank+1 < 1
+		Update BoardOverLists set DownLock = 0 where 
 		ListIndex IN(
 			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum + 1 = #NumTwo.RowNum and 
-			#NumTwo.OrderRank - #NumOne.OrderRank > 1
+			#NumTwo.Rank - #NumOne.Rank > 1
 		);
 		
-		--//Unlock UpLock for OrderRank-1 < 1
-		Update BoardOverLists set Uplock = 0 where 
+		--//Unlock L.UpLock for L.Rank-1 < 1
+		Update BoardOverLists set UpLock = 0 where 
 		ListIndex IN(
 			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum - 1 = #NumTwo.RowNum and 
-			#NumOne.OrderRank - #NumTwo.OrderRank > 1
+			#NumOne.Rank - #NumTwo.Rank > 1
 		);
 
 	drop table #NumOne;
 	drop table #NumTwo;
 
-	--//Reorder rankings
+	--//Reorder L.Rankings
 	With cte As
 	(
 		SELECT *,
-		ROW_NUMBER() OVER (ORDER BY OrderRank) AS RowNum
-		FROM BoardOverLists where BoardOverUserIndex = @intUserIndex
+		ROW_NUMBER() OVER (ORDER BY Rank) AS RowNum
+		FROM BoardOverLists where UserIndex = @intUserIndex
 	)
-	UPDATE cte SET OrderRank=RowNum-1
+	UPDATE cte SET Rank=RowNum-1
 
 
 END

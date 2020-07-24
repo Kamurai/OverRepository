@@ -1,19 +1,19 @@
---drop PROCEDURE BubbleUpUpdateOrderRankTargets;
+--drop PROCEDURE BubbleUpUpdateRankTargets;
 
-create PROCEDURE BubbleUpUpdateOrderRankTargets(
+create PROCEDURE BubbleUpUpdateRankTargets(
 	@intUserIndex		int,
 	@intParentBoxIndex	int,
-	@orderRank			int,
+	@Rank				int,
 	@intAdjustment		int
 )
 AS
 BEGIN
-	PRINT('BubbleUpUpdateOrderRankTargets');
+	PRINT('BubbleUpUpdateRankTargets');
 	PRINT(CONCAT('@intUserIndex: ',			@intUserIndex));
 	PRINT(CONCAT('@intParentBoxIndex: ',	@intParentBoxIndex));
-	PRINT(CONCAT('@orderRank: ',			@orderRank));
+	PRINT(CONCAT('@Rank: ',					@Rank));
 	PRINT(CONCAT('@intAdjustment: ',		@intAdjustment));
 	
-	--Adjust other orderRanks for same parentIndex
-	UPDATE TARGETS set OrderRank = OrderRank + @intAdjustment WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intParentBoxIndex AND OrderRank > @orderRank;
+	--Adjust other Ranks for same parentIndex
+	UPDATE TARGETS set Rank = Rank + @intAdjustment WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intParentBoxIndex AND Rank > @Rank;
 END

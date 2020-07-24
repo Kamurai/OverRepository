@@ -105,7 +105,7 @@ public class TargetDAO extends DAO{
             {
                 Sub.add(rs.getString("NAME"));
                 Sub.add(rs.getString("Picture"));
-                tempValue = rs.getString("Sex");
+                tempValue = rs.getString("Gender");
                 
                 if( tempValue.compareTo("F") == 0 )
                 {
@@ -156,7 +156,7 @@ public class TargetDAO extends DAO{
             while(rs.next()){
                 Sub.add(rs.getString("NAME"));
                 Sub.add(rs.getString("Picture"));
-                tempValue = rs.getString("Sex");
+                tempValue = rs.getString("Gender");
                 
                 if( tempValue.compareTo("F") == 0 )
                 {
@@ -174,7 +174,7 @@ public class TargetDAO extends DAO{
                 {
                     Sub.add("Trans Man");
                 }
-                Sub.add(rs.getString("OrderRank"));
+                Sub.add(rs.getString("Rank"));
                 
                 resultList.add(new ArrayList<String>(Sub));
                 Sub.clear();

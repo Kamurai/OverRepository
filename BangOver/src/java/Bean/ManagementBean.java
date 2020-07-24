@@ -139,8 +139,7 @@ public class ManagementBean implements Serializable
     }
     
     //Pull User Counts
-    public ArrayList<ArrayList<String>> PullUserCounts()
-    {
+    public ArrayList<ArrayList<String>> PullUserCounts(){
         ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
         
         resultList = dao.callablePullUserCounts();

@@ -1,7 +1,6 @@
 --drop PROCEDURE BoardOverAddTarget;
 
-create PROCEDURE BoardOverAddTarget
-(
+create PROCEDURE BoardOverAddTarget(
     @strBoardGameName varChar(50),
 	@strBoardGameRelease varChar(50),
 	@strBoardGameGenre varChar(50),

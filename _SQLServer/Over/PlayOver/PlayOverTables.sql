@@ -2,9 +2,9 @@
 
 create table PlayOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 
-create table PlayOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, PlayOverUserIndex bigint not null, OrderRank bigint not null, VideoGameIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
+create table PlayOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, UserIndex bigint not null, Rank bigint not null, TargetIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table PlayOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, PlayOverUserIndex bigint not null, VideoGameIndex1 bigint not null, VideoGameIndex2 bigint not null );
+create table PlayOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, UserIndex bigint not null, TargetIndex1 bigint not null, TargetIndex2 bigint not null );
 
 create table VideoGames (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, GamePlatform varchar(50) not null, Genre varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 

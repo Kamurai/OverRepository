@@ -417,15 +417,15 @@ public class TargetBean implements Serializable
         
         strTargetToAdd = "";
         strReleaseToAdd = "";
-        strGenreToAdd = "ComedyM";
-        strSettingToAdd = "ModernM";
+        strGenreToAdd = "Comedy";
+        strSettingToAdd = "Modern";
         strURLToAdd = "";
         fileTargetToAdd = null;
         
         strTargetToSuggest = "";
         strReleaseToSuggest = "";
-        strGenreToSuggest = "ComedyM";
-        strSettingToSuggest = "ModernM";
+        strGenreToSuggest = "Comedy";
+        strSettingToSuggest = "Modern";
         strURLToSuggest = "";
         
     }

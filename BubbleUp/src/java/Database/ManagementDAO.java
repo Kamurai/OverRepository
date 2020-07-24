@@ -59,17 +59,17 @@ public class ManagementDAO extends DAO{
             boolean boolLoggedOn = false;
             
             while(rs.next()){
-                if(rs.getInt("BubbleUpOnline") == 1){
+                if(rs.getInt("Online") == 1){
                     boolLoggedOn = true;
                 }else{
                     boolLoggedOn = false;
                 }
                 
                 tempUser = new User(
-                        rs.getInt("BubbleUpUserIndex"), 
+                        rs.getInt("UserIndex"), 
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getInt("BubbleUpAdminLevel"), 
+                        rs.getInt("AdminLevel"), 
                         boolLoggedOn
                 );
                 
@@ -101,8 +101,8 @@ public class ManagementDAO extends DAO{
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("BubbleUpAdminLevel")));
-                sub.add(Integer.toString(rs.getInt("BubbleUpOnline")));
+                sub.add(Integer.toString(rs.getInt("AdminLevel")));
+                sub.add(Integer.toString(rs.getInt("Online")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();

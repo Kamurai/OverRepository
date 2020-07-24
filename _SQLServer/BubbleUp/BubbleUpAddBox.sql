@@ -3,38 +3,38 @@
 create PROCEDURE BubbleUpAddBox(
 	@intUserIndex			int,
 	@intTargetBoxIndex		int,
-	@intLocationOrderRank	int
+	@intLocationRank		int
 )
 AS
 BEGIN
 	PRINT('BubbleUpAddBox');
-	PRINT(CONCAT('@intUserIndex: ',				@intUserIndex));
-	PRINT(CONCAT('@intTargetBoxIndex: ',		@intTargetBoxIndex));
-	PRINT(CONCAT('@intLocationOrderRank: ',		@intLocationOrderRank));
+	PRINT(CONCAT('@intUserIndex: ',			@intUserIndex));
+	PRINT(CONCAT('@intTargetBoxIndex: ',	@intTargetBoxIndex));
+	PRINT(CONCAT('@intLocationRank: ',		@intLocationRank));
 	
-	DECLARE @newOrderRank	int;
+	DECLARE @newRank	int;
 
-	--IF @intLocationOrderRank == -2
-	IF(@intLocationOrderRank = -2)
+	--IF @intLocationRank == -2
+	IF(@intLocationRank = -2)
 	BEGIN
-		SET @newOrderRank = (SELECT MAX(OrderRank) FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intTargetBoxIndex) + 1;
-		PRINT(CONCAT('@newOrderRank: ',		@newOrderRank));
+		SET @newRank = (SELECT MAX(Rank) FROM BOXES WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intTargetBoxIndex) + 1;
+		PRINT(CONCAT('@newRank: ',		@newRank));
 	
-		IF(@newOrderRank IS NULL)
+		IF(@newRank IS NULL)
 		BEGIN
-			SET @newOrderRank = 0;
+			SET @newRank = 0;
 		END
-		PRINT(CONCAT('@newOrderRank: ',		@newOrderRank));
+		PRINT(CONCAT('@newRank: ',		@newRank));
 	END
 	--ELSE
 	ELSE
 	BEGIN
-		SET @newOrderRank = @intLocationOrderRank;
+		SET @newRank = @intLocationRank;
 	END
 
 	--Push targets forward in the list
-	EXEC BubbleUpUpdateOrderRankBoxes @intUserIndex, @intTargetBoxIndex, @newOrderRank, 1;
+	EXEC BubbleUpUpdateRankBoxes @intUserIndex, @intTargetBoxIndex, @newRank, 1;
 
-	INSERT INTO BOXES (BubbleUpUserIndex, Label, Direction, ParentBoxIndex, OrderRank) 
-	VALUES (@intUserIndex, '', 'Horizontal', @intTargetBoxIndex, @newOrderRank);
+	INSERT INTO BOXES (UserIndex, Label, Direction, ParentBoxIndex, Rank) 
+	VALUES (@intUserIndex, '', 'Horizontal', @intTargetBoxIndex, @newRank);
 END

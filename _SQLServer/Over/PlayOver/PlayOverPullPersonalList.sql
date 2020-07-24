@@ -1,16 +1,15 @@
 --drop PROCEDURE PlayOverPullPersonalList;
 
-create PROCEDURE PlayOverPullPersonalList
-(
+create PROCEDURE PlayOverPullPersonalList(
 	@intUserIndex int
 )
 AS
 BEGIN
 	select * 
-	from VideoGames 
-	JOIN PlayOverLists ON PlayOverLists.VideoGameIndex = VideoGames.TargetIndex
-    WHERE PlayOverLists.PlayOverUserIndex = @intUserIndex
-    --sort by Order Ranking
-    order by OrderRank        
+	from VideoGames T
+	JOIN PlayOverLists L ON L.TargetIndex = T.TargetIndex
+    WHERE L.UserIndex = @intUserIndex
+    --sort by Order L.Ranking
+    order by L.Rank        
     ;
 END

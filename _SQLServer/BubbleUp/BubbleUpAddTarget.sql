@@ -3,31 +3,31 @@
 create PROCEDURE BubbleUpAddTarget(
 	@intUserIndex			int,
 	@intTargetBoxIndex		int,
-	@intLocationOrderRank	int
+	@intLocationRank		int
 )
 AS
 BEGIN
-	DECLARE @newOrderRank	int;
+	DECLARE @newRank	int;
 
-	--IF @intLocationOrderRank == -2
-	IF(@intLocationOrderRank = -2)
+	--IF @intLocationRank == -2
+	IF(@intLocationRank = -2)
 	BEGIN
-		SET @newOrderRank = (SELECT MAX(OrderRank) FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intTargetBoxIndex) + 1;
+		SET @newRank = (SELECT MAX(Rank) FROM TARGETS WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intTargetBoxIndex) + 1;
 		
-		IF(@newOrderRank IS NULL)
+		IF(@newRank IS NULL)
 		BEGIN
-			SET @newOrderRank = 0;
+			SET @newRank = 0;
 		END
 	END
 	--ELSE
 	ELSE
 	BEGIN
-		SET @newOrderRank = @intLocationOrderRank;
+		SET @newRank = @intLocationRank;
 	END
 
 	--Push targets forward in the list
-	EXEC BubbleUpUpdateOrderRankTargets @intUserIndex, @intTargetBoxIndex, @newOrderRank, 1;
+	EXEC BubbleUpUpdateRankTargets @intUserIndex, @intTargetBoxIndex, @newRank, 1;
 
-	INSERT INTO TARGETS (BubbleUpUserIndex, Label, ParentBoxIndex, OrderRank) 
-	VALUES (@intUserIndex, '', @intTargetBoxIndex, @newOrderRank);
+	INSERT INTO TARGETS (UserIndex, Label, ParentBoxIndex, Rank) 
+	VALUES (@intUserIndex, '', @intTargetBoxIndex, @newRank);
 END

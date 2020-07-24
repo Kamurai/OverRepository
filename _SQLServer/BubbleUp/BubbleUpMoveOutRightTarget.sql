@@ -7,30 +7,30 @@ create PROCEDURE BubbleUpMoveOutRightTarget(
 AS
 BEGIN
 	DECLARE @intParentIndex			int;
-	DECLARE @intParentOrderRank		int;
-	DECLARE @intParentMaxOrderRank	int;
+	DECLARE @intParentRank			int;
+	DECLARE @intParentMaxRank		int;
 	DECLARE @intGrandParentIndex	int;
 	DECLARE @intNeighborIndex		int;
 	
 	--Determine if Parent Box has a right neighbor
-	SET @intParentIndex			= (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intTargetIndex);
+	SET @intParentIndex			= (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE UserIndex = @intUserIndex AND TargetIndex = @intTargetIndex);
 	--if Parent Box is Root
 	IF(@intParentIndex = -1)
 	BEGIN
 		--then add new root
 		EXEC BubbleUpAddNewRoot @intUserIndex;
 	END
-	SET @intParentOrderRank		= (SELECT TOP 1 OrderRank		FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @intParentIndex);
-	SET @intGrandParentIndex	= (SELECT TOP 1 ParentBoxIndex	FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @intParentIndex);
-	SET @intParentMaxOrderRank	= (SELECT TOP 1 MAX(OrderRank)	FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intGrandParentIndex);
+	SET @intParentRank			= (SELECT TOP 1 Rank			FROM BOXES WHERE UserIndex = @intUserIndex AND BoxIndex = @intParentIndex);
+	SET @intGrandParentIndex	= (SELECT TOP 1 ParentBoxIndex	FROM BOXES WHERE UserIndex = @intUserIndex AND BoxIndex = @intParentIndex);
+	SET @intParentMaxRank		= (SELECT TOP 1 MAX(Rank)		FROM BOXES WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intGrandParentIndex);
 	--if Parent Box is at rightmost position
-	IF(@intParentOrderRank = @intParentMaxOrderRank)
+	IF(@intParentRank = @intParentMaxRank)
 	BEGIN
 		--then add right neighbor to Grand Parent
 		EXEC BubbleUpAddBox @intUserIndex, @intGrandParentIndex, -2;
-		SET @intParentOrderRank		= (SELECT TOP 1 OrderRank		FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @intParentIndex);
+		SET @intParentRank		= (SELECT TOP 1 Rank		FROM BOXES WHERE UserIndex = @intUserIndex AND BoxIndex = @intParentIndex);
 	END
-	SET @intNeighborIndex		= (SELECT TOP 1 BoxIndex		FROM BOXES WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intGrandParentIndex AND OrderRank = @intParentOrderRank+1);
+	SET @intNeighborIndex		= (SELECT TOP 1 BoxIndex		FROM BOXES WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intGrandParentIndex AND Rank = @intParentRank+1);
 	--Move Box from current Parent Box to right neighbor
 	EXEC BubbleUpMoveBox @intUserIndex, @intTargetIndex, @intNeighborIndex, -2;
 END

@@ -1,7 +1,6 @@
 --drop PROCEDURE BubbleUpAddTargetToBox;
 
-create PROCEDURE BubbleUpAddTargetToBox
-(
+create PROCEDURE BubbleUpAddTargetToBox(
 	@intUserIndex		int,
 	@intParentBoxIndex	int
 )

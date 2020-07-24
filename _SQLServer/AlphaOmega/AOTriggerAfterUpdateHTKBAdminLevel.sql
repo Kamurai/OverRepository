@@ -6,22 +6,22 @@ AFTER Update
 AS
 	--Over
 	Update O SET 
-	OverAdminLevel = (SELECT TOP 1 INSERTED.HTKBAdminLevel FROM INSERTED)
+	AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Over].dbo.Users O
-	JOIN INSERTED ON INSERTED.HTKBUserIndex = O.OverUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = O.HTKBUserIndex;
 	--BubbleUp
 	Update B SET 
-	BubbleUpAdminLevel = (SELECT TOP 1 INSERTED.HTKBAdminLevel FROM INSERTED)
+	AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [BubbleUp].dbo.Users B
-	JOIN INSERTED ON INSERTED.HTKBUserIndex = B.BubbleUpUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = B.HTKBUserIndex;
 	--Shout
 	Update S SET 
-	ShoutAdminLevel = (SELECT TOP 1 INSERTED.HTKBAdminLevel FROM INSERTED)
+	AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Shout].dbo.Users S
-	JOIN INSERTED ON INSERTED.HTKBUserIndex = S.ShoutUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = S.HTKBUserIndex;
 	--Mist
 	Update M SET 
-	MistAdminLevel = (SELECT TOP 1 INSERTED.HTKBAdminLevel FROM INSERTED)
+	AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Mist].dbo.Users M
-	JOIN INSERTED ON INSERTED.HTKBUserIndex = M.MistUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = M.HTKBUserIndex;
 GO

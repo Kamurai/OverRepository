@@ -9,7 +9,7 @@
     <h:head>
         <link href='#{MainBean.GetPath()}Pictures/favicon.ico'          rel='shortcut icon' type='image/x-icon' />
         <link href='#{MainBean.GetPath()}Pictures/favicon.ico'          rel='icon'          type='image/x-icon' />
-        <link href='http://htkb.dyndns.org/Styles/ProductLayout.css'    rel='stylesheet'    type='text/css' />
+        <link href='http://htkb.dyndns.org/Styles/Main.css'             rel='stylesheet'    type='text/css' />
         <link href='#{MainBean.GetStylePath()}Styles/BubbleUp.css'      rel='stylesheet'    type='text/css' />
         <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0"/>
     </h:head>
@@ -26,9 +26,9 @@
                 </div>
                 <div id="idCenterRow">
                     <div id="idCenterRowLeft">
-						<h:outputLink value="#{TargetBean.advertURL1}">
-							<h:graphicImage id="idAdvertLeft" value="#{TargetBean.getpath()}#{TargetBean.getadvertfolder()}#{TargetBean.advert1}" alt="#{TargetBean.advertURL1}" />
-						</h:outputLink>
+                        <h:outputLink value="#{TargetBean.advertURL1}">
+                            <h:graphicImage id="idAdvertLeft" value="#{TargetBean.getpath()}#{TargetBean.getadvertfolder()}#{TargetBean.advert1}" alt="#{TargetBean.advertURL1}" />
+                        </h:outputLink>
                     </div>
                     <div id="idCenterRowMain" >
                         <h:form id="idForm"  enctype="multipart/form-data"  prependId="false">
@@ -36,9 +36,9 @@
                         </h:form>
                     </div>
                     <div id="idCenterRowRight">
-						<h:outputLink value="#{TargetBean.advertURL2}">
-							<h:graphicImage id="idAdvertRight" value="#{TargetBean.getpath()}#{TargetBean.getadvertfolder()}#{TargetBean.advert2}" alt="#{TargetBean.advertURL2}" />
-						</h:outputLink>
+                        <h:outputLink value="#{TargetBean.advertURL2}">
+                            <h:graphicImage id="idAdvertRight" value="#{TargetBean.getpath()}#{TargetBean.getadvertfolder()}#{TargetBean.advert2}" alt="#{TargetBean.advertURL2}" />
+                        </h:outputLink>
                     </div>
                 </div>
                 <div id="idFooterRow">

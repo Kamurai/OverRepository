@@ -52,150 +52,150 @@ public class User
     }
     
     //Genres
-    private boolean ComedyM;
-    public boolean getComedyM()
+    private boolean Comedy;
+    public boolean getComedy()
     {
-        return ComedyM;
+        return Comedy;
     }
-    public void setComedyM(boolean input)
+    public void setComedy(boolean input)
     {
-        ComedyM = input;
+        Comedy = input;
     }
-    private boolean DramaM;
-    public boolean getDramaM()
+    private boolean Drama;
+    public boolean getDrama()
     {
-        return DramaM;
+        return Drama;
     }
-    public void setDramaM(boolean input)
+    public void setDrama(boolean input)
     {
-        DramaM = input;
+        Drama = input;
     }
-    private boolean ActionM;
-    public boolean getActionM()
+    private boolean Action;
+    public boolean getAction()
     {
-        return ActionM;
+        return Action;
     }
-    public void setActionM(boolean input)
+    public void setAction(boolean input)
     {
-        ActionM = input;
+        Action = input;
     }
-    private boolean HorrorM;    
-    public boolean getHorrorM()
+    private boolean Horror;    
+    public boolean getHorror()
     {
-        return HorrorM;
+        return Horror;
     }
-    public void setHorrorM(boolean input)
+    public void setHorror(boolean input)
     {
-        HorrorM = input;
+        Horror = input;
     }
-    private boolean ThrillerM;
-    public boolean getThrillerM()
+    private boolean Thriller;
+    public boolean getThriller()
     {
-        return ThrillerM;
+        return Thriller;
     }
-    public void setThrillerM(boolean input)
+    public void setThriller(boolean input)
     {
-        ThrillerM = input;
+        Thriller = input;
     }
-    private boolean MysteryM;
-    public boolean getMysteryM()
+    private boolean Mystery;
+    public boolean getMystery()
     {
-        return MysteryM;
+        return Mystery;
     }
-    public void setMysteryM(boolean input)
+    public void setMystery(boolean input)
     {
-        MysteryM = input;
+        Mystery = input;
     }
-    private boolean DocumentaryM;
-    public boolean getDocumentaryM()
+    private boolean Documentary;
+    public boolean getDocumentary()
     {
-        return DocumentaryM;
+        return Documentary;
     }
-    public void setDocumentaryM(boolean input)
+    public void setDocumentary(boolean input)
     {
-        DocumentaryM = input;
+        Documentary = input;
     }
     //Settings
-    private boolean ScienceFictionM;
-    public boolean getScienceFictionM()
+    private boolean ScienceFiction;
+    public boolean getScienceFiction()
     {
-        return ScienceFictionM;
+        return ScienceFiction;
     }
-    public void setScienceFictionM(boolean input)
+    public void setScienceFiction(boolean input)
     {
-        ScienceFictionM = input;
+        ScienceFiction = input;
     }
-    private boolean FantasyM;
-    public boolean getFantasyM()
+    private boolean Fantasy;
+    public boolean getFantasy()
     {
-        return FantasyM;
+        return Fantasy;
     }
-    public void setFantasyM(boolean input)
+    public void setFantasy(boolean input)
     {
-        FantasyM = input;
+        Fantasy = input;
     }
-    private boolean WesternM;
-    public boolean getWesternM()
+    private boolean Western;
+    public boolean getWestern()
     {
-        return WesternM;
+        return Western;
     }
-    public void setWesternM(boolean input)
+    public void setWestern(boolean input)
     {
-        WesternM = input;
+        Western = input;
     }
-    private boolean MartialArtsM;
-    public boolean getMartialArtsM()
+    private boolean MartialArts;
+    public boolean getMartialArts()
     {
-        return MartialArtsM;
+        return MartialArts;
     }
-    public void setMartialArtsM(boolean input)
+    public void setMartialArts(boolean input)
     {
-        MartialArtsM = input;
+        MartialArts = input;
     }
-    private boolean ModernM;  
-    public boolean getModernM()
+    private boolean Modern;  
+    public boolean getModern()
     {
-        return ModernM;
+        return Modern;
     }
-    public void setModernM(boolean input)
+    public void setModern(boolean input)
     {
-        ModernM = input;
+        Modern = input;
     }
-    private boolean HistoricM;  
-    public boolean getHistoricM()
+    private boolean Historic;  
+    public boolean getHistoric()
     {
-        return HistoricM;
+        return Historic;
     }
-    public void setHistoricM(boolean input)
+    public void setHistoric(boolean input)
     {
-        HistoricM = input;
+        Historic = input;
     }
-    private boolean PrehistoricM;  
-    public boolean getPrehistoricM()
+    private boolean Prehistoric;  
+    public boolean getPrehistoric()
     {
-        return PrehistoricM;
+        return Prehistoric;
     }
-    public void setPrehistoricM(boolean input)
+    public void setPrehistoric(boolean input)
     {
-        PrehistoricM = input;
+        Prehistoric = input;
     }
-    private boolean ComicsM;  
-    public boolean getComicsM()
+    private boolean Comics;  
+    public boolean getComics()
     {
-        return ComicsM;
+        return Comics;
     }
-    public void setComicsM(boolean input)
+    public void setComics(boolean input)
     {
-        ComicsM = input;
+        Comics = input;
     }
-    private boolean PeriodM;  
-    public boolean getPeriodM()
+    private boolean Period;  
+    public boolean getPeriod()
     {
-        return PeriodM;
+        return Period;
     }
-    public void setPeriodM(boolean input)
+    public void setPeriod(boolean input)
     {
-        PeriodM = input;
+        Period = input;
     }
     
     private boolean LoggedOn;
@@ -218,23 +218,23 @@ public class User
             String strEmail,             
             boolean boolMemory, 
             //Genres
-            boolean boolComedyM, 
-            boolean boolDramaM, 
-            boolean boolActionM, 
-            boolean boolHorrorM, 
-            boolean boolThrillerM, 
-            boolean boolMysteryM, 
-            boolean boolDocumentaryM, 
+            boolean boolComedy, 
+            boolean boolDrama, 
+            boolean boolAction, 
+            boolean boolHorror, 
+            boolean boolThriller, 
+            boolean boolMystery, 
+            boolean boolDocumentary, 
             //Settings
-            boolean boolScienceFictionM, 
-            boolean boolFantasyM, 
-            boolean boolWesternM, 
-            boolean boolMartialArtsM, 
-            boolean boolModernM, 
-            boolean boolHistoricM, 
-            boolean boolPreHistoricM, 
-            boolean boolComicsM, 
-            boolean boolPeriodM
+            boolean boolScienceFiction, 
+            boolean boolFantasy, 
+            boolean boolWestern, 
+            boolean boolMartialArts, 
+            boolean boolModern, 
+            boolean boolHistoric, 
+            boolean boolPreHistoric, 
+            boolean boolComics, 
+            boolean boolPeriod
     ){
         UserIndex = intUserIndex;
         AdminLevel = intAdminLevel;
@@ -245,23 +245,23 @@ public class User
         Memory = boolMemory;
         
         //Genres
-        ComedyM = boolComedyM;
-        DramaM = boolDramaM;
-        ActionM = boolActionM;
-        HorrorM = boolHorrorM;
-        ThrillerM = boolThrillerM;
-        MysteryM = boolMysteryM;
-        DocumentaryM = boolDocumentaryM;
+        Comedy = boolComedy;
+        Drama = boolDrama;
+        Action = boolAction;
+        Horror = boolHorror;
+        Thriller = boolThriller;
+        Mystery = boolMystery;
+        Documentary = boolDocumentary;
         //Settings
-        ScienceFictionM = boolScienceFictionM;
-        FantasyM = boolFantasyM;
-        WesternM = boolWesternM;
-        MartialArtsM = boolMartialArtsM;
-        ModernM = boolModernM;
-        HistoricM = boolHistoricM;
-        PrehistoricM = boolPreHistoricM;
-        ComicsM = boolComicsM;
-        PeriodM = boolPeriodM;
+        ScienceFiction = boolScienceFiction;
+        Fantasy = boolFantasy;
+        Western = boolWestern;
+        MartialArts = boolMartialArts;
+        Modern = boolModern;
+        Historic = boolHistoric;
+        Prehistoric = boolPreHistoric;
+        Comics = boolComics;
+        Period = boolPeriod;
     }
     
     public User(User newUser){
@@ -272,23 +272,23 @@ public class User
         Memory = newUser.Memory;
         
         //Genres
-        ComedyM = newUser.ComedyM;
-        DramaM = newUser.DramaM;
-        ActionM = newUser.ActionM;
-        HorrorM = newUser.HorrorM;
-        ThrillerM = newUser.ThrillerM;
-        MysteryM = newUser.MysteryM;
-        DocumentaryM = newUser.DocumentaryM;
+        Comedy = newUser.Comedy;
+        Drama = newUser.Drama;
+        Action = newUser.Action;
+        Horror = newUser.Horror;
+        Thriller = newUser.Thriller;
+        Mystery = newUser.Mystery;
+        Documentary = newUser.Documentary;
         //Settings
-        ScienceFictionM = newUser.ScienceFictionM;
-        FantasyM = newUser.FantasyM;
-        WesternM = newUser.WesternM;
-        MartialArtsM = newUser.MartialArtsM;
-        ModernM = newUser.ModernM;
-        HistoricM = newUser.HistoricM;
-        PrehistoricM = newUser.PrehistoricM;
-        ComicsM = newUser.ComicsM;
-        PeriodM = newUser.PeriodM;
+        ScienceFiction = newUser.ScienceFiction;
+        Fantasy = newUser.Fantasy;
+        Western = newUser.Western;
+        MartialArts = newUser.MartialArts;
+        Modern = newUser.Modern;
+        Historic = newUser.Historic;
+        Prehistoric = newUser.Prehistoric;
+        Comics = newUser.Comics;
+        Period = newUser.Period;
         
         LoggedOn = newUser.LoggedOn;
 

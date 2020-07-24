@@ -5,11 +5,11 @@ AS
 BEGIN
 	select count(TargetIndex) as retNum from Celebrities
     UNION all
-    select count(Sex) from celebrities where Sex = 'F'
+    select count(Gender) from celebrities where Gender = 'F'
     UNION all
-    select count(Sex) from celebrities where  Sex = 'M'
+    select count(Gender) from celebrities where  Gender = 'M'
     UNION all
-    select count(Sex) from celebrities where  Sex = 'W'
+    select count(Gender) from celebrities where  Gender = 'W'
     UNION all
-    select count(Sex) from celebrities where  Sex = 'T';
+    select count(Gender) from celebrities where  Gender = 'T';
 END

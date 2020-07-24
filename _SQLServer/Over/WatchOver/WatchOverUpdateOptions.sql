@@ -4,112 +4,112 @@ create PROCEDURE WatchOverUpdateOptions(
     @intUserIndex		int,
 	@bitMemory			bit,
 	--Genres
-    @bitComedyM			bit,
-	@bitDramaM			bit,
-	@bitActionM			bit,
-	@bitHorrorM			bit,
-	@bitThrillerM		bit,
-	@bitMysteryM		bit,
-	@bitDocumentaryM	bit,
+    @bitComedy			bit,
+	@bitDrama			bit,
+	@bitAction			bit,
+	@bitHorror			bit,
+	@bitThriller		bit,
+	@bitMystery			bit,
+	@bitDocumentary		bit,
 	--Settings
-	@bitScienceFictionM bit,
-	@bitFantasyM		bit,
-	@bitWesternM		bit,
-	@bitMartialArtsM	bit,
-	@bitModernM			bit,
-	@bitHistoricM		bit,
-	@bitPrehistoricM	bit,
-	@bitComicsM			bit,
-	@bitPeriodM			bit
+	@bitScienceFiction bit,
+	@bitFantasy			bit,
+	@bitWestern			bit,
+	@bitMartialArts		bit,
+	@bitModern			bit,
+	@bitHistoric		bit,
+	@bitPrehistoric		bit,
+	@bitComics			bit,
+	@bitPeriod			bit
 )
 AS
 BEGIN
 	--//Update preferences to match check boxes (local variables)
 	update WatchOverUsers set 
-	WatchOverMemory		= @bitMemory, 
+	Memory				= @bitMemory, 
 	--Genres
-    ComedyM				= @bitComedyM, 
-	DramaM				= @bitDramaM, 
-	ActionM				= @bitActionM, 
-	HorrorM				= @bitHorrorM, 
-	ThrillerM			= @bitThrillerM, 
-	MysteryM			= @bitMysteryM, 
-	DocumentaryM		= @bitDocumentaryM, 
+    Comedy				= @bitComedy, 
+	Drama				= @bitDrama, 
+	Action				= @bitAction, 
+	Horror				= @bitHorror, 
+	Thriller			= @bitThriller, 
+	Mystery				= @bitMystery, 
+	Documentary			= @bitDocumentary, 
 	--Settings
-	ScienceFictionM		= @bitScienceFictionM, 
-	FantasyM			= @bitFantasyM, 
-	WesternM			= @bitWesternM, 
-	MartialArtsM		= @bitMartialArtsM, 
-	ModernM				= @bitModernM, 
-	HistoricM			= @bitHistoricM, 
-	PreHistoricM		= @bitPreHistoricM, 
-	ComicsM				= @bitComicsM, 
-	PeriodM				= @bitPeriodM
+	ScienceFiction		= @bitScienceFiction, 
+	Fantasy				= @bitFantasy, 
+	Western				= @bitWestern, 
+	MartialArts			= @bitMartialArts, 
+	Modern				= @bitModern, 
+	Historic			= @bitHistoric, 
+	PreHistoric			= @bitPreHistoric, 
+	Comics				= @bitComics, 
+	Period				= @bitPeriod
 
-	where WatchOverUsers.WatchOverUserIndex = @intUserIndex;
+	where UserIndex = @intUserIndex;
 
 	--//Adjust Personal list to match new preferences
 	delete from WatchOverLists 
-	where WatchOverUserIndex = @intUserIndex and MovieIndex 
+	where UserIndex = @intUserIndex and TargetIndex 
 	IN (
-		select Movies.TargetIndex from Movies 
-		JOIN WatchOverUsers ON 
+		select T.TargetIndex from Movies T
+		JOIN WatchOverUsers U ON 
 			(
 				(
-					( Genre = 'ComedyM'				and WatchOverUsers.ComedyM = 0 )			or 
-					( Genre = 'DramaM'				and WatchOverUsers.DramaM = 0 )				or 
-					( Genre = 'ActionM'				and WatchOverUsers.ActionM = 0 )			or 
-					( Genre = 'HorrorM'				and WatchOverUsers.HorrorM = 0 )			or
-					( Genre = 'ThrillerM'			and WatchOverUsers.ThrillerM = 0 )			or
-					( Genre = 'MysteryM'			and WatchOverUsers.MysteryM = 0 )			or
-					( Genre = 'DocumentaryM'		and WatchOverUsers.DocumentaryM = 0 )
+					( T.Genre = 'Comedy'				and U.Comedy = 0 )			or 
+					( T.Genre = 'Drama'					and U.Drama = 0 )			or 
+					( T.Genre = 'Action'				and U.Action = 0 )			or 
+					( T.Genre = 'Horror'				and U.Horror = 0 )			or
+					( T.Genre = 'Thriller'				and U.Thriller = 0 )		or
+					( T.Genre = 'Mystery'				and U.Mystery = 0 )		or
+					( T.Genre = 'Documentary'			and U.Documentary = 0 )
 				) 
 				and
 				(
-					( Setting = 'ScienceFictionM'	and WatchOverUsers.ScienceFictionM = 0 )	or
-					( Setting = 'FantasyM'			and WatchOverUsers.FantasyM = 0 )			or
-					( Setting = 'WesternM'			and WatchOverUsers.WesternM = 0 )			or
-					( Setting = 'MartialArtsM'		and WatchOverUsers.MartialArtsM = 0 )		or
-					( Setting = 'ModernM'			and WatchOverUsers.ModernM = 0 )			or
-					( Setting = 'HistoricM'			and WatchOverUsers.HistoricM = 0 )			or
-					( Setting = 'PrehistoricM'		and WatchOverUsers.PrehistoricM = 0 )		or
-					( Setting = 'ComicsM'			and WatchOverUsers.ComicsM = 0 )			or
-					( Setting = 'PeriodM'			and WatchOverUsers.PeriodM = 0 )
+					( T.Setting = 'ScienceFiction'		and U.ScienceFiction = 0 )	or
+					( T.Setting = 'Fantasy'				and U.Fantasy = 0 )		or
+					( T.Setting = 'Western'				and U.Western = 0 )		or
+					( T.Setting = 'MartialArts'			and U.MartialArts = 0 )	or
+					( T.Setting = 'Modern'				and U.Modern = 0 )			or
+					( T.Setting = 'Historic'			and U.Historic = 0 )		or
+					( T.Setting = 'Prehistoric'			and U.Prehistoric = 0 )	or
+					( T.Setting = 'Comics'				and U.Comics = 0 )			or
+					( T.Setting = 'Period'				and U.Period = 0 )
 				)
 			)
-		where WatchOverUsers.WatchOverUserIndex = @intUserIndex
+		where U.UserIndex = @intUserIndex
 	);
 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumOne from WatchOverLists where WatchOverUserIndex = @intUserIndex; 
-	select *, ROW_NUMBER() Over(order by OrderRank) as RowNum INTO #NumTwo from WatchOverLists where WatchOverUserIndex = @intUserIndex; 
+	select *, ROW_NUMBER() Over(order by L.Rank) as RowNum INTO #NumOne from WatchOverLists L where L.UserIndex = @intUserIndex; 
+	select *, ROW_NUMBER() Over(order by L.Rank) as RowNum INTO #NumTwo from WatchOverLists L where L.UserIndex = @intUserIndex; 
 	
 	--//Unlock records adacent to removed records
-		--//Unlock DownLock for OrderRank+1 < 1
-		Update WatchOverLists set Downlock = 0 where 
+		--//Unlock L.DownLock for L.Rank+1 < 1
+		Update WatchOverLists set DownLock = 0 where 
 		ListIndex IN(
 			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum + 1 = #NumTwo.RowNum and 
-			#NumTwo.OrderRank - #NumOne.OrderRank > 1
+			#NumTwo.Rank - #NumOne.Rank > 1
 		);
 		
-		--//Unlock UpLock for OrderRank-1 < 1
-		Update WatchOverLists set Uplock = 0 where 
+		--//Unlock L.UpLock for L.Rank-1 < 1
+		Update WatchOverLists set UpLock = 0 where 
 		ListIndex IN(
 			select #NumOne.ListIndex from #NumOne, #NumTwo where 
 			#NumOne.RowNum - 1 = #NumTwo.RowNum and 
-			#NumOne.OrderRank - #NumTwo.OrderRank > 1
+			#NumOne.Rank - #NumTwo.Rank > 1
 		);
 
 	drop table #NumOne;
 	drop table #NumTwo;
 
-	--//Reorder rankings
+	--//Reorder L.Rankings
 	With cte As
 	(
 		SELECT *,
-		ROW_NUMBER() OVER (ORDER BY OrderRank) AS RowNum
-		FROM WatchOverLists where WatchOverUserIndex = @intUserIndex
+		ROW_NUMBER() OVER (ORDER BY Rank) AS RowNum
+		FROM WatchOverLists where UserIndex = @intUserIndex
 	)
-	UPDATE cte SET OrderRank = RowNum-1
+	UPDATE cte SET Rank = RowNum-1
 END
 

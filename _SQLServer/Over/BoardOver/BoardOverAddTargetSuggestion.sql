@@ -1,7 +1,6 @@
 --drop PROCEDURE BoardOverAddTargetSuggestion;
 
-create PROCEDURE BoardOverAddTargetSuggestion
-(
+create PROCEDURE BoardOverAddTargetSuggestion(
     @strBoardGameName varChar(50),
 	@strBoardGameRelease varChar(50),
 	@strBoardGameGenre varChar(50),

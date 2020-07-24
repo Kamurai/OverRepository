@@ -4,7 +4,7 @@ create PROCEDURE WatchOverPullUserList
 AS
 BEGIN
 	select * 
-	from [Over].dbo.WatchOverUsers W
-	JOIN [Over].dbo.Users O ON W.OverUserIndex = O.OverUserIndex
-	JOIN [HTKB].dbo.Users H ON O.HTKBUserIndex = H.HTKBUserIndex;
+	from [Over].dbo.WatchOverUsers U
+	JOIN [Over].dbo.Users O ON U.OverUserIndex = O.UserIndex
+	JOIN [HTKB].dbo.Users H ON O.HTKBUserIndex = H.UserIndex;
 END

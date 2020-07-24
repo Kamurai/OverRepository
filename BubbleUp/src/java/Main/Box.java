@@ -32,12 +32,12 @@ public class Box {
     public void setParentIndex(int parentIndex){
         this.parentIndex = parentIndex;
     }
-    int orderRank = -1;
-    public int getOrderRank(){
-        return orderRank;
+    int rank = -1;
+    public int getRank(){
+        return rank;
     }
-    public void setOrderRank(int orderRank){
-        this.orderRank = orderRank;
+    public void setRank(int rank){
+        this.rank = rank;
     }
     public List<Box> boxList = new ArrayList<Box>();
     public List<Box> getBoxList(){
@@ -76,13 +76,13 @@ public class Box {
         String direction, 
         String label, 
         int parentIndex, 
-        int orderRank
+        int rank
     ){
-        this.boxIndex = boxIndex;
-        this.direction = direction;
-        this.label = label;
-        this.parentIndex = parentIndex;
-        this.orderRank = orderRank;
+        this.boxIndex       = boxIndex;
+        this.direction      = direction;
+        this.label          = label;
+        this.parentIndex    = parentIndex;
+        this.rank           = rank;
     }
     
     public Box(Box inBox){
@@ -90,7 +90,7 @@ public class Box {
         this.direction      = inBox.direction;
         this.label          = inBox.label;
         this.parentIndex    = inBox.parentIndex;
-        this.orderRank      = inBox.orderRank;
+        this.rank           = inBox.rank;
         
         for(int x = 0; x < inBox.boxList.size(); x++){
             this.boxList.add(new Box(inBox.boxList.get(x)));

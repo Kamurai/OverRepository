@@ -135,42 +135,34 @@ public class TargetBean implements Serializable
         gc = PullGlobalCounts();
     }
     private ArrayList<ArrayList<String>> pl = new ArrayList<ArrayList<String>>();
-    public ArrayList<ArrayList<String>> getpl()
-    {
+    public ArrayList<ArrayList<String>> getpl(){
         return pl;
     }
-    public void setPersonalList(LoginBean userBean) //set Personal List
-    {
+    public void setPersonalList(LoginBean userBean){ //set Personal List
         pl = PullPersonalList(userBean.getCurrentUser().getUserIndex());
     }
-    public int getPLSize()
-    {
+    public int getPLSize(){
         int monkey = pl.size();
         return monkey;
     }
     private ArrayList<ArrayList<String>> ul = new ArrayList<ArrayList<String>>();
-    public ArrayList<ArrayList<String>> getul()
-    {
+    public ArrayList<ArrayList<String>> getul(){
         return ul;
     }
-    public int getULSize()
-    {
+    public int getULSize(){
         int monkey = ul.size();
         return monkey;
     }
     private ArrayList<ArrayList<String>> uc = new ArrayList<ArrayList<String>>();
-    public ArrayList<ArrayList<String>> getuc()
-    {
+    public ArrayList<ArrayList<String>> getuc(){
         return uc;
     }
-    public int getUCSize()
-    {
+    public int getUCSize(){
         int monkey = uc.size();
         return monkey;
     }
     private String path;
-    public String getpath()
-    {
+    public String getpath(){
         return path;
     }
     public void setpath(String strInput)
@@ -269,8 +261,7 @@ public class TargetBean implements Serializable
     }
     
     
-    public TargetBean()
-    {
+    public TargetBean(){
         connect = null;
         dao = new TargetDAO();
         error = "";
@@ -332,8 +323,7 @@ public class TargetBean implements Serializable
     }
     
     //Pull Personal List
-    public ArrayList<ArrayList<String>> PullPersonalList(int intUserIndex)
-    {
+    public ArrayList<ArrayList<String>> PullPersonalList(int intUserIndex){
         ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
         
         resultList = dao.callablePullPersonalList(intUserIndex);

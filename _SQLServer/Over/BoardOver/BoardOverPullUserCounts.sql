@@ -3,43 +3,43 @@
 create PROCEDURE BoardOverPullUserCounts
 AS
 BEGIN
-	select count(BoardOverAdminLevel) as retNum from [Over].dbo.BoardOverUsers where BoardOverAdminLevel = 0
+	select count(AdminLevel) as retNum 	from [Over].dbo.BoardOverUsers where AdminLevel = 0
     UNION all
-    select count(BoardOverAdminLevel) from [Over].dbo.BoardOverUsers where BoardOverAdminLevel = 1
+    select count(AdminLevel) 			from [Over].dbo.BoardOverUsers where AdminLevel = 1
     UNION all
-    select count(BoardOverAdminLevel) from [Over].dbo.BoardOverUsers where BoardOverAdminLevel = 2
+    select count(AdminLevel) 			from [Over].dbo.BoardOverUsers where AdminLevel = 2
     UNION all
-    select count(BoardOverAdminLevel) from [Over].dbo.BoardOverUsers where BoardOverAdminLevel = 3
+    select count(AdminLevel) 			from [Over].dbo.BoardOverUsers where AdminLevel = 3
     UNION all
-	select count(DeckBuilding) from [Over].dbo.BoardOveUsers where DeckBuilding = 1
+	select count(DeckBuilding) 			from [Over].dbo.BoardOverUsers where DeckBuilding = 1
     UNION all
-    select count(FixedDeck) from [Over].dbo.BoardOveUsers where FixedDeck = 1
+    select count(FixedDeck) 			from [Over].dbo.BoardOverUsers where FixedDeck = 1
     UNION all
-    select count(ConstructedDeck) from [Over].dbo.BoardOveUsers where ConstructedDeck = 1
+    select count(ConstructedDeck) 		from [Over].dbo.BoardOverUsers where ConstructedDeck = 1
     UNION all
-    select count(Strategy) from [Over].dbo.BoardOveUsers where Strategy = 1
+    select count(Strategy) 				from [Over].dbo.BoardOverUsers where Strategy = 1
 	UNION all
-    select count(War) from [Over].dbo.BoardOveUsers where War = 1
+    select count(War) 					from [Over].dbo.BoardOverUsers where War = 1
 	UNION all
-	select count(Economy) from [Over].dbo.BoardOveUsers where Economy = 1
+	select count(Economy) 				from [Over].dbo.BoardOverUsers where Economy = 1
 	UNION all
-	select count(TableauBuilding) from [Over].dbo.BoardOveUsers where TableauBuilding = 1
+	select count(TableauBuilding) 		from [Over].dbo.BoardOverUsers where TableauBuilding = 1
 	UNION all
-	select count(Coop) from [Over].dbo.BoardOveUsers where Coop = 1
+	select count(Coop) 					from [Over].dbo.BoardOverUsers where Coop = 1
 	UNION all
-	select count(Mystery) from [Over].dbo.BoardOveUsers where Mystery = 1
+	select count(Mystery) 				from [Over].dbo.BoardOverUsers where Mystery = 1
 	UNION all
-	select count(SemiCoop) from [Over].dbo.BoardOveUsers where SemiCoop = 1
+	select count(SemiCoop) 				from [Over].dbo.BoardOverUsers where SemiCoop = 1
 	UNION all
-	select count(PPRPG) from [Over].dbo.BoardOveUsers where PPRPG = 1
+	select count(PPRPG) 				from [Over].dbo.BoardOverUsers where PPRPG = 1
 	UNION all
-	select count(Bluffing) from [Over].dbo.BoardOveUsers where Bluffing = 1
+	select count(Bluffing) 				from [Over].dbo.BoardOverUsers where Bluffing = 1
 	UNION all
-    select count(Puzzle) from [Over].dbo.BoardOveUsers where Puzzle = 1
+    select count(Puzzle) 				from [Over].dbo.BoardOverUsers where Puzzle = 1
 	UNION all
-    select count(Dexterity) from [Over].dbo.BoardOveUsers where Dexterity = 1
+    select count(Dexterity) 			from [Over].dbo.BoardOverUsers where Dexterity = 1
 	UNION all
-    select count(Party) from [Over].dbo.BoardOveUsers where Party = 1
+    select count(Party) 				from [Over].dbo.BoardOverUsers where Party = 1
     UNION all
-    select count(BoardOverOnline) from [Over].dbo.BoardOveUsers where BoardOverOnline = 1;
+    select count(Online) 				from [Over].dbo.BoardOverUsers where Online = 1;
 END

@@ -45,7 +45,7 @@ public class TargetDAO extends DAO{
                             rs.getString("Direction"),
                             rs.getString("Label"),
                             rs.getInt("ParentBoxIndex"),
-                            rs.getInt("OrderRank")
+                            rs.getInt("Rank")
                         )
                     );
                 }
@@ -56,7 +56,7 @@ public class TargetDAO extends DAO{
                             rs.getInt("BoxIndex"), 
                             rs.getString("Label"),
                             rs.getInt("ParentBoxIndex"),
-                            rs.getInt("OrderRank")
+                            rs.getInt("Rank")
                         )
                     );
                 }

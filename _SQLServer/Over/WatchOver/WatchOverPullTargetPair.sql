@@ -8,87 +8,87 @@ BEGIN
 	DECLARE @UserCount 			int = 0;
 	DECLARE @OrderCount 		int = 0;
 	DECLARE @GlobalCount 		int = 0;
-	DECLARE @TargetIndex 		int = 0;
-	DECLARE @SecondTargetIndex 	int = 0;
+	DECLARE @ListIndex 			int = 0;
+	DECLARE @SecondListIndex 	int = 0;
 	DECLARE @SavedOrder 		int = 0;
 
 	--//request count of records related to user
-	SET @UserCount = (select count(WatchOverUserIndex) from WatchOverLists where WatchOverUserIndex = @intUserIndex);
+	SET @UserCount = (select count(L.UserIndex) from WatchOverLists L where L.UserIndex = @intUserIndex);
 
 	--//if count != 0 (user has records)
 	if( @UserCount > 0 )
 	BEGIN
 		--//request count of random non-locked Movies from personal list
-		IF( (SELECT TOP 1 U.WatchOverMemory FROM WatchOverUsers U WHERE U.WatchOverUserIndex = @intUserIndex) = 1 )
+		IF( (SELECT TOP 1 U.Memory FROM WatchOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 		BEGIN
 			SET @OrderCount = (
 				SELECT count(L1.ListIndex) FROM WatchOverLists L1
-				JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-				JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
-				WHERE L1.WatchOverUserIndex = @intUserIndex
+				JOIN WatchOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+				JOIN WatchOverUsers U ON L1.UserIndex = U.UserIndex
+				WHERE L1.UserIndex = @intUserIndex
 				AND(
-					 L1.MovieIndex NOT IN(
-						SELECT M.MovieIndex1 FROM WatchOverMemories M
-						WHERE L1.MovieIndex = M.MovieIndex1
-						AND L2.MovieIndex = M.MovieIndex2
+					 L1.TargetIndex NOT IN(
+						SELECT M.TargetIndex1 FROM WatchOverMemories M
+						WHERE L1.TargetIndex = M.TargetIndex1
+						AND L2.TargetIndex = M.TargetIndex2
 						UNION
-						SELECT M.MovieIndex2 FROM WatchOverMemories M
-						WHERE L1.MovieIndex = M.MovieIndex2
-						AND L2.MovieIndex = M.MovieIndex1
+						SELECT M.TargetIndex2 FROM WatchOverMemories M
+						WHERE L1.TargetIndex = M.TargetIndex2
+						AND L2.TargetIndex = M.TargetIndex1
 					) OR (
-						U.WatchOverMemory = 0
+						U.Memory = 0
 					)				
 				)
 			);
 		END
 		ELSE
 		BEGIN
-			--//adjust OrderCount to exclude (1's uplock and count's downlock only available)
-			select count(ListIndex) from WatchOverLists where WatchOverUserIndex = @intUserIndex 
+			--//adjust OrderCount to exclude (1's L.UpLock and count's L.DownLock only available)
+			select count(ListIndex) from WatchOverLists L where L.UserIndex = @intUserIndex 
 			and (
-				UpLock = 0 or DownLock = 0
+				L.UpLock = 0 or L.DownLock = 0
 			)and not (
-				OrderRank = 0 and UpLock = 0 and DownLock = 1 
+				L.Rank = 0 and L.UpLock = 0 and L.DownLock = 1 
 			) and not (
-				OrderRank = (@UserCount-1) and UpLock = 1 and DownLock = 0
+				L.Rank = (@UserCount-1) and L.UpLock = 1 and L.DownLock = 0
 			)
 		END
 		
-		SET @GlobalCount = (select count(Movies.TargetIndex) from Movies
-			JOIN WatchOverUsers ON
+		SET @GlobalCount = (select count(T.TargetIndex) from Movies T
+			JOIN WatchOverUsers U ON
 			(
 				(
 					--Genres
-					(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
-					(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
-					(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
-					(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
-					(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
-					(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
-					(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
+					(T.Genre = 'Comedy'				and U.Comedy = 1)			or 
+					(T.Genre = 'Drama'				and U.Drama = 1)			or 
+					(T.Genre = 'Action'				and U.Action = 1)			or 
+					(T.Genre = 'Horror'				and U.Horror = 1)			or 
+					(T.Genre = 'Thriller'			and U.Thriller = 1)			or 
+					(T.Genre = 'Mystery'			and U.Mystery = 1)			or 
+					(T.Genre = 'Documentary'		and U.Documentary = 1) 
 				)
 				and
 				(
 					--Settings
-					(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
-					(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
-					(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
-					(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
-					(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
-					(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
-					(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
-					(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
-					(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
+					(T.Setting = 'ScienceFiction'	and U.ScienceFiction = 1)	or 
+					(T.Setting = 'Fantasy'			and U.Fantasy = 1)			or 
+					(T.Setting = 'Western'			and U.Western = 1)			or 
+					(T.Setting = 'MartialArts'		and U.MartialArts = 1)		or 
+					(T.Setting = 'Modern'			and U.Modern = 1)			or 
+					(T.Setting = 'Historic'			and U.Historic = 1)			or 
+					(T.Setting = 'PreHistoric'		and U.PreHistoric = 1)		or 
+					(T.Setting = 'Comics'			and U.Comics = 1)			or 
+					(T.Setting = 'Period'			and U.Period = 1)
 				)
 			) 
-			WHERE WatchOverUsers.WatchOverUserIndex = @intUserIndex
-			and Movies.TargetIndex not in(
-				select Movies.TargetIndex from Movies
-				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.MovieIndex
-				JOIN WatchOverUsers ON
-					WatchOverUsers.WatchOverUserIndex = WatchOverLists.WatchOverUserIndex
-				where WatchOverUsers.WatchOverUserIndex = @intUserIndex
+			WHERE U.UserIndex = @intUserIndex
+			and T.TargetIndex not in(
+				select T2.TargetIndex from Movies T2
+				JOIN WatchOverLists L ON
+					T2.TargetIndex = L.TargetIndex
+				JOIN WatchOverUsers U ON
+					U.UserIndex = L.UserIndex
+				where U.UserIndex = @intUserIndex
 			)
 		);
 	
@@ -98,26 +98,26 @@ BEGIN
 			--//there are Movies left in the global list
 			IF( @GlobalCount > 0 )
 			BEGIN
-				IF( (SELECT TOP 1 U.WatchOverMemory FROM WatchOverUsers U WHERE U.WatchOverUserIndex = @intUserIndex) = 1 )
+				IF( (SELECT TOP 1 U.Memory FROM WatchOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = 
+					SET @ListIndex = 
 					(
 						SELECT top 1 L1.ListIndex FROM WatchOverLists L1
-						JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-						JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
-						WHERE L1.WatchOverUserIndex = @intUserIndex
+						JOIN WatchOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+						JOIN WatchOverUsers U ON L1.UserIndex = U.UserIndex
+						WHERE L1.UserIndex = @intUserIndex
 						AND(
-							 L1.MovieIndex NOT IN(
-								SELECT M.MovieIndex1 FROM WatchOverMemories M
-								WHERE L1.MovieIndex = M.MovieIndex1
-								AND L2.MovieIndex = M.MovieIndex2
+							 L1.TargetIndex NOT IN(
+								SELECT M.TargetIndex1 FROM WatchOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex1
+								AND L2.TargetIndex = M.TargetIndex2
 								UNION
-								SELECT M.MovieIndex2 FROM WatchOverMemories M
-								WHERE L1.MovieIndex = M.MovieIndex2
-								AND L2.MovieIndex = M.MovieIndex1
+								SELECT M.TargetIndex2 FROM WatchOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex2
+								AND L2.TargetIndex = M.TargetIndex1
 							) OR (
-								U.WatchOverMemory = 0
+								U.Memory = 0
 							)				
 						)
 						order by newid()
@@ -126,45 +126,45 @@ BEGIN
 				ELSE
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = (select top 1 ListIndex from WatchOverLists where WatchOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0) order by newid());
+					SET @ListIndex = (select top 1 ListIndex from WatchOverLists L where L.UserIndex = @intUserIndex and (L.UpLock = 0 or L.DownLock = 0) order by newid());
 				END
 			END
 			ELSE
 			BEGIN
-				IF( (SELECT TOP 1 U.WatchOverMemory FROM WatchOverUsers U WHERE U.WatchOverUserIndex = @intUserIndex) = 1 )
+				IF( (SELECT TOP 1 U.Memory FROM WatchOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = 
+					SET @ListIndex = 
 					(
 						SELECT top 1 L1.ListIndex FROM WatchOverLists L1
-						JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-						JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
-						WHERE L1.WatchOverUserIndex = @intUserIndex
+						JOIN WatchOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+						JOIN WatchOverUsers U ON L1.UserIndex = U.UserIndex
+						WHERE L1.UserIndex = @intUserIndex
 						AND(
-							 L1.MovieIndex NOT IN(
-								SELECT M.MovieIndex1 FROM WatchOverMemories M
-								WHERE L1.MovieIndex = M.MovieIndex1
-								AND L2.MovieIndex = M.MovieIndex2
+							 L1.TargetIndex NOT IN(
+								SELECT M.TargetIndex1 FROM WatchOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex1
+								AND L2.TargetIndex = M.TargetIndex2
 								UNION
-								SELECT M.MovieIndex2 FROM WatchOverMemories M
-								WHERE L1.MovieIndex = M.MovieIndex2
-								AND L2.MovieIndex = M.MovieIndex1
+								SELECT M.TargetIndex2 FROM WatchOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex2
+								AND L2.TargetIndex = M.TargetIndex1
 							) OR (
-								U.WatchOverMemory = 0
+								U.Memory = 0
 							)
 						)
 						--//exclude the first and last Movies
-						and (L1.OrderRank != 0 and L1.OrderRank != @UserCount-1 )
+						and (L1.Rank != 0 and L1.Rank != @UserCount-1 )
 						order by newid()
 					);
 				END
 				ELSE
 				BEGIN
 					--//request random non-locked Target from personal list
-					SET @TargetIndex = (select top 1 ListIndex from WatchOverLists 
-					where WatchOverUserIndex = @intUserIndex and (UpLock = 0 or DownLock = 0)
+					SET @ListIndex = (select top 1 ListIndex from WatchOverLists L
+					where L.UserIndex = @intUserIndex and (L.UpLock = 0 or L.DownLock = 0)
 					--//exclude the first and last Movies
-					and (OrderRank != 0 and OrderRank != @UserCount-1 ) order by newid());
+					and (L.Rank != 0 and L.Rank != @UserCount-1 ) order by newid());
 				END
 			END
 			
@@ -173,84 +173,83 @@ BEGIN
 					--//there are Movies left in the global list
 			if ( 
 				(
-					select count(WatchOverUserIndex) from WatchOverLists 
-					where (ListIndex = @TargetIndex and OrderRank = 0) 
-					or (ListIndex = @TargetIndex and OrderRank = @UserCount-1) 
+					select count(L.UserIndex) from WatchOverLists L
+					where (ListIndex = @ListIndex and L.Rank = 0) 
+					or (ListIndex = @ListIndex and L.Rank = @UserCount-1) 
 				) > 0 
 				and @GlobalCount > 0 )
 			BEGIN    
-				--//request @TargetIndex from personal list
-				select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from WatchOverLists
-				JOIN Movies ON
-					WatchOverLists.MovieIndex = Movies.TargetIndex
-				where WatchOverLists.ListIndex = @TargetIndex 
+				--//request @ListIndex from personal list
+				select T.TargetIndex, Name, Release, Picture, Genre, Setting from WatchOverLists L
+				JOIN Movies T ON
+					L.TargetIndex = T.TargetIndex
+				where L.ListIndex = @ListIndex 
 				UNION
 				--//request random from global list
 					--//exclude from personal list
 				select * from (
-					select Top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-					JOIN WatchOverUsers ON
+					select Top 1 T.TargetIndex, Name, Release, Picture, Genre, Setting from Movies T
+					JOIN WatchOverUsers U ON
 					(
 						(
 							--Genres
-							(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
-							(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
-							(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
-							(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
-							(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
-							(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
-							(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
+							(T.Genre = 'Comedy'				and U.Comedy = 1)		or 
+							(T.Genre = 'Drama'				and U.Drama = 1)		or 
+							(T.Genre = 'Action'				and U.Action = 1)		or 
+							(T.Genre = 'Horror'				and U.Horror = 1)		or 
+							(T.Genre = 'Thriller'			and U.Thriller = 1)		or 
+							(T.Genre = 'Mystery'			and U.Mystery = 1)		or 
+							(T.Genre = 'Documentary'		and U.Documentary = 1) 
 						)
 						and
 						(
 							--Settings
-							(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
-							(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
-							(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
-							(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
-							(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
-							(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
-							(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
-							(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
-							(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
+							(T.Setting = 'ScienceFiction'	and U.ScienceFiction = 1)	or 
+							(T.Setting = 'Fantasy'			and U.Fantasy = 1)			or 
+							(T.Setting = 'Western'			and U.Western = 1)			or 
+							(T.Setting = 'MartialArts'		and U.MartialArts = 1)		or 
+							(T.Setting = 'Modern'			and U.Modern = 1)			or 
+							(T.Setting = 'Historic'			and U.Historic = 1)			or 
+							(T.Setting = 'PreHistoric'		and U.PreHistoric = 1)		or 
+							(T.Setting = 'Comics'			and U.Comics = 1)			or 
+							(T.Setting = 'Period'			and U.Period = 1)
 						)
 					) 
-					WHERE WatchOverUsers.WatchOverUserIndex = @intUserIndex
-					and Movies.TargetIndex not in(
-						select Movies.TargetIndex from Movies
-						JOIN WatchOverLists ON
-							Movies.TargetIndex = WatchOverLists.MovieIndex
-						JOIN WatchOverUsers ON
-							WatchOverUsers.WatchOverUserIndex = WatchOverLists.WatchOverUserIndex
-						where WatchOverUsers.WatchOverUserIndex = @intUserIndex
+					WHERE U.UserIndex = @intUserIndex
+					and T.TargetIndex not in(
+						select T2.TargetIndex from Movies T2
+						JOIN WatchOverLists L2 ON
+							T2.TargetIndex = L2.TargetIndex
+						JOIN WatchOverUsers U2 ON
+							U2.UserIndex = L2.UserIndex
+						where U2.UserIndex = @intUserIndex
 					) order by newid() 
-				) T1;
+				) AS TABLE1
 			END
 			--//else we're looking for an adjacent Target from the personal list
 			ELSE
 			BEGIN
-				SET @SavedOrder = (select OrderRank from WatchOverLists where ListIndex = @TargetIndex);
+				SET @SavedOrder = (select L.Rank from WatchOverLists L where L.ListIndex = @ListIndex);
 				
-				IF( (SELECT TOP 1 U.WatchOverMemory FROM WatchOverUsers U WHERE U.WatchOverUserIndex = @intUserIndex) = 1 )
+				IF( (SELECT TOP 1 U.Memory FROM WatchOverUsers U WHERE U.UserIndex = @intUserIndex) = 1 )
 				BEGIN
-					SET @SecondTargetIndex = (
-
+					SET @SecondListIndex = (
 						SELECT top 1 L2.ListIndex FROM WatchOverLists L1
-						JOIN WatchOverLists L2 ON (L1.OrderRank = L2.OrderRank + 1 or L1.OrderRank = L2.OrderRank - 1)
-						JOIN WatchOverUsers U ON L1.WatchOverUserIndex = U.WatchOverUserIndex
-						WHERE L1.WatchOverUserIndex = @intUserIndex
-						AND L1.ListIndex = @TargetIndex
+						JOIN WatchOverLists L2 ON (L1.Rank = L2.Rank + 1 or L1.Rank = L2.Rank - 1)
+						JOIN WatchOverUsers U ON L1.UserIndex = U.UserIndex
+						WHERE L1.UserIndex = @intUserIndex
+						AND L1.ListIndex = @ListIndex
 						AND(
-							 L1.MovieIndex NOT IN(
-								SELECT M.MovieIndex1 FROM WatchOverMemories M
-								WHERE L1.MovieIndex = M.MovieIndex1
-								AND L2.MovieIndex = M.MovieIndex2
+							 L1.TargetIndex NOT IN(
+								SELECT M.TargetIndex1 FROM WatchOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex1
+								AND L2.TargetIndex = M.TargetIndex2
 								UNION
-								SELECT M.MovieIndex2 FROM WatchOverMemories M
-								WHERE L1.MovieIndex = M.MovieIndex2
-								AND L2.MovieIndex = M.MovieIndex1
+								SELECT M.TargetIndex2 FROM WatchOverMemories M
+								WHERE L1.TargetIndex = M.TargetIndex2
+								AND L2.TargetIndex = M.TargetIndex1
 							) OR (
-								U.WatchOverMemory = 0
+								U.Memory = 0
 							)				
 						)
 						order by newid()
@@ -258,131 +257,131 @@ BEGIN
 				END
 				ELSE
 				BEGIN
-					if( (SELECT UpLock FROM WatchOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					if( (SELECT L.UpLock FROM WatchOverLists L WHERE L.Rank = @SavedOrder) = 0 )
 					BEGIN
-						SET @SecondTargetIndex = (SELECT ListIndex FROM WatchOverLists WHERE OrderRank = @SavedOrder-1);
+						SET @SecondListIndex = (SELECT ListIndex FROM WatchOverLists L WHERE L.Rank = @SavedOrder-1);
 					END
-					else if( (SELECT DownLock FROM WatchOverLists WHERE OrderRank = @SavedOrder) = 0 )
+					else if( (SELECT L.DownLock FROM WatchOverLists L WHERE L.Rank = @SavedOrder) = 0 )
 					BEGIN
-						SET @SecondTargetIndex = (SELECT ListIndex FROM WatchOverLists WHERE OrderRank = @SavedOrder+1);
+						SET @SecondListIndex = (SELECT ListIndex FROM WatchOverLists L WHERE L.Rank = @SavedOrder+1);
 					END
 				END
 				
-				--//request @TargetIndex from personal list
-				(select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.MovieIndex
-				where WatchOverLists.ListIndex = @TargetIndex 
+				--//request @ListIndex from personal list
+				(select T.TargetIndex, T.Name, T.Release, T.Picture, T.Genre, T.Setting from Movies T
+				JOIN WatchOverLists L ON
+					T.TargetIndex = L.TargetIndex
+				where L.ListIndex = @ListIndex 
 				UNION
-				select Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.MovieIndex
-				where WatchOverLists.ListIndex = @SecondTargetIndex
-				); --T2
+				select T.TargetIndex, T.Name, T.Release, T.Picture, T.Genre, T.Setting from T
+				JOIN WatchOverLists L ON
+					T.TargetIndex = L.TargetIndex
+				where L.ListIndex = @SecondListIndex
+				);
 			END
 		END                    
 		--//else (there are no unlocked records)
 		ELSE
 		BEGIN
-			--//there are Movies left in the global list
+			--//there are Targets left in the global list
 			IF( @GlobalCount > 0 )
 			BEGIN
 				--//request Order = 0 or Order = count from personal list
 				select * from (
-					select top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-					JOIN WatchOverLists ON
-						Movies.TargetIndex = WatchOverLists.MovieIndex
-					where WatchOverUserIndex = @intUserIndex 
+					select top 1 T.TargetIndex, Name, Release, Picture, Genre, Setting from Movies T
+					JOIN WatchOverLists L ON
+						T.TargetIndex = L.TargetIndex
+					where L.UserIndex = @intUserIndex 
 					and 
-						( OrderRank = 0 or OrderRank = @UserCount-1 )
+						( L.Rank = 0 or L.Rank = @UserCount-1 )
 					order by newid() 
-				) T3
+				) AS TABLE2
 				UNION
 				--//request random from global list
 					--//exclude from personal list
 				select * from ( 
-					select Top 1 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-					JOIN WatchOverUsers ON
+					select Top 1 T.TargetIndex, T.Name, T.Release, T.Picture, T.Genre, T.Setting from Movies T
+					JOIN WatchOverUsers U ON
 					(
 						(
 							--Genres
-							(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
-							(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
-							(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
-							(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
-							(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
-							(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
-							(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
+							(T.Genre = 'Comedy'				and U.Comedy = 1)			or 
+							(T.Genre = 'Drama'				and U.Drama = 1)			or 
+							(T.Genre = 'Action'				and U.Action = 1)			or 
+							(T.Genre = 'Horror'				and U.Horror = 1)			or 
+							(T.Genre = 'Thriller'			and U.Thriller = 1)			or 
+							(T.Genre = 'Mystery'			and U.Mystery = 1)			or 
+							(T.Genre = 'Documentary'		and U.Documentary = 1) 
 						)
 						and
 						(
 							--Settings
-							(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
-							(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
-							(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
-							(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
-							(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
-							(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
-							(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
-							(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
-							(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
+							(T.Setting = 'ScienceFiction'	and U.ScienceFiction = 1)	or 
+							(T.Setting = 'Fantasy'			and U.Fantasy = 1)			or 
+							(T.Setting = 'Western'			and U.Western = 1)			or 
+							(T.Setting = 'MartialArts'		and U.MartialArts = 1)		or 
+							(T.Setting = 'Modern'			and U.Modern = 1)			or 
+							(T.Setting = 'Historic'			and U.Historic = 1)			or 
+							(T.Setting = 'PreHistoric'		and U.PreHistoric = 1)		or 
+							(T.Setting = 'Comics'			and U.Comics = 1)			or 
+							(T.Setting = 'Period'			and U.Period = 1)
 						)
 					) 
-					WHERE WatchOverUsers.WatchOverUserIndex = @intUserIndex
-					and Movies.TargetIndex not in(
-						select Movies.TargetIndex from Movies
-						JOIN WatchOverLists ON
-							Movies.TargetIndex = WatchOverLists.MovieIndex
-						JOIN Users ON
-							WatchOverLists.WatchOverUserIndex = WatchOverUsers.WatchOverUserIndex
-						where WatchOverUsers.WatchOverUserIndex = @intUserIndex
+					WHERE U.UserIndex = @intUserIndex
+					and T.TargetIndex not in(
+						select T2.TargetIndex from Movies T2
+						JOIN WatchOverLists L2 ON
+							T2.TargetIndex = L2.TargetIndex
+						JOIN WatchOverUsers U2 ON
+							L2.UserIndex = U2.UserIndex
+						where U2.UserIndex = @intUserIndex
 					) order by newid() 
-				) T4;
+				) AS TABLE3
 			END
 			ELSE
 			--//there are no selections left in the global list
 				--//there are no unlocked records
 			BEGIN
 				--//return the top two records from personal list
-				select top 2 Movies.TargetIndex, Name, Release, Picture, Genre, Setting from Movies
-				JOIN WatchOverLists ON
-					Movies.TargetIndex = WatchOverLists.MovieIndex
-				where WatchOverUserIndex = @intUserIndex
-				and ( (OrderRank = 0) or (OrderRank = 1) );
+				select top 2 T.TargetIndex, Name, Release, Picture, Genre, Setting from Movies T
+				JOIN WatchOverLists L ON
+					T.TargetIndex = L.TargetIndex
+				where L.UserIndex = @intUserIndex
+				and ( (L.Rank = 0) or (L.Rank = 1) );
 			END
 		END
 	END
 	--//else (if user has no records)
 	ELSE
 	BEGIN
-		--//request 2 random Movies from global list
-		select top 2 Movies.TargetIndex, Name, Picture, Release, Genre, Setting from Movies
-		JOIN WatchOverUsers  ON 
+		--//request 2 random Targets from global list
+		select top 2 T.TargetIndex, Name, Picture, Release, Genre, Setting from Movies T
+		JOIN WatchOverUsers U ON 
 		(
 				(
 					--Genres
-					(Movies.Genre = 'Comedy'			and WatchOverUsers.ComedyM = 1)			or 
-					(Movies.Genre = 'Drama'				and WatchOverUsers.DramaM = 1)			or 
-					(Movies.Genre = 'Action'			and WatchOverUsers.ActionM = 1)			or 
-					(Movies.Genre = 'Horror'			and WatchOverUsers.HorrorM = 1)			or 
-					(Movies.Genre = 'Thriller'			and WatchOverUsers.ThrillerM = 1)		or 
-					(Movies.Genre = 'Mystery'			and WatchOverUsers.MysteryM = 1)		or 
-					(Movies.Genre = 'Documentary'		and WatchOverUsers.DocumentaryM = 1) 
+					(T.Genre = 'Comedy'				and U.Comedy = 1)			or 
+					(T.Genre = 'Drama'				and U.Drama = 1)			or 
+					(T.Genre = 'Action'				and U.Action = 1)			or 
+					(T.Genre = 'Horror'				and U.Horror = 1)			or 
+					(T.Genre = 'Thriller'			and U.Thriller = 1)			or 
+					(T.Genre = 'Mystery'			and U.Mystery = 1)			or 
+					(T.Genre = 'Documentary'		and U.Documentary = 1) 
 				)
 				and
 				(
 					--Settings
-					(Movies.Setting = 'ScienceFiction'	and WatchOverUsers.ScienceFictionM = 1)	or 
-					(Movies.Setting = 'Fantasy'			and WatchOverUsers.FantasyM = 1)		or 
-					(Movies.Setting = 'Western'			and WatchOverUsers.WesternM = 1)		or 
-					(Movies.Setting = 'MartialArts'		and WatchOverUsers.MartialArtsM = 1)	or 
-					(Movies.Setting = 'Modern'			and WatchOverUsers.ModernM = 1)			or 
-					(Movies.Setting = 'Historic'		and WatchOverUsers.HistoricM = 1)		or 
-					(Movies.Setting = 'PreHistoric'		and WatchOverUsers.PreHistoricM = 1)	or 
-					(Movies.Setting = 'Comics'			and WatchOverUsers.ComicsM = 1)			or 
-					(Movies.Setting = 'Period'			and WatchOverUsers.PeriodM = 1)
+					(T.Setting = 'ScienceFiction'	and U.ScienceFiction = 1)	or 
+					(T.Setting = 'Fantasy'			and U.Fantasy = 1)			or 
+					(T.Setting = 'Western'			and U.Western = 1)			or 
+					(T.Setting = 'MartialArts'		and U.MartialArts = 1)		or 
+					(T.Setting = 'Modern'			and U.Modern = 1)			or 
+					(T.Setting = 'Historic'			and U.Historic = 1)			or 
+					(T.Setting = 'PreHistoric'		and U.PreHistoric = 1)		or 
+					(T.Setting = 'Comics'			and U.Comics = 1)			or 
+					(T.Setting = 'Period'			and U.Period = 1)
 				)
 			)  
-			where WatchOverUsers.WatchOverUserIndex = @intUserIndex order by newid();
+			where U.UserIndex = @intUserIndex order by newid();
 	END
 END

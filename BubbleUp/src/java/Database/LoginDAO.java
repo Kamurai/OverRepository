@@ -35,11 +35,11 @@ public class LoginDAO extends DAO{
             rs.next();
             
             returnUser = new User(
-                rs.getInt("BubbleUpUserIndex"), 
+                rs.getInt("UserIndex"), 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getInt("BubbleUpAdminLevel"),
-                rs.getBoolean("BubbleUpOnline") 
+                rs.getInt("AdminLevel"),
+                rs.getBoolean("Online") 
             );
             
         }

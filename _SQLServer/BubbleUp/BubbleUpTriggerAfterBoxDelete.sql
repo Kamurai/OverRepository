@@ -4,13 +4,13 @@ CREATE TRIGGER AfterBoxDelete
 ON [BubbleUp].dbo.Boxes
 AFTER DELETE
 AS
-	DECLARE @intUserIndex		int = (SELECT TOP 1 deleted.BubbleUpUserIndex	FROM deleted);
+	DECLARE @intUserIndex		int = (SELECT TOP 1 deleted.UserIndex			FROM deleted);
 	DECLARE @intBoxIndex		int = (SELECT TOP 1 deleted.BoxIndex			FROM deleted);
 	DECLARE @intParentBoxIndex	int = (SELECT TOP 1 deleted.ParentBoxIndex		FROM deleted);
-	DECLARE @intOrderRank		int = (SELECT TOP 1 deleted.OrderRank			FROM deleted);
+	DECLARE @intRank			int = (SELECT TOP 1 deleted.Rank				FROM deleted);
 	
-	--Adjust other orderRanks for deleted box's parentIndex
-	EXEC BubbleUpUpdateOrderRankBoxes @intUserIndex, @intParentBoxIndex, @intOrderRank, -1;
+	--Adjust other Ranks for deleted box's parentIndex
+	EXEC BubbleUpUpdateRankBoxes @intUserIndex, @intParentBoxIndex, @intRank, -1;
 	
 	--DELETE subs of subs targets
 	WITH BoxesToDelete AS (
@@ -32,7 +32,7 @@ AS
 		SELECT BoxIndex 
 		FROM BoxesToDelete R
 	)
-	AND Targets.BubbleUpUserIndex = @intUserIndex;
+	AND Targets.UserIndex = @intUserIndex;
 	
 	--DELETE subs of subs boxes
 	WITH BoxesToDelete AS (
@@ -52,6 +52,6 @@ AS
 		SELECT B2.BoxIndex FROM Boxes B2
 		JOIN BoxesToDelete R
 		ON B2.BoxIndex = R.BoxIndex
-		WHERE B2.BubbleUpUserIndex = @intUserIndex
+		WHERE B2.UserIndex = @intUserIndex
 	)
 GO

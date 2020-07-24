@@ -92,151 +92,151 @@ public class LoginBean implements Serializable
     }
     
     //Genres
-    private boolean boolComedyS;
-    public boolean getboolComedyS()
+    private boolean boolComedy;
+    public boolean getboolComedy()
     {
-        return boolComedyS;
+        return boolComedy;
     }
-    public void setboolComedyS(boolean input)
+    public void setboolComedy(boolean input)
     {
-        boolComedyS = input;
+        boolComedy = input;
     }
-    private boolean boolDramaS;
-    public boolean getboolDramaS()
+    private boolean boolDrama;
+    public boolean getboolDrama()
     {
-        return boolDramaS;
+        return boolDrama;
     }
-    public void setboolDramaS(boolean input)
+    public void setboolDrama(boolean input)
     {
-        boolDramaS = input;
+        boolDrama = input;
     }
-    private boolean boolActionS;
-    public boolean getboolActionS()
+    private boolean boolAction;
+    public boolean getboolAction()
     {
-        return boolActionS;
+        return boolAction;
     }
-    public void setboolActionS(boolean input)
+    public void setboolAction(boolean input)
     {
-        boolActionS = input;
+        boolAction = input;
     }
-    private boolean boolHorrorS;
-    public boolean getboolHorrorS()
+    private boolean boolHorror;
+    public boolean getboolHorror()
     {
-        return boolHorrorS;
+        return boolHorror;
     }
-    public void setboolHorrorS(boolean input)
+    public void setboolHorror(boolean input)
     {
-        boolHorrorS = input;
+        boolHorror = input;
     }
-    private boolean boolThrillerS;
-    public boolean getboolThrillerS()
+    private boolean boolThriller;
+    public boolean getboolThriller()
     {
-        return boolThrillerS;
+        return boolThriller;
     }
-    public void setboolThrillerS(boolean input)
+    public void setboolThriller(boolean input)
     {
-        boolThrillerS = input;
+        boolThriller = input;
     }
-    private boolean boolMysteryS;
-    public boolean getboolMysteryS()
+    private boolean boolMystery;
+    public boolean getboolMystery()
     {
-        return boolMysteryS;
+        return boolMystery;
     }
-    public void setboolMysteryS(boolean input)
+    public void setboolMystery(boolean input)
     {
-        boolMysteryS = input;
+        boolMystery = input;
     }
-    private boolean boolDocumentaryS;
-    public boolean getboolDocumentaryS()
+    private boolean boolDocumentary;
+    public boolean getboolDocumentary()
     {
-        return boolDocumentaryS;
+        return boolDocumentary;
     }
-    public void setboolDocumentaryS(boolean input)
+    public void setboolDocumentary(boolean input)
     {
-        boolDocumentaryS = input;
+        boolDocumentary = input;
     }
     
     //Settings
-    private boolean boolScienceFictionS;
-    public boolean getboolScienceFictionS()
+    private boolean boolScienceFiction;
+    public boolean getboolScienceFiction()
     {
-        return boolScienceFictionS;
+        return boolScienceFiction;
     }
-    public void setboolScienceFictionS(boolean input)
+    public void setboolScienceFiction(boolean input)
     {
-        boolScienceFictionS = input;
+        boolScienceFiction = input;
     }
-    private boolean boolFantasyS;
-    public boolean getboolFantasyS()
+    private boolean boolFantasy;
+    public boolean getboolFantasy()
     {
-        return boolFantasyS;
+        return boolFantasy;
     }
-    public void setboolFantasyS(boolean input)
+    public void setboolFantasy(boolean input)
     {
-        boolFantasyS = input;
+        boolFantasy = input;
     }
-    private boolean boolWesternS;
-    public boolean getboolWesternS()
+    private boolean boolWestern;
+    public boolean getboolWestern()
     {
-        return boolWesternS;
+        return boolWestern;
     }
-    public void setboolWesternS(boolean input)
+    public void setboolWestern(boolean input)
     {
-        boolWesternS = input;
+        boolWestern = input;
     }
-    private boolean boolMartialArtsS;
-    public boolean getboolMartialArtsS()
+    private boolean boolMartialArts;
+    public boolean getboolMartialArts()
     {
-        return boolMartialArtsS;
+        return boolMartialArts;
     }
-    public void setboolMartialArtsS(boolean input)
+    public void setboolMartialArts(boolean input)
     {
-        boolMartialArtsS = input;
+        boolMartialArts = input;
     }
-    private boolean boolModernS;
-    public boolean getboolModernS()
+    private boolean boolModern;
+    public boolean getboolModern()
     {
-        return boolModernS;
+        return boolModern;
     }
-    public void setboolModernS(boolean input)
+    public void setboolModern(boolean input)
     {
-        boolModernS = input;
+        boolModern = input;
     }
-    private boolean boolHistoricS;
-    public boolean getboolHistoricS()
+    private boolean boolHistoric;
+    public boolean getboolHistoric()
     {
-        return boolHistoricS;
+        return boolHistoric;
     }
-    public void setboolHistoricS(boolean input)
+    public void setboolHistoric(boolean input)
     {
-        boolHistoricS = input;
+        boolHistoric = input;
     }
-    private boolean boolPrehistoricS;
-    public boolean getboolPrehistoricS()
+    private boolean boolPrehistoric;
+    public boolean getboolPrehistoric()
     {
-        return boolPrehistoricS;
+        return boolPrehistoric;
     }
-    public void setboolPrehistoricS(boolean input)
+    public void setboolPrehistoric(boolean input)
     {
-        boolPrehistoricS = input;
+        boolPrehistoric = input;
     }
-    private boolean boolComicsS;
-    public boolean getboolComicsS()
+    private boolean boolComics;
+    public boolean getboolComics()
     {
-        return boolComicsS;
+        return boolComics;
     }
-    public void setboolComicsS(boolean input)
+    public void setboolComics(boolean input)
     {
-        boolComicsS = input;
+        boolComics = input;
     }
-    private boolean boolPeriodS;
-    public boolean getboolPeriodS()
+    private boolean boolPeriod;
+    public boolean getboolPeriod()
     {
-        return boolPeriodS;
+        return boolPeriod;
     }
-    public void setboolPeriodS(boolean input)
+    public void setboolPeriod(boolean input)
     {
-        boolPeriodS = input;
+        boolPeriod = input;
     }
     
     
@@ -282,23 +282,23 @@ public class LoginBean implements Serializable
         email = "";
         error = "";
         //Genres
-        boolComedyS = false;
-        boolDramaS = false;
-        boolActionS = false;
-        boolHorrorS = false;
-        boolThrillerS = false;
-        boolMysteryS = false;
-        boolDocumentaryS = false;
+        boolComedy = false;
+        boolDrama = false;
+        boolAction = false;
+        boolHorror = false;
+        boolThriller = false;
+        boolMystery = false;
+        boolDocumentary = false;
         //Settings
-        boolScienceFictionS = false;
-        boolFantasyS = false;
-        boolWesternS = false;
-        boolMartialArtsS = false;
-        boolModernS = false;
-        boolHistoricS = false;
-        boolPrehistoricS = false;
-        boolComicsS = false;
-        boolPeriodS = false;
+        boolScienceFiction = false;
+        boolFantasy = false;
+        boolWestern = false;
+        boolMartialArts = false;
+        boolModern = false;
+        boolHistoric = false;
+        boolPrehistoric = false;
+        boolComics = false;
+        boolPeriod = false;
         
     }
     
@@ -357,23 +357,23 @@ public class LoginBean implements Serializable
             result = "SignUp";
         }else if(
                 //Genres
-                !boolComedyS &&
-                !boolDramaS &&
-                !boolActionS &&
-                !boolHorrorS &&
-                !boolThrillerS &&
-                !boolMysteryS &&
-                !boolDocumentaryS &&
+                !boolComedy &&
+                !boolDrama &&
+                !boolAction &&
+                !boolHorror &&
+                !boolThriller &&
+                !boolMystery &&
+                !boolDocumentary &&
                 //Settings
-                !boolScienceFictionS &&
-                !boolFantasyS &&
-                !boolWesternS &&
-                !boolMartialArtsS &&
-                !boolModernS &&
-                !boolHistoricS &&
-                !boolPrehistoricS &&
-                !boolComicsS &&
-                !boolPeriodS
+                !boolScienceFiction &&
+                !boolFantasy &&
+                !boolWestern &&
+                !boolMartialArts &&
+                !boolModern &&
+                !boolHistoric &&
+                !boolPrehistoric &&
+                !boolComics &&
+                !boolPeriod
                 )
         {
             error = "You didn't select any preferences.";
@@ -387,23 +387,23 @@ public class LoginBean implements Serializable
                     email,
                     password,
                     //Genres
-                    boolComedyS,
-                    boolDramaS,
-                    boolActionS,
-                    boolHorrorS,
-                    boolThrillerS,
-                    boolMysteryS,
-                    boolDocumentaryS,
+                    boolComedy,
+                    boolDrama,
+                    boolAction,
+                    boolHorror,
+                    boolThriller,
+                    boolMystery,
+                    boolDocumentary,
                     //Settings
-                    boolScienceFictionS,
-                    boolFantasyS,
-                    boolWesternS,
-                    boolMartialArtsS,
-                    boolModernS,
-                    boolHistoricS,
-                    boolPrehistoricS,
-                    boolComicsS,
-                    boolPeriodS
+                    boolScienceFiction,
+                    boolFantasy,
+                    boolWestern,
+                    boolMartialArts,
+                    boolModern,
+                    boolHistoric,
+                    boolPrehistoric,
+                    boolComics,
+                    boolPeriod
             )){
                 result = "Login";
             }else{

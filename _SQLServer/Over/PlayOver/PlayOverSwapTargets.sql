@@ -9,69 +9,69 @@ AS
 BEGIN
 	--//Swap and or add VideoGames to Personal list
 	DECLARE @intVideoGameCount int = 0;
-	DECLARE @intVideoGameIndex1 int = -2; --//Higher rank, lower number, at end
-	DECLARE @intVideoGameIndex2 int = -2;
+	DECLARE @intTargetIndex1 int = -2; --//Higher L.Rank, lower number, at end
+	DECLARE @intTargetIndex2 int = -2;
 
 	set @intVideoGameCount = (
 		select count(*) 
-		from VideoGames 
-		JOIN PlayOverLists ON
-		VideoGames.TargetIndex = PlayOverLists.VideoGameIndex
-		where PlayOverLists.PlayOverUserIndex = @intUserIndex and (Name = @strVideoGame1 or Name = @strVideoGame2)
+		from VideoGames T
+		JOIN PlayOverLists L ON
+		T.TargetIndex = L.TargetIndex
+		where L.UserIndex = @intUserIndex and (T.Name = @strVideoGame1 or T.Name = @strVideoGame2)
 	);
-	set @intVideoGameIndex1 = (select top 1 TargetIndex from VideoGames where Name = @strVideoGame1);
-	set @intVideoGameIndex2 = (select top 1 TargetIndex from VideoGames where Name = @strVideoGame2);
+	set @intTargetIndex1 = (select top 1 T.TargetIndex from VideoGames T where T.Name = @strVideoGame1);
+	set @intTargetIndex2 = (select top 1 T.TargetIndex from VideoGames T where T.Name = @strVideoGame2);
 
 	--//if Neither Target is already in the personal list
 	if( @intVideoGameCount = 0)
 	BEGIN
-		--//add to table at OrderRank 0 and 1
-		insert into PlayOverLists (PlayOverUserIndex, OrderRank, VideoGameIndex) VALUES (@intUserIndex,  0, @intVideoGameIndex1);
-		insert into PlayOverLists (PlayOverUserIndex, OrderRank, VideoGameIndex) VALUES (@intUserIndex,  1, @intVideoGameIndex2);
+		--//add to table at L.Rank 0 and 1
+		insert into PlayOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex,  0, @intTargetIndex1);
+		insert into PlayOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex,  1, @intTargetIndex2);
 	END
 	ELSE
 	--//else if One Target is already in the personal list
 	if( @intVideoGameCount = 1 )
 	BEGIN
 		--//if one Target is first on the list
-		if( (select top 1 OrderRank from PlayOverLists where PlayOverUserIndex = @intUserIndex and (VideoGameIndex = @intVideoGameIndex1 or VideoGameIndex = @intVideoGameIndex2) ) = 0 )
+		if( (select top 1 L.Rank from PlayOverLists L where L.UserIndex = @intUserIndex and (L.TargetIndex = @intTargetIndex1 or L.TargetIndex = @intTargetIndex2) ) = 0 )
 		BEGIN
 			--//if first Target is currently in personal list and order = 0
-			if( (select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex1 and OrderRank = 0)  > 0)
+			if( (select count(L.ListIndex) from PlayOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex1 and L.Rank = 0)  > 0)
 			BEGIN
-				--//Add the second Target to table at -1 OrderRank
-				insert into PlayOverLists (PlayOverUserIndex, OrderRank, VideoGameIndex) VALUES (@intUserIndex, -1, @intVideoGameIndex2);
+				--//Add the second Target to table at -1 L.Rank
+				insert into PlayOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, -1, @intTargetIndex2);
 			END
 			ELSE
 			BEGIN
 				--//if second Target is currently in personal list and order = 0
-				if( (select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2 and OrderRank = 0)  > 0)
+				if( (select count(ListIndex) from PlayOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex2 and L.Rank = 0)  > 0)
 				BEGIN
-					--//Add the first Target to table at -1 OrderRank
-					insert into PlayOverLists (PlayOverUserIndex, OrderRank, VideoGameIndex) VALUES (@intUserIndex, -1, @intVideoGameIndex1);
+					--//Add the first Target to table at -1 L.Rank
+					insert into PlayOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, -1, @intTargetIndex1);
 				END
 			END
 			--//Increment all VideoGames on the list by 1
-			update PlayOverLists set OrderRank = OrderRank + 1 where PlayOverUserIndex = @intUserIndex;
+			update PlayOverLists set Rank = Rank + 1 where UserIndex = @intUserIndex;
 		END
 		ELSE
 		--//else one Target is last on the list
 		BEGIN
 			DECLARE @intOrderCount int = 0;
-			SET @intOrderCount = (select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex);
+			SET @intOrderCount = (select count(L.ListIndex) from PlayOverLists L where L.UserIndex = @intUserIndex);
 			--//if first Target is ordered last (at count)-1
-			if( (select count(ListIndex) from PlayOverLists where VideoGameIndex = @intVideoGameIndex1 and OrderRank = @intOrderCount-1 ) > 0)
+			if( (select count(L.ListIndex) from PlayOverLists L where L.TargetIndex = @intTargetIndex1 and L.Rank = @intOrderCount-1 ) > 0)
 			BEGIN
-				--//Add the second Target to table at (count) OrderRank
-				insert into PlayOverLists (PlayOverUserIndex, OrderRank, VideoGameIndex) VALUES (@intUserIndex, @intOrderCount, @intVideoGameIndex2);
+				--//Add the second Target to table at (count) L.Rank
+				insert into PlayOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, @intOrderCount, @intTargetIndex2);
 			END
 			ELSE
 			BEGIN
 				--//if second Target is ordered last (at count)-1
-				if( (select count(ListIndex) from PlayOverLists where VideoGameIndex = @intVideoGameIndex2 and OrderRank = @intOrderCount-1 ) > 0)
+				if( (select count(L.ListIndex) from PlayOverLists L where L.TargetIndex = @intTargetIndex2 and L.Rank = @intOrderCount-1 ) > 0)
 				BEGIN
-					--//Add the first Target to table at (count) OrderRank
-					insert into PlayOverLists (PlayOverUserIndex, OrderRank, VideoGameIndex) VALUES (@intUserIndex, @intOrderCount, @intVideoGameIndex1);
+					--//Add the first Target to table at (count) L.Rank
+					insert into PlayOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, @intOrderCount, @intTargetIndex1);
 				END
 			END
 		END
@@ -83,70 +83,39 @@ BEGIN
 
 	--//Both VideoGames are NOW in the personal list
 	  --//VideoGames should also be adjacent
-	if( (select top 1 OrderRank from PlayOverLists where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex1) > (select top 1 OrderRank from PlayOverLists where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2) )
+	if( (select top 1 L.Rank from PlayOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex1) > (select top 1 L.Rank from PlayOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex2) )
 	BEGIN
-		--//Swap the orderranks on the two VideoGames
+		--//Swap the L.Ranks on the two VideoGames
 			--//Lower the number on the first and lock down
-		update PlayOverLists set OrderRank = OrderRank-1, UpLock = 0, DownLock = 1 where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex1;
+		update PlayOverLists set Rank = Rank-1, UpLock = 0, DownLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex1;
 			--//Raise the number of the second and lock up
-		update PlayOverLists set OrderRank = OrderRank+1, UpLock = 1, DownLock = 0 where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2;
+		update PlayOverLists set Rank = Rank+1, UpLock = 1, DownLock = 0 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex2;
 		SET @boolSwapped = 1;
 	END
 	ELSE
 	BEGIN
-		--//DON'T Swap the orderranks on the two VideoGames: already in correct order
+		--//DON'T Swap the L.Ranks on the two VideoGames: already in correct order
 			--//Only lock down
-		update PlayOverLists set DownLock = 1 where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex1;
+		update PlayOverLists set DownLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex1;
 			--//Only lock up
-		update PlayOverLists set UpLock = 1 where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2;
+		update PlayOverLists set UpLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex2;
 	END
 	
 	--if pair of targets is not already remembered
 	if(
 		(
-			SELECT COUNT(MemoryIndex) FROM PlayOverMemories 
-			WHERE (VideoGameIndex1 = @intVideoGameIndex1 or VideoGameIndex1 = @intVideoGameIndex2)
-			AND (VideoGameIndex2 = @intVideoGameIndex1 or VideoGameIndex2 = @intVideoGameIndex2)
+			SELECT COUNT(M.MemoryIndex) FROM PlayOverMemories M
+			WHERE (M.TargetIndex1 = @intTargetIndex1 or M.TargetIndex1 = @intTargetIndex2)
+			AND (M.TargetIndex2 = @intTargetIndex1 or M.TargetIndex2 = @intTargetIndex2)
 		) = 0
 		AND (
 			(
-				(SELECT top 1 PlayOverMemory FROM PlayOverUsers WHERE PlayOverUserIndex = @intUserIndex) = 1
+				(SELECT top 1 U.Memory FROM PlayOverUsers U WHERE U.UserIndex = @intUserIndex) = 1
 			)
 		)
 	)
 	BEGIN
 		--add memory to table
-		INSERT INTO PlayOverMemories (PlayOverUserIndex, VideoGameIndex1, VideoGameIndex2) VALUES (@intUserIndex, @intVideoGameIndex1, @intVideoGameIndex2);
+		INSERT INTO PlayOverMemories (UserIndex, TargetIndex1, TargetIndex2) VALUES (@intUserIndex, @intTargetIndex1, @intTargetIndex2);
 	END
-
-
-	--//Clear adjacent locks
-		--//Get Orders of swapped VideoGames
-	/*
-	DECLARE @intVideoGameOrder1 int = -2;
-	DECLARE @intVideoGameOrder2 int = -2;
-	DECLARE @intVideoGameTotal int = 0;
-
-	SET @intVideoGameOrder1 = (select top 1 OrderRank from PlayOverLists where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex1);
-	SET @intVideoGameOrder2 = (select top 1 OrderRank from PlayOverLists where PlayOverUserIndex = @intUserIndex and VideoGameIndex = @intVideoGameIndex2);
-	SET @intVideoGameTotal = (select count(ListIndex) from PlayOverLists where PlayOverUserIndex = @intUserIndex);
-
-	--//if VideoGames were swapped
-	if( @boolSwapped = 1)
-	--//Clear adjacent locks
-	BEGIN
-		--//if Target1's OrderRank is > 0
-		if( @intVideoGameOrder1 > 0 )
-		BEGIN	
-			--//set DownLock to 0 on record with -1 order and 2nd Target
-			update PlayOverLists set DownLock = 0 where PlayOverUserIndex = @intUserIndex and (OrderRank = @intVideoGameOrder1-1 or OrderRank = @intVideoGameOrder2);
-		END
-		--//if Target2's OrderRank is < Count
-		if( @intVideoGameOrder2 < (@intVideoGameTotal) )
-		BEGIN
-			--//set UpLock to 0 on record with +1 order and 1st Target
-			update PlayOverLists set UpLock = 0 where PlayOverUserIndex = @intUserIndex and (OrderRank = @intVideoGameOrder2+1 or OrderRank = @intVideoGameOrder1);
-		END
-	END
-	*/
 END

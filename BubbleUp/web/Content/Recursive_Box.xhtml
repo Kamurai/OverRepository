@@ -12,10 +12,10 @@
             <td class='classBoxLabelHeader'>
                 <h:commandButton value="Switch Direction" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
                 <h:inputText class='classBoxInput' value="#{box.label}"/>
-            <c:if test="#{box.orderRank lt maxOrder}">
+            <c:if test="#{box.rank lt maxOrder}">
                 <h:commandButton value="Move Down" action='#{TargetBean.MoveBoxAfter(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
             </c:if>
-            <c:if test="#{box.orderRank gt 0}">
+            <c:if test="#{box.rank gt 0}">
                 <h:commandButton value="Move Up" action='#{TargetBean.MoveBoxBefore(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
             </c:if>
                 <h:commandButton value="Delete" action='#{TargetBean.DeleteBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
@@ -24,8 +24,8 @@
         <tr class='classBoxLabelRow'>
             <td class='classBoxLabelHeader'>
                 <h:commandButton value="Move Out Left"  action='#{TargetBean.MoveOutLeftBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
-                <h:commandButton value="Move Out"   action='#{TargetBean.MoveOutBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
-                <h:commandButton value="Move In"    action='#{TargetBean.MoveInBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+                <h:commandButton value="Move Out"       action='#{TargetBean.MoveOutBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
+                <h:commandButton value="Move In"        action='#{TargetBean.MoveInBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
                 <h:commandButton value="Move Out Right" action='#{TargetBean.MoveOutRightBox(LoginBean.currentUser.userIndex, box.boxIndex)}'/>
             </td>
         </tr>
@@ -56,10 +56,10 @@
                         <tr>
                             <td class='classTarget'>
                                 <h:inputText class='classTargetInput' value="#{y.label}"/>
-                            <c:if test="#{y.orderRank lt box.targetList.size()-1}">
+                            <c:if test="#{y.getRank() lt box.targetList.size()-1}">
                                 <h:commandButton value="Move Down" action='#{TargetBean.MoveTargetAfter(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                             </c:if>
-                            <c:if test="#{y.orderRank gt 0}">
+                            <c:if test="#{y.getRank() gt 0}">
                                 <h:commandButton value="Move Up" action='#{TargetBean.MoveTargetBefore(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                             </c:if>
                                 <h:commandButton value="Delete" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>

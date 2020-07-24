@@ -5,7 +5,7 @@ create table [BubbleUp].dbo.Boxes (
 	BubbleUpUserIndex	bigint not null, 
 	ParentBoxIndex		bigint not null,
 	Label				varchar(max),
-	OrderRank			int not null
+	L.Rank			int not null
 );
 
 create table [BubbleUp].dbo.Targets (
@@ -13,5 +13,5 @@ create table [BubbleUp].dbo.Targets (
 	BubbleUpUserIndex	bigint not null, 
 	ParentBoxIndex		bigint not null,
 	Label				varchar(max),
-	OrderRank			int not null
+	L.Rank			int not null
 );

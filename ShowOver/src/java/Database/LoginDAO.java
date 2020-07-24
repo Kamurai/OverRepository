@@ -35,31 +35,31 @@ public class LoginDAO extends DAO{
             rs.next();
             
             returnUser = new User(
-                rs.getInt("ShowOverUserIndex"), 
-                rs.getInt("ShowOverAdminLevel"), 
-                rs.getBoolean("ShowOverOnline"),
+                rs.getInt("UserIndex"), 
+                rs.getInt("AdminLevel"), 
+                rs.getBoolean("Online"),
                     
                 rs.getString("Username"), 
                 rs.getString("Email"),                     
-                rs.getBoolean("ShowOverMemory"), 
+                rs.getBoolean("Memory"), 
                 //Genres
-                rs.getBoolean("ComedyS"), 
-                rs.getBoolean("DramaS"), 
-                rs.getBoolean("ActionS"), 
-                rs.getBoolean("HorrorS"), 
-                rs.getBoolean("ThrillerS"), 
-                rs.getBoolean("MysteryS"), 
-                rs.getBoolean("DocumentaryS"), 
+                rs.getBoolean("Comedy"), 
+                rs.getBoolean("Drama"), 
+                rs.getBoolean("Action"), 
+                rs.getBoolean("Horror"), 
+                rs.getBoolean("Thriller"), 
+                rs.getBoolean("Mystery"), 
+                rs.getBoolean("Documentary"), 
                 //Settings
-                rs.getBoolean("ScienceFictionS"), 
-                rs.getBoolean("FantasyS"), 
-                rs.getBoolean("WesternS"), 
-                rs.getBoolean("MartialArtsS"), 
-                rs.getBoolean("ModernS"), 
-                rs.getBoolean("HistoricS"), 
-                rs.getBoolean("PrehistoricS"), 
-                rs.getBoolean("ComicsS"), 
-                rs.getBoolean("PeriodS")
+                rs.getBoolean("ScienceFiction"), 
+                rs.getBoolean("Fantasy"), 
+                rs.getBoolean("Western"), 
+                rs.getBoolean("MartialArts"), 
+                rs.getBoolean("Modern"), 
+                rs.getBoolean("Historic"), 
+                rs.getBoolean("Prehistoric"), 
+                rs.getBoolean("Comics"), 
+                rs.getBoolean("Period")
             );
             
         }
@@ -127,31 +127,31 @@ public class LoginDAO extends DAO{
         ResultSet rs;
         
         //if all Genres are false
-        if( !targetUser.getComedyS() && 
-            !targetUser.getDramaS() && 
-            !targetUser.getActionS() && 
-            !targetUser.getHorrorS() && 
-            !targetUser.getThrillerS() && 
-            !targetUser.getMysteryS() && 
-            !targetUser.getDocumentaryS()
+        if( !targetUser.getComedy() && 
+            !targetUser.getDrama() && 
+            !targetUser.getAction() && 
+            !targetUser.getHorror() && 
+            !targetUser.getThriller() && 
+            !targetUser.getMystery() && 
+            !targetUser.getDocumentary()
         ){
             //then set default to true
-            targetUser.setComedyS(true);
+            targetUser.setComedy(true);
         }
         
         //if all Platforms are false
-        if( !targetUser.getScienceFictionS() && 
-            !targetUser.getFantasyS() && 
-            !targetUser.getWesternS() && 
-            !targetUser.getMartialArtsS() && 
-            !targetUser.getModernS() && 
-            !targetUser.getHistoricS() && 
-            !targetUser.getPrehistoricS() && 
-            !targetUser.getComicsS() && 
-            !targetUser.getPeriodS()
+        if( !targetUser.getScienceFiction() && 
+            !targetUser.getFantasy() && 
+            !targetUser.getWestern() && 
+            !targetUser.getMartialArts() && 
+            !targetUser.getModern() && 
+            !targetUser.getHistoric() && 
+            !targetUser.getPrehistoric() && 
+            !targetUser.getComics() && 
+            !targetUser.getPeriod()
         ){
             //then set default to true
-            targetUser.setScienceFictionS(true);
+            targetUser.setScienceFiction(true);
         }
         
         //Update preferences to match check boxes (local variables)
@@ -162,23 +162,23 @@ public class LoginDAO extends DAO{
             stmt = getConnect().prepareCall("{call ShowOverUpdateOptions(?,?,?,?,?)}");
             stmt.setInt(1, targetUser.getUserIndex());
             //Genres
-            stmt.setBoolean(2, targetUser.getComedyS());
-            stmt.setBoolean(3, targetUser.getDramaS());
-            stmt.setBoolean(4, targetUser.getActionS());
-            stmt.setBoolean(5, targetUser.getHorrorS());
-            stmt.setBoolean(5, targetUser.getThrillerS());
-            stmt.setBoolean(5, targetUser.getMysteryS());
-            stmt.setBoolean(5, targetUser.getDocumentaryS());
+            stmt.setBoolean(2, targetUser.getComedy());
+            stmt.setBoolean(3, targetUser.getDrama());
+            stmt.setBoolean(4, targetUser.getAction());
+            stmt.setBoolean(5, targetUser.getHorror());
+            stmt.setBoolean(5, targetUser.getThriller());
+            stmt.setBoolean(5, targetUser.getMystery());
+            stmt.setBoolean(5, targetUser.getDocumentary());
             //Settings
-            stmt.setBoolean(5, targetUser.getScienceFictionS());
-            stmt.setBoolean(5, targetUser.getFantasyS());
-            stmt.setBoolean(5, targetUser.getWesternS());
-            stmt.setBoolean(5, targetUser.getMartialArtsS());
-            stmt.setBoolean(5, targetUser.getModernS());
-            stmt.setBoolean(5, targetUser.getHistoricS());
-            stmt.setBoolean(5, targetUser.getPrehistoricS());
-            stmt.setBoolean(5, targetUser.getComicsS());
-            stmt.setBoolean(5, targetUser.getPeriodS());
+            stmt.setBoolean(5, targetUser.getScienceFiction());
+            stmt.setBoolean(5, targetUser.getFantasy());
+            stmt.setBoolean(5, targetUser.getWestern());
+            stmt.setBoolean(5, targetUser.getMartialArts());
+            stmt.setBoolean(5, targetUser.getModern());
+            stmt.setBoolean(5, targetUser.getHistoric());
+            stmt.setBoolean(5, targetUser.getPrehistoric());
+            stmt.setBoolean(5, targetUser.getComics());
+            stmt.setBoolean(5, targetUser.getPeriod());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();
@@ -209,23 +209,23 @@ public class LoginDAO extends DAO{
         String email,
         String password,
         //Genres
-        boolean boolComedyS,
-        boolean boolDramaS,
-        boolean boolActionS,
-        boolean boolHorrorS,
-        boolean boolThrillerS,
-        boolean boolMysteryS,
-        boolean boolDocumentaryS,
+        boolean boolComedy,
+        boolean boolDrama,
+        boolean boolAction,
+        boolean boolHorror,
+        boolean boolThriller,
+        boolean boolMystery,
+        boolean boolDocumentary,
         //Settings
-        boolean boolScienceFictionS,
-        boolean boolFantasyS,
-        boolean boolWesternS,
-        boolean boolMartialArtsS,
-        boolean boolModernS,
-        boolean boolHistoricS,
-        boolean boolPrehistoricS,
-        boolean boolComicsS,
-        boolean boolPeriodS
+        boolean boolScienceFiction,
+        boolean boolFantasy,
+        boolean boolWestern,
+        boolean boolMartialArts,
+        boolean boolModern,
+        boolean boolHistoric,
+        boolean boolPrehistoric,
+        boolean boolComics,
+        boolean boolPeriod
     ){
         CallableStatement stmt = null;
         boolean result = false;
@@ -241,23 +241,23 @@ public class LoginDAO extends DAO{
             stmt.setString(2, email);
             stmt.setString(3, password);
             //Genres
-            stmt.setBoolean(4, boolComedyS);
-            stmt.setBoolean(5, boolDramaS);
-            stmt.setBoolean(6, boolActionS);
-            stmt.setBoolean(7, boolHorrorS);
-            stmt.setBoolean(8, boolThrillerS);
-            stmt.setBoolean(9, boolMysteryS);
-            stmt.setBoolean(10, boolDocumentaryS);
+            stmt.setBoolean(4, boolComedy);
+            stmt.setBoolean(5, boolDrama);
+            stmt.setBoolean(6, boolAction);
+            stmt.setBoolean(7, boolHorror);
+            stmt.setBoolean(8, boolThriller);
+            stmt.setBoolean(9, boolMystery);
+            stmt.setBoolean(10, boolDocumentary);
             //Settings
-            stmt.setBoolean(11, boolScienceFictionS);
-            stmt.setBoolean(12, boolFantasyS);
-            stmt.setBoolean(13, boolWesternS);
-            stmt.setBoolean(14, boolMartialArtsS);
-            stmt.setBoolean(15, boolModernS);
-            stmt.setBoolean(16, boolHistoricS);
-            stmt.setBoolean(17, boolPrehistoricS);
-            stmt.setBoolean(18, boolComicsS);
-            stmt.setBoolean(19, boolPeriodS);
+            stmt.setBoolean(11, boolScienceFiction);
+            stmt.setBoolean(12, boolFantasy);
+            stmt.setBoolean(13, boolWestern);
+            stmt.setBoolean(14, boolMartialArts);
+            stmt.setBoolean(15, boolModern);
+            stmt.setBoolean(16, boolHistoric);
+            stmt.setBoolean(17, boolPrehistoric);
+            stmt.setBoolean(18, boolComics);
+            stmt.setBoolean(19, boolPeriod);
             rs = stmt.executeQuery();
             
             result = true;

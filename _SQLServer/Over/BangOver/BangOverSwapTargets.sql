@@ -9,69 +9,69 @@ AS
 BEGIN
 	--//Swap and or add Celebrities to Personal list
 	DECLARE @intCelebrityCount int = 0;
-	DECLARE @intCelebrityIndex1 int = -2; --//Higher rank, lower number, at end
-	DECLARE @intCelebrityIndex2 int = -2;
+	DECLARE @intTargetIndex1 int = -2; --//Higher L.Rank, lower number, at end
+	DECLARE @intTargetIndex2 int = -2;
 
 	set @intCelebrityCount = (
 		select count(*) 
-		from Celebrities 
-		JOIN BangOverLists ON
-		Celebrities.TargetIndex = BangOverLists.CelebrityIndex
-		where BangOverLists.BangOverUserIndex = @intUserIndex and (Name = @strCelebrity1 or Name = @strCelebrity2)
+		from Celebrities T
+		JOIN BangOverLists L ON
+		T.TargetIndex = L.TargetIndex
+		where L.UserIndex = @intUserIndex and (T.Name = @strCelebrity1 or T.Name = @strCelebrity2)
 	);	
-	set @intCelebrityIndex1 = (select top 1 TargetIndex from Celebrities where Name = @strCelebrity1);
-	set @intCelebrityIndex2 = (select top 1 TargetIndex from Celebrities where Name = @strCelebrity2);
+	set @intTargetIndex1 = (select top 1 T.TargetIndex from Celebrities T where T.Name = @strCelebrity1);
+	set @intTargetIndex2 = (select top 1 T.TargetIndex from Celebrities T where T.Name = @strCelebrity2);
 
 	--//if Neither Target is already in the personal list
 	if( @intCelebrityCount = 0)
 	BEGIN
-		--//add to table at OrderRank 0 and 1
-		insert into BangOverLists (BangOverUserIndex, OrderRank, CelebrityIndex) VALUES (@intUserIndex,  0, @intCelebrityIndex1);
-		insert into BangOverLists (BangOverUserIndex, OrderRank, CelebrityIndex) VALUES (@intUserIndex,  1, @intCelebrityIndex2);
+		--//add to table at L.Rank 0 and 1
+		insert into BangOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex,  0, @intTargetIndex1);
+		insert into BangOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex,  1, @intTargetIndex2);
 	END
 	ELSE
 	--//else if One Target is already in the personal list
 	if( @intCelebrityCount = 1 )
 	BEGIN
 		--//if one Target is first on the list
-		if( (select top 1 OrderRank from BangOverLists where BangOverUserIndex = @intUserIndex and (CelebrityIndex = @intCelebrityIndex1 or CelebrityIndex = @intCelebrityIndex2) ) = 0 )
+		if( (select top 1 L.Rank from BangOverLists L where L.UserIndex = @intUserIndex and (L.TargetIndex = @intTargetIndex1 or L.TargetIndex = @intTargetIndex2) ) = 0 )
 		BEGIN
 			--//if first Target is currently in personal list and order = 0
-			if( (select count(ListIndex) from BangOverLists where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex1 and OrderRank = 0)  > 0)
+			if( (select count(L.ListIndex) from BangOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex1 and L.Rank = 0)  > 0)
 			BEGIN
-				--//Add the second Target to table at -1 OrderRank
-				insert into BangOverLists (BangOverUserIndex, OrderRank, CelebrityIndex) VALUES (@intUserIndex, -1, @intCelebrityIndex2);
+				--//Add the second Target to table at -1 L.Rank
+				insert into BangOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, -1, @intTargetIndex2);
 			END
 			ELSE
 			BEGIN
 				--//if second Target is currently in personal list and order = 0
-				if( (select count(ListIndex) from BangOverLists where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2 and OrderRank = 0)  > 0)
+				if( (select count(L.ListIndex) from BangOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex2 and L.Rank = 0)  > 0)
 				BEGIN
-					--//Add the first Target to table at -1 OrderRank
-					insert into BangOverLists (BangOverUserIndex, OrderRank, CelebrityIndex) VALUES (@intUserIndex, -1, @intCelebrityIndex1);
+					--//Add the first Target to table at -1 L.Rank
+					insert into BangOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, -1, @intTargetIndex1);
 				END
 			END
 			--//Increment all celebrities on the list by 1
-			update BangOverLists set OrderRank = OrderRank + 1 where BangOverUserIndex = @intUserIndex;
+			update BangOverLists set Rank = Rank + 1 where UserIndex = @intUserIndex;
 		END
 		ELSE
 		--//else one Target is last on the list
 		BEGIN
 			DECLARE @intOrderCount int = 0;
-			SET @intOrderCount = (select count(ListIndex) from BangOverLists where BangOverUserIndex = @intUserIndex);
+			SET @intOrderCount = (select count(L.ListIndex) from BangOverLists L where L.UserIndex = @intUserIndex);
 			--//if first Target is ordered last (at count)-1
-			if( (select count(ListIndex) from BangOverLists where CelebrityIndex = @intCelebrityIndex1 and OrderRank = @intOrderCount-1 ) > 0)
+			if( (select count(L.ListIndex) from BangOverLists L where L.TargetIndex = @intTargetIndex1 and L.Rank = @intOrderCount-1 ) > 0)
 			BEGIN
-				--//Add the second Target to table at (count) OrderRank
-				insert into BangOverLists (BangOverUserIndex, OrderRank, CelebrityIndex) VALUES (@intUserIndex, @intOrderCount, @intCelebrityIndex2);
+				--//Add the second Target to table at (count) L.Rank
+				insert into BangOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, @intOrderCount, @intTargetIndex2);
 			END
 			ELSE
 			BEGIN
 				--//if second Target is ordered last (at count)-1
-				if( (select count(ListIndex) from BangOverLists where CelebrityIndex = @intCelebrityIndex2 and OrderRank = @intOrderCount-1 ) > 0)
+				if( (select count(L.ListIndex) from BangOverLists L where L.TargetIndex = @intTargetIndex2 and L.Rank = @intOrderCount-1 ) > 0)
 				BEGIN
-					--//Add the first Target to table at (count) OrderRank
-					insert into BangOverLists (BangOverUserIndex, OrderRank, CelebrityIndex) VALUES (@intUserIndex, @intOrderCount, @intCelebrityIndex1);
+					--//Add the first Target to table at (count) L.Rank
+					insert into BangOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, @intOrderCount, @intTargetIndex1);
 				END
 			END
 		END
@@ -81,72 +81,41 @@ BEGIN
 	DECLARE @boolSwapped bit;
 	SET @boolSwapped = 0;
 
-	--//Both Celebrities are NOW in the personal list
-	  --//Celebrities should also be adjacent
-	if( (select top 1 OrderRank from BangOverLists where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex1) > (select top 1 OrderRank from BangOverLists where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2) )
+	--//Both Targets are NOW in the personal list
+	  --//Targets should also be adjacent
+	if( (select top 1 L.Rank from BangOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex1) > (select top 1 L.Rank from BangOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex2) )
 	BEGIN
-		--//Swap the orderranks on the two celebrities
+		--//Swap the L.Ranks on the two Targets
 			--//Lower the number on the first and lock down
-		update BangOverLists set OrderRank = OrderRank-1, UpLock = 0, DownLock = 1 where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex1;
+		update BangOverLists set Rank = Rank-1, UpLock = 0, DownLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex1;
 			--//Raise the number of the second and lock up
-		update BangOverLists set OrderRank = OrderRank+1, UpLock = 1, DownLock = 0 where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2;
+		update BangOverLists set Rank = Rank+1, UpLock = 1, DownLock = 0 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex2;
 		SET @boolSwapped = 1;
 	END
 	ELSE
 	BEGIN
-		--//DON'T Swap the orderranks on the two celebrities: already in correct order
+		--//DON'T Swap the L.Ranks on the two Targets: already in correct order
 			--//Only lock down
-		update BangOverLists set DownLock = 1 where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex1;
+		update BangOverLists set DownLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex1;
 			--//Only lock up
-		update BangOverLists set UpLock = 1 where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2;
+		update BangOverLists set UpLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex2;
 	END
 	
 	--if pair of targets is not already remembered
 	if(
 		(
-			SELECT COUNT(MemoryIndex) FROM BangOverMemories 
-			WHERE (CelebrityIndex1 = @intCelebrityIndex1 or CelebrityIndex1 = @intCelebrityIndex2)
-			AND (CelebrityIndex2 = @intCelebrityIndex1 or CelebrityIndex2 = @intCelebrityIndex2)
+			SELECT COUNT(M.MemoryIndex) FROM BangOverMemories M
+			WHERE (M.TargetIndex1 = @intTargetIndex1 or M.TargetIndex1 = @intTargetIndex2)
+			AND (M.TargetIndex2 = @intTargetIndex1 or M.TargetIndex2 = @intTargetIndex2)
 		) = 0
 		AND (
 			(
-				(SELECT top 1 BangOverMemory FROM BangOverUsers WHERE BangOverUserIndex = @intUserIndex) = 1
+				(SELECT top 1 U.Memory FROM BangOverUsers U WHERE U.UserIndex = @intUserIndex) = 1
 			)
 		)
 	)
 	BEGIN
 		--add memory to table
-		INSERT INTO BangOverMemories (BangOverUserIndex, CelebrityIndex1, CelebrityIndex2) VALUES (@intUserIndex, @intCelebrityIndex1, @intCelebrityIndex2);
+		INSERT INTO BangOverMemories (UserIndex, TargetIndex1, TargetIndex2) VALUES (@intUserIndex, @intTargetIndex1, @intTargetIndex2);
 	END
-
-
-	--//Clear adjacent locks
-		--//Get Orders of swapped Celebrities
-	/*
-	DECLARE @intCelebrityOrder1 int = -2;
-	DECLARE @intCelebrityOrder2 int = -2;
-	DECLARE @intCelebrityTotal int = 0;
-
-	SET @intCelebrityOrder1 = (select top 1 OrderRank from BangOverLists where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex1);
-	SET @intCelebrityOrder2 = (select top 1 OrderRank from BangOverLists where BangOverUserIndex = @intUserIndex and CelebrityIndex = @intCelebrityIndex2);
-	SET @intCelebrityTotal = (select count(ListIndex) from BangOverLists where BangOverUserIndex = @intUserIndex);
-
-	--//if celebrities were swapped
-	if( @boolSwapped = 1)
-	--//Clear adjacent locks
-	BEGIN
-		--//if Target1's OrderRank is > 0
-		if( @intCelebrityOrder1 > 0 )
-		BEGIN	
-			--//set DownLock to 0 on record with -1 order and 2nd Target
-			update BangOverLists set DownLock = 0 where BangOverUserIndex = @intUserIndex and (OrderRank = @intCelebrityOrder1-1 or OrderRank = @intCelebrityOrder2);
-		END
-		--//if Target2's OrderRank is < Count
-		if( @intCelebrityOrder2 < (@intCelebrityTotal) )
-		BEGIN
-			--//set UpLock to 0 on record with +1 order and 1st Target
-			update BangOverLists set UpLock = 0 where BangOverUserIndex = @intUserIndex and (OrderRank = @intCelebrityOrder2+1 or OrderRank = @intCelebrityOrder1);
-		END
-	END
-	*/
 END

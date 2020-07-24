@@ -1,7 +1,6 @@
 --drop PROCEDURE BubbleUpUpdateStructure;
 
-create PROCEDURE BubbleUpUpdateStructure
-(
+create PROCEDURE BubbleUpUpdateStructure(
 	@intUserIndex		int,
 	@boxIdList			varchar(max),
 	@boxLabelList		varchar(max),
@@ -56,7 +55,7 @@ BEGIN
 		(LEN(@strId) > 0)
 		)
 		BEGIN
-			UPDATE Boxes SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND BoxIndex = @strId;
+			UPDATE Boxes SET Label = @strLabel WHERE UserIndex = @intUserIndex AND BoxIndex = @strId;
 		END
 	END
 
@@ -107,7 +106,7 @@ BEGIN
 		(LEN(@strId) > 0)
 		)
 		BEGIN
-			UPDATE Targets SET Label = @strLabel WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @strId;
+			UPDATE Targets SET Label = @strLabel WHERE UserIndex = @intUserIndex AND TargetIndex = @strId;
 			SET @strId			= '';
 			SET @strLabel		= '';
 		END

@@ -4,7 +4,7 @@ create PROCEDURE BubbleUpMoveTarget(
 	@intUserIndex			int,
 	@intMovingTargetIndex	int,
 	@intTargetBoxIndex		int,
-	@intLocationOrderRank	int
+	@intLocationRank		int
 )
 AS
 BEGIN
@@ -12,55 +12,55 @@ BEGIN
 	PRINT(CONCAT('@intUserIndex: ',			@intUserIndex));
 	PRINT(CONCAT('@intMovingBoxIndex: ',	@intMovingTargetIndex));
 	PRINT(CONCAT('@intTargetBoxIndex: ',	@intTargetBoxIndex));
-	PRINT(CONCAT('@intLocationOrderRank: ',	@intLocationOrderRank));
+	PRINT(CONCAT('@intLocationRank: ',		@intLocationRank));
 	
-	DECLARE @parentIndex	int = (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex);
-	DECLARE @orderRank		int = (SELECT TOP 1 OrderRank		FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex);
-	DECLARE @newOrderRank	int;
+	DECLARE @parentIndex	int = (SELECT TOP 1 ParentBoxIndex	FROM TARGETS WHERE UserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex);
+	DECLARE @Rank			int = (SELECT TOP 1 Rank			FROM TARGETS WHERE UserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex);
+	DECLARE @newRank		int;
 
-	--IF @intLocationOrderRank == -2
-	IF(@intLocationOrderRank = -2)
+	--IF @intLocationRank == -2
+	IF(@intLocationRank = -2)
 	BEGIN
-		SET @newOrderRank = (SELECT MAX(OrderRank) FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @intTargetBoxIndex) + 1;
+		SET @newRank = (SELECT MAX(Rank) FROM TARGETS WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intTargetBoxIndex) + 1;
 
-		IF(@newOrderRank IS NULL)
+		IF(@newRank IS NULL)
 		BEGIN
-			SET @newOrderRank = 0;
+			SET @newRank = 0;
 		END
 	END
 	--ELSE
 	ELSE
 	BEGIN
-		SET @newOrderRank = @intLocationOrderRank;
+		SET @newRank = @intLocationRank;
 	END
 
 	PRINT(CONCAT('@parentIndex: ',			@parentIndex));
 	PRINT(CONCAT('@intTargetBoxIndex: ',	@intTargetBoxIndex));
-	PRINT(CONCAT('@orderRank: ',			@orderRank));
-	PRINT(CONCAT('@newOrderRank: ',			@newOrderRank));
-	--IF @parentIndex == @intTargetBoxIndex AND @newOrderRank is -1 OR 1 from @orderRank
-	IF( (@parentIndex = @intTargetBoxIndex) AND (@newOrderRank = @orderRank-1 OR @newOrderRank = @orderRank+1) )
+	PRINT(CONCAT('@Rank: ',					@Rank));
+	PRINT(CONCAT('@newRank: ',				@newRank));
+	--IF @parentIndex == @intTargetBoxIndex AND @newRank is -1 OR 1 from @Rank
+	IF( (@parentIndex = @intTargetBoxIndex) AND (@newRank = @Rank-1 OR @newRank = @Rank+1) )
 	BEGIN
 		PRINT('ALPHA');
 		--THEN swap
 		--Declare secondTargetIndex
-		DECLARE @secondTargetIndex	int = (SELECT TOP 1 TargetIndex	FROM TARGETS WHERE BubbleUpUserIndex = @intUserIndex AND ParentBoxIndex = @parentIndex AND OrderRank = @newOrderRank);
-		PRINT(CONCAT('@secondTargetIndex: ', @secondTargetIndex));
+		DECLARE @SecondListIndex	int = (SELECT TOP 1 TargetIndex	FROM TARGETS WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @parentIndex AND Rank = @newRank);
+		PRINT(CONCAT('@SecondListIndex: ', @SecondListIndex));
 	
-		UPDATE TARGETS SET OrderRank = @newOrderRank	WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex;
-		UPDATE TARGETS SET OrderRank = @orderRank		WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @secondTargetIndex;
+		UPDATE TARGETS SET Rank = @newRank	WHERE UserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex;
+		UPDATE TARGETS SET Rank = @Rank		WHERE UserIndex = @intUserIndex AND TargetIndex = @SecondListIndex;
 	END
 	--ELSE
 	ELSE
 	BEGIN
 		PRINT('BETA');
-		--Update OrderRank of the new Box, increase post target OrderRanks
-		EXEC BubbleUpUpdateOrderRankTargets @intUserIndex, @intTargetBoxIndex, @newOrderRank, 1;
+		--Update Rank of the new Box, increase post target Ranks
+		EXEC BubbleUpUpdateRankTargets @intUserIndex, @intTargetBoxIndex, @newRank, 1;
 		
 		UPDATE TARGETS SET ParentBoxIndex = @intTargetBoxIndex 
-		WHERE BubbleUpUserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex;
+		WHERE UserIndex = @intUserIndex AND TargetIndex = @intMovingTargetIndex;
 
-		--Update OrderRank of the old Box, reduce post target OrderRanks
-		EXEC BubbleUpUpdateOrderRankTargets @intUserIndex, @parentIndex, @orderRank, -1;
+		--Update Rank of the old Box, reduce post target Ranks
+		EXEC BubbleUpUpdateRankTargets @intUserIndex, @parentIndex, @Rank, -1;
 	END
 END

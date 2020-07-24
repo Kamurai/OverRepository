@@ -35,13 +35,13 @@ public class LoginDAO extends DAO{
             rs.next();
             
             returnUser = new User(
-                rs.getInt("PlayOverUserIndex"), 
-                rs.getInt("PlayOverAdminLevel"), 
-                rs.getBoolean("PlayOverOnline"),
+                rs.getInt("UserIndex"), 
+                rs.getInt("AdminLevel"), 
+                rs.getBoolean("Online"),
                 
                 rs.getString("Username"), 
                 rs.getString("Email"), 
-                rs.getBoolean("PlayOverMemory"), 
+                rs.getBoolean("Memory"), 
                 //Genres
                 rs.getBoolean("TwoDP"), 
                 rs.getBoolean("ThreeDP"), 
@@ -229,67 +229,67 @@ public class LoginDAO extends DAO{
         }
         
         //Update preferences to match check boxes (local variables)
-        try
-        {
+        try{
             openConnection();
         
-            stmt = getConnect().prepareCall("{call PlayOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call PlayOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             stmt.setInt(1, targetUser.getUserIndex());
+            stmt.setBoolean(2, targetUser.getMemory());
             //Genres
-            stmt.setBoolean(2, targetUser.getTwoDP());
-            stmt.setBoolean(3, targetUser.getThreeDP());
-            stmt.setBoolean(4, targetUser.getFPS());
-            stmt.setBoolean(5, targetUser.getFPP());
-            stmt.setBoolean(6, targetUser.getVPuzzle());
-            stmt.setBoolean(7, targetUser.getBulletstorm());
-            stmt.setBoolean(8, targetUser.getFighting());
-            stmt.setBoolean(9, targetUser.getStealth());
-            stmt.setBoolean(10, targetUser.getSurvival());
-            stmt.setBoolean(11, targetUser.getVN());
-            stmt.setBoolean(12, targetUser.getIM());
-            stmt.setBoolean(13, targetUser.getRPG());
-            stmt.setBoolean(14, targetUser.getTRPG());
-            stmt.setBoolean(15, targetUser.getARPG());
-            stmt.setBoolean(16, targetUser.getSports());
-            stmt.setBoolean(17, targetUser.getRacing());
-            stmt.setBoolean(18, targetUser.getRTS());
-            stmt.setBoolean(19, targetUser.getTBS());
-            stmt.setBoolean(20, targetUser.getVE());
-            stmt.setBoolean(21, targetUser.getMMO());
-            stmt.setBoolean(22, targetUser.getMOBA());
+            stmt.setBoolean(3, targetUser.getTwoDP());
+            stmt.setBoolean(4, targetUser.getThreeDP());
+            stmt.setBoolean(5, targetUser.getFPS());
+            stmt.setBoolean(6, targetUser.getFPP());
+            stmt.setBoolean(7, targetUser.getVPuzzle());
+            stmt.setBoolean(8, targetUser.getBulletstorm());
+            stmt.setBoolean(9, targetUser.getFighting());
+            stmt.setBoolean(10, targetUser.getStealth());
+            stmt.setBoolean(11, targetUser.getSurvival());
+            stmt.setBoolean(12, targetUser.getVN());
+            stmt.setBoolean(13, targetUser.getIM());
+            stmt.setBoolean(14, targetUser.getRPG());
+            stmt.setBoolean(15, targetUser.getTRPG());
+            stmt.setBoolean(16, targetUser.getARPG());
+            stmt.setBoolean(17, targetUser.getSports());
+            stmt.setBoolean(18, targetUser.getRacing());
+            stmt.setBoolean(19, targetUser.getRTS());
+            stmt.setBoolean(20, targetUser.getTBS());
+            stmt.setBoolean(21, targetUser.getVE());
+            stmt.setBoolean(22, targetUser.getMMO());
+            stmt.setBoolean(23, targetUser.getMOBA());
             //Platforms
-            stmt.setBoolean(23, targetUser.getPC());
-            stmt.setBoolean(24, targetUser.getAtari());
-            stmt.setBoolean(25, targetUser.getCommodore64());
-            stmt.setBoolean(26, targetUser.getFAMICOM());
-            stmt.setBoolean(27, targetUser.getNES());
-            stmt.setBoolean(28, targetUser.getSNES());
-            stmt.setBoolean(29, targetUser.getN64());
-            stmt.setBoolean(30, targetUser.getGamecube());
-            stmt.setBoolean(31, targetUser.getWii());
-            stmt.setBoolean(32, targetUser.getWiiU());
-            stmt.setBoolean(33, targetUser.getNintendoSwitch());
-            stmt.setBoolean(34, targetUser.getGameboy());
-            stmt.setBoolean(35, targetUser.getVirtualBoy());
-            stmt.setBoolean(36, targetUser.getGBA());
-            stmt.setBoolean(37, targetUser.getDS());
-            stmt.setBoolean(38, targetUser.getThreeDS());
-            stmt.setBoolean(39, targetUser.getSegaGenesis());
-            stmt.setBoolean(40, targetUser.getSegaCD());
-            stmt.setBoolean(41, targetUser.getSegaDreamcast());
-            stmt.setBoolean(42, targetUser.getPS1());
-            stmt.setBoolean(43, targetUser.getPS2());
-            stmt.setBoolean(44, targetUser.getPS3());
-            stmt.setBoolean(45, targetUser.getPS4());
-            stmt.setBoolean(46, targetUser.getPSP());
-            stmt.setBoolean(47, targetUser.getPSVita());
-            stmt.setBoolean(48, targetUser.getXbox());
-            stmt.setBoolean(49, targetUser.getXbox360());
-            stmt.setBoolean(50, targetUser.getXboxOne());
-            stmt.setBoolean(51, targetUser.getOuya());
-            stmt.setBoolean(52, targetUser.getOculusRift());
-            stmt.setBoolean(53, targetUser.getVive());
-            stmt.setBoolean(54, targetUser.getPSVR());
+            stmt.setBoolean(24, targetUser.getPC());
+            stmt.setBoolean(25, targetUser.getAtari());
+            stmt.setBoolean(26, targetUser.getCommodore64());
+            stmt.setBoolean(27, targetUser.getFAMICOM());
+            stmt.setBoolean(28, targetUser.getNES());
+            stmt.setBoolean(29, targetUser.getSNES());
+            stmt.setBoolean(30, targetUser.getN64());
+            stmt.setBoolean(31, targetUser.getGamecube());
+            stmt.setBoolean(32, targetUser.getWii());
+            stmt.setBoolean(33, targetUser.getWiiU());
+            stmt.setBoolean(34, targetUser.getNintendoSwitch());
+            stmt.setBoolean(35, targetUser.getGameboy());
+            stmt.setBoolean(36, targetUser.getVirtualBoy());
+            stmt.setBoolean(37, targetUser.getGBA());
+            stmt.setBoolean(38, targetUser.getDS());
+            stmt.setBoolean(39, targetUser.getThreeDS());
+            stmt.setBoolean(40, targetUser.getSegaGenesis());
+            stmt.setBoolean(41, targetUser.getSegaCD());
+            stmt.setBoolean(42, targetUser.getSegaDreamcast());
+            stmt.setBoolean(43, targetUser.getPS1());
+            stmt.setBoolean(44, targetUser.getPS2());
+            stmt.setBoolean(45, targetUser.getPS3());
+            stmt.setBoolean(46, targetUser.getPS4());
+            stmt.setBoolean(47, targetUser.getPSP());
+            stmt.setBoolean(48, targetUser.getPSVita());
+            stmt.setBoolean(49, targetUser.getXbox());
+            stmt.setBoolean(50, targetUser.getXbox360());
+            stmt.setBoolean(51, targetUser.getXboxOne());
+            stmt.setBoolean(52, targetUser.getOuya());
+            stmt.setBoolean(53, targetUser.getOculusRift());
+            stmt.setBoolean(54, targetUser.getVive());
+            stmt.setBoolean(55, targetUser.getPSVR());
             rs = stmt.executeQuery();
         }catch(Exception e){
             e.printStackTrace();

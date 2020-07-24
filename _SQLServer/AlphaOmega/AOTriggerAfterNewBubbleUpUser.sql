@@ -6,9 +6,9 @@ AFTER Insert
 AS
 	--BubbleUp
 	INSERT INTO [BubbleUp].dbo.Boxes (
-		BubbleUpUserIndex, Direction, Label, ParentBoxIndex, OrderRank
+		UserIndex, Direction, Label, ParentBoxIndex, Rank
 	) 
 	VALUES (
-	(SELECT TOP 1 inserted.BubbleUpUserIndex FROM inserted), 'Horizontal', '', -1, 0);
+	(SELECT TOP 1 inserted.UserIndex FROM inserted), 'Horizontal', '', -1, 0);
 	
 GO

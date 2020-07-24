@@ -57,13 +57,13 @@ public class ManagementDAO extends DAO{
             
             while(rs.next()){
                 tempUser = new User(
-                        rs.getInt("BangOverUserIndex"), 
-                        rs.getInt("BangOverAdminLevel"),
-                        rs.getBoolean("BangOverOnline"), 
+                        rs.getInt("UserIndex"), 
+                        rs.getInt("AdminLevel"),
+                        rs.getBoolean("Online"), 
                         
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getBoolean("BangOverMemory"), 
+                        rs.getBoolean("Memory"), 
                         //Gender
                         rs.getBoolean("Women"), 
                         rs.getBoolean("Men"), 
@@ -99,12 +99,13 @@ public class ManagementDAO extends DAO{
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("BangOverAdminLevel")));
+                sub.add(Integer.toString(rs.getInt("AdminLevel")));
+                sub.add(Integer.toString(rs.getInt("Memory")));
                 sub.add(Integer.toString(rs.getInt("Women")));
                 sub.add(Integer.toString(rs.getInt("Men")));
                 sub.add(Integer.toString(rs.getInt("TransWomen")));
                 sub.add(Integer.toString(rs.getInt("TransMen")));
-                sub.add(Integer.toString(rs.getInt("BangOverOnline")));
+                sub.add(Integer.toString(rs.getInt("Online")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();
@@ -119,8 +120,7 @@ public class ManagementDAO extends DAO{
     }
     
     //Pull User Counts
-    public ArrayList<ArrayList<String>> callablePullUserCounts()
-    {
+    public ArrayList<ArrayList<String>> callablePullUserCounts(){
         CallableStatement stmt = null;
         ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
         ArrayList<String> sub = new ArrayList<String>();

@@ -58,22 +58,22 @@
                     classTableManagementUsersColUsername,
                     classTableManagementUsersColEmail,
                     classTableManagementUsersColAdminLevel,
-                    classTableManagementUsersColComedyS,
-                    classTableManagementUsersColDramaS,
-                    classTableManagementUsersColActionS,
-                    classTableManagementUsersColHorrorS,
-                    classTableManagementUsersColThrillerS,
-                    classTableManagementUsersColMysteryS,
-                    classTableManagementUsersColDocumentaryS,
-                    classTableManagementUsersColScienceFictionS,
-                    classTableManagementUsersColFantasyS,
-                    classTableManagementUsersColWesternS,
-                    classTableManagementUsersColMartialArtsS,
-                    classTableManagementUsersColModernS,
-                    classTableManagementUsersColHistoricS,
-                    classTableManagementUsersColPrehistoricS,
-                    classTableManagementUsersColComicsS,
-                    classTableManagementUsersColPeriodS,
+                    classTableManagementUsersColComedy,
+                    classTableManagementUsersColDrama,
+                    classTableManagementUsersColAction,
+                    classTableManagementUsersColHorror,
+                    classTableManagementUsersColThriller,
+                    classTableManagementUsersColMystery,
+                    classTableManagementUsersColDocumentary,
+                    classTableManagementUsersColScienceFiction,
+                    classTableManagementUsersColFantasy,
+                    classTableManagementUsersColWestern,
+                    classTableManagementUsersColMartialArts,
+                    classTableManagementUsersColModern,
+                    classTableManagementUsersColHistoric,
+                    classTableManagementUsersColPrehistoric,
+                    classTableManagementUsersColComics,
+                    classTableManagementUsersColPeriod,
                     classTableManagementUsersColLoggedOn            
                     ">
                     <h:column> 
@@ -98,146 +98,146 @@
                         </h:selectOneMenu>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderComedyS" name = "header">Into Comedy</f:facet>
-                        <ui:fragment rendered="#{user.comedyS}">
+                        <f:facet id="idTableManagementUsersColHeaderComedy" name = "header">Into Comedy</f:facet>
+                        <ui:fragment rendered="#{user.comedy}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.comedyS}">
+                        <ui:fragment rendered="#{!user.comedy}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderDramaS" name = "header">Into Drama</f:facet>
-                        <ui:fragment rendered="#{user.dramaS}">
+                        <f:facet id="idTableManagementUsersColHeaderDrama" name = "header">Into Drama</f:facet>
+                        <ui:fragment rendered="#{user.drama}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.dramaS}">
+                        <ui:fragment rendered="#{!user.drama}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderActionS" name = "header">Into Action</f:facet>
-                        <ui:fragment rendered="#{user.actionS}">
+                        <f:facet id="idTableManagementUsersColHeaderAction" name = "header">Into Action</f:facet>
+                        <ui:fragment rendered="#{user.action}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.actionS}">
+                        <ui:fragment rendered="#{!user.action}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderHorrorS" name = "header">Into Horror</f:facet>
-                        <ui:fragment rendered="#{user.horrorS}">
+                        <f:facet id="idTableManagementUsersColHeaderHorror" name = "header">Into Horror</f:facet>
+                        <ui:fragment rendered="#{user.horror}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.horrorS}">
+                        <ui:fragment rendered="#{!user.horror}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderThrillerS" name = "header">Into Thrillers</f:facet>
-                        <ui:fragment rendered="#{user.thrillerS}">
+                        <f:facet id="idTableManagementUsersColHeaderThriller" name = "header">Into Thrillers</f:facet>
+                        <ui:fragment rendered="#{user.thriller}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.thrillerS}">
+                        <ui:fragment rendered="#{!user.thriller}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderMysteryS" name = "header">Into Thrillers</f:facet>
-                        <ui:fragment rendered="#{user.mysteryS}">
+                        <f:facet id="idTableManagementUsersColHeaderMystery" name = "header">Into Thrillers</f:facet>
+                        <ui:fragment rendered="#{user.mystery}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.mysteryS}">
+                        <ui:fragment rendered="#{!user.mystery}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderDocumentaryS" name = "header">Into Documentaries</f:facet>
-                        <ui:fragment rendered="#{user.documentaryS}">
+                        <f:facet id="idTableManagementUsersColHeaderDocumentary" name = "header">Into Documentaries</f:facet>
+                        <ui:fragment rendered="#{user.documentary}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.documentaryS}">
+                        <ui:fragment rendered="#{!user.documentary}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderScienceFictionS" name = "header">Into Science Fiction</f:facet>
-                        <ui:fragment rendered="#{user.scienceFictionS}">
+                        <f:facet id="idTableManagementUsersColHeaderScienceFiction" name = "header">Into Science Fiction</f:facet>
+                        <ui:fragment rendered="#{user.scienceFiction}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.scienceFictionS}">
+                        <ui:fragment rendered="#{!user.scienceFiction}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderFantasyS" name = "header">Into Fantasy</f:facet>
-                        <ui:fragment rendered="#{user.fantasyS}">
+                        <f:facet id="idTableManagementUsersColHeaderFantasy" name = "header">Into Fantasy</f:facet>
+                        <ui:fragment rendered="#{user.fantasy}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.fantasyS}">
+                        <ui:fragment rendered="#{!user.fantasy}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderWesternS" name = "header">Into Westerns</f:facet>
-                        <ui:fragment rendered="#{user.westernS}">
+                        <f:facet id="idTableManagementUsersColHeaderWestern" name = "header">Into Westerns</f:facet>
+                        <ui:fragment rendered="#{user.western}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.westernS}">
+                        <ui:fragment rendered="#{!user.western}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderMartialArtsS" name = "header">Into Martial Arts</f:facet>
-                        <ui:fragment rendered="#{user.martialArtsS}">
+                        <f:facet id="idTableManagementUsersColHeaderMartialArts" name = "header">Into Martial Arts</f:facet>
+                        <ui:fragment rendered="#{user.martialArts}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.martialArtsS}">
+                        <ui:fragment rendered="#{!user.martialArts}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderModernS" name = "header">Into Modern</f:facet>
-                        <ui:fragment rendered="#{user.modernS}">
+                        <f:facet id="idTableManagementUsersColHeaderModern" name = "header">Into Modern</f:facet>
+                        <ui:fragment rendered="#{user.modern}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.modernS}">
+                        <ui:fragment rendered="#{!user.modern}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderHistoricS" name = "header">Into Historic</f:facet>
-                        <ui:fragment rendered="#{user.historicS}">
+                        <f:facet id="idTableManagementUsersColHeaderHistoric" name = "header">Into Historic</f:facet>
+                        <ui:fragment rendered="#{user.historic}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.historicS}">
+                        <ui:fragment rendered="#{!user.historic}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPrehistoricS" name = "header">Into Prehistoric</f:facet>
-                        <ui:fragment rendered="#{user.prehistoricS}">
+                        <f:facet id="idTableManagementUsersColHeaderPrehistoric" name = "header">Into Prehistoric</f:facet>
+                        <ui:fragment rendered="#{user.prehistoric}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.prehistoricS}">
+                        <ui:fragment rendered="#{!user.prehistoric}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderComicsS" name = "header">Into Comics</f:facet>
-                        <ui:fragment rendered="#{user.comicsS}">
+                        <f:facet id="idTableManagementUsersColHeaderComics" name = "header">Into Comics</f:facet>
+                        <ui:fragment rendered="#{user.comics}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.comicsS}">
+                        <ui:fragment rendered="#{!user.comics}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>
                     <h:column>
-                        <f:facet id="idTableManagementUsersColHeaderPeriodS" name = "header">Into Period</f:facet>
-                        <ui:fragment rendered="#{user.periodS}">
+                        <f:facet id="idTableManagementUsersColHeaderPeriod" name = "header">Into Period</f:facet>
+                        <ui:fragment rendered="#{user.period}">
                             <h:outputText value="Yes" />
                         </ui:fragment>
-                        <ui:fragment rendered="#{!user.periodS}">
+                        <ui:fragment rendered="#{!user.period}">
                             <h:outputText value="No" />
                         </ui:fragment>
                     </h:column>

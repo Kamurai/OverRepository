@@ -3,21 +3,21 @@
 create PROCEDURE BangOverPullUserCounts
 AS
 BEGIN
-	select count(BangOverAdminLevel) as retNum from [Over].dbo.BangOveUsers where BangOverAdminLevel = 0
+	select count(AdminLevel) as retNum 	from [Over].dbo.BangOverUsers where AdminLevel = 0
     UNION all
-    select count(BangOverAdminLevel)	from [Over].dbo.BangOveUsers where BangOverAdminLevel = 1
+    select count(AdminLevel)			from [Over].dbo.BangOverUsers where AdminLevel = 1
     UNION all
-    select count(BangOverAdminLevel)	from [Over].dbo.BangOveUsers where BangOverAdminLevel = 2
+    select count(AdminLevel)			from [Over].dbo.BangOverUsers where AdminLevel = 2
     UNION all
-    select count(BangOverAdminLevel)	from [Over].dbo.BangOveUsers where BangOverAdminLevel = 3
+    select count(AdminLevel)			from [Over].dbo.BangOverUsers where AdminLevel = 3
     UNION all
-    select count(Women)					from [Over].dbo.BangOveUsers where Women = 1
+    select count(Women)					from [Over].dbo.BangOverUsers where Women = 1
     UNION all
-    select count(Men)					from [Over].dbo.BangOveUsers where Men = 1
+    select count(Men)					from [Over].dbo.BangOverUsers where Men = 1
     UNION all
-    select count(TransWomen)			from [Over].dbo.BangOveUsers where TransWomen = 1
+    select count(TransWomen)			from [Over].dbo.BangOverUsers where TransWomen = 1
     UNION all
-    select count(TransMen)				from [Over].dbo.BangOveUsers where TransMen = 1
+    select count(TransMen)				from [Over].dbo.BangOverUsers where TransMen = 1
     UNION all
-    select count(BangOverOnline)		from [Over].dbo.BangOverUsers where BangOverOnline = 1;
+    select count(Online)				from [Over].dbo.BangOverUsers where Online = 1;
 END

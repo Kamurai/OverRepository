@@ -9,68 +9,68 @@ AS
 BEGIN
 	--//Swap and or add Shows to Personal list
 	DECLARE @intShowCount int = 0;
-	DECLARE @intShowIndex1 int = -2; --//Higher rank, lower number, at end
-	DECLARE @intShowIndex2 int = -2;
+	DECLARE @intTargetIndex1 int = -2; --//Higher L.Rank, lower number, at end
+	DECLARE @intTargetIndex2 int = -2;
 
 	set @intShowCount = (
-		select count(*) from Shows 
-		JOIN ShowOverLists ON
-			Shows.TargetIndex = ShowOverLists.ShowIndex
-		where ShowOverLists.ShowOverUserIndex = @intUserIndex and (Name = @strShow1 or Name = @strShow2)
+		select count(*) from Shows T
+		JOIN ShowOverLists L ON
+			T.TargetIndex = L.TargetIndex
+		where L.UserIndex = @intUserIndex and (T.Name = @strShow1 or T.Name = @strShow2)
 	);
-	set @intShowIndex1 = (select top 1 TargetIndex from Shows where Name = @strShow1);
-	set @intShowIndex2 = (select top 1 TargetIndex from Shows where Name = @strShow2);
+	set @intTargetIndex1 = (select top 1 T.TargetIndex from Shows T where T.Name = @strShow1);
+	set @intTargetIndex2 = (select top 1 T.TargetIndex from Shows T where T.Name = @strShow2);
 
 	--//if Neither Target is already in the personal list
 	if( @intShowCount = 0)
 	BEGIN
-		--//add to table at OrderRank 0 and 1
-		insert into ShowOverLists (ShowOverUserIndex, OrderRank, ShowIndex) VALUES (@intUserIndex,  0, @intShowIndex1);
-		insert into ShowOverLists (ShowOverUserIndex, OrderRank, ShowIndex) VALUES (@intUserIndex,  1, @intShowIndex2);
+		--//add to table at L.Rank 0 and 1
+		insert into ShowOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex,  0, @intTargetIndex1);
+		insert into ShowOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex,  1, @intTargetIndex2);
 	END
 	ELSE
 	--//else if One Target is already in the personal list
 	if( @intShowCount = 1 )
 	BEGIN
 		--//if one Target is first on the list
-		if( (select top 1 OrderRank from ShowOverLists where ShowOverUserIndex = @intUserIndex and (ShowIndex = @intShowIndex1 or ShowIndex = @intShowIndex2) ) = 0 )
+		if( (select top 1 L.Rank from ShowOverLists L where L.UserIndex = @intUserIndex and (L.TargetIndex = @intTargetIndex1 or L.TargetIndex = @intTargetIndex2) ) = 0 )
 		BEGIN
 			--//if first Target is currently in personal list and order = 0
-			if( (select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex1 and OrderRank = 0)  > 0)
+			if( (select count(L.ListIndex) from ShowOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex1 and L.Rank = 0)  > 0)
 			BEGIN
-				--//Add the second Target to table at -1 OrderRank
-				insert into ShowOverLists (ShowOverUserIndex, OrderRank, ShowIndex) VALUES (@intUserIndex, -1, @intShowIndex2);
+				--//Add the second Target to table at -1 L.Rank
+				insert into ShowOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, -1, @intTargetIndex2);
 			END
 			ELSE
 			BEGIN
 				--//if second Target is currently in personal list and order = 0
-				if( (select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2 and OrderRank = 0)  > 0)
+				if( (select count(L.ListIndex) from ShowOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex2 and L.Rank = 0)  > 0)
 				BEGIN
-					--//Add the first Target to table at -1 OrderRank
-					insert into ShowOverLists (ShowOverUserIndex, OrderRank, ShowIndex) VALUES (@intUserIndex, -1, @intShowIndex1);
+					--//Add the first Target to table at -1 L.Rank
+					insert into ShowOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, -1, @intTargetIndex1);
 				END
 			END
 			--//Increment all Shows on the list by 1
-			update ShowOverLists set OrderRank = OrderRank + 1 where ShowOverUserIndex = @intUserIndex;
+			update ShowOverLists set Rank = Rank + 1 where UserIndex = @intUserIndex;
 		END
 		ELSE
 		--//else one Target is last on the list
 		BEGIN
 			DECLARE @intOrderCount int = 0;
-			SET @intOrderCount = (select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex);
+			SET @intOrderCount = (select count(L.ListIndex) from ShowOverLists L where L.UserIndex = @intUserIndex);
 			--//if first Target is ordered last (at count)-1
-			if( (select count(ListIndex) from ShowOverLists where ShowIndex = @intShowIndex1 and OrderRank = @intOrderCount-1 ) > 0)
+			if( (select count(L.ListIndex) from ShowOverLists L where L.TargetIndex = @intTargetIndex1 and L.Rank = @intOrderCount-1 ) > 0)
 			BEGIN
-				--//Add the second Target to table at (count) OrderRank
-				insert into ShowOverLists (ShowOverUserIndex, OrderRank, ShowIndex) VALUES (@intUserIndex, @intOrderCount, @intShowIndex2);
+				--//Add the second Target to table at (count) L.Rank
+				insert into ShowOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, @intOrderCount, @intTargetIndex2);
 			END
 			ELSE
 			BEGIN
 				--//if second Target is ordered last (at count)-1
-				if( (select count(ListIndex) from ShowOverLists where ShowIndex = @intShowIndex2 and OrderRank = @intOrderCount-1 ) > 0)
+				if( (select count(L.ListIndex) from ShowOverLists L where L.TargetIndex = @intTargetIndex2 and L.Rank = @intOrderCount-1 ) > 0)
 				BEGIN
-					--//Add the first Target to table at (count) OrderRank
-					insert into ShowOverLists (ShowOverUserIndex, OrderRank, ShowIndex) VALUES (@intUserIndex, @intOrderCount, @intShowIndex1);
+					--//Add the first Target to table at (count) L.Rank
+					insert into ShowOverLists (UserIndex, Rank, TargetIndex) VALUES (@intUserIndex, @intOrderCount, @intTargetIndex1);
 				END
 			END
 		END
@@ -82,70 +82,39 @@ BEGIN
 
 	--//Both Shows are NOW in the personal list
 	  --//Shows should also be adjacent
-	if( (select top 1 OrderRank from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex1) > (select top 1 OrderRank from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2) )
+	if( (select top 1 L.Rank from ShowOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex1) > (select top 1 L.Rank from ShowOverLists L where L.UserIndex = @intUserIndex and L.TargetIndex = @intTargetIndex2) )
 	BEGIN
-		--//Swap the orderranks on the two Shows
+		--//Swap the L.Ranks on the two Shows
 			--//Lower the number on the first and lock down
-		update ShowOverLists set OrderRank = OrderRank-1, UpLock = 0, DownLock = 1 where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex1;
+		update ShowOverLists set Rank = Rank-1, UpLock = 0, DownLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex1;
 			--//Raise the number of the second and lock up
-		update ShowOverLists set OrderRank = OrderRank+1, UpLock = 1, DownLock = 0 where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2;
+		update ShowOverLists set Rank = Rank+1, UpLock = 1, DownLock = 0 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex2;
 		SET @boolSwapped = 1;
 	END
 	ELSE
 	BEGIN
-		--//DON'T Swap the orderranks on the two Shows: already in correct order
+		--//DON'T Swap the L.Ranks on the two Shows: already in correct order
 			--//Only lock down
-		update ShowOverLists set DownLock = 1 where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex1;
+		update ShowOverLists set DownLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex1;
 			--//Only lock up
-		update ShowOverLists set UpLock = 1 where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2;
+		update ShowOverLists set UpLock = 1 where UserIndex = @intUserIndex and TargetIndex = @intTargetIndex2;
 	END
 
 	--if pair of targets is not already remembered
 	if(
 		(
-			SELECT COUNT(MemoryIndex) FROM ShowOverMemories 
-			WHERE (ShowIndex1 = @intShowIndex1 or ShowIndex1 = @intShowIndex2)
-			AND (ShowIndex2 = @intShowIndex1 or ShowIndex2 = @intShowIndex2)
+			SELECT COUNT(M.MemoryIndex) FROM ShowOverMemories M
+			WHERE (M.TargetIndex1 = @intTargetIndex1 or M.TargetIndex1 = @intTargetIndex2)
+			AND (M.TargetIndex2 = @intTargetIndex1 or M.TargetIndex2 = @intTargetIndex2)
 		) = 0
 		AND (
 			(
-				(SELECT top 1 ShowOverMemory FROM ShowOverUsers WHERE ShowOverUserIndex = @intUserIndex) = 1
+				(SELECT top 1 U.Memory FROM ShowOverUsers U WHERE U.UserIndex = @intUserIndex) = 1
 			)
 		)
 	)
 	BEGIN
 		--add memory to table
-		INSERT INTO ShowOverMemories (ShowOverUserIndex, ShowIndex1, ShowIndex2) VALUES (@intUserIndex, @intShowIndex1, @intShowIndex2);
+		INSERT INTO ShowOverMemories (UserIndex, TargetIndex1, TargetIndex2) VALUES (@intUserIndex, @intTargetIndex1, @intTargetIndex2);
 	END
-	
-
-	--//Clear adjacent locks
-		--//Get Orders of swapped Shows
-	/*
-	DECLARE @intShowOrder1 int = -2;
-	DECLARE @intShowOrder2 int = -2;
-	DECLARE @intShowTotal int = 0;
-
-	SET @intShowOrder1 = (select top 1 OrderRank from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex1);
-	SET @intShowOrder2 = (select top 1 OrderRank from ShowOverLists where ShowOverUserIndex = @intUserIndex and ShowIndex = @intShowIndex2);
-	SET @intShowTotal = (select count(ListIndex) from ShowOverLists where ShowOverUserIndex = @intUserIndex);
-
-	--//if Shows were swapped
-	if( @boolSwapped = 1)
-	--//Clear adjacent locks
-	BEGIN
-		--//if Target1's OrderRank is > 0
-		if( @intShowOrder1 > 0 )
-		BEGIN	
-			--//set DownLock to 0 on record with -1 order and 2nd Target
-			update ShowOverLists set DownLock = 0 where ShowOverUserIndex = @intUserIndex and (OrderRank = @intShowOrder1-1 or OrderRank = @intShowOrder2);
-		END
-		--//if Target2's OrderRank is < Count
-		if( @intShowOrder2 < (@intShowTotal) )
-		BEGIN
-			--//set UpLock to 0 on record with +1 order and 1st Target
-			update ShowOverLists set UpLock = 0 where ShowOverUserIndex = @intUserIndex and (OrderRank = @intShowOrder2+1 or OrderRank = @intShowOrder1);
-		END
-	END
-	*/
 END

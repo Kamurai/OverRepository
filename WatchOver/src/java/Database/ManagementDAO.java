@@ -57,31 +57,31 @@ public class ManagementDAO extends DAO{
             
             while(rs.next()){
                 tempUser = new User(
-                        rs.getInt("WatchOverUserIndex"), 
-                        rs.getInt("WatchOverAdminLevel"),
-                        rs.getBoolean("WatchOverOnline"), 
+                        rs.getInt("UserIndex"), 
+                        rs.getInt("AdminLevel"),
+                        rs.getBoolean("Online"), 
                         
                         rs.getString("Username"), 
                         rs.getString("Email"), 
-                        rs.getBoolean("WatchOverMemory"), 
+                        rs.getBoolean("Memory"), 
                         //Genres
-                        rs.getBoolean("ComedyM"), 
-                        rs.getBoolean("DramaM"), 
-                        rs.getBoolean("ActionM"), 
-                        rs.getBoolean("HorrorM"), 
-                        rs.getBoolean("ThrillerM"), 
-                        rs.getBoolean("MysteryM"), 
-                        rs.getBoolean("DocumentaryM"), 
+                        rs.getBoolean("Comedy"), 
+                        rs.getBoolean("Drama"), 
+                        rs.getBoolean("Action"), 
+                        rs.getBoolean("Horror"), 
+                        rs.getBoolean("Thriller"), 
+                        rs.getBoolean("Mystery"), 
+                        rs.getBoolean("Documentary"), 
                         //Settings
-                        rs.getBoolean("ScienceFictionM"), 
-                        rs.getBoolean("FantasyM"), 
-                        rs.getBoolean("WesternM"), 
-                        rs.getBoolean("MartialArtsM"), 
-                        rs.getBoolean("ModernM"), 
-                        rs.getBoolean("HistoricM"), 
-                        rs.getBoolean("PrehistoricM"), 
-                        rs.getBoolean("ComicsM"), 
-                        rs.getBoolean("PeriodM") 
+                        rs.getBoolean("ScienceFiction"), 
+                        rs.getBoolean("Fantasy"), 
+                        rs.getBoolean("Western"), 
+                        rs.getBoolean("MartialArts"), 
+                        rs.getBoolean("Modern"), 
+                        rs.getBoolean("Historic"), 
+                        rs.getBoolean("Prehistoric"), 
+                        rs.getBoolean("Comics"), 
+                        rs.getBoolean("Period") 
                 );
                 
                 ResultList.add(new User(tempUser));
@@ -112,12 +112,29 @@ public class ManagementDAO extends DAO{
             {
                 sub.add(rs.getString("Username"));
                 sub.add(rs.getString("Email"));
-                sub.add(Integer.toString(rs.getInt("WatchOverAdminLevel")));
-                sub.add(Integer.toString(rs.getInt("Women")));
-                sub.add(Integer.toString(rs.getInt("Men")));
-                sub.add(Integer.toString(rs.getInt("TransWomen")));
-                sub.add(Integer.toString(rs.getInt("TransMen")));
-                sub.add(Integer.toString(rs.getInt("WatchOverOnline")));
+                sub.add(Integer.toString(rs.getInt("AdminLevel")));
+                sub.add(Integer.toString(rs.getInt("Memory")));
+                
+                //Genres
+                sub.add(Integer.toString(rs.getInt("Comedy")));
+                sub.add(Integer.toString(rs.getInt("Drama")));
+                sub.add(Integer.toString(rs.getInt("Action")));
+                sub.add(Integer.toString(rs.getInt("Horror")));
+                sub.add(Integer.toString(rs.getInt("Thriller")));
+                sub.add(Integer.toString(rs.getInt("Mystery")));
+                sub.add(Integer.toString(rs.getInt("Documentary")));
+                //Settings
+                sub.add(Integer.toString(rs.getInt("ScienceFiction")));
+                sub.add(Integer.toString(rs.getInt("Fantasy")));
+                sub.add(Integer.toString(rs.getInt("Western")));
+                sub.add(Integer.toString(rs.getInt("MartialArts")));
+                sub.add(Integer.toString(rs.getInt("Modern")));
+                sub.add(Integer.toString(rs.getInt("Historic")));
+                sub.add(Integer.toString(rs.getInt("Prehistoric")));
+                sub.add(Integer.toString(rs.getInt("Comics")));
+                sub.add(Integer.toString(rs.getInt("Period")));
+                
+                sub.add(Integer.toString(rs.getInt("Online")));
                 
                 resultList.add(new ArrayList<String>(sub));
                 sub.clear();

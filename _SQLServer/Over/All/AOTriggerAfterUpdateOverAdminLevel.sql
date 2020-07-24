@@ -1,32 +1,32 @@
---DROP TRIGGER AOTriggerAfterUpdateOverAdminLevel
+--DROP TRIGGER AOTriggerAfterUpdateAdminLevel
 
-CREATE TRIGGER AOTriggerAfterUpdateOverAdminLevel
+CREATE TRIGGER AOTriggerAfterUpdateAdminLevel
 ON [Over].dbo.Users
 AFTER Update
 AS
-	--Over
+	--Bang Over
 	Update B SET 
-	BangOverAdminLevel = (SELECT TOP 1 INSERTED.OverAdminLevel FROM INSERTED)
+	B.AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Over].dbo.BangOverUsers B
-	JOIN INSERTED ON INSERTED.OverUserIndex = B.BangOverUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = B.UserIndex;
 	--Board Over
 	Update D SET 
-	BoardOverAdminLevel = (SELECT TOP 1 INSERTED.OverAdminLevel FROM INSERTED)
+	D.AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Over].dbo.BoardOverUsers D
-	JOIN INSERTED ON INSERTED.OverUserIndex = D.BoardOverUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = D.UserIndex;
 	--Play Over
 	Update P SET 
-	PlayOverAdminLevel = (SELECT TOP 1 INSERTED.OverAdminLevel FROM INSERTED)
+	P.AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Over].dbo.PlayOverUsers P
-	JOIN INSERTED ON INSERTED.OverUserIndex = P.PlayOverUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = P.UserIndex;
 	--Show Over
 	Update S SET 
-	ShowOverAdminLevel = (SELECT TOP 1 INSERTED.OverAdminLevel FROM INSERTED)
+	S.AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Over].dbo.ShowOverUsers S
-	JOIN INSERTED ON INSERTED.OverUserIndex = S.ShowOverUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = S.UserIndex;
 	--Watch Over
 	Update W SET 
-	WatchOverAdminLevel = (SELECT TOP 1 INSERTED.OverAdminLevel FROM INSERTED)
+	W.AdminLevel = (SELECT TOP 1 INSERTED.AdminLevel FROM INSERTED)
 	FROM [Over].dbo.WatchOverUsers W
-	JOIN INSERTED ON INSERTED.OverUserIndex = W.WatchOverUserIndex;
+	JOIN INSERTED ON INSERTED.UserIndex = W.UserIndex;
 GO

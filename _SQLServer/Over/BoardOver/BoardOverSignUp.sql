@@ -1,7 +1,6 @@
 --drop procedure BoardOverSignUp;
 
-create PROCEDURE BoardOverSignUp
-(
+create PROCEDURE BoardOverSignUp(
     @strUsername varchar(max),
 	@strEmail varchar(max),
 	@strPasscode varchar(max),
@@ -24,10 +23,10 @@ create PROCEDURE BoardOverSignUp
 )
 AS
 BEGIN
-	IF( (select count(*) from Users where Username = @strUsername) = 0)
+	IF( (select count(*) from [HTKB].dbo.Users where Username = @strUsername) = 0)
 	BEGIN
 		INSERT INTO [HTKB].dbo.Users (
-		HTKBAdminLevel, HTKBOnline, Username, Passcode, Email
+		AdminLevel, Online, Username, Passcode, Email
 		) 
 		VALUES ( 
 		0, 0, @strUsername, @strPasscode, @strEmail 
@@ -35,27 +34,27 @@ BEGIN
 
 		--subsequent user records created by triggers
 
-		Update B SET 
+		Update U SET 
 		/*Genres*/ 
-		DeckBuilding	= @bitDeckBuilding,
-		FixedDeck		= @bitFixedDeck,
-		ConstructedDeck = @bitConstructedDeck,
-		Strategy		= @bitStrategy,
-		War				= @bitWar,
-		Economy			= @bitEconomy,
-		TableauBuilding = @bitTableauBuilding,
-		Coop			= @bitCoop,
-		Mystery			= @bitMystery,
-		SemiCoop		= @bitSemiCoop,
-		PPRPG			= @bitPPRPG,
-		Bluffing		= @bitBluffing,
-		Puzzle			= @bitPuzzle,
-		Dexterity		= @bitDexterity,
-		Party			= @bitParty
+		U.DeckBuilding		= @bitDeckBuilding,
+		U.FixedDeck			= @bitFixedDeck,
+		U.ConstructedDeck	= @bitConstructedDeck,
+		U.Strategy			= @bitStrategy,
+		U.War				= @bitWar,
+		U.Economy			= @bitEconomy,
+		U.TableauBuilding	= @bitTableauBuilding,
+		U.Coop				= @bitCoop,
+		U.Mystery			= @bitMystery,
+		U.SemiCoop			= @bitSemiCoop,
+		U.PPRPG				= @bitPPRPG,
+		U.Bluffing			= @bitBluffing,
+		U.Puzzle			= @bitPuzzle,
+		U.Dexterity			= @bitDexterity,
+		U.Party				= @bitParty
 
-		FROM [Over].dbo.BoardOverUsers B
-		JOIN [Over].dbo.Users O ON B.OverUserIndex = O.OverUserIndex
-		JOIN [HTKB].dbo.Users H ON O.HTKBUserIndex = H.HTKBUserIndex
+		FROM [Over].dbo.BoardOverUsers U
+		JOIN [Over].dbo.Users O ON U.OverUserIndex = O.UserIndex
+		JOIN [HTKB].dbo.Users H ON O.HTKBUserIndex = H.UserIndex
 		WHERE H.Username = @strUsername;
 	END
 END

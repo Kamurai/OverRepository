@@ -1,7 +1,6 @@
 --drop procedure PlayOverSignUp;
 
-create PROCEDURE PlayOverSignUp
-(
+create PROCEDURE PlayOverSignUp(
     @strUsername		varchar(max),
 	@strEmail			varchar(max),
 	@strPasscode		varchar(max),
@@ -66,7 +65,7 @@ BEGIN
 	IF( (select count(*) from [HTKB].dbo.Users where Username = @strUsername) = 0)
 	BEGIN
 		INSERT INTO [HTKB].dbo.Users (
-		HTKBAdminLevel, HTKBOnline, Username, Passcode, Email
+		AdminLevel, Online, Username, Passcode, Email
 		) 
 		VALUES ( 
 		0, 0, @strUsername, @strPasscode, @strEmail 
@@ -74,66 +73,66 @@ BEGIN
 
 		--subsequent user records created by triggers
 
-		Update P SET
+		Update U SET
 		--Genres
-		TwoDP			= @bitTwoDP, 
-		ThreeDP			= @bitThreeDP, 
-		FPS				= @bitFPS, 
-		FPP				= @bitFPP, 
-		VPuzzle			= @bitVPuzzle, 
-		Bulletstorm		= @bitBulletstorm, 
-		Fighting		= @bitFighting, 
-		Stealth			= @bitStealth, 
-		Survival		= @bitSurvival, 
-		VN				= @bitVN, 
-		IM				= @bitIM, 
-		RPG				= @bitRPG, 
-		TRPG			= @bitTRPG, 
-		ARPG			= @bitARPG, 
-		Sports			= @bitSports,	
-		Racing			= @bitRacing, 
-		RTS				= @bitRTS, 
-		TBS				= @bitTBS, 
-		VE				= @bitVE, 
-		MMO				= @bitMMO, 
-		MOBA			= @bitMOBA, 
+		U.TwoDP				= @bitTwoDP, 
+		U.ThreeDP			= @bitThreeDP, 
+		U.FPS				= @bitFPS, 
+		U.FPP				= @bitFPP, 
+		U.VPuzzle			= @bitVPuzzle, 
+		U.Bulletstorm		= @bitBulletstorm, 
+		U.Fighting			= @bitFighting, 
+		U.Stealth			= @bitStealth, 
+		U.Survival			= @bitSurvival, 
+		U.VN				= @bitVN, 
+		U.IM				= @bitIM, 
+		U.RPG				= @bitRPG, 
+		U.TRPG				= @bitTRPG, 
+		U.ARPG				= @bitARPG, 
+		U.Sports			= @bitSports,	
+		U.Racing			= @bitRacing, 
+		U.RTS				= @bitRTS, 
+		U.TBS				= @bitTBS, 
+		U.VE				= @bitVE, 
+		U.MMO				= @bitMMO, 
+		U.MOBA				= @bitMOBA, 
 		--Platforms
-		PC				= @bitPC, 
-		Atari			= @bitAtari, 
-		Commodore64		= @bitCommodore64, 
-		FAMICOM			= @bitFAMICOM, 
-		NES				= @bitNES, 
-		SNES			= @bitSNES, 
-		N64				= @bitN64, 
-		Gamecube		= @bitGamecube, 
-		Wii				= @bitWii, 
-		WiiU			= @bitWiiU, 
-		NintendoSwitch	= @bitNintendoSwitch, 
-		Gameboy			= @bitGameboy, 
-		VirtualBoy		= @bitVirtualBoy, 
-		GBA				= @bitGBA, 
-		DS				= @bitDS, 
-		ThreeDS			= @bitThreeDS, 
-		SegaGenesis		= @bitSegaGenesis, 
-		SegaCD			= @bitSegaCD, 
-		SegaDreamcast	= @bitSegaDreamcast, 
-		PS1				= @bitPS1, 
-		PS2				= @bitPS2, 
-		PS3				= @bitPS3, 
-		PS4				= @bitPS4, 
-		PSP				= @bitPSP, 
-		PSVita			= @bitPSVita, 
-		Xbox			= @bitXbox, 
-		Xbox360			= @bitXbox360, 
-		XboxOne			= @bitXboxOne, 
-		Ouya			= @bitOuya,
-		OculusRift		= @bitOculusRift,
-		Vive			= @bitVive,
-		PSVR			= @bitPSVR
+		U.PC				= @bitPC, 
+		U.Atari				= @bitAtari, 
+		U.Commodore64		= @bitCommodore64, 
+		U.FAMICOM			= @bitFAMICOM, 
+		U.NES				= @bitNES, 
+		U.SNES				= @bitSNES, 
+		U.N64				= @bitN64, 
+		U.Gamecube			= @bitGamecube, 
+		U.Wii				= @bitWii, 
+		U.WiiU				= @bitWiiU, 
+		U.NintendoSwitch	= @bitNintendoSwitch, 
+		U.Gameboy			= @bitGameboy, 
+		U.VirtualBoy		= @bitVirtualBoy, 
+		U.GBA				= @bitGBA, 
+		U.DS				= @bitDS, 
+		U.ThreeDS			= @bitThreeDS, 
+		U.SegaGenesis		= @bitSegaGenesis, 
+		U.SegaCD			= @bitSegaCD, 
+		U.SegaDreamcast		= @bitSegaDreamcast, 
+		U.PS1				= @bitPS1, 
+		U.PS2				= @bitPS2, 
+		U.PS3				= @bitPS3, 
+		U.PS4				= @bitPS4, 
+		U.PSP				= @bitPSP, 
+		U.PSVita			= @bitPSVita, 
+		U.Xbox				= @bitXbox, 
+		U.Xbox360			= @bitXbox360, 
+		U.XboxOne			= @bitXboxOne, 
+		U.Ouya				= @bitOuya,
+		U.OculusRift		= @bitOculusRift,
+		U.Vive				= @bitVive,
+		U.PSVR				= @bitPSVR
 
-		FROM [Over].dbo.PlayOverUsers P
-		JOIN [Over].dbo.Users O ON P.OverUserIndex = O.OverUserIndex
-		JOIN [HTKB].dbo.Users H ON O.HTKBUserIndex = H.HTKBUserIndex
+		FROM [Over].dbo.PlayOverUsers U
+		JOIN [Over].dbo.Users O ON U.OverUserIndex = O.UserIndex
+		JOIN [HTKB].dbo.Users H ON O.HTKBUserIndex = H.UserIndex
 		WHERE H.Username = @strUsername;
 	END
 END

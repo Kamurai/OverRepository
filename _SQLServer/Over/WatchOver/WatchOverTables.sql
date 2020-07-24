@@ -2,9 +2,9 @@
 
 create table WatchOverAdverts (AdvertIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Picture varchar(50) not null, Link varchar(50) not null );
 
-create table WatchOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, WatchOverUserIndex bigint not null, OrderRank bigint not null, MovieIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
+create table WatchOverLists (ListIndex bigint IDENTITY(0,1) PRIMARY KEY, UserIndex bigint not null, Rank bigint not null, TargetIndex bigint not null, UpLock bit not null default 0, DownLock bit not null default 0);
 
-create table WatchOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, WatchOverUserIndex bigint not null, MovieIndex1 bigint not null, MovieIndex2 bigint not null );
+create table WatchOverMemories (MemoryIndex bigint IDENTITY(0,1) PRIMARY KEY, UserIndex bigint not null, TargetIndex1 bigint not null, TargetIndex2 bigint not null );
 
 create table Movies (TargetIndex bigint IDENTITY(0,1) PRIMARY KEY, Name varchar(50) not null, Release varchar(50) not null, Genre varchar(50) not null, Setting varchar(50) not null, Picture varchar(50) not null, UploadUserIndex bigint not null );
 
@@ -27,7 +27,7 @@ insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VAL
 insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('Guardians of the Galaxy',				'2012', 'Action',	'Comics',			'GuardiansOfTheGalaxy_2014.png', 0);
 insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('Guardians of the Galaxy Vol 2',		'2012', 'Action',	'Comics',			'GuardiansOfTheGalaxy2_2017.png', 0);
 insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('The Hulk',							'2012', 'Action',	'Comics',			'HulkThe_2003.jpg', 0);
-insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('I, Frankenstein',						'2012', 'Action',	'ScienceFiction',	'IFrankenstein_2014.jpg', 0);
+insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('I, FL.Rankenstein',						'2012', 'Action',	'ScienceFiction',	'IFL.Rankenstein_2014.jpg', 0);
 insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('The Incredible Hulk',					'2012', 'Action',	'Comics',			'IncredibleHulkThe_2008.jpg', 0);
 insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('Iron Man',							'2012', 'Action',	'Comics',			'IronMan_2008.jpg', 0);
 insert into Movies (Name, Release, Genre, Setting, Picture, UploadUserIndex) VALUES ('Iron Man 2',							'2012', 'Action',	'Comics',			'IronMan2_2010.jpg', 0);

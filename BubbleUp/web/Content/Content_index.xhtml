@@ -52,10 +52,10 @@
                                 <tr>
                                     <td class='classTarget'>
                                         <h:inputText class='classTargetInput' value="#{y.label}"/>
-                                    <c:if test="#{y.orderRank lt TargetBean.getStructure().targetList.size()-1}">
+                                    <c:if test="#{y.rank lt TargetBean.getStructure().targetList.size()-1}">
                                         <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Move_Down.png" action='#{TargetBean.MoveTargetAfter(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                                     </c:if>
-                                    <c:if test="#{y.orderRank gt 0}">
+                                    <c:if test="#{y.rank gt 0}">
                                         <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Move_Up.png" action='#{TargetBean.MoveTargetBefore(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
                                     </c:if>
                                         <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Delete.png" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>

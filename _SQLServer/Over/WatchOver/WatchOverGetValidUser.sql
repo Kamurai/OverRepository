@@ -14,19 +14,19 @@ BEGIN
 			(
 				select count(*)
 				from [HTKB].dbo.Users H
-				JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
+				JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
 				where Username = @strUsername
 			) < 1
 		)
 		BEGIN
 			--get HTKBUserIndex
 			DECLARE @HTKBUserIndex int = (
-				select TOP 1 HTKBUserIndex 
+				select TOP 1 UserIndex 
 				from [HTKB].dbo.Users 
 				where Username = @strUsername
 			);
 
-			INSERT INTO [Over].dbo.Users (HTKBUserIndex, OverAdminLevel, OverOnline) 
+			INSERT INTO [Over].dbo.Users (HTKBUserIndex, AdminLevel, Online) 
 			VALUES (@HTKBUserIndex, 0, 0);
 		END
 		
@@ -35,40 +35,40 @@ BEGIN
 			(
 				select count(*)
 				from [HTKB].dbo.Users H
-				JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
-				JOIN [Over].dbo.BangOverUsers B ON B.OverUserIndex = O.OverUserIndex
+				JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
+				JOIN [Over].dbo.BangOverUsers U ON U.OverUserIndex = O.UserIndex
 				where Username = @strUsername
 			) < 1
 		)
 		BEGIN
 			--get UserIndex
 			DECLARE @OverUserIndex int = (
-				select TOP 1 OverUserIndex
+				select TOP 1 O.UserIndex
 				from [HTKB].dbo.Users H
-				JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
+				JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
 				where Username = @strUsername
 			);
 
 			--create default user in Watch Over table
-			INSERT INTO WatchOverUsers (WatchOverUserIndex, WatchOverOnline, WatchOverMemory,
+			INSERT INTO WatchOverUsers (OverUserIndex, Online, Memory,
 				/*Genres*/ 
-				ComedyM, 
-				DramaM, 
-				ActionM, 
-				HorrorM, 
-				ThrillerM, 
-				MysteryM, 
-				DocumentaryM, 
+				Comedy, 
+				Drama, 
+				Action, 
+				Horror, 
+				Thriller, 
+				Mystery, 
+				Documentary, 
 				/*Settings*/ 
-				ScienceFictionM, 
-				FantasyM, 
-				WesternM, 
-				MartialArtsM, 
-				ModernM, 
-				HistoricM, 
-				PrehistoricM, 
-				ComicsM, 
-				PeriodM 
+				ScienceFiction, 
+				Fantasy, 
+				Western, 
+				MartialArts, 
+				Modern, 
+				Historic, 
+				Prehistoric, 
+				Comics, 
+				Period 
 			)
 			VALUES ( @OverUserIndex, 0, 1, 
 				/*Genres*/ 1, 1, 1, 1, 1, 1, 1, 
@@ -79,7 +79,7 @@ BEGIN
 	
 	select TOP 1 * 
 	from [HTKB].dbo.Users H
-	JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
-	JOIN [Over].dbo.WatchOverUsers W ON W.OverUserIndex = O.OverUserIndex
+	JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
+	JOIN [Over].dbo.WatchOverUsers U ON U.OverUserIndex = O.UserIndex
 	where Username = @strUserName COLLATE SQL_Latin1_General_CP1_CS_AS and Passcode = @strPasscode COLLATE SQL_Latin1_General_CP1_CS_AS;
 END

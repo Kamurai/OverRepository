@@ -1,7 +1,6 @@
 --drop PROCEDURE BoardOverGetValidUser;
 
-create PROCEDURE BoardOverGetValidUser
-(
+create PROCEDURE BoardOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )
@@ -15,19 +14,19 @@ BEGIN
 			(
 				select count(*) 
 				from [HTKB].dbo.Users H
-				JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
+				JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
 				where Username = @strUsername
 			) < 1
 		)
 		BEGIN
 			--get HTKBUserIndex
 			DECLARE @HTKBUserIndex int = (
-				select TOP 1 HTKBUserIndex 
+				select TOP 1 UserIndex 
 				from [HTKB].dbo.Users 
 				where Username = @strUsername
 			);
 
-			INSERT INTO [Over].dbo.Users (HTKBUserIndex, OverAdminLevel, OverOnline) 
+			INSERT INTO [Over].dbo.Users (HTKBUserIndex, AdminLevel, Online) 
 			VALUES (@HTKBUserIndex, 0, 0);
 		END
 
@@ -36,22 +35,22 @@ BEGIN
 			(
 				select count(*)
 				from [HTKB].dbo.Users H
-				JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
-				JOIN [Over].dbo.BoardOverUsers B ON B.OverUserIndex = O.OverUserIndex
+				JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
+				JOIN [Over].dbo.BoardOverUsers U ON U.OverUserIndex = O.UserIndex
 				where Username = @strUsername
 			) < 1
 		)
 		BEGIN
 			--get UserIndex
 			DECLARE @OverUserIndex int = (
-				select TOP 1 OverUserIndex
+				select TOP 1 O.UserIndex
 				from [HTKB].dbo.Users H
-				JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
+				JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
 				where Username = @strUsername
 			);
 
 			--create default user in Board Over User table
-			INSERT INTO BoardOverUsers (OverUserIndex, BoardOverOnline, BoardOverMemory,
+			INSERT INTO BoardOverUsers (OverUserIndex, Online, Memory,
 			DeckBuilding, 
 			FixedDeck, 
 			ConstructedDeck, 
@@ -74,7 +73,7 @@ BEGIN
 		
 	select TOP 1 * 
 	from [HTKB].dbo.Users H
-	JOIN [Over].dbo.Users O ON H.HTKBUserIndex = O.HTKBUserIndex
-	JOIN [Over].dbo.BoardOverUsers B ON B.OverUserIndex = O.OverUserIndex
+	JOIN [Over].dbo.Users O ON H.UserIndex = O.HTKBUserIndex
+	JOIN [Over].dbo.BoardOverUsers U ON U.OverUserIndex = O.UserIndex
 	where Username = @strUserName COLLATE SQL_Latin1_General_CP1_CS_AS and Passcode = @strPasscode COLLATE SQL_Latin1_General_CP1_CS_AS;
 END

@@ -147,7 +147,7 @@ public class TargetDAO extends DAO{
                 Sub.add(rs.getString("RELEASE"));
                 Sub.add(rs.getString("SETTING"));
                 Sub.add(rs.getString("GENRE"));
-                Sub.add(rs.getString("OrderRank"));
+                Sub.add(rs.getString("Rank"));
                 
                 resultList.add(new ArrayList<String>(Sub));
                 Sub.clear();
