@@ -288,11 +288,13 @@ public class TargetBean implements Serializable
     public String UpdateStructure(int intUserIndex){
         String result = "index";
         
-//        System.out.println("Top: " + originalStructure.getLabel() + " vs " + structure.getLabel());
-        
-//        System.out.println("Structures: " + originalStructure.boxList + " vs " + structure.boxList);
+        System.out.println("UpdateStructure: Start");
+        System.out.println("Top: " + originalStructure.getLabel() + " vs " + structure.getLabel());
+        System.out.println("Structures: " + originalStructure.boxList + " vs " + structure.boxList);
         
         dao.callableUpdateStructure(intUserIndex, structure, originalStructure);
+        
+        System.out.println("UpdateStructure: End");
         
         return result;
     }
@@ -408,7 +410,7 @@ public class TargetBean implements Serializable
     public String MoveOutBox(int intUserIndex, int intBoxIndex){
         String result = "index";
     
-        dao.callableMoveOutLeftBox(intUserIndex, intBoxIndex);
+        dao.callableMoveOutBox(intUserIndex, intBoxIndex);
         
         return result;
     }

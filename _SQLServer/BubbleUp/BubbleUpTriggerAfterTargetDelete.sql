@@ -1,7 +1,7 @@
 --DROP TRIGGER AfterTargetDelete
 
 CREATE TRIGGER AfterTargetDelete
-ON [BubbleUp].dbo.Boxes
+ON [BubbleUp].dbo.Targets
 AFTER DELETE
 AS
 	DECLARE @intUserIndex		int = (SELECT TOP 1 deleted.UserIndex			FROM deleted);

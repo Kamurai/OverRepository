@@ -1,37 +1,8 @@
- /* 
-    Document   : moo
-    Created on : Nov 24, 2010, 2:32:30 PM
-    Author     : Kamurai
-    Description:
-        Purpose of the stylesheet follows.
-   COC:
-       Eric Kidder - 11/17/207 - Started to update CSS
-*/
-
-/* 
-   TODO customize this sample style
-   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
-*/
-@media only screen and (max-device-width: 1024px)
-{
-    .parallax{
-       background-image: url('../Image/main.jpg');
-       min-height: 450px;
-       background-attachment: fixed;
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: cover;
-    }
-}
-
-/* TESTING ERIC - 11/17/2017 */
-root 
-{ 
+root{ 
     display: block;
 }
 
-html 
-{ 
+html{ 
     min-height: 125%;
     min-height: 125vh;
     height: 125%;
@@ -42,8 +13,7 @@ html
     width: 100vw;
 }
 
-body
-{
+body{
     min-height: 125%;
     min-height: 125vh;
     height: 125%;
@@ -1143,8 +1113,7 @@ navlink a:hover
     display: table-row;
 }
 
-#idCenterRowLeft
-{
+#idCenterRowLeft{
     height: 100%;
     height: 85vh;
     max-height: 100%;
@@ -1162,8 +1131,7 @@ navlink a:hover
     display: table-cell;
 }
 
-#idAdvertLeft
-{
+#idAdvertLeft{
     min-height: 100%;
     min-height: 75vh;
     height: 100%;
@@ -1186,8 +1154,7 @@ navlink a:hover
     display: block;
 }
 
-#idCenterRowMain
-{
+#idCenterRowMain{
     height: 100%;
     height: 85vh;
     max-height: 100%;
@@ -1207,8 +1174,7 @@ navlink a:hover
     vertical-align: top;
 }
 
-#idCenterContent
-{
+#idCenterContent{
     height: auto;
     width: 100%;
     width: 70vw;
@@ -1221,8 +1187,7 @@ navlink a:hover
     vertical-align: top;
 }
 
-#idTableCompare
-{
+#idTableCompare{
     height: 80%;
     height: 80vh;
     max-height: 80%;

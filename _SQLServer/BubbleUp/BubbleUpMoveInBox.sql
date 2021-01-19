@@ -17,5 +17,5 @@ BEGIN
 
 	DECLARE @intFirstChildBoxIndex int = (SELECT TOP 1 BoxIndex FROM BOXES WHERE UserIndex = @intUserIndex AND ParentBoxIndex = @intParentBoxIndex AND Rank = 0);
 
-	EXEC BubbleUpMoveBox @intUserIndex, @intMovingBoxIndex, @intFirstChildBoxIndex;
+	EXEC BubbleUpMoveBox @intUserIndex, @intMovingBoxIndex, @intFirstChildBoxIndex, -2;
 END

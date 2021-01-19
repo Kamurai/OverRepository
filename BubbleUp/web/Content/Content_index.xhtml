@@ -11,118 +11,57 @@
                 Bubble Up!
             </title>
             <c:forEach var = "x" items = "#{TargetBean.PullStructure(LoginBean.currentUser.userIndex).boxList}"/>
-            
-            <h:commandButton  value ="Update Structure" action='#{TargetBean.UpdateStructure(LoginBean.currentUser.userIndex)}'/>
-            <br/>
-            Bubble Up!  Recursive Table Test:
-            <table id='idMainStructure' class='classBox'>
-                <tr class='classBoxLabelRow'>
-                    <td class='classBoxLabelHeader'>
+            <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Save.png" action='#{TargetBean.UpdateStructure(LoginBean.currentUser.userIndex)}'/>
+            <div id='idMainStructure' class='classTopBox'>
+                <div class='classBoxLabelRow'>
+                    <div class='classBoxLabelHeader'>
                         <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Switch.png" action='#{TargetBean.ChangeDirectionOfBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>
                         <h:inputText class='classBoxInput' value="#{TargetBean.getStructure().label}"/>
                         <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Delete.png" action='#{TargetBean.DeleteBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>
-                    </td>
-                </tr>
-                <tr class='classBoxSubRow'>
-                <c:forEach var = "x" items = "#{TargetBean.getStructure().boxList}">
-                <c:if test="#{TargetBean.getStructure().direction == 'Vertical'}">
-                    <tr>
-                        <td>
-                            <ui:include src="Recursive_Box.xhtml">
-                                <ui:param name="box"        value="#{x}" />
-                                <ui:param name="maxOrder"   value="#{TargetBean.getStructure().boxList.size()-1}" />
-                            </ui:include>
-                        </td>
-                    </tr>
-                </c:if>
-                <c:if test="#{TargetBean.getStructure().direction == 'Horizontal'}">
-                    <td>
-                        <ui:include src="Recursive_Box.xhtml">
-                            <ui:param name="box"        value="#{x}" />
-                            <ui:param name="maxOrder"   value="#{TargetBean.getStructure().boxList.size()-1}" />
-                        </ui:include>
-                    </td>
-                </c:if>
-                </c:forEach>
-                </tr>        
-                <tr class='classBoxSubRow'>
-                    <td>
-                        <table class='classBoxLabelSection'>
-                            <c:forEach var = "y" items = "#{TargetBean.getStructure().targetList}">
-                                <tr>
-                                    <td class='classTarget'>
-                                        <h:inputText class='classTargetInput' value="#{y.label}"/>
-                                    <c:if test="#{y.rank lt TargetBean.getStructure().targetList.size()-1}">
-                                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Move_Down.png" action='#{TargetBean.MoveTargetAfter(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                    </c:if>
-                                    <c:if test="#{y.rank gt 0}">
-                                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Move_Up.png" action='#{TargetBean.MoveTargetBefore(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                    </c:if>
-                                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Delete.png" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class='classTarget'>
-                                        <h:commandButton value="Move Left"  action='#{TargetBean.MoveOutLeftTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                        <h:commandButton value="Move Out"   action='#{TargetBean.MoveOutTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                        <h:commandButton value="Move In"    action='#{TargetBean.MoveInTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                        <h:commandButton value="Move Right" action='#{TargetBean.MoveOutRightTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
-                                    </td>
-                                </tr>
-                             </c:forEach>
-                                <tr>
-                                    <td>
-                                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/New.png" action='#{TargetBean.AddTargetToBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>Item
-                                    </td>
-                                </tr>
-                       </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/New.png" action='#{TargetBean.AddBoxToBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>Section
-                    </td>
-                </tr>
-            </table>
-            <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/New.png" action='#{TargetBean.AddBoxToBox(LoginBean.currentUser.userIndex, -1)}'/>Section
-<!--            <br/>
-            Bubble Up!  Recursive Div Test:
-            <div id='idDivMainStructure' class='classDivBox'>
-                <div class='classDivBoxLabelRow'>
-                    <div class='classDivBoxLabelHeader'>
-                        <input class='classDivBoxInput' type="text" value="#{TargetBean.structure.label}"/>
                     </div>
                 </div>
-                <div class='classDivBoxSubRow'>
-                <c:forEach var = "x" items = "#{TargetBean.structure.boxList}">
-                <c:if test="#{x.direction == 'Horizontal'}">
-                        <div class='classDivHorizontal classDivBox'>
-                            <ui:include src="Recursive_Div_Box.xhtml">
-                                <ui:param name="box" value="#{x}" />
-                            </ui:include>
-                        </div>
-                </c:if>
-                <c:if test="#{x.direction == 'Vertical'}">
-                    <div class='classDivVertical classDivBox'>
-                        <ui:include src="Recursive_Div_Box.xhtml">
-                            <ui:param name="box" value="#{x}" />
-                        </ui:include>
+                <div class='classBoxSubRow'>
+                    <c:forEach var = "x" items = "#{TargetBean.structure.boxList}">
+                        <c:if test="#{TargetBean.structure.direction == 'Horizontal'}">
+                            <div class='classHorizontal classBox'>
+                                <ui:include src="Recursive_Div_Box.xhtml">
+                                    <ui:param name="box"        value="#{x}" />
+                                    <ui:param name="maxOrder"   value="#{TargetBean.getStructure().boxList.size()-1}" />
+                                </ui:include>
+                            </div>
+                        </c:if>
+                        <c:if test="#{TargetBean.structure.direction == 'Vertical'}">
+                            <div class='classVertical classBox'>
+                                <ui:include src="Recursive_Div_Box.xhtml">
+                                    <ui:param name="box"        value="#{x}" />
+                                    <ui:param name="maxOrder"   value="#{TargetBean.getStructure().boxList.size()-1}" />
+                                </ui:include>
+                            </div>
+                        </c:if>
+                    </c:forEach>
+                    <div class='classBoxLabelSection'>
+                        <c:forEach var = "y" items = "#{TargetBean.structure.targetList}">
+                            <div class='classTarget'>
+                                <h:inputText class='classTargetInput' value="#{y.label}"/>
+                                <c:if test="#{y.rank lt TargetBean.getStructure().targetList.size()-1}">
+                                    <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Move_Down.png" action='#{TargetBean.MoveTargetAfter(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                </c:if>
+                                <c:if test="#{y.rank gt 0}">
+                                    <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Move_Up.png" action='#{TargetBean.MoveTargetBefore(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                                </c:if>
+                                <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/Delete.png" action='#{TargetBean.DeleteTarget(LoginBean.currentUser.userIndex, y.targetIndex)}'/>
+                            </div>
+                        </c:forEach>
                     </div>
-                </c:if>
-                </c:forEach>
                     <div>
-                        <div class='classBoxLabelSection'>
-                            <c:forEach var = "y" items = "#{TargetBean.structure.targetList}">
-                                <div>
-                                    <div class='classDivTarget'>
-                                        <input class='classDivTargetInput' type="text" value="#{y.label}"/>
-                                    </div>
-                                </div>
-                            </c:forEach>
-                        </div>
+                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/New.png" action='#{TargetBean.AddTargetToBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>Item
+                    </div>
+                    <div>
+                        <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/New.png" action='#{TargetBean.AddBoxToBox(LoginBean.currentUser.userIndex, TargetBean.getStructure().boxIndex)}'/>Section
                     </div>
                 </div>        
-            </div>-->
+            </div>
+            <h:commandButton class='classButtons' image="#{MainBean.GetPath()}Pictures/UI/New.png" action='#{TargetBean.AddBoxToBox(LoginBean.currentUser.userIndex, -1)}'/>Section
             
             
         </c:when>

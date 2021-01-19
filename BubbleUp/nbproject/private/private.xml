@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Bean/ManagementBean.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Database/ManagementDAO.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Main/User.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Main/Box.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/web/Content/Recursive_Box.xhtml</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Database/TargetDAO.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Bean/TargetBean.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/web/Content/Content_Management.xhtml</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/src/java/Bean/LoginBean.java</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/web/Content/Content_index.xhtml</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/web/Common/NavBar.xhtml</file>
-            <file>file:/C:/House/Programming/Netbeans/OverRepository/BubbleUp/web/Content/Content_Login.xhtml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

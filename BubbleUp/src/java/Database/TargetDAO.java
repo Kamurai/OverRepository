@@ -94,7 +94,12 @@ public class TargetDAO extends DAO{
     
     //Update Personal List
     public void callableUpdateStructure(int intUserIndex, Box structure, Box originalStructure){
+        System.out.println("callableUpdateStructure: Start");
+        
+        
         CallableStatement stmt = null;
+        
+        Statement test = null;
         
         List<String> bigList    = new ArrayList<String>();
         String boxIdList        = "";
@@ -108,10 +113,10 @@ public class TargetDAO extends DAO{
         targetIdList    = bigList.get(2);
         targetLabelList = bigList.get(3);
         
-//        System.out.println("BoxIdList: " + boxIdList);
-//        System.out.println("BoxLabelList: " + boxLabelList);
-//        System.out.println("TargetIdList: " + targetIdList);
-//        System.out.println("TargetLabelList: " + targetLabelList);
+        System.out.println("BoxIdList: " + boxIdList);
+        System.out.println("BoxLabelList: " + boxLabelList);
+        System.out.println("TargetIdList: " + targetIdList);
+        System.out.println("TargetLabelList: " + targetLabelList);
         
         if(
             boxIdList.length() > 0 ||
@@ -135,11 +140,20 @@ public class TargetDAO extends DAO{
             }finally{
                 closeConnection();
             }
+        }else{
+            try{
+            test.executeUpdate("update Boxes SET Label = 'Failure Pile' WHERE BoxIndex = 49");
+            }catch(Exception e){
+                
+            }
         }
         
+        System.out.println("callableUpdateStructure: End");
     }
     
     private List<String> createStringLists(Box structure, Box originalStructure){
+        System.out.println("CreateStringLists: Start");
+        
         List<String> bigList    = new ArrayList<String>();
         List<String> tempList   = new ArrayList<String>();
         bigList.add("");
@@ -147,7 +161,7 @@ public class TargetDAO extends DAO{
         bigList.add("");
         bigList.add("");
         
-//        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
+        System.out.println(originalStructure.getLabel() + " vs " + structure.getLabel());
         
         
         if(!structure.getLabel().equals(originalStructure.getLabel())){
@@ -155,13 +169,13 @@ public class TargetDAO extends DAO{
                 bigList.set(0, bigList.get(0) + ",");
             }
             bigList.set(0, bigList.get(0) + structure.getBoxIndex());
-//            System.out.println(structure.getBoxIndex());
+            System.out.println(structure.getBoxIndex());
         
             if(bigList.get(1).length() > 0){
                 bigList.set(1, bigList.get(1) + ",");
             }
             bigList.set(1, bigList.get(1) + structure.getLabel());
-//            System.out.println(structure.getLabel());
+            System.out.println(structure.getLabel());
         
         }
         
@@ -189,10 +203,10 @@ public class TargetDAO extends DAO{
         
         for(int y = 0; y < structure.targetList.size(); y++){
             
-//            System.out.println(originalStructure.targetList.get(y).getLabel() + " vs " + structure.targetList.get(y).getLabel());
+            System.out.println(originalStructure.targetList.get(y).getLabel() + " vs " + structure.targetList.get(y).getLabel());
             
             if(!structure.targetList.get(y).getLabel().equals(originalStructure.targetList.get(y).getLabel())){
-//                System.out.println("Safety 1");
+                System.out.println("Safety 1");
                 
                 if(bigList.get(2).length() > 0){
                     bigList.set(2, bigList.get(2) + ",");
@@ -205,9 +219,11 @@ public class TargetDAO extends DAO{
             }
         }
         
-//        System.out.println("Indexes: " + bigList.get(2));
-//        System.out.println("Labels: " + bigList.get(3));
+        System.out.println("Indexes: " + bigList.get(2));
+        System.out.println("Labels: " + bigList.get(3));
                 
+        
+        System.out.println("CreateStringLists: End");
         
         return bigList;
     }

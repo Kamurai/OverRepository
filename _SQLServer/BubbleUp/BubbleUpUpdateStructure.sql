@@ -9,6 +9,8 @@ create PROCEDURE BubbleUpUpdateStructure(
 )
 AS
 BEGIN
+	PRINT('BubbleUpUpdateStructure: Start');
+	
 	DECLARE @checkBoxes		BIT = 1;
 	DECLARE @trackerIds		int = 0;
 	DECLARE @startIds		int = 0;
@@ -20,22 +22,50 @@ BEGIN
 
 	DECLARE @checkTargets	BIT = 1;
 	
+	
+	
+	PRINT('BubbleUpUpdateStructure: Pre-Boxes');
+	
 	WHILE (@checkBoxes = 1) 
 	BEGIN
+	
+		PRINT('BubbleUpUpdateStructure: Boxes-Pre-Ids');
+	
 		--while we are searching for the next id
 		WHILE ((SUBSTRING(@boxIdList,@trackerIds,1) != ',') AND (@trackerIds <= LEN(@boxIdList)))
 		BEGIN
 			SET @trackerIds = @trackerIds + 1;
 		END
+
+		PRINT('BubbleUpUpdateStructure: Boxes-Mid-Ids');
+	
 		IF((@trackerIds > LEN(@boxIdList)))
 		BEGIN
 			SET @checkBoxes = 0;
-			BREAK;
+			--BREAK;
 		END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		PRINT('BubbleUpUpdateStructure: Boxes-Post-Ids');
+	
+		PRINT('BubbleUpUpdateStructure: Boxes-Pre-Labels');
+				
 		SET @strId		= SUBSTRING(@boxIdList,@startIds,@trackerIds-@startIds);
 		SET @trackerIds = @trackerIds + 1;
 		SET @startIds	= @trackerIds;
-				
+
 		--while we are searching for the next label
 		WHILE ((SUBSTRING(@boxLabelList,@trackerLabels,1) != ',') AND (@trackerLabels <= LEN(@boxLabelList)))
 		BEGIN
@@ -44,21 +74,36 @@ BEGIN
 		IF((@trackerLabels > LEN(@boxLabelList)))
 		BEGIN
 			SET @checkBoxes = 0;
-			BREAK;
+			--BREAK;
 		END
 		SET @strLabel		= SUBSTRING(@boxLabelList,@startLabels,@trackerLabels-@startLabels);
+
+		--PRINT(CONCAT('@strLabel: ',		@strLabel));
+	
 		SET @trackerLabels	= @trackerLabels + 1;
 		SET @startLabels	= @trackerLabels;
+
+		PRINT('BubbleUpUpdateStructure: Boxes-Post-Labels');
+		
+		PRINT('BubbleUpUpdateStructure: Boxes-Pre-Update');
 
 		IF(
 		(LEN(@strLabel) > 0) AND
 		(LEN(@strId) > 0)
 		)
 		BEGIN
+			PRINT(CONCAT('UserIndex: ',		@intUserIndex));
+			PRINT(CONCAT('BoxIndex: ',		@strId));
+			PRINT(CONCAT('Label: ',			@strLabel));
 			UPDATE Boxes SET Label = @strLabel WHERE UserIndex = @intUserIndex AND BoxIndex = @strId;
 		END
+
+		PRINT('BubbleUpUpdateStructure: Boxes-Post-Update');
+
 	END
 
+	PRINT('BubbleUpUpdateStructure: Post-Boxes');
+	
 	SET @trackerIds		= 0;
 	SET @startIds		= 0;
 	SET @strId			= '';
@@ -67,8 +112,13 @@ BEGIN
 	SET @startLabels	= 0;
 	SET @strLabel		= '';
 
+	PRINT('BubbleUpUpdateStructure: Pre-Targets');
+	
 	WHILE (@checkTargets = 1)
 	BEGIN
+		
+		PRINT('BubbleUpUpdateStructure: Targets-Pre-Ids');
+	
 		--while we are searching for the next id
 		WHILE ((SUBSTRING(@targetIdList,@trackerIds,1) != ',') AND (@trackerIds <= LEN(@targetIdList)))
 		BEGIN
@@ -80,7 +130,11 @@ BEGIN
 		--	BREAK;
 		END
 		
-		PRINT SUBSTRING(@targetIdList,@startIds,@trackerIds-@startIds);
+		PRINT('BubbleUpUpdateStructure: Targets-Post-Ids');
+	
+		PRINT('BubbleUpUpdateStructure: Targets-Pre-Labels');
+				
+		--PRINT SUBSTRING(@targetIdList,@startIds,@trackerIds-@startIds);
 		SET @strId		= SUBSTRING(@targetIdList,@startIds,@trackerIds-@startIds);
 		SET @trackerIds = @trackerIds + 1;
 		SET @startIds	= @trackerIds;
@@ -96,10 +150,14 @@ BEGIN
 		--	BREAK;
 		END
 
-		PRINT SUBSTRING(@targetLabelList,@startLabels,@trackerLabels-@startLabels);
+		--PRINT SUBSTRING(@targetLabelList,@startLabels,@trackerLabels-@startLabels);
 		SET @strLabel		= SUBSTRING(@targetLabelList,@startLabels,@trackerLabels-@startLabels);
 		SET @trackerLabels	= @trackerLabels + 1;
 		SET @startLabels	= @trackerLabels;
+
+		PRINT('BubbleUpUpdateStructure: Targets-Post-Labels');
+		
+		PRINT('BubbleUpUpdateStructure: Targets-Pre-Update');
 
 		IF(
 		(LEN(@strLabel) > 0) AND
@@ -110,5 +168,13 @@ BEGIN
 			SET @strId			= '';
 			SET @strLabel		= '';
 		END
-	END	
+
+		PRINT('BubbleUpUpdateStructure: Targets-Post-Update');
+
+	END
+
+	PRINT('BubbleUpUpdateStructure: Post-Targets');
+	
+
+	PRINT('BubbleUpUpdateStructure: End');
 END
