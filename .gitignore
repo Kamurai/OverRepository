@@ -15,3 +15,12 @@
 /ShowOver/dist/
 /WatchOver/dist/
 /Mist/dist/
+WatchOver/nbproject/project.xml
+WatchOver/nbproject/project.properties
+WatchOver/nbproject/private/private.properties
+WatchOver/nbproject/genfiles.properties
+WatchOver/nbproject/build-impl.xml
+ShowOver/nbproject/private/private.properties
+PlayOver/nbproject/private/private.properties
+BoardOver/nbproject/private/private.properties
+BangOver/nbproject/private/private.properties
