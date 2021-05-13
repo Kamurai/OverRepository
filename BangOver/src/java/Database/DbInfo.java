@@ -30,10 +30,10 @@ public class DbInfo
     
     public DbInfo()
     {
-        driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        url = "jdbc:sqlserver://localhost\\SQLSERVER";
-        dbName = ";DatabaseName=Over";
-        dbUsername = "SA";
-        dbPassword = "yellow23";
+        driver      = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        url         = "jdbc:sqlserver://localhost";
+        dbName      = ";DatabaseName=Over";
+        dbUsername  = "sa";
+        dbPassword  = "yellow23";
     }
 }
