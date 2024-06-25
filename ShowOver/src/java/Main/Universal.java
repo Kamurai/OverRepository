@@ -53,5 +53,8 @@ public class Universal
             return "./";
         }
     }
-
+    
+    public static String getPictureHost(){
+        return "http://htkb.info/Over/ShowOver/";
+    }
 }

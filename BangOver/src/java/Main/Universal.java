@@ -2,20 +2,15 @@ package Main;
 
 public class Universal
 {
-    public Universal()
-    {
-
-    }
+    public Universal(){}
     
-    public String WebMaster()
-    {
+    public String WebMaster(){
         String Result = "";
         Result += "Website managed by Kamurai.";
         return Result;
     }
 
-    public String GetPath(int level)
-    {
+    public String GetPath(int level){
         if(level <= 0)
         {
             return "./";
@@ -52,6 +47,10 @@ public class Universal
         {
             return "./";
         }
+    }
+    
+    public static String getPictureHost(){
+        return "http://htkb.info/Over/BangOver/";
     }
 
 }

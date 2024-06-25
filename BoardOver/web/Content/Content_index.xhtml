@@ -14,12 +14,12 @@
                 <div id="idTableCompareRowPictures">
                     <div id="idTableCompareRowDataPicturesLeft">
                         <h:commandLink action="#{TargetBean.SwapPositions(LoginBean.currentUser.userIndex,TargetBean.targetName1,TargetBean.targetName2)}"> 
-                            <h:graphicImage id="idTableCompareRowPicturesLeft" value="#{TargetBean.getpath()}#{TargetBean.getfolder()}#{TargetBean.targetURL1}" alt="#{TargetBean.targetName1}" />
+                            <h:graphicImage id="idTableCompareRowPicturesLeft" value="#{TargetBean.getPictureHost()}#{TargetBean.getfolder()}#{TargetBean.targetURL1}" alt="#{TargetBean.targetName1}" />
                         </h:commandLink>
                     </div>
                     <div id="idTableCompareRowDataPicturesRight">
                         <h:commandLink action="#{TargetBean.SwapPositions(LoginBean.currentUser.userIndex,TargetBean.targetName2,TargetBean.targetName1)}"> 
-                            <h:graphicImage id="idTableCompareRowPicturesRight" value="#{TargetBean.getpath()}#{TargetBean.getfolder()}#{TargetBean.targetURL2}" alt="#{TargetBean.targetName2}" />
+                            <h:graphicImage id="idTableCompareRowPicturesRight" value="#{TargetBean.getPictureHost()}#{TargetBean.getfolder()}#{TargetBean.targetURL2}" alt="#{TargetBean.targetName2}" />
                         </h:commandLink>
                     </div>
                 </div>

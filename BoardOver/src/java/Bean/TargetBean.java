@@ -7,6 +7,7 @@ package Bean;
 
 import Database.ConnInfo;
 import Database.TargetDAO;
+import Main.Universal;
 import java.io.*;
 import javax.faces.bean.ManagedBean;
 import java.sql.Connection;
@@ -498,5 +499,8 @@ public class TargetBean implements Serializable
         
         return result;
     }
-    
+
+    public String getPictureHost(){
+        return Universal.getPictureHost();
+    }
 }   
