@@ -36,12 +36,11 @@ public class DbInfo
         return dbPassword;
     }
     
-    public DbInfo()
-    {
-        driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        url = "jdbc:sqlserver://localhost";
-        dbName = ";DatabaseName=Over";
-        dbUsername = "publicAccess";
-        dbPassword = "yellow23";
+    public DbInfo(){
+        driver      = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        url         = "jdbc:sqlserver://localhost"; //:3306
+        dbName      = ";DatabaseName=Over";
+        dbUsername  = "publicAccess";
+        dbPassword  = "yellow23";
     }
 }

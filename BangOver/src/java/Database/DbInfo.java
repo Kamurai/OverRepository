@@ -28,10 +28,9 @@ public class DbInfo
         return dbPassword;
     }
     
-    public DbInfo()
-    {
+    public DbInfo(){
         driver      = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-        url         = "jdbc:sqlserver://localhost";
+        url         = "jdbc:sqlserver://localhost"; //:3306
         dbName      = ";DatabaseName=Over";
         dbUsername  = "publicAccess";
         dbPassword  = "yellow23";
