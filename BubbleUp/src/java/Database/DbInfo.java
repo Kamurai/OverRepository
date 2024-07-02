@@ -33,6 +33,6 @@ public class DbInfo
         url         = "jdbc:sqlserver://localhost"; //:3306
         dbName      = ";DatabaseName=BubbleUp";
         dbUsername  = "publicAccess";
-        dbPassword  = "yellow23";
+        dbPassword  = "Yellow23!23";
     }
 }

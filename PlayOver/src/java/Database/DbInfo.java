@@ -41,6 +41,6 @@ public class DbInfo
         url         = "jdbc:sqlserver://localhost"; //:3306
         dbName      = ";DatabaseName=Over";
         dbUsername  = "publicAccess";
-        dbPassword  = "yellow23";
+        dbPassword  = "Yellow23!23";
     }
 }
