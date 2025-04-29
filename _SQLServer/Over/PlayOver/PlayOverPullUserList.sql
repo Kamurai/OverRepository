@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverPullUserList;
 
-create PROCEDURE PlayOverPullUserList
+CREATE OR ALTER PROCEDURE PlayOverPullUserList
 AS
 BEGIN
 	select * 

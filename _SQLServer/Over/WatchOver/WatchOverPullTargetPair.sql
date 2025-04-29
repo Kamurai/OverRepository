@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverPullTargetPair;
 
-create PROCEDURE WatchOverPullTargetPair(
+CREATE OR ALTER PROCEDURE WatchOverPullTargetPair(
     @intUserIndex int        
 )
 AS

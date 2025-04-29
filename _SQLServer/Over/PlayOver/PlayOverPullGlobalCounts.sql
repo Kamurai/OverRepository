@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverPullGlobalCounts;
 
-create PROCEDURE PlayOverPullGlobalCounts
+CREATE OR ALTER PROCEDURE PlayOverPullGlobalCounts
 AS
 BEGIN
 	select count(TargetIndex) as retNum from VideoGames

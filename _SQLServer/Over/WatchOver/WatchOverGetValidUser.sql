@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverGetValidUser;
 
-create PROCEDURE WatchOverGetValidUser(
+CREATE OR ALTER PROCEDURE WatchOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )

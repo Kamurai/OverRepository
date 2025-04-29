@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverAddTarget;
 
-create PROCEDURE PlayOverAddTarget(
+CREATE OR ALTER PROCEDURE PlayOverAddTarget(
     @strVideoGameName varChar(50),
 	@strVideoGameRelease varChar(50),
 	@strVideoGamePlatform varChar(50),

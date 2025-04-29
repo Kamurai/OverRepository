@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverGetValidUser;
 
-create PROCEDURE PlayOverGetValidUser(
+CREATE OR ALTER PROCEDURE PlayOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )

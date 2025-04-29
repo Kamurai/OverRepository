@@ -1,6 +1,6 @@
 --drop procedure WatchOverUpdateOptions;
 
-create PROCEDURE WatchOverUpdateOptions(
+CREATE OR ALTER PROCEDURE WatchOverUpdateOptions(
     @intUserIndex		int,
 	@bitMemory			bit,
 	--Genres

@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverPullPersonalList;
 
-create PROCEDURE WatchOverPullPersonalList(
+CREATE OR ALTER PROCEDURE WatchOverPullPersonalList(
 	@intUserIndex int
 )
 AS

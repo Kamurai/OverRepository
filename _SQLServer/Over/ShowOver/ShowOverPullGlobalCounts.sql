@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverPullGlobalCounts;
 
-create PROCEDURE ShowOverPullGlobalCounts
+CREATE OR ALTER PROCEDURE ShowOverPullGlobalCounts
 AS
 BEGIN
 	select count(TargetIndex) as retNum from Shows

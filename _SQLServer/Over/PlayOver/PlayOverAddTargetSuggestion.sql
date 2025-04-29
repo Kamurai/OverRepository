@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverAddTargetSuggestion;
 
-create PROCEDURE PlayOverAddTargetSuggestion(
+CREATE OR ALTER PROCEDURE PlayOverAddTargetSuggestion(
     @strVideoGameName varChar(50),
 	@strVideoGameRelease varChar(50),
 	@strVideoGamePlatform varChar(50),

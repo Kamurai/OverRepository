@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverSetOnlineStatus;
 
-create PROCEDURE WatchOverSetOnlineStatus(
+CREATE OR ALTER PROCEDURE WatchOverSetOnlineStatus(
 	@intOnline int,
 	@strUserName varchar(max)
 )

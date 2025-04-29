@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverSetOnlineStatus;
 
-create PROCEDURE ShowOverSetOnlineStatus(
+CREATE OR ALTER PROCEDURE ShowOverSetOnlineStatus(
 	@intOnline int,
 	@strUserName varchar(max)
 )

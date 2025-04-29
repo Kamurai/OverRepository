@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverAddTarget;
 
-create PROCEDURE ShowOverAddTarget(
+CREATE OR ALTER PROCEDURE ShowOverAddTarget(
     @strShowName varChar(50),
 	@strShowRelease varChar(50),
 	@strShowGenre varChar(50),

@@ -1,6 +1,6 @@
 --drop procedure ShowOverSignUp;
 
-create PROCEDURE ShowOverSignUp(
+CREATE OR ALTER PROCEDURE ShowOverSignUp(
     @strUsername		varchar(max),
 	@strEmail			varchar(max),
 	@strPasscode		varchar(max),

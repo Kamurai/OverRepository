@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverPullGlobalListAll;
 
-create PROCEDURE PlayOverPullGlobalListAll
+CREATE OR ALTER PROCEDURE PlayOverPullGlobalListAll
 AS
 BEGIN
 	select L.TargetIndex, T.Name, T.Picture, T.Release, T.GamePlatform, T.Genre, avg(L.Rank)+1 as Ranking from PlayOverLists L

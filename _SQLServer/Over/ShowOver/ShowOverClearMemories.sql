@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverClearMemories;
 
-create PROCEDURE ShowOverClearMemories(
+CREATE OR ALTER PROCEDURE ShowOverClearMemories(
     @intUserIndex int        
 )
 AS

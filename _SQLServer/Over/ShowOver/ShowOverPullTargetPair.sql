@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverPullTargetPair;
 
-create PROCEDURE ShowOverPullTargetPair(
+CREATE OR ALTER PROCEDURE ShowOverPullTargetPair(
     @intUserIndex int        
 )
 AS

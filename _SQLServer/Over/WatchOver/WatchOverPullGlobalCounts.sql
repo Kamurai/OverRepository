@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverPullGlobalCounts;
 
-create PROCEDURE WatchOverPullGlobalCounts
+CREATE OR ALTER PROCEDURE WatchOverPullGlobalCounts
 AS
 BEGIN
 	select count(TargetIndex) as retNum from Movies

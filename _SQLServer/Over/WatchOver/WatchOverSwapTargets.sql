@@ -1,6 +1,6 @@
 --drop procedure WatchOverSwapTargets;
 
-create PROCEDURE WatchOverSwapTargets(
+CREATE OR ALTER PROCEDURE WatchOverSwapTargets(
     @intUserIndex int,
     @strMovie1 VARCHAR(50),
 	@strMovie2 VARCHAR(50)

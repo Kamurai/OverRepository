@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverClearMemories;
 
-create PROCEDURE WatchOverClearMemories(
+CREATE OR ALTER PROCEDURE WatchOverClearMemories(
     @intUserIndex int        
 )
 AS

@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverPullGlobalListAll;
 
-create PROCEDURE ShowOverPullGlobalListAll
+CREATE OR ALTER PROCEDURE ShowOverPullGlobalListAll
 AS
 BEGIN
 	select L.TargetIndex, T.Name, T.Picture, T.Release, T.Genre, T.Setting, avg(L.Rank)+1 as Ranking 

@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverPullUserCounts;
 
-create PROCEDURE PlayOverPullUserCounts
+CREATE OR ALTER PROCEDURE PlayOverPullUserCounts
 AS
 BEGIN
 	select count(AdminLevel) as retNum 	from [Over].dbo.PlayOverUsers where AdminLevel = 0

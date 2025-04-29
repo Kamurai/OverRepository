@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverPullUserList;
 
-create PROCEDURE ShowOverPullUserList
+CREATE OR ALTER PROCEDURE ShowOverPullUserList
 AS
 BEGIN
 	select * 

@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverGetValidUser;
 
-create PROCEDURE ShowOverGetValidUser(
+CREATE OR ALTER PROCEDURE ShowOverGetValidUser(
 	@strUserName varchar(max),
 	@strPasscode varchar(max)
 )

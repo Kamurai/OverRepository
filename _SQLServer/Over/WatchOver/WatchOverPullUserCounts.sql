@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverPullUserCounts;
 
-create PROCEDURE WatchOverPullUserCounts
+CREATE OR ALTER PROCEDURE WatchOverPullUserCounts
 AS
 BEGIN
 	select count(AdminLevel) as retNum			from [Over].dbo.WatchOverUsers where AdminLevel = 0

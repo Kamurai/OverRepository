@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverPullPersonalList;
 
-create PROCEDURE PlayOverPullPersonalList(
+CREATE OR ALTER PROCEDURE PlayOverPullPersonalList(
 	@intUserIndex int
 )
 AS

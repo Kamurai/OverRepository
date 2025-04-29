@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverPullPersonalList;
 
-create PROCEDURE ShowOverPullPersonalList(
+CREATE OR ALTER PROCEDURE ShowOverPullPersonalList(
 	@intUserIndex int
 )
 AS

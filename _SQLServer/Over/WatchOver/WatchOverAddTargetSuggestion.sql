@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverAddTargetSuggestion;
 
-create PROCEDURE WatchOverAddTargetSuggestion(
+CREATE OR ALTER PROCEDURE WatchOverAddTargetSuggestion(
     @strMovieName varChar(50),
 	@strMovieRelease varChar(50),
 	@strMovieGenre varChar(50),

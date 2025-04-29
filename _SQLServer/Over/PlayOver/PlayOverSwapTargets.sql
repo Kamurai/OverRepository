@@ -1,6 +1,6 @@
 --drop procedure PlayOverSwapTargets;
 
-create PROCEDURE PlayOverSwapTargets(
+CREATE OR ALTER PROCEDURE PlayOverSwapTargets(
     @intUserIndex int,
     @strVideoGame1 VARCHAR(50),
 	@strVideoGame2 VARCHAR(50)

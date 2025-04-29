@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverPullGlobalListAll;
 
-create PROCEDURE WatchOverPullGlobalListAll
+CREATE OR ALTER PROCEDURE WatchOverPullGlobalListAll
 AS
 BEGIN
 	select L.TargetIndex, T.Name, T.Picture, T.Release, T.Genre, T.Setting, avg(L.Rank)+1 as Ranking 

@@ -1,6 +1,6 @@
 --drop procedure ShowOverSwapTargets;
 
-create PROCEDURE ShowOverSwapTargets(
+CREATE OR ALTER PROCEDURE ShowOverSwapTargets(
     @intUserIndex int,
     @strShow1 VARCHAR(50),
 	@strShow2 VARCHAR(50)

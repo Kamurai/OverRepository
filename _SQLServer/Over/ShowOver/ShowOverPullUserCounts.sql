@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverPullUserCounts;
 
-create PROCEDURE ShowOverPullUserCounts
+CREATE OR ALTER PROCEDURE ShowOverPullUserCounts
 AS
 BEGIN
 	select count(AdminLevel) as retNum			from [Over].dbo.ShowOverUsers where AdminLevel = 0

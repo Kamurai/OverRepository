@@ -1,6 +1,6 @@
 --drop PROCEDURE WatchOverPullUserList;
 
-create PROCEDURE WatchOverPullUserList
+CREATE OR ALTER PROCEDURE WatchOverPullUserList
 AS
 BEGIN
 	select * 

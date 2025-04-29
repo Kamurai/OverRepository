@@ -1,6 +1,6 @@
 --drop procedure PlayOverUpdateOptions;
 
-create PROCEDURE PlayOverUpdateOptions(
+CREATE OR ALTER PROCEDURE PlayOverUpdateOptions(
     @intUserIndex		int,
 	@bitMemory			bit,
 	--Genres

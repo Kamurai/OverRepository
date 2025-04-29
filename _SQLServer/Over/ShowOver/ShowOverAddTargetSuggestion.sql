@@ -1,6 +1,6 @@
 --drop PROCEDURE ShowOverAddTargetSuggestion;
 
-create PROCEDURE ShowOverAddTargetSuggestion(
+CREATE OR ALTER PROCEDURE ShowOverAddTargetSuggestion(
     @strShowName varChar(50),
 	@strShowRelease varChar(50),
 	@strShowGenre varChar(50),

@@ -1,6 +1,6 @@
 --drop procedure PlayOverSignUp;
 
-create PROCEDURE PlayOverSignUp(
+CREATE OR ALTER PROCEDURE PlayOverSignUp(
     @strUsername		varchar(max),
 	@strEmail			varchar(max),
 	@strPasscode		varchar(max),

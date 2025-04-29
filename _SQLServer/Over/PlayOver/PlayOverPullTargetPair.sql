@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverPullTargetPair;
 
-create PROCEDURE PlayOverPullTargetPair(
+CREATE OR ALTER PROCEDURE PlayOverPullTargetPair(
     @intUserIndex int        
 )
 AS

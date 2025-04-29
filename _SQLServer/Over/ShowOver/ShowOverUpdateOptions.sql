@@ -1,6 +1,6 @@
 --drop procedure ShowOverUpdateOptions;
 
-create PROCEDURE ShowOverUpdateOptions(
+CREATE OR ALTER PROCEDURE ShowOverUpdateOptions(
     @intUserIndex		int,
 	@bitMemory			bit,
 	--Genres

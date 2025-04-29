@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverSetOnlineStatus;
 
-create PROCEDURE PlayOverSetOnlineStatus(
+CREATE OR ALTER PROCEDURE PlayOverSetOnlineStatus(
 	@intOnline int,
 	@strUserName varchar(max)
 )

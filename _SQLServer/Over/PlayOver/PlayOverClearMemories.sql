@@ -1,6 +1,6 @@
 --drop PROCEDURE PlayOverClearMemories;
 
-create PROCEDURE PlayOverClearMemories(
+CREATE OR ALTER PROCEDURE PlayOverClearMemories(
     @intUserIndex int        
 )
 AS

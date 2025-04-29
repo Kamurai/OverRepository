@@ -1,6 +1,6 @@
 --drop procedure WatchOverSignUp;
 
-create PROCEDURE WatchOverSignUp(
+CREATE OR ALTER PROCEDURE WatchOverSignUp(
     @strUsername		varchar(max),
 	@strEmail			varchar(max),
 	@strPasscode		varchar(max),
