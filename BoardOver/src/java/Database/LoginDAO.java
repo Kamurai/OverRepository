@@ -167,7 +167,8 @@ public class LoginDAO extends DAO{
             stmt.setBoolean(15, targetUser.getPuzzle());
             stmt.setBoolean(16, targetUser.getDexterity());
             stmt.setBoolean(17, targetUser.getParty());
-            rs = stmt.executeQuery();
+            
+            stmt.executeUpdate();
         }catch(Exception e){
             e.printStackTrace();
         }finally{

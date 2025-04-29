@@ -290,7 +290,8 @@ public class LoginDAO extends DAO{
             stmt.setBoolean(53, targetUser.getOculusRift());
             stmt.setBoolean(54, targetUser.getVive());
             stmt.setBoolean(55, targetUser.getPSVR());
-            rs = stmt.executeQuery();
+            
+            stmt.executeUpdate();
         }catch(Exception e){
             e.printStackTrace();
         }finally{

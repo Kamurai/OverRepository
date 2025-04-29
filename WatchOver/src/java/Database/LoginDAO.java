@@ -159,27 +159,30 @@ public class LoginDAO extends DAO{
         {
             openConnection();
         
-            stmt = getConnect().prepareCall("{call WatchOverUpdateOptions(?,?,?,?,?)}");
+            stmt = getConnect().prepareCall("{call WatchOverUpdateOptions(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             stmt.setInt(1, targetUser.getUserIndex());
+            stmt.setBoolean(2, targetUser.getMemory());
+            
             //Genres
-            stmt.setBoolean(2, targetUser.getComedy());
-            stmt.setBoolean(3, targetUser.getDrama());
-            stmt.setBoolean(4, targetUser.getAction());
-            stmt.setBoolean(5, targetUser.getHorror());
-            stmt.setBoolean(5, targetUser.getThriller());
-            stmt.setBoolean(5, targetUser.getMystery());
-            stmt.setBoolean(5, targetUser.getDocumentary());
+            stmt.setBoolean(3, targetUser.getComedy());
+            stmt.setBoolean(4, targetUser.getDrama());
+            stmt.setBoolean(5, targetUser.getAction());
+            stmt.setBoolean(6, targetUser.getHorror());
+            stmt.setBoolean(7, targetUser.getThriller());
+            stmt.setBoolean(8, targetUser.getMystery());
+            stmt.setBoolean(9, targetUser.getDocumentary());
             //Settings
-            stmt.setBoolean(5, targetUser.getScienceFiction());
-            stmt.setBoolean(5, targetUser.getFantasy());
-            stmt.setBoolean(5, targetUser.getWestern());
-            stmt.setBoolean(5, targetUser.getMartialArts());
-            stmt.setBoolean(5, targetUser.getModern());
-            stmt.setBoolean(5, targetUser.getHistoric());
-            stmt.setBoolean(5, targetUser.getPrehistoric());
-            stmt.setBoolean(5, targetUser.getComics());
-            stmt.setBoolean(5, targetUser.getPeriod());
-            rs = stmt.executeQuery();
+            stmt.setBoolean(10, targetUser.getScienceFiction());
+            stmt.setBoolean(11, targetUser.getFantasy());
+            stmt.setBoolean(12, targetUser.getWestern());
+            stmt.setBoolean(13, targetUser.getMartialArts());
+            stmt.setBoolean(14, targetUser.getModern());
+            stmt.setBoolean(15, targetUser.getHistoric());
+            stmt.setBoolean(16, targetUser.getPrehistoric());
+            stmt.setBoolean(17, targetUser.getComics());
+            stmt.setBoolean(18, targetUser.getPeriod());
+            
+            stmt.executeUpdate();
         }catch(Exception e){
             e.printStackTrace();
         }finally{

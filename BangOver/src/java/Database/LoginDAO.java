@@ -134,7 +134,8 @@ public class LoginDAO extends DAO{
             stmt.setBoolean(4, targetUser.getMen());
             stmt.setBoolean(5, targetUser.getTransWomen());
             stmt.setBoolean(6, targetUser.getTransMen());
-            rs = stmt.executeQuery();
+            
+            stmt.executeUpdate();
         }catch(Exception e){
             e.printStackTrace();
         }finally{
